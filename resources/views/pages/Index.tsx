@@ -7,13 +7,15 @@ class Index extends React.Component {
             <>
                 <PublicLayout>
                     <Header>
-
+                        <h1>Header</h1>
                     </Header>
+
                     <Body>
-                        
+                        <h1>Body</h1>
                     </Body>
+
                     <Footer>
-                        
+                        <h1>Footer</h1>
                     </Footer>
                 </PublicLayout>
             </>
