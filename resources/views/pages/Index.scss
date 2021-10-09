@@ -1,0 +1,14 @@
+$primaryBackgroundColor: #e32129;
+$primaryFontColor: #ffffff;
+$secondaryBackgroundColor: #ffffff;
+$secondaryFontColor: #191919;
+
+.style-1 {
+	background-color: $primaryBackgroundColor;
+	color: $primaryFontColor;
+}
+
+.style-2 {
+	background-color: $secondaryBackgroundColor;
+	color: $secondaryFontColor;
+}
