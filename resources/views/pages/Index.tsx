@@ -34,7 +34,7 @@ class Index extends React.Component {
        justifyContent: "center"
       }}>
        <Stack spacing={8} direction="row" alignItems="center" justifyContent="center">
-        <div><img src="../storage/logo.png" /></div>
+        <div><img src="/storage/images/logo.png" /></div>
         <div>
          <Router>
           <Link color="text.primary" underline="none">

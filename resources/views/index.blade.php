@@ -10,7 +10,6 @@
 
 <body>
     <div id="app"></div>
-    <img src="{{ url('storage/app/public/logo.png') }}" />
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

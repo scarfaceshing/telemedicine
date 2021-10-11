@@ -10924,7 +10924,7 @@ var Index = function (_super) {
             }, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-                  src: "../storage/logo.png"
+                  src: "/storage/images/logo.png"
                 }, void 0)
               }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.MemoryRouter, {
