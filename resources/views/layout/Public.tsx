@@ -1,7 +1,7 @@
 
 import React, { Component, ReactElement, ReactNode } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { AppBar, CssBaseline } from '@mui/material'
+import { AppBar, Container, CssBaseline, Toolbar } from '@mui/material'
 import { green, purple, red } from '@mui/material/colors'
 import "@fontsource/montserrat/400.css"
 import { fontWeight } from '@mui/system'
@@ -121,8 +121,12 @@ class PublicLayout extends Component<IProps, IState> {
        </header>
       </AppBar>
      </ElevationScroll>
+     <Toolbar />
+     <Toolbar sx={{ margin: "30px 0px", }} />
      <main>
-      {body ? body.props.children : null}
+      <Container>
+       {body ? body.props.children : null}
+      </Container>
      </main>
      <footer>
       {footer ? footer.props.children : null}

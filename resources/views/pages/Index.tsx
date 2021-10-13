@@ -1,4 +1,4 @@
-import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box } from '@mui/material'
+import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container } from '@mui/material'
 import { fontWeight } from '@mui/system'
 import React from 'react'
 import PublicLayout, { Header, Body, Footer } from '../layout/Public'
@@ -31,74 +31,90 @@ class Index extends React.Component {
        </Grid>
       </Toolbar>
       <Toolbar className="style-2" sx={{
-       justifyContent: "center"
+       justifyContent: "center",
+       padding: "30px 0px",
       }}>
-       <Stack spacing={8} direction="row" alignItems="center" justifyContent="center">
-        <div><img src="/storage/images/logo.png" /></div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link} className="style-2">home</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link}>services</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link}>about us</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link}>contact</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link}>blogs</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link}>FAQs</Typography>
-          </Link>
-         </Router>
-        </div>
-        <div>
-         <Router>
-          <Button sx={{ textTransform: "capitalize" }} component={RouterLink} to="/" color="primary">
-           Login
-          </Button>
-         </Router>
-        </div>
-       </Stack>
+       <Grid container justifyContent="center" alignItems="center">
+        <Grid item xs={9}>
+         <Grid container justifyContent="space-between" alignItems="center">
+          <Grid item>
+           <Grid container>
+            <Grid item>
+             <img style={{ width: "150px", height: "50px" }} src="/storage/images/logo.png" />
+            </Grid>
+           </Grid>
+          </Grid>
+          <Grid item>
+           <Grid container rowSpacing={{ xs: 0 }} columnSpacing={{ xs: 8, sm: 4, md: 7 }} alignItems="center">
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link} className="style-2">home</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link}>services</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link}>about us</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link}>contact</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link}>blogs</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Link color="text.primary" underline="none">
+               <Typography sx={link}>FAQs</Typography>
+              </Link>
+             </Router>
+            </Grid>
+            <Grid item>
+             <Router>
+              <Button sx={{ textTransform: "capitalize" }} component={RouterLink} to="/" color="primary">
+               Login
+              </Button>
+             </Router>
+            </Grid>
+           </Grid>
+          </Grid>
+         </Grid>
+        </Grid>
+       </Grid>
       </Toolbar>
      </Header>
 
      <Body>
-      <Box sx={{ my: 2 }}>
-       {[...new Array(12)]
-        .map(
-         () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-        )
-        .join('\n')}
-      </Box>
+      <Grid container justifyContent="center" alignItems="center">
+       <Grid item xs={9}>
+        <Grid container justifyContent="space-between" alignItems="center">
+         <Grid item>
+          <h1>The highest standard for pediatric
+           and adult assessment
+           and therapy</h1>
+         </Grid>
+        </Grid>
+       </Grid>
+      </Grid>
      </Body>
 
      <Footer>
