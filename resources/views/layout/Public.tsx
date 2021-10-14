@@ -5,8 +5,8 @@ import { AppBar, Container, CssBaseline, Toolbar } from '@mui/material'
 import { green, purple, red } from '@mui/material/colors'
 import "@fontsource/montserrat/400.css"
 import { fontWeight } from '@mui/system'
-import PropTypes from 'prop-types';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
+import PropTypes from 'prop-types'
+import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 const theme = createTheme({
  typography: {

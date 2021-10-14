@@ -2,7 +2,7 @@ import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container 
 import { fontWeight } from '@mui/system'
 import React from 'react'
 import PublicLayout, { Header, Body, Footer } from '../layout/Public'
-import { Link as RouterLink, MemoryRouter as Router } from 'react-router-dom';
+import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom';
 import "./Index.scss"
 
 interface ILink {
@@ -22,11 +22,9 @@ class Index extends React.Component {
       <Toolbar className="style-1">
        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
         <Grid item xs={12}>
-         <Router>
-          <Button component={RouterLink} to="/" color="primary">
-           book a session now
-          </Button>
-         </Router>
+         <Button component={RouterLink} to="/" color="primary">
+          book a session now
+         </Button>
         </Grid>
        </Grid>
       </Toolbar>
@@ -47,11 +45,9 @@ class Index extends React.Component {
           <Grid item>
            <Grid container rowSpacing={{ xs: 0 }} columnSpacing={{ xs: 8, sm: 4, md: 7 }} alignItems="center">
             <Grid item>
-             <Router>
-              <Link color="text.primary" underline="none">
-               <Typography sx={link} className="style-2">home</Typography>
-              </Link>
-             </Router>
+             <Link color="text.primary" underline="none">
+              <Typography sx={link} className="style-2">home</Typography>
+             </Link>
             </Grid>
             <Grid item>
              <Router>
@@ -89,11 +85,9 @@ class Index extends React.Component {
              </Router>
             </Grid>
             <Grid item>
-             <Router>
-              <Button sx={{ textTransform: "capitalize" }} component={RouterLink} to="/" color="primary">
-               Login
-              </Button>
-             </Router>
+             <Button sx={{ textTransform: "capitalize" }} component={RouterLink} to="/login" color="primary">
+              Login
+             </Button>
             </Grid>
            </Grid>
           </Grid>
