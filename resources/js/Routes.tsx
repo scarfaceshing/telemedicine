@@ -1,6 +1,6 @@
 import React from 'react';
-import IndexPage from '../views/pages/Index'
-import LoginPage from '../views/auth/Login'
+import HomePage from '../views/pages/private/Home'
+import LoginPage from '../views/pages/public/Login'
 
 import {
  BrowserRouter as Router,
@@ -18,7 +18,7 @@ class Routes extends React.Component {
     <Switch>
      <Redirect exact from="/" to="/login" />
      <Route path="/login" component={LoginPage} />
-     <Route path="/index" component={IndexPage} />
+     <Route path="/home" component={HomePage} />
     </Switch>
    </Router>
   );

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import SystemLayout, { Body, Header, Footer } from '../layout/System'
+import SystemLayout, { Body, Header, Footer } from '../../layout/System'
 import { Grid, Paper, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
+import Http from '../../../api/Api'
 
 interface IProps {
-
+ history: any;
 }
 
 interface IState {
@@ -43,7 +44,13 @@ class Index extends Component<IProps, IState>{
  private Authenticate = (event: Event): void => {
   event.preventDefault();
 
-  console.log(this.state.username, this.state.password)
+  Http.post('/auth/login', {
+   name: this.state.username,
+   password: this.state.password
+  }).then((res: any) => {
+
+   this.props.history.push('/home')
+  })
  }
 
  render() {
@@ -98,7 +105,6 @@ class Index extends Component<IProps, IState>{
       </Container>
      </Body>
      <Footer>
-
      </Footer>
     </SystemLayout>
    </>

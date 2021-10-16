@@ -52,6 +52,9 @@ class SystemLayout extends Component<IProps, IState> {
      <main>
       {body ? body.props.children : null}
      </main>
+     <footer>
+      {footer ? footer.props.children : null}
+     </footer>
     </ThemeProvider>
    </>
   )
