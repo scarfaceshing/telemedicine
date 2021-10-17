@@ -17,13 +17,20 @@ use App\Http\Controllers\AuthController;
 
 Route::group(
  [
-     'middleware' => 'auth:sanctum',
+     'middleware' => 'api',
      'prefix' => 'auth',
  ],
  function ($router) {
      Route::post('login', [AuthController::class, 'login']);
      Route::post('logout', [AuthController::class, 'logout']);
      Route::post('refresh', [AuthController::class, 'refresh']);
-     Route::post('me', [AuthController::class, 'me']);
  }
 );
+
+Route::group([
+ 'middlware' => 'auth:sanctum',
+ 'prefix' => 'data'
+], function($router) {
+ Route::post('me', [AuthController::class, 'me']);
+ Route::post('check-auth', [AuthController::class, 'checkAuth']);
+});

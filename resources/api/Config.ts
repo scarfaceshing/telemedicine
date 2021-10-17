@@ -1,3 +1,4 @@
+import { getToken } from '../js/Cookie'
 
 interface IConfig {
  [key: string]: string | number | boolean | object | undefined
@@ -8,7 +9,7 @@ const APP_URL = `${process.env.MIX_APP_URL}/api`
 const config: IConfig = {
  baseURL: APP_URL,
  headers: {
-  'X-Requested-With': 'XMLHttpRequest'
+  'X-Requested-With': 'XMLHttpRequest',
  },
  timeout: 1000,
  withCredentials: true,
@@ -18,7 +19,6 @@ const config: IConfig = {
  xsrfCookieName: 'XSRF-TOKEN', // default
  // `xsrfHeaderName` is the name of the http header that carries the xsrf token value
  xsrfHeaderName: 'X-XSRF-TOKEN', // default
-
  /*
  // `onUploadProgress` allows handling of progress events for uploads
  // browser only

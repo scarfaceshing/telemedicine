@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SystemLayout, { Body, Header, Footer } from '../../layout/System'
 import { Grid, Paper, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
 import Http from '../../../api/Api'
+import { storeToken } from '../../../js/Cookie'
 
 interface IProps {
  history: any;
@@ -32,7 +33,7 @@ class Index extends Component<IProps, IState>{
 
   this.state = {
    username: '',
-   password: ''
+   password: '',
   }
  }
 
@@ -41,13 +42,21 @@ class Index extends Component<IProps, IState>{
   this.setState(newState)
  }
 
- private Authenticate = (event: Event): void => {
+ public Authenticate = (event: Event): void => {
   event.preventDefault();
 
   Http.post('/auth/login', {
    name: this.state.username,
    password: this.state.password
   }).then((res: any) => {
+
+   const { token } = res.data
+
+   Http.interceptors.request.use(function (config) {
+    config.headers["Authorization"] = `Bearer ${token}`
+   });
+
+   storeToken(token)
 
    this.props.history.push('/home')
   })
