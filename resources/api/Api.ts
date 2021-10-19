@@ -7,11 +7,7 @@ const Http = Axios.create(Config);
 Http.interceptors.request.use(function (config) {
  // console.log("Config-", config)
 
- /* if (config.url !== '/auth/login') {
-   if (getToken()) {
-   config.headers['Authorization'] = 'Bearer ' + getToken()
-  }
- } */
+  if (getToken()) config.headers['Authorization'] = 'Bearer ' + getToken()
 
  return config;
 }, function (error) {

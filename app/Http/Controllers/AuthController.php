@@ -8,7 +8,7 @@ class AuthController extends Controller
 {
     //
     public function __construct() {
-     $this->middleware('auth:sanctum', ['except' => ['login', 'logout']]);
+     $this->middleware('auth:api', ['except' => ['login']]);
     }
 
     public function login(Request $request) {
@@ -19,9 +19,9 @@ class AuthController extends Controller
       ]);
 
       if (!Auth::attempt($credentials)) return response()->json(['status' => 'Unauthorized'], 401);
+      $accessToken = Auth::user()->createToken('authToken')->accessToken;
 
-      $token = $request->user()->createToken($request->name.date("Y-m-d H:i:s"));
-      return ['token' => $token->plainTextToken];
+      return response()->json(['access_token' => $accessToken]);
     }
 
     public function me(Request $request) {
@@ -30,12 +30,16 @@ class AuthController extends Controller
 
     public function checkAuth(Request $request) {
      if (!auth()->check()) return ["authenticate" => false, "message" => "Not authenticate"];
-     else return ["authenticate" => false, "message" => "User authenticate"];
+     else return response()->json(["authenticate" => false, "message" => "User authenticate"]);
     }
 
     public function logout(Request $request) {
-     auth()->user()->tokens()->delete();
 
+     Auth::user()->tokens->each(function($token, $key) {
+      $token->delete();
+     });
+
+     // auth()->logout();
      return response()->json(["message" => "Logout successfully"]);
     }
 }

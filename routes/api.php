@@ -15,6 +15,8 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+
+
 Route::group(
  [
      'middleware' => 'api',
@@ -22,15 +24,15 @@ Route::group(
  ],
  function ($router) {
      Route::post('login', [AuthController::class, 'login']);
-     Route::post('logout', [AuthController::class, 'logout']);
      Route::post('refresh', [AuthController::class, 'refresh']);
+
+     Route::group([
+      'middlware' => 'auth:api',
+      'prefix' => 'guard'
+     ], function($router) {
+      Route::post('me', [AuthController::class, 'me']);
+      Route::post('logout', [AuthController::class, 'logout']);
+      Route::post('check-auth', [AuthController::class, 'checkAuth']);
+     });
  }
 );
-
-Route::group([
- 'middlware' => 'auth:sanctum',
- 'prefix' => 'data'
-], function($router) {
- Route::post('me', [AuthController::class, 'me']);
- Route::post('check-auth', [AuthController::class, 'checkAuth']);
-});

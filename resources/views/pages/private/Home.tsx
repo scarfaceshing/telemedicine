@@ -14,13 +14,12 @@ export class Home extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
-
-  console.log(getToken())
  }
 
  componentDidMount() {
+
   if (getToken()) {
-   Http.post('/data/check-auth', {}).then((res) => {
+   Http.post('auth/guard/check-auth', {}).then((res) => {
     console.log(res)
    })
   } else {
@@ -29,13 +28,13 @@ export class Home extends Component<IProps, IState> {
  }
 
  private getUserInfo = (): void => {
-  Http.post('/data/me', {}).then((res) => {
+  Http.post('auth/guard/me', {}).then((res) => {
    console.log(res);
   })
  }
 
  private logout = (): void => {
-  Http.post('/auth/logout', {}).then((res) => {
+  Http.post('auth/guard/logout', {}).then((res) => {
    this.props.history.push('/login')
    removeToken()
   })
@@ -58,7 +57,6 @@ export class Home extends Component<IProps, IState> {
      </div>
     </Body>
     <Footer>
-
     </Footer>
    </SystemLayout>
   )

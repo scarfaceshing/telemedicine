@@ -50,15 +50,16 @@ class Index extends Component<IProps, IState>{
    password: this.state.password
   }).then((res: any) => {
 
-   const { token } = res.data
+   const { access_token } = res.data;
 
-   Http.interceptors.request.use(function (config) {
-    config.headers["Authorization"] = `Bearer ${token}`
-   });
+   storeToken(access_token)
 
-   storeToken(token)
-
+   /*  Http.interceptors.request.use(function (config) {
+     config.headers["Authorization"] = `Bearer ${access_token}`
+    });
+  */
    this.props.history.push('/home')
+
   })
  }
 

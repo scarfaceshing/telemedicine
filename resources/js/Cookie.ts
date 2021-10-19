@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie'
 
-export const storeToken = (token: string) => {
- return Cookies.set('token', token, { expires: 1, path: '/' })
+export const storeToken = async (token: string) => {
+ const access_token = await token;
+ return Cookies.set('token', access_token, { expires: 1, path: '/' })
 }
 
 export const getToken = (): string | undefined => {
