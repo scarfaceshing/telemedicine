@@ -1,5 +1,3 @@
-import { getToken } from '../js/Cookie'
-
 interface IConfig {
  [key: string]: string | number | boolean | object | undefined
 }

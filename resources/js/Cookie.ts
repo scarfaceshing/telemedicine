@@ -10,6 +10,6 @@ export const getToken = (): string | undefined => {
  return token;
 }
 
-export const removeToken = () => {
+export const removeToken = ():void => {
  Cookies.remove('token')
 }

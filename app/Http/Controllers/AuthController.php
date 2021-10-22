@@ -18,6 +18,8 @@ class AuthController extends Controller
       'password' => ['required'],
       ]);
 
+      if($credentials) response()->json(['error' => $credentials], 422);
+
       if (!Auth::attempt($credentials)) return response()->json(['status' => 'Unauthorized'], 401);
       $accessToken = Auth::user()->createToken('authToken')->accessToken;
 

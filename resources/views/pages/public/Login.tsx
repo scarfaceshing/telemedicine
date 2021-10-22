@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SystemLayout, { Body, Header, Footer } from '../../layout/System'
-import { Grid, Paper, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
+import { Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
 import Http from '../../../api/Api'
 import { storeToken } from '../../../js/Cookie'
 
@@ -11,6 +11,7 @@ interface IProps {
 interface IState {
  username: string;
  password: string;
+ error: string;
 }
 
 interface IEvent {
@@ -34,6 +35,7 @@ class Index extends Component<IProps, IState>{
   this.state = {
    username: '',
    password: '',
+   error: ''
   }
  }
 
@@ -49,21 +51,19 @@ class Index extends Component<IProps, IState>{
    name: this.state.username,
    password: this.state.password
   }).then((res: any) => {
-
-   const { access_token } = res.data;
-
+   const { access_token } = res.data
    storeToken(access_token)
-
-   /*  Http.interceptors.request.use(function (config) {
-     config.headers["Authorization"] = `Bearer ${access_token}`
-    });
-  */
    this.props.history.push('/home')
+  }).catch((err) => {
+   if (err.response.status === 422 || err.response.status === 402) this.setState({ error: err.response.data.message })
+  }).finally(() => {
 
   })
  }
 
  render() {
+
+
   return (
    <>
     <SystemLayout>
@@ -74,6 +74,10 @@ class Index extends Component<IProps, IState>{
      </Header>
      <Body>
       <Container component="main" maxWidth="xs">
+       <Alert severity="error" sx={{ my: 2 }} onClose={() => { }}>
+        {this.state.error}
+       </Alert>
+
        <Box component="form" onSubmit={(event: any) => this.Authenticate(event)} noValidate sx={{ mt: 1 }}>
         <TextField
          margin="normal"
