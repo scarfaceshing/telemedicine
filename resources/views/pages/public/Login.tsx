@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SystemLayout, { Body, Header, Footer } from '../../layout/System'
-import { Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
+import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container } from '@mui/material'
 import Http from '../../../api/Api'
 import { storeToken } from '../../../js/Cookie'
 
@@ -12,6 +12,7 @@ interface IState {
  username: string;
  password: string;
  error: string;
+ displayError: boolean;
 }
 
 interface IEvent {
@@ -35,7 +36,8 @@ class Index extends Component<IProps, IState>{
   this.state = {
    username: '',
    password: '',
-   error: ''
+   error: '',
+   displayError: false
   }
  }
 
@@ -53,11 +55,11 @@ class Index extends Component<IProps, IState>{
   }).then((res: any) => {
    const { access_token } = res.data
    storeToken(access_token)
-   this.props.history.push('/home')
   }).catch((err) => {
-   if (err.response.status === 422 || err.response.status === 402) this.setState({ error: err.response.data.message })
+   this.setState({ displayError: true })
+   this.setState({ error: err.response.data.message })
   }).finally(() => {
-
+   this.props.history.push('/home')
   })
  }
 
@@ -74,9 +76,12 @@ class Index extends Component<IProps, IState>{
      </Header>
      <Body>
       <Container component="main" maxWidth="xs">
-       <Alert severity="error" sx={{ my: 2 }} onClose={() => { }}>
-        {this.state.error}
-       </Alert>
+
+       <Collapse in={this.state.displayError}>
+        <Alert severity="error" sx={{ my: 2 }} onClose={() => { this.setState({ displayError: false }) }}>
+         {this.state.error}
+        </Alert>
+       </Collapse>
 
        <Box component="form" onSubmit={(event: any) => this.Authenticate(event)} noValidate sx={{ mt: 1 }}>
         <TextField
