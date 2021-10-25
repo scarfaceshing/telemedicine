@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,24 +16,19 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-
-
-Route::group(
- [
-     'middleware' => 'api',
-     'prefix' => 'auth',
- ],
- function ($router) {
-     Route::post('login', [AuthController::class, 'login']);
-     Route::post('refresh', [AuthController::class, 'refresh']);
-
-     Route::group([
-      'middlware' => 'auth:api',
-      'prefix' => 'guard'
+  Route::group([
+      'middlware' => 'auth:sanctum',
+      'prefix' => 'auth'
      ], function($router) {
-      Route::post('me', [AuthController::class, 'me']);
-      Route::post('logout', [AuthController::class, 'logout']);
-      Route::post('check-auth', [AuthController::class, 'checkAuth']);
-     });
- }
-);
+       Route::post('login', [AuthController::class, 'login']);
+       Route::post('refresh', [AuthController::class, 'refresh']);
+       Route::get('me', [AuthController::class, 'me']);
+       Route::post('logout', [AuthController::class, 'logout']);
+       Route::post('check-auth', [AuthController::class, 'checkAuth']);
+
+       Route::group([
+        'prefix' => 'data'
+       ], function($router) {
+        Route::get('user', [UserController::class, 'index']);
+       });
+});

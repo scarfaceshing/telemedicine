@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
     //
     public function __construct() {
-     $this->middleware('auth:api', ['except' => ['login']]);
+     $this->middleware('auth:sanctum', ['except' => ['login']]);
     }
 
     public function login(Request $request) {
@@ -21,27 +22,26 @@ class AuthController extends Controller
       if($credentials) response()->json(['error' => $credentials], 422);
 
       if (!Auth::attempt($credentials)) return response()->json(['status' => 'Unauthorized'], 401);
-      $accessToken = Auth::user()->createToken('authToken')->accessToken;
+      $token = Auth::user()->createToken('API Token')->plainTextToken;
 
-      return response()->json(['access_token' => $accessToken]);
+      return response()->json(['access_token' => $token]);
     }
 
     public function me(Request $request) {
-     return response()->json(auth()->user());
+     return Auth::user();
     }
 
     public function checkAuth(Request $request) {
      if (!auth()->check()) return ["authenticate" => false, "message" => "Not authenticate"];
-     else return response()->json(["authenticate" => false, "message" => "User authenticate"]);
+     else return response()->json(["authenticate" => true, "message" => "User authenticated"]);
     }
 
     public function logout(Request $request) {
+     /* if (Auth::guard('web')->logout()) return response()->json(['status' => 'Unauthorized'], 401);
 
-     Auth::user()->tokens->each(function($token, $key) {
-      $token->delete();
-     });
+     return response()->json(['status' => 'Logout Successfully']); */
+     $request->user()->tokens()->delete();
 
-     // auth()->logout();
-     return response()->json(["message" => "Logout successfully"]);
+     if (Auth::guard('web')->logout()) return response()->json(["status" => "true"]);
     }
 }

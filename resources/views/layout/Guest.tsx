@@ -108,8 +108,6 @@ class PublicLayout extends Component<IProps, IState> {
   const body = children[1]
   const footer = children[2]
 
-  console.log(header)
-
   return (
    <>
     <ThemeProvider theme={theme}>
@@ -122,7 +120,6 @@ class PublicLayout extends Component<IProps, IState> {
       </AppBar>
      </ElevationScroll>
      <Toolbar />
-     <Toolbar sx={{ margin: "30px 0px", }} />
      <main>
       <Container>
        {body ? body.props.children : null}

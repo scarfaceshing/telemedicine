@@ -1,7 +1,7 @@
 import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container } from '@mui/material'
 import { fontWeight } from '@mui/system'
 import React from 'react'
-import PublicLayout, { Header, Body, Footer } from '../layout/Public'
+import GuestLayout, { Header, Body, Footer } from '../layout/Guest'
 import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom';
 import "./Index.scss"
 
@@ -17,7 +17,7 @@ class Index extends React.Component {
 
   return (
    <>
-    <PublicLayout>
+    <GuestLayout>
      <Header>
       <Toolbar className="style-1">
        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
@@ -114,7 +114,7 @@ class Index extends React.Component {
      <Footer>
       <h1>Footer</h1>
      </Footer>
-    </PublicLayout >
+    </GuestLayout >
    </>
   )
  }

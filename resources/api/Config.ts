@@ -7,6 +7,7 @@ const APP_URL = `${process.env.MIX_APP_URL}/api`
 const config: IConfig = {
  baseURL: APP_URL,
  headers: {
+  'Accept': 'application/json',
   'X-Requested-With': 'XMLHttpRequest',
  },
  timeout: 1000,
