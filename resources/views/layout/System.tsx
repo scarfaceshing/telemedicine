@@ -71,7 +71,7 @@ class SystemLayout extends Component<IProps, IState> {
 
   this.state = {
    drawerWidth: drawerWidth,
-   drawerOpen: false
+   drawerOpen: true
   }
  }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container, AppBar, Typography } from '@mui/material'
 import Http from '../../../api/Api'
+import { storeToken } from '../../../js/Cookie'
 
 interface IProps {
  history?: any;
@@ -51,7 +52,8 @@ class Login extends Component<IProps, IState>{
    name: this.state.username,
    password: this.state.password
   }).then((res: any) => {
-   this.props.history.push('/dashboard')
+   storeToken(res.data.access_token)
+   this.props.history.push('/admin')
   }).catch((err) => {
    this.setState({ displayError: true })
    this.setState({ error: err.response.data.message })

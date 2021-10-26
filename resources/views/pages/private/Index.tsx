@@ -20,12 +20,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 
-export class Dashboard extends Component<IProps, IState> {
+export class Index extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
 
-  console.log("Dashboard")
+  console.log("Index")
  }
 
 
@@ -50,4 +50,4 @@ export class Dashboard extends Component<IProps, IState> {
  }
 }
 
-export default Dashboard
+export default Index

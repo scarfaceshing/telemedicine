@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import MuiDrawer from '@mui/material/Drawer'
-import DashboardIcon from '@mui/icons-material/Dashboard'
-import LogoutIcon from '@mui/icons-material/Logout'
 import Http from '../../../api/Api'
-import { useHistory } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
+import LogoutIcon from '@mui/icons-material/Logout'
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import MuiDrawer from '@mui/material/Drawer'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import PersonIcon from '@mui/icons-material/Person';
 
 interface IProps {
  history?: any;
@@ -73,8 +74,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const NavItem = [
  {
+  path: '/admin/dashboard',
   name: 'Dashboard',
   icon: <DashboardIcon />
+ },
+ {
+  path: '/admin/usermanagement',
+  name: 'User Management',
+  icon: <PersonIcon />
  }
 ]
 
@@ -97,15 +104,16 @@ export class Navigation extends Component<IProps, IState> {
  }
 
  private logout = (): void => {
-
   Http.post('auth/logout', {}).then((res) => {
-   console.log(res)
-   this.props.history.push('/');
   })
+
+  this.props.history.push('/');
  }
 
+
  render() {
-  const NavComponent = NavItem.map(({ name, icon }, key) => <ListItem button key={key}><ListItemIcon>{icon}</ListItemIcon><ListItemText primary={name} /></ListItem>)
+
+  const NavComponent = NavItem.map(({ path, name, icon }, key) => <ListItem button key={key} component={Link} to={path}><ListItemIcon>{icon}</ListItemIcon><ListItemText primary={name} /></ListItem>)
 
   return (
    <>

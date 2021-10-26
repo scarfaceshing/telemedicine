@@ -1,6 +1,8 @@
 import React from 'react';
-import DashboardPage from '../views/pages/private/Dashboard'
 import LoginPage from '../views/pages/public/Login'
+import AdminPage from '../views/pages/private/Index'
+import DashboardPage from '../views/pages/private/Dashboard'
+import UserManagementPage from '../views/pages/private/User'
 import Http from '../api/Api'
 
 import {
@@ -12,48 +14,44 @@ import {
  useHistory
 } from "react-router-dom";
 
-const PublicRoute = [
- {
-  path: '/login',
-  component: LoginPage
- }
-]
-
 const PrivateRoute = [
  {
   path: '/dashboard',
   component: DashboardPage
+ },
+ {
+  path: '/usermanagement',
+  component: UserManagementPage
  }
 ]
 
-const CheckAuth = () => {
+const CheckPoint = ({ component, path, key }: any) => {
+ const history = useHistory()
 
- let auth = Http.post('auth/check-auth', {}).then((res: any) => {
-  return res.data.authenticate
+ Http.post('/auth/check-auth', {}).then((res) => {
+  console.log("Authenticated")
+ }).catch((err) => {
+  return history.push('/login')
  })
 
- return auth
-}
-
-const CheckPoint = ({ component, path }: any) => {
- const auth = CheckAuth()
-
- return <Route path={path} component={component} />;
+ return <Route path={path} component={component} key={key} />
 }
 
 
 class Routes extends React.Component {
 
  render() {
-  const publicComponents = PublicRoute.map(({ path, component }, key) => <Route path={path} component={component} key={key} />)
   const privateComponents = PrivateRoute.map(({ path, component }, key) => <CheckPoint path={path} component={component} key={key} />)
 
   return (
    <BrowserRouter>
     <Switch>
      <Redirect exact from="/" to="/login" />
-     {publicComponents}
-     {privateComponents}
+     <Route path="/login" component={LoginPage} />
+     <Route path="/admin">
+      <Route path="/admin/index" component={AdminPage} />
+      <Route path="/admin/dashboard" component={DashboardPage} />
+     </Route>
     </Switch>
    </BrowserRouter>
   );
