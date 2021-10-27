@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography } from '@mui/material'
+import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Http from '../../../api/Api'
 import { useLocation, Link } from 'react-router-dom'
@@ -7,7 +7,9 @@ import LogoutIcon from '@mui/icons-material/Logout'
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from '@mui/icons-material/Person'
+import ExpandLess from '@mui/icons-material/ExpandLess'
+import ExpandMore from '@mui/icons-material/ExpandMore'
 
 interface IProps {
  history?: any;
@@ -72,18 +74,18 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
  }),
 );
 
-const NavItem = [
+/* const NavItem = [
  {
   path: '/admin/dashboard',
   name: 'Dashboard',
   icon: <DashboardIcon />
  },
  {
-  path: '/admin/usermanagement',
+  path: '/admin/user-management',
   name: 'User Management',
   icon: <PersonIcon />
  }
-]
+] */
 
 export class Navigation extends Component<IProps, IState> {
 
@@ -113,7 +115,11 @@ export class Navigation extends Component<IProps, IState> {
 
  render() {
 
-  const NavComponent = NavItem.map(({ path, name, icon }, key) => <ListItem button key={key} component={Link} to={path}><ListItemIcon>{icon}</ListItemIcon><ListItemText primary={name} /></ListItem>)
+  /*  const NavComponent = NavItem.map(({ path, name, icon }, key) =>
+    <ListItem button key={key} component={Link} to={path}>
+     <ListItemIcon>{icon}</ListItemIcon>
+     <ListItemText primary={name} />
+    </ListItem>) */
 
   return (
    <>
@@ -124,8 +130,27 @@ export class Navigation extends Component<IProps, IState> {
       </IconButton>
      </DrawerHeader>
      <Divider />
+
      <List>
-      {NavComponent}
+
+      <ListItem button component={Link} to={"/admin/dashboard"}>
+       <ListItemIcon>
+        <DashboardIcon />
+       </ListItemIcon>
+       <ListItemText primary={'Dashboard'} />
+      </ListItem>
+
+      <Divider />
+
+      <ListItem button component={Link} to={"/admin/change-password"}>
+       <ListItemIcon>
+        <PersonIcon />
+       </ListItemIcon>
+       <ListItemText primary={'Change password'} />
+      </ListItem>
+
+      <Divider />
+
       <ListItem button onClick={this.logout}>
        <ListItemIcon>
         <LogoutIcon />

@@ -1,8 +1,7 @@
 import React from 'react';
 import LoginPage from '../views/pages/public/Login'
-import AdminPage from '../views/pages/private/Index'
+import ChangePasswordPage from '../views/pages/private/user-management/ChangePassword';
 import DashboardPage from '../views/pages/private/Dashboard'
-import UserManagementPage from '../views/pages/private/User'
 import Http from '../api/Api'
 
 import {
@@ -16,12 +15,12 @@ import {
 
 const PrivateRoute = [
  {
-  path: '/dashboard',
+  path: '/admin/dashboard',
   component: DashboardPage
  },
  {
-  path: '/usermanagement',
-  component: UserManagementPage
+  path: '/admin/user-management/change-password',
+  component: ChangePasswordPage
  }
 ]
 
@@ -49,8 +48,11 @@ class Routes extends React.Component {
      <Redirect exact from="/" to="/login" />
      <Route path="/login" component={LoginPage} />
      <Route path="/admin">
-      <Route path="/admin/index" component={AdminPage} />
+
+      <Redirect exact from="/admin/" to="/admin/dashboard" />
       <Route path="/admin/dashboard" component={DashboardPage} />
+      <Route path="/admin/change-password" component={ChangePasswordPage} />
+
      </Route>
     </Switch>
    </BrowserRouter>

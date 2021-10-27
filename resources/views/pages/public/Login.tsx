@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container, AppBar, Typography } from '@mui/material'
+import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container, AppBar, Typography, Backdrop, CircularProgress } from '@mui/material'
 import Http from '../../../api/Api'
 import { storeToken } from '../../../js/Cookie'
 
@@ -12,6 +12,7 @@ interface IState {
  password: string;
  error: string;
  displayError: boolean;
+ showLoading: boolean;
 }
 
 interface IEvent {
@@ -36,7 +37,8 @@ class Login extends Component<IProps, IState>{
    username: '',
    password: '',
    error: '',
-   displayError: false
+   displayError: false,
+   showLoading: false
   }
  }
 
@@ -48,17 +50,24 @@ class Login extends Component<IProps, IState>{
  public Authenticate = (event: Event): void => {
   event.preventDefault();
 
-  Http.post('/auth/login', {
-   name: this.state.username,
-   password: this.state.password
-  }).then((res: any) => {
-   storeToken(res.data.access_token)
-   this.props.history.push('/admin')
-  }).catch((err) => {
-   this.setState({ displayError: true })
-   this.setState({ error: err.response.data.message })
-  }).finally(() => {
-  })
+  try {
+   Http.post('/auth/login', {
+    name: this.state.username,
+    password: this.state.password
+   }).then((res: any) => {
+    storeToken(res.data.access_token)
+    this.setState({ showLoading: true })
+    this.props.history.push('/admin')
+   }).catch((err) => {
+    this.setState({ showLoading: false })
+    this.setState({ displayError: true })
+    this.setState({ error: "Error Login" })
+   }).finally(() => {
+   })
+  } catch (err) {
+   console.log(err)
+  }
+
  }
 
  render() {
@@ -75,6 +84,13 @@ class Login extends Component<IProps, IState>{
     </AppBar>
     <Toolbar />
     <main>
+     <Backdrop
+      sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      open={this.state.showLoading}
+     >
+      <CircularProgress color="inherit" />
+     </Backdrop>
+
      <Container component="main" maxWidth="xs">
       <Collapse in={this.state.displayError}>
        <Alert severity="error" sx={{ my: 2 }} onClose={() => { this.setState({ displayError: false }) }}>
@@ -107,10 +123,12 @@ class Login extends Component<IProps, IState>{
         value={this.state.password}
         onChange={this.HandleInput}
        />
-       <FormControlLabel
+
+       {/* <FormControlLabel
         control={<Checkbox value="remember" color="primary" />}
         label="Remember me"
-       />
+       /> */}
+
        <Button
         type="submit"
         fullWidth

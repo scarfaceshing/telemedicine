@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import SystemLayout, { Header, Body, Footer } from '../../layout/System'
+import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
 import { Typography, Box, Alert } from '@mui/material'
 
-interface IProps {
+interface IProps { }
 
-}
-
-interface IState {
-}
+interface IState { }
 
 const DrawerHeader = styled('div')(({ theme }) => ({
  display: 'flex',
@@ -19,13 +16,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
  ...theme.mixins.toolbar,
 }));
 
-
-export class Index extends Component<IProps, IState> {
+export class ChangePassword extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
 
-  console.log("Index")
+  console.log("ChangePassword")
  }
 
 
@@ -40,7 +36,7 @@ export class Index extends Component<IProps, IState> {
     <Body>
      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <DrawerHeader />
-      <Alert severity="error">This is page not available for now.. :D </Alert>
+
      </Box>
     </Body>
     <Footer>
@@ -50,4 +46,4 @@ export class Index extends Component<IProps, IState> {
  }
 }
 
-export default Index
+export default ChangePassword
