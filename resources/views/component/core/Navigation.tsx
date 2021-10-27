@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse } from '@mui/material'
+import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse, ListItemButton } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Http from '../../../api/Api'
 import { useLocation, Link } from 'react-router-dom'
@@ -10,13 +10,14 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import PersonIcon from '@mui/icons-material/Person'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
+import StarBorder from '@mui/icons-material/StarBorder'
 
 interface IProps {
  history?: any;
 }
 
 interface IState {
- open: boolean;
+ openNav: boolean;
 }
 
 interface IProps {
@@ -25,7 +26,7 @@ interface IProps {
  drawerOpen: boolean;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const openedMixin = (theme: Theme): CSSObject => ({
  width: drawerWidth,
@@ -91,6 +92,10 @@ export class Navigation extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
+
+  this.state = {
+   openNav: false
+  }
  }
 
  private getUser = (): void => {
@@ -112,6 +117,11 @@ export class Navigation extends Component<IProps, IState> {
   this.props.history.push('/');
  }
 
+ private collapseClick = (event: any): void => {
+  const open = !this.state.openNav
+  this.setState({ openNav: open })
+
+ }
 
  render() {
 
@@ -129,8 +139,8 @@ export class Navigation extends Component<IProps, IState> {
        <ChevronLeftIcon />
       </IconButton>
      </DrawerHeader>
-     <Divider />
 
+     <Divider />
      <List>
 
       <ListItem button component={Link} to={"/admin/dashboard"}>
@@ -142,14 +152,23 @@ export class Navigation extends Component<IProps, IState> {
 
       <Divider />
 
-      <ListItem button component={Link} to={"/admin/change-password"}>
+      <ListItem button onClick={this.collapseClick}>
        <ListItemIcon>
         <PersonIcon />
        </ListItemIcon>
-       <ListItemText primary={'Change password'} />
+       <ListItemText primary="User Management " />
+       {this.state.openNav ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
 
-      <Divider />
+      <Collapse in={this.state.openNav} timeout="auto" unmountOnExit>
+       <List component="div" disablePadding>
+        <ListItem sx={{ pl: 2 }} button component={Link} to="/admin/change-password">
+         <ListItemIcon>
+         </ListItemIcon>
+         <ListItemText primary="Change password" />
+        </ListItem>
+       </List>
+      </Collapse>
 
       <ListItem button onClick={this.logout}>
        <ListItemIcon>
