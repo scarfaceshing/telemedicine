@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse, ListItemButton } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Http from '../../../api/Api'
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation, Link, BrowserRouter, Router, useHistory } from 'react-router-dom'
 import LogoutIcon from '@mui/icons-material/Logout'
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import MuiDrawer from '@mui/material/Drawer'
@@ -11,6 +11,8 @@ import PersonIcon from '@mui/icons-material/Person'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import StarBorder from '@mui/icons-material/StarBorder'
+import Global from '../../../global/index'
+// import history from '../../../global/history'
 
 interface IProps {
  history?: any;
@@ -26,7 +28,7 @@ interface IProps {
  drawerOpen: boolean;
 }
 
-const drawerWidth = 250;
+const drawerWidth = Global.drawerWidth;
 
 const openedMixin = (theme: Theme): CSSObject => ({
  width: drawerWidth,
@@ -88,99 +90,87 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
  }
 ] */
 
-export class Navigation extends Component<IProps, IState> {
+const Navigation = (props: IProps) => {
+ const [openNav, setOpenNav] = useState(false);
+ const [drawerOpen, setDrawerOpen] = useState(false);
+ const history = useHistory()
 
- constructor(props: IProps) {
-  super(props)
-
-  this.state = {
-   openNav: false
-  }
- }
-
- private getUser = (): void => {
+ const getUser = (): void => {
   Http.get('auth/data/user', {}).then((res: any) => {
    console.log(res.data);
   })
  }
 
- private getUserInfo = (): void => {
+ const getUserInfo = (): void => {
   Http.get('auth/me', {}).then((res) => {
    console.log(res);
   })
  }
 
- private logout = (): void => {
+ const logout = (): void => {
   Http.post('auth/logout', {}).then((res) => {
+   history.push('/')
   })
-
-  this.props.history.push('/');
  }
 
- private collapseClick = (event: any): void => {
-  const open = !this.state.openNav
-  this.setState({ openNav: open })
-
+ const collapseClick = (event: any): void => {
+  const open = !openNav
+  setOpenNav(open)
  }
 
- render() {
+ return (
+  <>
+   <Drawer variant="permanent" open={props.drawerOpen}>
+    <DrawerHeader>
+     <IconButton onClick={props.onToggleDrawer}>
+      <ChevronLeftIcon />
+     </IconButton>
+    </DrawerHeader>
 
-  /*  const NavComponent = NavItem.map(({ path, name, icon }, key) =>
-    <ListItem button key={key} component={Link} to={path}>
-     <ListItemIcon>{icon}</ListItemIcon>
-     <ListItemText primary={name} />
-    </ListItem>) */
+    <Divider />
+    <List>
 
-  return (
-   <>
-    <Drawer variant="permanent" open={this.props.drawerOpen}>
-     <DrawerHeader>
-      <IconButton onClick={this.props.onToggleDrawer}>
-       <ChevronLeftIcon />
-      </IconButton>
-     </DrawerHeader>
+     <ListItem button component={Link} to={"/admin/dashboard"}>
+      <ListItemIcon>
+       <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary={'Dashboard'} />
+     </ListItem>
 
      <Divider />
-     <List>
 
-      <ListItem button component={Link} to={"/admin/dashboard"}>
-       <ListItemIcon>
-        <DashboardIcon />
-       </ListItemIcon>
-       <ListItemText primary={'Dashboard'} />
-      </ListItem>
+     <ListItem button onClick={collapseClick}>
+      <ListItemIcon>
+       <PersonIcon />
+      </ListItemIcon>
+      <ListItemText primary="User Management " />
+      {openNav ? <ExpandLess /> : <ExpandMore />}
+     </ListItem>
 
-      <Divider />
+     <Collapse in={openNav} timeout="auto" unmountOnExit>
+      <List component="div" disablePadding>
+       <ListItem sx={{ pl: 2 }} button component={Link} to="/admin/change-password">
+        <ListItemIcon>
+        </ListItemIcon>
+        <ListItemText>
+         Change password
+        </ListItemText>
+       </ListItem>
+      </List>
+     </Collapse>
 
-      <ListItem button onClick={this.collapseClick}>
-       <ListItemIcon>
-        <PersonIcon />
-       </ListItemIcon>
-       <ListItemText primary="User Management " />
-       {this.state.openNav ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-
-      <Collapse in={this.state.openNav} timeout="auto" unmountOnExit>
-       <List component="div" disablePadding>
-        <ListItem sx={{ pl: 2 }} button component={Link} to="/admin/change-password">
-         <ListItemIcon>
-         </ListItemIcon>
-         <ListItemText primary="Change password" />
-        </ListItem>
-       </List>
-      </Collapse>
-
-      <ListItem button onClick={this.logout}>
-       <ListItemIcon>
-        <LogoutIcon />
-       </ListItemIcon>
-       <ListItemText primary={'Logout'} />
-      </ListItem>
-     </List>
-    </Drawer>
-   </>
-  )
- }
+     <ListItem button onClick={logout}>
+      <ListItemIcon>
+       <LogoutIcon />
+      </ListItemIcon>
+      <ListItemText>
+       Logout
+      </ListItemText>
+     </ListItem>
+    </List>
+   </Drawer>
+  </>
+ )
 }
 
-export default Navigation
+export default Navigation;

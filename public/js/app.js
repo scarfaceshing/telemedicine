@@ -3508,6 +3508,62 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/ExpandLess.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/icons-material/ExpandLess.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+}), 'ExpandLess');
+
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/ExpandMore.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/icons-material/ExpandMore.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+}), 'ExpandMore');
+
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/Logout.js":
 /*!****************************************************!*\
   !*** ./node_modules/@mui/icons-material/Logout.js ***!
@@ -9394,6 +9450,550 @@ function GlobalStyles(props) {
   }), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)])
 } : 0;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GlobalStyles);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/Grid/Grid.js":
+/*!*************************************************!*\
+  !*** ./node_modules/@mui/material/Grid/Grid.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "generateRowGap": () => (/* binding */ generateRowGap),
+/* harmony export */   "generateColumnGap": () => (/* binding */ generateColumnGap),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/breakpoints.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js");
+/* harmony import */ var _mui_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/core */ "./node_modules/@mui/core/composeClasses/composeClasses.js");
+/* harmony import */ var _utils_requirePropFactory__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../utils/requirePropFactory */ "./node_modules/@mui/material/utils/requirePropFactory.js");
+/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
+/* harmony import */ var _GridContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./GridContext */ "./node_modules/@mui/material/Grid/GridContext.js");
+/* harmony import */ var _gridClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./gridClasses */ "./node_modules/@mui/material/Grid/gridClasses.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+const _excluded = ["className", "columns", "columnSpacing", "component", "container", "direction", "item", "lg", "md", "rowSpacing", "sm", "spacing", "wrap", "xl", "xs", "zeroMinWidth"];
+// A grid component using the following libs as inspiration.
+//
+// For the implementation:
+// - https://getbootstrap.com/docs/4.3/layout/grid/
+// - https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
+// - https://github.com/roylee0704/react-flexbox-grid
+// - https://material.angularjs.org/latest/layout/introduction
+//
+// Follow this flexbox Guide to better understand the underlying model:
+// - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+
+
+
+
+
+
+
+
+
+
+function getOffset(val) {
+  const parse = parseFloat(val);
+  return `${parse}${String(val).replace(String(parse), '') || 'px'}`;
+}
+
+function generateGrid(globalStyles, theme, breakpoint, ownerState) {
+  const size = ownerState[breakpoint];
+
+  if (!size) {
+    return;
+  }
+
+  let styles = {};
+
+  if (size === true) {
+    // For the auto layouting
+    styles = {
+      flexBasis: 0,
+      flexGrow: 1,
+      maxWidth: '100%'
+    };
+  } else if (size === 'auto') {
+    styles = {
+      flexBasis: 'auto',
+      flexGrow: 0,
+      flexShrink: 0,
+      maxWidth: 'none',
+      width: 'auto'
+    };
+  } else {
+    const columnsBreakpointValues = (0,_mui_system__WEBPACK_IMPORTED_MODULE_6__.resolveBreakpointValues)({
+      values: ownerState.columns,
+      base: theme.breakpoints.values
+    }); // Keep 7 significant numbers.
+
+    const width = `${Math.round(size / columnsBreakpointValues[breakpoint] * 10e7) / 10e5}%`;
+    let more = {};
+
+    if (ownerState.container && ownerState.item && ownerState.columnSpacing !== 0) {
+      const themeSpacing = theme.spacing(ownerState.columnSpacing);
+
+      if (themeSpacing !== '0px') {
+        const fullWidth = `calc(${width} + ${getOffset(themeSpacing)})`;
+        more = {
+          flexBasis: fullWidth,
+          maxWidth: fullWidth
+        };
+      }
+    } // Close to the bootstrap implementation:
+    // https://github.com/twbs/bootstrap/blob/8fccaa2439e97ec72a4b7dc42ccc1f649790adb0/scss/mixins/_grid.scss#L41
+
+
+    styles = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+      flexBasis: width,
+      flexGrow: 0,
+      maxWidth: width
+    }, more);
+  } // No need for a media query for the first size.
+
+
+  if (theme.breakpoints.values[breakpoint] === 0) {
+    Object.assign(globalStyles, styles);
+  } else {
+    globalStyles[theme.breakpoints.up(breakpoint)] = styles;
+  }
+}
+
+function generateDirection({
+  theme,
+  ownerState
+}) {
+  return (0,_mui_system__WEBPACK_IMPORTED_MODULE_6__.handleBreakpoints)({
+    theme
+  }, ownerState.direction, propValue => {
+    const output = {
+      flexDirection: propValue
+    };
+
+    if (propValue.indexOf('column') === 0) {
+      output[`& > .${_gridClasses__WEBPACK_IMPORTED_MODULE_7__["default"].item}`] = {
+        maxWidth: 'none'
+      };
+    }
+
+    return output;
+  });
+}
+
+function generateRowGap({
+  theme,
+  ownerState
+}) {
+  const {
+    container,
+    rowSpacing
+  } = ownerState;
+  let styles = {};
+
+  if (container && rowSpacing !== 0) {
+    styles = (0,_mui_system__WEBPACK_IMPORTED_MODULE_6__.handleBreakpoints)({
+      theme
+    }, rowSpacing, propValue => {
+      const themeSpacing = theme.spacing(propValue);
+
+      if (themeSpacing !== '0px') {
+        return {
+          marginTop: `-${getOffset(themeSpacing)}`,
+          [`& > .${_gridClasses__WEBPACK_IMPORTED_MODULE_7__["default"].item}`]: {
+            paddingTop: getOffset(themeSpacing)
+          }
+        };
+      }
+
+      return {};
+    });
+  }
+
+  return styles;
+}
+function generateColumnGap({
+  theme,
+  ownerState
+}) {
+  const {
+    container,
+    columnSpacing
+  } = ownerState;
+  let styles = {};
+
+  if (container && columnSpacing !== 0) {
+    styles = (0,_mui_system__WEBPACK_IMPORTED_MODULE_6__.handleBreakpoints)({
+      theme
+    }, columnSpacing, propValue => {
+      const themeSpacing = theme.spacing(propValue);
+
+      if (themeSpacing !== '0px') {
+        return {
+          width: `calc(100% + ${getOffset(themeSpacing)})`,
+          marginLeft: `-${getOffset(themeSpacing)}`,
+          [`& > .${_gridClasses__WEBPACK_IMPORTED_MODULE_7__["default"].item}`]: {
+            paddingLeft: getOffset(themeSpacing)
+          }
+        };
+      }
+
+      return {};
+    });
+  }
+
+  return styles;
+} // Default CSS values
+// flex: '0 1 auto',
+// flexDirection: 'row',
+// alignItems: 'flex-start',
+// flexWrap: 'nowrap',
+// justifyContent: 'flex-start',
+
+const GridRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('div', {
+  name: 'MuiGrid',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      container,
+      direction,
+      item,
+      lg,
+      md,
+      sm,
+      spacing,
+      wrap,
+      xl,
+      xs,
+      zeroMinWidth
+    } = props.ownerState;
+    return [styles.root, container && styles.container, item && styles.item, zeroMinWidth && styles.zeroMinWidth, container && spacing !== 0 && styles[`spacing-xs-${String(spacing)}`], direction !== 'row' && styles[`direction-xs-${String(direction)}`], wrap !== 'wrap' && styles[`wrap-xs-${String(wrap)}`], xs !== false && styles[`grid-xs-${String(xs)}`], sm !== false && styles[`grid-sm-${String(sm)}`], md !== false && styles[`grid-md-${String(md)}`], lg !== false && styles[`grid-lg-${String(lg)}`], xl !== false && styles[`grid-xl-${String(xl)}`]];
+  }
+})(({
+  ownerState
+}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  boxSizing: 'border-box'
+}, ownerState.container && {
+  display: 'flex',
+  flexWrap: 'wrap',
+  width: '100%'
+}, ownerState.item && {
+  margin: 0 // For instance, it's useful when used with a `figure` element.
+
+}, ownerState.zeroMinWidth && {
+  minWidth: 0
+}, ownerState.wrap === 'nowrap' && {
+  flexWrap: 'nowrap'
+}, ownerState.wrap === 'reverse' && {
+  flexWrap: 'wrap-reverse'
+}), generateDirection, generateRowGap, generateColumnGap, ({
+  theme,
+  ownerState
+}) => theme.breakpoints.keys.reduce((globalStyles, breakpoint) => {
+  // Use side effect over immutability for better performance.
+  generateGrid(globalStyles, theme, breakpoint, ownerState);
+  return globalStyles;
+}, {}));
+
+const useUtilityClasses = ownerState => {
+  const {
+    classes,
+    container,
+    direction,
+    item,
+    lg,
+    md,
+    sm,
+    spacing,
+    wrap,
+    xl,
+    xs,
+    zeroMinWidth
+  } = ownerState;
+  const slots = {
+    root: ['root', container && 'container', item && 'item', zeroMinWidth && 'zeroMinWidth', container && spacing !== 0 && `spacing-xs-${String(spacing)}`, direction !== 'row' && `direction-xs-${String(direction)}`, wrap !== 'wrap' && `wrap-xs-${String(wrap)}`, xs !== false && `grid-xs-${String(xs)}`, sm !== false && `grid-sm-${String(sm)}`, md !== false && `grid-md-${String(md)}`, lg !== false && `grid-lg-${String(lg)}`, xl !== false && `grid-xl-${String(xl)}`]
+  };
+  return (0,_mui_core__WEBPACK_IMPORTED_MODULE_9__["default"])(slots, _gridClasses__WEBPACK_IMPORTED_MODULE_7__.getGridUtilityClass, classes);
+};
+
+const Grid = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Grid(inProps, ref) {
+  const themeProps = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__["default"])({
+    props: inProps,
+    name: 'MuiGrid'
+  });
+  const props = (0,_mui_system__WEBPACK_IMPORTED_MODULE_11__["default"])(themeProps);
+
+  const {
+    className,
+    columns: columnsProp = 12,
+    columnSpacing: columnSpacingProp,
+    component = 'div',
+    container = false,
+    direction = 'row',
+    item = false,
+    lg = false,
+    md = false,
+    rowSpacing: rowSpacingProp,
+    sm = false,
+    spacing = 0,
+    wrap = 'wrap',
+    xl = false,
+    xs = false,
+    zeroMinWidth = false
+  } = props,
+        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
+
+  const rowSpacing = rowSpacingProp || spacing;
+  const columnSpacing = columnSpacingProp || spacing;
+  const columns = react__WEBPACK_IMPORTED_MODULE_2__.useContext(_GridContext__WEBPACK_IMPORTED_MODULE_12__["default"]) || columnsProp;
+
+  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+    columns,
+    container,
+    direction,
+    item,
+    lg,
+    md,
+    sm,
+    rowSpacing,
+    columnSpacing,
+    wrap,
+    xl,
+    xs,
+    zeroMinWidth
+  });
+
+  const classes = useUtilityClasses(ownerState);
+
+  const wrapChild = element => columns !== 12 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_GridContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
+    value: columns,
+    children: element
+  }) : element;
+
+  return wrapChild( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(GridRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    ownerState: ownerState,
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className),
+    as: component,
+    ref: ref
+  }, other)));
+});
+ true ? Grid.propTypes
+/* remove-proptypes */
+= {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The content of the component.
+   */
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node),
+
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object),
+
+  /**
+   * @ignore
+   */
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+
+  /**
+   * The number of columns.
+   * @default 12
+   */
+  columns: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_3___default().number)), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object)]),
+
+  /**
+   * Defines the horizontal space between the type `item` components.
+   * It overrides the value of the `spacing` prop.
+   */
+  columnSpacing: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)])), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)]),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().elementType),
+
+  /**
+   * If `true`, the component will have the flex *container* behavior.
+   * You should be wrapping *items* with a *container*.
+   * @default false
+   */
+  container: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
+
+  /**
+   * Defines the `flex-direction` style property.
+   * It is applied for all screen sizes.
+   * @default 'row'
+   */
+  direction: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['column-reverse', 'column', 'row-reverse', 'row']), prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['column-reverse', 'column', 'row-reverse', 'row'])), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object)]),
+
+  /**
+   * If `true`, the component will have the flex *item* behavior.
+   * You should be wrapping *items* with a *container*.
+   * @default false
+   */
+  item: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `lg` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  lg: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `md` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  md: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)]),
+
+  /**
+   * Defines the vertical space between the type `item` components.
+   * It overrides the value of the `spacing` prop.
+   */
+  rowSpacing: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)])), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `sm` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  sm: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)]),
+
+  /**
+   * Defines the space between the type `item` components.
+   * It can only be used on a type `container` component.
+   * @default 0
+   */
+  spacing: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)])), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)]),
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object),
+
+  /**
+   * Defines the `flex-wrap` style property.
+   * It's applied for all screen sizes.
+   * @default 'wrap'
+   */
+  wrap: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['nowrap', 'wrap-reverse', 'wrap']),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `xl` breakpoint and wider screens.
+   * @default false
+   */
+  xl: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for all the screen sizes with the lowest priority.
+   * @default false
+   */
+  xs: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)]),
+
+  /**
+   * If `true`, it sets `min-width: 0` on the item.
+   * Refer to the limitations section of the documentation to better understand the use case.
+   * @default false
+   */
+  zeroMinWidth: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)
+} : 0;
+
+if (true) {
+  const requireProp = (0,_utils_requirePropFactory__WEBPACK_IMPORTED_MODULE_13__["default"])('Grid', Grid); // eslint-disable-next-line no-useless-concat
+
+  Grid['propTypes' + ''] = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, Grid.propTypes, {
+    direction: requireProp('container'),
+    lg: requireProp('item'),
+    md: requireProp('item'),
+    sm: requireProp('item'),
+    spacing: requireProp('container'),
+    wrap: requireProp('container'),
+    xs: requireProp('item'),
+    zeroMinWidth: requireProp('item')
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Grid);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/Grid/GridContext.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/material/Grid/GridContext.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/**
+ * @ignore - internal component.
+ */
+
+const GridContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext();
+
+if (true) {
+  GridContext.displayName = 'GridContext';
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GridContext);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/Grid/gridClasses.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/material/Grid/gridClasses.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getGridUtilityClass": () => (/* binding */ getGridUtilityClass),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mui_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/core */ "./node_modules/@mui/core/generateUtilityClass/generateUtilityClass.js");
+/* harmony import */ var _mui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/core */ "./node_modules/@mui/core/generateUtilityClasses/generateUtilityClasses.js");
+
+function getGridUtilityClass(slot) {
+  return (0,_mui_core__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiGrid', slot);
+}
+const SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const DIRECTIONS = ['column-reverse', 'column', 'row-reverse', 'row'];
+const WRAPS = ['nowrap', 'wrap-reverse', 'wrap'];
+const GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const gridClasses = (0,_mui_core__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiGrid', ['root', 'container', 'item', 'zeroMinWidth', // spacings
+...SPACINGS.map(spacing => `spacing-xs-${spacing}`), // direction values
+...DIRECTIONS.map(direction => `direction-xs-${direction}`), // wrap values
+...WRAPS.map(wrap => `wrap-xs-${wrap}`), // grid sizes for all breakpoints
+...GRID_SIZES.map(size => `grid-xs-${size}`), ...GRID_SIZES.map(size => `grid-sm-${size}`), ...GRID_SIZES.map(size => `grid-md-${size}`), ...GRID_SIZES.map(size => `grid-lg-${size}`), ...GRID_SIZES.map(size => `grid-xl-${size}`)]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gridClasses);
 
 /***/ }),
 
@@ -25797,6 +26397,24 @@ var config = {
 
 /***/ }),
 
+/***/ "./resources/global/index.ts":
+/*!***********************************!*\
+  !*** ./resources/global/index.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  drawerWidth: 250,
+  openNav: false
+});
+
+/***/ }),
+
 /***/ "./resources/js/App.tsx":
 /*!******************************!*\
   !*** ./resources/js/App.tsx ***!
@@ -26083,14 +26701,13 @@ var PrivateRoute = [{
   path: '/admin/dashboard',
   component: _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
-  path: '/admin/user-management/change-password',
+  path: '/admin/change-password',
   component: _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__["default"]
 }];
 
 var CheckPoint = function CheckPoint(_a) {
   var component = _a.component,
-      path = _a.path,
-      key = _a.key;
+      path = _a.path;
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
   _api_Api__WEBPACK_IMPORTED_MODULE_5__["default"].post('/auth/check-auth', {}).then(function (res) {
     console.log("Authenticated");
@@ -26100,7 +26717,7 @@ var CheckPoint = function CheckPoint(_a) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: path,
     component: component
-  }, key);
+  }, void 0);
 };
 
 var Routes = function (_super) {
@@ -26135,13 +26752,7 @@ var Routes = function (_super) {
             exact: true,
             from: "/admin/",
             to: "/admin/dashboard"
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
-            path: "/admin/dashboard",
-            component: _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
-            path: "/admin/change-password",
-            component: _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__["default"]
-          }, void 0)]
+          }, void 0), privateComponents]
         }), void 0)]
       }, void 0)
     }, void 0);
@@ -26163,53 +26774,29 @@ var Routes = function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Navigation": () => (/* binding */ Navigation),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Divider/Divider.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Divider/Divider.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Collapse/Collapse.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
 /* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../api/Api */ "./resources/api/Api.ts");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/icons-material/Logout */ "./node_modules/@mui/icons-material/Logout.js");
-/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
-/* harmony import */ var _mui_material_Drawer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/Drawer */ "./node_modules/@mui/material/Drawer/Drawer.js");
-/* harmony import */ var _mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/ChevronLeft */ "./node_modules/@mui/icons-material/ChevronLeft.js");
-/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
-var __extends = undefined && undefined.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/icons-material/Logout */ "./node_modules/@mui/icons-material/Logout.js");
+/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
+/* harmony import */ var _mui_material_Drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/Drawer */ "./node_modules/@mui/material/Drawer/Drawer.js");
+/* harmony import */ var _mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/ChevronLeft */ "./node_modules/@mui/icons-material/ChevronLeft.js");
+/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
+/* harmony import */ var _mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/icons-material/ExpandLess */ "./node_modules/@mui/icons-material/ExpandLess.js");
+/* harmony import */ var _mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/ExpandMore */ "./node_modules/@mui/icons-material/ExpandMore.js");
+/* harmony import */ var _global_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../global/index */ "./resources/global/index.ts");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -26237,7 +26824,10 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-var drawerWidth = 240;
+
+
+
+var drawerWidth = _global_index__WEBPACK_IMPORTED_MODULE_3__["default"].drawerWidth;
 
 var openedMixin = function openedMixin(theme) {
   return {
@@ -26265,7 +26855,7 @@ var closedMixin = function closedMixin(theme) {
   }, _a;
 };
 
-var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])('div')(function (_a) {
+var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])('div')(function (_a) {
   var theme = _a.theme;
   return __assign({
     display: 'flex',
@@ -26274,7 +26864,7 @@ var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default
     padding: theme.spacing(0, 1)
   }, theme.mixins.toolbar);
 });
-var Drawer = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])(_mui_material_Drawer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+var Drawer = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_mui_material_Drawer__WEBPACK_IMPORTED_MODULE_5__["default"], {
   shouldForwardProp: function shouldForwardProp(prop) {
     return prop !== 'open';
   }
@@ -26305,89 +26895,107 @@ var Drawer = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])(_m
  }
 ] */
 
-var Navigation = function (_super) {
-  __extends(Navigation, _super);
+var Navigation = function Navigation(props) {
+  var _a = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      openNav = _a[0],
+      setOpenNav = _a[1];
 
-  function Navigation(props) {
-    var _this = _super.call(this, props) || this;
+  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      drawerOpen = _b[0],
+      setDrawerOpen = _b[1];
 
-    _this.getUser = function () {
-      _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].get('auth/data/user', {}).then(function (res) {
-        console.log(res.data);
-      });
-    };
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
 
-    _this.getUserInfo = function () {
-      _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].get('auth/me', {}).then(function (res) {
-        console.log(res);
-      });
-    };
-
-    _this.logout = function () {
-      _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].post('auth/logout', {}).then(function (res) {});
-
-      _this.props.history.push('/');
-    };
-
-    return _this;
-  }
-
-  Navigation.prototype.render = function () {
-    /*  const NavComponent = NavItem.map(({ path, name, icon }, key) =>
-      <ListItem button key={key} component={Link} to={path}>
-       <ListItemIcon>{icon}</ListItemIcon>
-       <ListItemText primary={name} />
-      </ListItem>) */
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Drawer, __assign({
-        variant: "permanent",
-        open: this.props.drawerOpen
-      }, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-            onClick: this.props.onToggleDrawer
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_6__["default"], {}, void 0)
-          }), void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
-            button: true,
-            component: react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link,
-            to: "/admin/dashboard"
-          }, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_12__["default"], {}, void 0)
-            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-              primary: 'Dashboard'
-            }, void 0)]
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
-            button: true,
-            component: react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link,
-            to: "/admin/change-password"
-          }, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_14__["default"], {}, void 0)
-            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-              primary: 'Change password'
-            }, void 0)]
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
-            button: true,
-            onClick: this.logout
-          }, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_15__["default"], {}, void 0)
-            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-              primary: 'Logout'
-            }, void 0)]
-          }), void 0)]
-        }, void 0)]
-      }), void 0)
-    }, void 0);
+  var getUser = function getUser() {
+    _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].get('auth/data/user', {}).then(function (res) {
+      console.log(res.data);
+    });
   };
 
-  return Navigation;
-}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+  var getUserInfo = function getUserInfo() {
+    _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].get('auth/me', {}).then(function (res) {
+      console.log(res);
+    });
+  };
 
+  var logout = function logout() {
+    _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].post('auth/logout', {}).then(function (res) {
+      history.push('/');
+    });
+  };
+
+  var collapseClick = function collapseClick(event) {
+    var open = !openNav;
+    setOpenNav(open);
+  };
+
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Drawer, __assign({
+      variant: "permanent",
+      open: props.drawerOpen
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+          onClick: props.onToggleDrawer
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_8__["default"], {}, void 0)
+        }), void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+          button: true,
+          component: react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link,
+          to: "/admin/dashboard"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_14__["default"], {}, void 0)
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            primary: 'Dashboard'
+          }, void 0)]
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+          button: true,
+          onClick: collapseClick
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_16__["default"], {}, void 0)
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            primary: "User Management "
+          }, void 0), openNav ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_17__["default"], {}, void 0) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_18__["default"], {}, void 0)]
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
+          "in": openNav,
+          timeout: "auto",
+          unmountOnExit: true
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+            component: "div",
+            disablePadding: true
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+              sx: {
+                pl: 2
+              },
+              button: true,
+              component: react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link,
+              to: "/admin/change-password"
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+                children: "Change password"
+              }, void 0)]
+            }), void 0)
+          }), void 0)
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+          button: true,
+          onClick: logout
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_20__["default"], {}, void 0)
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            children: "Logout"
+          }, void 0)]
+        }), void 0)]
+      }, void 0)]
+    }), void 0)
+  }, void 0);
+};
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navigation);
 
@@ -26487,7 +27095,7 @@ function Body(props) {
     children: props.content
   }, void 0);
 }
-var drawerWidth = 240;
+var drawerWidth = 250;
 var AppBar = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_mui_material_AppBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
   shouldForwardProp: function shouldForwardProp(prop) {
     return prop !== 'open';
@@ -26496,6 +27104,7 @@ var AppBar = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_m
   var theme = _a.theme,
       open = _a.open;
   return __assign({
+    backgroundColor: "red",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -26509,6 +27118,15 @@ var AppBar = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_m
       duration: theme.transitions.duration.enteringScreen
     })
   });
+});
+var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])('div')(function (_a) {
+  var theme = _a.theme;
+  return __assign({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1)
+  }, theme.mixins.toolbar);
 });
 
 var SystemLayout = function (_super) {
@@ -26527,7 +27145,7 @@ var SystemLayout = function (_super) {
 
     _this.state = {
       drawerWidth: drawerWidth,
-      drawerOpen: true
+      drawerOpen: false
     };
     return _this;
   }
@@ -26586,7 +27204,15 @@ var SystemLayout = function (_super) {
             drawerWidth: this.state.drawerWidth,
             onToggleDrawer: this.onToggleDrawer
           }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("main", {
-            children: body ? body.props.children : null
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+              component: "main",
+              sx: {
+                flexGrow: 1,
+                p: 3
+              }
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {}, void 0), body ? body.props.children : null]
+            }), void 0)
           }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("footer", {
             children: footer ? footer.props.children : null
           }, void 0)]
@@ -26619,7 +27245,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/System */ "./resources/views/layout/System.tsx");
 /* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Alert/Alert.js");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -26696,20 +27322,28 @@ var Dashboard = function (_super) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
           children: "Sandbox - Telemedicine App"
         }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-          component: "main",
-          sx: {
-            flexGrow: 1,
-            p: 3
-          }
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
+          container: true
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-            severity: "error"
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
+            item: true
           }, {
-            children: "This is page not available for now.. :D "
-          }), void 0)]
-        }), void 0)
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
+              variant: "h5",
+              component: "h5",
+              gutterBottom: true
+            }, {
+              children: "Dashboard"
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              variant: "subtitle2"
+            }, void 0)]
+          }), void 0)
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+          severity: "error"
+        }, {
+          children: "This is page not available for now.. :D "
+        }), void 0)]
       }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
     }, void 0);
   };
@@ -26731,43 +27365,16 @@ var Dashboard = function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ChangePassword": () => (/* binding */ ChangePassword),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-var __extends = undefined && undefined.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -26789,49 +27396,96 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])('div')(function (_a) {
-  var theme = _a.theme;
-  return __assign({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1)
-  }, theme.mixins.toolbar);
-});
+var ChangePassword = function ChangePassword(props) {
+  var _a = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+      curPassword = _a[0],
+      useCurPassword = _a[1];
 
-var ChangePassword = function (_super) {
-  __extends(ChangePassword, _super);
+  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+      newPassword = _b[0],
+      useNewPassword = _b[1];
 
-  function ChangePassword(props) {
-    var _this = _super.call(this, props) || this;
+  var _c = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+      conPassword = _c[0],
+      useConPassword = _c[1];
 
-    console.log("ChangePassword");
-    return _this;
-  }
-
-  ChangePassword.prototype.render = function () {
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          children: "Sandbox - Telemedicine App"
-        }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-          component: "main",
-          sx: {
-            flexGrow: 1,
-            p: 3
-          }
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {}, void 0)
-        }), void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
-    }, void 0);
+  var _onSubmit = function onSubmit(event) {
+    event.preventDefault();
+    console.log(curPassword, newPassword, conPassword);
   };
 
-  return ChangePassword;
-}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
-
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
+          container: true
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
+            item: true
+          }, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+              variant: "h5",
+              component: "h5",
+              gutterBottom: true
+            }, {
+              children: "Change Password"
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+              variant: "subtitle2"
+            }, {
+              children: "Where the user can change password."
+            }), void 0)]
+          }), void 0)
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
+          component: "form",
+          onSubmit: function onSubmit(event) {
+            return _onSubmit(event);
+          }
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            margin: "normal",
+            value: curPassword,
+            onChange: function onChange(e) {
+              return useCurPassword(e.currentTarget.value);
+            },
+            required: true,
+            fullWidth: true,
+            type: "password",
+            label: "Current Password"
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            margin: "normal",
+            value: newPassword,
+            onChange: function onChange(e) {
+              return useNewPassword(e.currentTarget.value);
+            },
+            required: true,
+            fullWidth: true,
+            type: "password",
+            label: "New Password"
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            margin: "normal",
+            value: conPassword,
+            onChange: function onChange(e) {
+              return useConPassword(e.currentTarget.value);
+            },
+            required: true,
+            fullWidth: true,
+            type: "password",
+            label: "Confirm Password"
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+            type: "submit",
+            variant: "contained"
+          }, {
+            children: "Submit"
+          }), void 0)]
+        }), void 0)]
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
+    }, void 0)
+  }, void 0);
+};
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChangePassword);
 
@@ -26975,13 +27629,17 @@ var Login = function (_super) {
     var _this = this;
 
     return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
+        sx: {
+          backgroundColor: "red"
+        }
+      }, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
             children: "Sandbox - Telemedicine App"
           }, void 0)
         }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
           sx: {
             color: '#fff',

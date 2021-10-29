@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SystemLayout, { Header, Body, Footer } from '../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
-import { Typography, Box, Alert } from '@mui/material'
+import { Typography, Box, Alert, Grid } from '@mui/material'
 
 interface IProps {
 
@@ -38,10 +38,18 @@ export class Dashboard extends Component<IProps, IState> {
      </Typography>
     </Header>
     <Body>
-     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-      <DrawerHeader />
-      <Alert severity="error">This is page not available for now.. :D </Alert>
-     </Box>
+     <Grid container>
+      <Grid item>
+       <Typography variant="h5" component="h5" gutterBottom>
+        Dashboard
+       </Typography>
+       <Typography variant="subtitle2">
+
+       </Typography>
+      </Grid>
+     </Grid>
+
+     <Alert severity="error">This is page not available for now.. :D </Alert>
     </Body>
     <Footer>
     </Footer>

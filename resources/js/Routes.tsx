@@ -19,21 +19,21 @@ const PrivateRoute = [
   component: DashboardPage
  },
  {
-  path: '/admin/user-management/change-password',
+  path: '/admin/change-password',
   component: ChangePasswordPage
  }
 ]
 
-const CheckPoint = ({ component, path, key }: any) => {
+const CheckPoint = ({ component, path }: any) => {
  const history = useHistory()
 
- Http.post('/auth/check-auth', {}).then((res) => {
+ Http.post('/auth/check-auth', {}).then((res: any) => {
   console.log("Authenticated")
  }).catch((err) => {
   return history.push('/login')
  })
 
- return <Route path={path} component={component} key={key} />
+ return <Route path={path} component={component} />
 }
 
 
@@ -48,11 +48,8 @@ class Routes extends React.Component {
      <Redirect exact from="/" to="/login" />
      <Route path="/login" component={LoginPage} />
      <Route path="/admin">
-
       <Redirect exact from="/admin/" to="/admin/dashboard" />
-      <Route path="/admin/dashboard" component={DashboardPage} />
-      <Route path="/admin/change-password" component={ChangePasswordPage} />
-
+      {privateComponents}
      </Route>
     </Switch>
    </BrowserRouter>

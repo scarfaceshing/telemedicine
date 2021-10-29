@@ -75,7 +75,7 @@ class Login extends Component<IProps, IState>{
 
   return (
    <>
-    <AppBar>
+    <AppBar sx={{ backgroundColor: "red" }}>
      <Toolbar>
       <Typography>
        Sandbox - Telemedicine App

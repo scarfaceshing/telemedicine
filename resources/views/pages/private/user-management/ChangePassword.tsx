@@ -1,32 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
-import { Typography, Box, Alert } from '@mui/material'
+import { Typography, Box, Alert, Grid, TextField, Button, FormGroup } from '@mui/material'
+import ContentHeader from '../../../component/core/ContentHeader'
 
 interface IProps { }
 
-interface IState { }
+interface IState {
+ currentPassword: string;
+ newPassword: string;
+ confirmPassword: string;
+}
 
-const DrawerHeader = styled('div')(({ theme }) => ({
- display: 'flex',
- alignItems: 'center',
- justifyContent: 'flex-end',
- padding: theme.spacing(0, 1),
- // necessary for content to be below app bar
- ...theme.mixins.toolbar,
-}));
+const ChangePassword = (props: IProps) => {
+ const [curPassword, useCurPassword] = useState('')
+ const [newPassword, useNewPassword] = useState('')
+ const [conPassword, useConPassword] = useState('')
 
-export class ChangePassword extends Component<IProps, IState> {
+ const onSubmit = (event: Event) => {
+  event.preventDefault();
 
- constructor(props: IProps) {
-  super(props)
-
-  console.log("ChangePassword")
+  console.log(curPassword, newPassword, conPassword)
  }
 
 
- render() {
-  return (
+ return (
+  <>
    <SystemLayout>
     <Header>
      <Typography>
@@ -34,16 +33,28 @@ export class ChangePassword extends Component<IProps, IState> {
      </Typography>
     </Header>
     <Body>
-     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-      <DrawerHeader />
-
+     <Grid container>
+      <Grid item>
+       <Typography variant="h5" component="h5" gutterBottom>
+        Change Password
+       </Typography>
+       <Typography variant="subtitle2">
+        Where the user can change password.
+       </Typography>
+      </Grid>
+     </Grid>
+     <Box component="form" onSubmit={(event: any) => onSubmit(event)}>
+      <TextField margin="normal" value={curPassword} onChange={(e) => useCurPassword(e.currentTarget.value)} required fullWidth type="password" label="Current Password" />
+      <TextField margin="normal" value={newPassword} onChange={(e) => useNewPassword(e.currentTarget.value)} required fullWidth type="password" label="New Password" />
+      <TextField margin="normal" value={conPassword} onChange={(e) => useConPassword(e.currentTarget.value)} required fullWidth type="password" label="Confirm Password" />
+      <Button type="submit" variant="contained">Submit</Button>
      </Box>
     </Body>
     <Footer>
     </Footer>
    </SystemLayout>
-  )
- }
+  </>
+ )
 }
 
 export default ChangePassword
