@@ -1,8 +1,13 @@
-import React from 'react';
-import LoginPage from '../views/pages/public/Login'
-import ChangePasswordPage from '../views/pages/private/user-management/ChangePassword';
-import DashboardPage from '../views/pages/private/Dashboard'
+import React from 'react'
 import Http from '../api/Api'
+
+import LoginPage from '../views/pages/public/Login'
+import ChangePasswordPage from '../views/pages/private/user-management/ChangePassword'
+import DashboardPage from '../views/pages/private/Dashboard'
+import RolePage from '../views/pages/private/user-management/Role'
+import PermissionPage from '../views/pages/private/user-management/Permission'
+import UsersPage from '../views/pages/private/user-management/Users'
+import PermissionRolePage from '../views/pages/private/user-management/PermissionRole'
 
 import {
  BrowserRouter,
@@ -21,18 +26,34 @@ const PrivateRoute = [
  {
   path: '/admin/change-password',
   component: ChangePasswordPage
+ },
+ {
+  path: '/admin/role',
+  component: RolePage
+ },
+ {
+  path: '/admin/permission',
+  component: PermissionPage
+ },
+ {
+  path: '/admin/users',
+  component: UsersPage
+ },
+ {
+  path: '/admin/permission-role',
+  component: PermissionRolePage
  }
 ]
 
 const CheckPoint = ({ component, path }: any) => {
  const history = useHistory()
 
- Http.post('/auth/check-auth', {}).then((res: any) => {
+ /* Http.post('/auth/check-auth', {}).then((res: any) => {
   console.log("Authenticated")
  }).catch((err) => {
   return history.push('/login')
  })
-
+ */
  return <Route path={path} component={component} />
 }
 

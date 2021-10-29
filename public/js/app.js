@@ -26643,9 +26643,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_pages_public_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/pages/public/Login */ "./resources/views/pages/public/Login.tsx");
 /* harmony import */ var _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/pages/private/user-management/ChangePassword */ "./resources/views/pages/private/user-management/ChangePassword.tsx");
 /* harmony import */ var _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/pages/private/Dashboard */ "./resources/views/pages/private/Dashboard.tsx");
-/* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/Api */ "./resources/api/Api.ts");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _views_pages_private_user_management_Role__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/pages/private/user-management/Role */ "./resources/views/pages/private/user-management/Role.tsx");
+/* harmony import */ var _views_pages_private_user_management_Permission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/pages/private/user-management/Permission */ "./resources/views/pages/private/user-management/Permission.tsx");
+/* harmony import */ var _views_pages_private_user_management_Users__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/pages/private/user-management/Users */ "./resources/views/pages/private/user-management/Users.tsx");
+/* harmony import */ var _views_pages_private_user_management_PermissionRole__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../views/pages/private/user-management/PermissionRole */ "./resources/views/pages/private/user-management/PermissionRole.tsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -26697,24 +26700,41 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
+
+
+
 var PrivateRoute = [{
   path: '/admin/dashboard',
   component: _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/admin/change-password',
   component: _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__["default"]
+}, {
+  path: '/admin/role',
+  component: _views_pages_private_user_management_Role__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: '/admin/permission',
+  component: _views_pages_private_user_management_Permission__WEBPACK_IMPORTED_MODULE_6__["default"]
+}, {
+  path: '/admin/users',
+  component: _views_pages_private_user_management_Users__WEBPACK_IMPORTED_MODULE_7__["default"]
+}, {
+  path: '/admin/permission-role',
+  component: _views_pages_private_user_management_PermissionRole__WEBPACK_IMPORTED_MODULE_8__["default"]
 }];
 
 var CheckPoint = function CheckPoint(_a) {
   var component = _a.component,
       path = _a.path;
-  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
-  _api_Api__WEBPACK_IMPORTED_MODULE_5__["default"].post('/auth/check-auth', {}).then(function (res) {
-    console.log("Authenticated");
-  })["catch"](function (err) {
-    return history.push('/login');
-  });
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_9__.useHistory)();
+  /* Http.post('/auth/check-auth', {}).then((res: any) => {
+   console.log("Authenticated")
+  }).catch((err) => {
+   return history.push('/login')
+  })
+  */
+
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: path,
     component: component
   }, void 0);
@@ -26736,19 +26756,19 @@ var Routes = function (_super) {
         component: component
       }, key);
     });
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Redirect, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.BrowserRouter, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Redirect, {
           exact: true,
           from: "/",
           to: "/login"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
           path: "/login",
           component: _views_pages_public_Login__WEBPACK_IMPORTED_MODULE_2__["default"]
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, __assign({
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, __assign({
           path: "/admin"
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Redirect, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Redirect, {
             exact: true,
             from: "/admin/",
             to: "/admin/dashboard"
@@ -26778,24 +26798,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Divider/Divider.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Collapse/Collapse.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Collapse/Collapse.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Divider/Divider.js");
 /* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
 /* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../api/Api */ "./resources/api/Api.ts");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/icons-material/Logout */ "./node_modules/@mui/icons-material/Logout.js");
-/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
+/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
 /* harmony import */ var _mui_material_Drawer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/Drawer */ "./node_modules/@mui/material/Drawer/Drawer.js");
-/* harmony import */ var _mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/ChevronLeft */ "./node_modules/@mui/icons-material/ChevronLeft.js");
-/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
-/* harmony import */ var _mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/icons-material/ExpandLess */ "./node_modules/@mui/icons-material/ExpandLess.js");
-/* harmony import */ var _mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/ExpandMore */ "./node_modules/@mui/icons-material/ExpandMore.js");
+/* harmony import */ var _mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/ChevronLeft */ "./node_modules/@mui/icons-material/ChevronLeft.js");
+/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
+/* harmony import */ var _mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material/ExpandLess */ "./node_modules/@mui/icons-material/ExpandLess.js");
+/* harmony import */ var _mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/icons-material/ExpandMore */ "./node_modules/@mui/icons-material/ExpandMore.js");
 /* harmony import */ var _global_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../global/index */ "./resources/global/index.ts");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
@@ -26882,6 +26902,34 @@ var Drawer = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_m
     '& .MuiDrawer-paper': closedMixin(theme)
   }));
 });
+var navItem = [{
+  path: '/admin/dashboard',
+  name: 'Dashboard',
+  icon: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"], {}, void 0),
+  hasChild: false
+}, {
+  path: '/admin/user-management',
+  name: 'User Management',
+  icon: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_7__["default"], {}, void 0),
+  hasChild: true,
+  open: false,
+  children: [{
+    path: '/admin/user-management/users',
+    name: 'Users'
+  }, {
+    path: '/admin/user-management/change-password',
+    name: 'Change Password'
+  }, {
+    path: '/admin/user-management/role',
+    name: 'Roles'
+  }, {
+    path: '/admin/user-management/permission',
+    name: 'Permission'
+  }, {
+    path: '/admin/user-management/permission-role',
+    name: 'Permission Role'
+  }]
+}];
 /* const NavItem = [
  {
   path: '/admin/dashboard',
@@ -26904,7 +26952,7 @@ var Navigation = function Navigation(props) {
       drawerOpen = _b[0],
       setDrawerOpen = _b[1];
 
-  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useHistory)();
 
   var getUser = function getUser() {
     _api_Api__WEBPACK_IMPORTED_MODULE_2__["default"].get('auth/data/user', {}).then(function (res) {
@@ -26929,66 +26977,107 @@ var Navigation = function Navigation(props) {
     setOpenNav(open);
   };
 
+  var CompNav = function CompNav(_a) {
+    var path = _a.path,
+        name = _a.name,
+        hasChild = _a.hasChild,
+        icon = _a.icon,
+        children = _a.children,
+        open = _a.open;
+
+    var navComp = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0);
+
+    if (hasChild) {
+      navComp = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+          button: true,
+          onClick: function onClick() {}
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            children: icon
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            children: name
+          }, void 0), open ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_12__["default"], {}, void 0) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_13__["default"], {}, void 0)]
+        }), void 0), children.map(function (_a, index) {
+          var path = _a.path,
+              name = _a.name;
+          return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+            "in": open,
+            timeout: "auto",
+            unmountOnExit: true
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
+              component: "div",
+              disablePadding: true
+            }, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+                sx: {
+                  pl: 2
+                },
+                button: true,
+                component: react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Link,
+                to: path
+              }, {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                  children: name
+                }, void 0)]
+              }), void 0)
+            }), void 0)
+          }), index);
+        })]
+      }, void 0);
+    } else {
+      navComp = (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+        button: true,
+        component: react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Link,
+        to: path
+      }, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: icon
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          children: name
+        }, void 0)]
+      }), void 0);
+    }
+
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: navComp
+    }, void 0);
+  };
+
+  var CheckPoint = navItem.map(function (_a, key) {
+    var path = _a.path,
+        name = _a.name,
+        hasChild = _a.hasChild,
+        icon = _a.icon,
+        children = _a.children;
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CompNav, {
+      path: path,
+      name: name,
+      hasChild: hasChild,
+      icon: icon,
+      children: children
+    }, key);
+  });
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Drawer, __assign({
       variant: "permanent",
       open: props.drawerOpen
     }, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], __assign({
           onClick: props.onToggleDrawer
         }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_8__["default"], {}, void 0)
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_18__["default"], {}, void 0)
         }), void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
-          button: true,
-          component: react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link,
-          to: "/admin/dashboard"
-        }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_14__["default"], {}, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
-            primary: 'Dashboard'
-          }, void 0)]
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
-          button: true,
-          onClick: collapseClick
-        }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_16__["default"], {}, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
-            primary: "User Management "
-          }, void 0), openNav ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_17__["default"], {}, void 0) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_18__["default"], {}, void 0)]
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-          "in": openNav,
-          timeout: "auto",
-          unmountOnExit: true
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
-            component: "div",
-            disablePadding: true
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
-              sx: {
-                pl: 2
-              },
-              button: true,
-              component: react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link,
-              to: "/admin/change-password"
-            }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
-                children: "Change password"
-              }, void 0)]
-            }), void 0)
-          }), void 0)
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        children: [CheckPoint, (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
           button: true,
           onClick: logout
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_20__["default"], {}, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
             children: "Logout"
           }, void 0)]
         }), void 0)]
@@ -27488,6 +27577,142 @@ var ChangePassword = function ChangePassword(props) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChangePassword);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/Permission.tsx":
+/*!**********************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/Permission.tsx ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+
+
+
+
+var Permission = function Permission() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Body, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Footer, {}, void 0)]
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Permission);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/PermissionRole.tsx":
+/*!**************************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/PermissionRole.tsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+
+
+
+
+var PermissionRole = function PermissionRole() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Body, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Footer, {}, void 0)]
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PermissionRole);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/Role.tsx":
+/*!****************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/Role.tsx ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+
+
+
+
+var Role = function Role() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Body, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Footer, {}, void 0)]
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Role);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/Users.tsx":
+/*!*****************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/Users.tsx ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+
+
+
+
+var Users = function Users() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Body, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Footer, {}, void 0)]
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Users);
 
 /***/ }),
 

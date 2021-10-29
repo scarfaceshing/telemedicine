@@ -12,6 +12,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import StarBorder from '@mui/icons-material/StarBorder'
 import Global from '../../../global/index'
+import { AnyPtrRecord } from 'dns'
 // import history from '../../../global/history'
 
 interface IProps {
@@ -77,6 +78,44 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
  }),
 );
 
+const navItem = [
+ {
+  path: '/admin/dashboard',
+  name: 'Dashboard',
+  icon: <DashboardIcon />,
+  hasChild: false
+ },
+ {
+  path: '/admin/user-management',
+  name: 'User Management',
+  icon: <PersonIcon />,
+  hasChild: true,
+  open: false,
+  children: [
+   {
+    path: '/admin/user-management/users',
+    name: 'Users'
+   },
+   {
+    path: '/admin/user-management/change-password',
+    name: 'Change Password'
+   },
+   {
+    path: '/admin/user-management/role',
+    name: 'Roles'
+   },
+   {
+    path: '/admin/user-management/permission',
+    name: 'Permission'
+   },
+   {
+    path: '/admin/user-management/permission-role',
+    name: 'Permission Role'
+   }
+  ]
+ }
+];
+
 /* const NavItem = [
  {
   path: '/admin/dashboard',
@@ -102,6 +141,7 @@ const Navigation = (props: IProps) => {
  }
 
  const getUserInfo = (): void => {
+
   Http.get('auth/me', {}).then((res) => {
    console.log(res);
   })
@@ -118,6 +158,60 @@ const Navigation = (props: IProps) => {
   setOpenNav(open)
  }
 
+ const CompNav = ({ path, name, hasChild, icon, children, open }: any): JSX.Element => {
+
+  let navComp: JSX.Element = <></>
+
+  if (hasChild) {
+
+   navComp =
+    <>
+     <ListItem button onClick={() => {
+
+     }}>
+      <ListItemIcon>
+       {icon}
+      </ListItemIcon>
+      <ListItemText>
+       {name}
+      </ListItemText>
+      {open ? <ExpandLess /> : <ExpandMore />}
+     </ListItem>
+     {children.map(({ path, name }: any, index: number) => (
+      <Collapse key={index} in={open} timeout="auto" unmountOnExit>
+       <List component="div" disablePadding>
+        <ListItem sx={{ pl: 2 }} button component={Link} to={path}>
+         <ListItemIcon>
+         </ListItemIcon>
+         <ListItemText>
+          {name}
+         </ListItemText>
+        </ListItem>
+       </List>
+      </Collapse>
+     ))}
+
+    </>
+  } else {
+   navComp = <ListItem button component={Link} to={path}>
+    <ListItemIcon>
+     {icon}
+    </ListItemIcon>
+    <ListItemText>
+     {name}
+    </ListItemText>
+   </ListItem>
+  }
+
+  return (
+   <>
+    {navComp}
+   </>
+  )
+ }
+
+ const CheckPoint = navItem.map(({ path, name, hasChild, icon, children }, key) => <CompNav path={path} name={name} key={key} hasChild={hasChild} icon={icon} children={children} />)
+
  return (
   <>
    <Drawer variant="permanent" open={props.drawerOpen}>
@@ -126,38 +220,11 @@ const Navigation = (props: IProps) => {
       <ChevronLeftIcon />
      </IconButton>
     </DrawerHeader>
-
     <Divider />
+
     <List>
 
-     <ListItem button component={Link} to={"/admin/dashboard"}>
-      <ListItemIcon>
-       <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary={'Dashboard'} />
-     </ListItem>
-
-     <Divider />
-
-     <ListItem button onClick={collapseClick}>
-      <ListItemIcon>
-       <PersonIcon />
-      </ListItemIcon>
-      <ListItemText primary="User Management " />
-      {openNav ? <ExpandLess /> : <ExpandMore />}
-     </ListItem>
-
-     <Collapse in={openNav} timeout="auto" unmountOnExit>
-      <List component="div" disablePadding>
-       <ListItem sx={{ pl: 2 }} button component={Link} to="/admin/change-password">
-        <ListItemIcon>
-        </ListItemIcon>
-        <ListItemText>
-         Change password
-        </ListItemText>
-       </ListItem>
-      </List>
-     </Collapse>
+     {CheckPoint}
 
      <ListItem button onClick={logout}>
       <ListItemIcon>

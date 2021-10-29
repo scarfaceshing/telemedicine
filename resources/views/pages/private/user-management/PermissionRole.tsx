@@ -2,7 +2,7 @@ import React from 'react'
 import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
 import { Typography } from '@mui/material'
 
-const Role = () => {
+const PermissionRole = () => {
  return (
   <>
    <SystemLayout>
@@ -22,4 +22,4 @@ const Role = () => {
  )
 }
 
-export default Role
+export default PermissionRole
