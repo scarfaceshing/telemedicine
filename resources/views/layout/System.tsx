@@ -6,7 +6,9 @@ import { styled } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 import Navigation from '../component/core/Navigation'
 import Http from '../../api/Api'
-import { useHistory } from 'react-router-dom'
+import { useHistory, BrowserRouter } from 'react-router-dom'
+import Global from '../../global/index'
+
 interface IState {
  drawerWidth: number;
  drawerOpen: boolean;
@@ -42,11 +44,12 @@ interface AppBarProps extends MuiAppBarProps {
  open?: boolean;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const AppBar = styled(MuiAppBar, {
  shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
+ backgroundColor: "red",
  zIndex: theme.zIndex.drawer + 1,
  transition: theme.transitions.create(['width', 'margin'], {
   easing: theme.transitions.easing.sharp,
@@ -62,6 +65,15 @@ const AppBar = styled(MuiAppBar, {
  }),
 }));
 
+const DrawerHeader = styled('div')(({ theme }) => ({
+ display: 'flex',
+ alignItems: 'center',
+ justifyContent: 'flex-end',
+ padding: theme.spacing(0, 1),
+ // necessary for content to be below app bar
+ ...theme.mixins.toolbar,
+}));
+
 
 class SystemLayout extends Component<IProps, IState> {
 
@@ -71,7 +83,7 @@ class SystemLayout extends Component<IProps, IState> {
 
   this.state = {
    drawerWidth: drawerWidth,
-   drawerOpen: true
+   drawerOpen: false
   }
  }
 
@@ -127,7 +139,10 @@ class SystemLayout extends Component<IProps, IState> {
       </AppBar>
       <Navigation drawerOpen={this.state.drawerOpen} drawerWidth={this.state.drawerWidth} onToggleDrawer={this.onToggleDrawer} />
       <main>
-       {body ? body.props.children : null}
+       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <DrawerHeader />
+        {body ? body.props.children : null}
+       </Box>
       </main>
       <footer>
        {footer ? footer.props.children : null}
