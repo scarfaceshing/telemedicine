@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component, FC, MouseEventHandler, useState, useEffect } from 'react'
 import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse, ListItemButton } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Http from '../../../api/Api'
@@ -12,12 +12,6 @@ import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import StarBorder from '@mui/icons-material/StarBorder'
 import Global from '../../../global/index'
-import { AnyPtrRecord } from 'dns'
-// import history from '../../../global/history'
-
-interface IProps {
- history?: any;
-}
 
 interface IState {
  openNav: boolean;
@@ -29,68 +23,29 @@ interface IProps {
  drawerOpen: boolean;
 }
 
-const drawerWidth = Global.drawerWidth;
+interface INavChildren {
+ path?: string;
+ name?: string;
+}
+interface INavigation {
+ path: string;
+ name: string;
+ icon: JSX.Element;
+ open?: boolean;
+ children?: Array<INavChildren>;
+}
 
-const openedMixin = (theme: Theme): CSSObject => ({
- width: drawerWidth,
- transition: theme.transitions.create('width', {
-  easing: theme.transitions.easing.sharp,
-  duration: theme.transitions.duration.enteringScreen,
- }),
- overflowX: 'hidden',
-});
-
-const closedMixin = (theme: Theme): CSSObject => ({
- transition: theme.transitions.create('width', {
-  easing: theme.transitions.easing.sharp,
-  duration: theme.transitions.duration.leavingScreen,
- }),
- overflowX: 'hidden',
- width: `calc(${theme.spacing(7)} + 1px)`,
- [theme.breakpoints.up('sm')]: {
-  width: `calc(${theme.spacing(9)} + 1px)`,
- },
-});
-
-const DrawerHeader = styled('div')(({ theme }) => ({
- display: 'flex',
- alignItems: 'center',
- justifyContent: 'flex-end',
- padding: theme.spacing(0, 1),
- // necessary for content to be below app bar
- ...theme.mixins.toolbar,
-}));
-
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
- ({ theme, open }) => ({
-  width: drawerWidth,
-  flexShrink: 0,
-  whiteSpace: 'nowrap',
-  boxSizing: 'border-box',
-  ...(open && {
-   ...openedMixin(theme),
-   '& .MuiDrawer-paper': openedMixin(theme),
-  }),
-  ...(!open && {
-   ...closedMixin(theme),
-   '& .MuiDrawer-paper': closedMixin(theme),
-  }),
- }),
-);
-
-const navItem = [
+const navigationItem = [
  {
   path: '/admin/dashboard',
   name: 'Dashboard',
   icon: <DashboardIcon />,
-  hasChild: false
  },
  {
   path: '/admin/user-management',
   name: 'User Management',
   icon: <PersonIcon />,
-  hasChild: true,
-  open: false,
+  open: true,
   children: [
    {
     path: '/admin/user-management/users',
@@ -129,10 +84,59 @@ const navItem = [
  }
 ] */
 
-const Navigation = (props: IProps) => {
- const [openNav, setOpenNav] = useState(false);
- const [drawerOpen, setDrawerOpen] = useState(false);
+
+
+const Navigation: FC<IProps> = ({ drawerOpen, drawerWidth, onToggleDrawer }) => {
+
  const history = useHistory()
+ const [navItem, setNavItem] = useState(navigationItem)
+
+ const openedMixin = (theme: Theme): CSSObject => ({
+  width: drawerWidth,
+  transition: theme.transitions.create('width', {
+   easing: theme.transitions.easing.sharp,
+   duration: theme.transitions.duration.enteringScreen,
+  }),
+  overflowX: 'hidden',
+ });
+
+ const closedMixin = (theme: Theme): CSSObject => ({
+  transition: theme.transitions.create('width', {
+   easing: theme.transitions.easing.sharp,
+   duration: theme.transitions.duration.leavingScreen,
+  }),
+  overflowX: 'hidden',
+  width: `calc(${theme.spacing(7)} + 1px)`,
+  [theme.breakpoints.up('sm')]: {
+   width: `calc(${theme.spacing(9)} + 1px)`,
+  },
+ });
+
+ const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+ }));
+
+ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
+   width: drawerWidth,
+   flexShrink: 0,
+   whiteSpace: 'nowrap',
+   boxSizing: 'border-box',
+   ...(open && {
+    ...openedMixin(theme),
+    '& .MuiDrawer-paper': openedMixin(theme),
+   }),
+   ...(!open && {
+    ...closedMixin(theme),
+    '& .MuiDrawer-paper': closedMixin(theme),
+   }),
+  }),
+ );
 
  const getUser = (): void => {
   Http.get('auth/data/user', {}).then((res: any) => {
@@ -153,78 +157,61 @@ const Navigation = (props: IProps) => {
   })
  }
 
- const collapseClick = (event: any): void => {
-  const open = !openNav
-  setOpenNav(open)
+ const collapseClick = (index: number) => {
+  const open = !navItem[index].open
+  navItem[index].open = open
+  setNavItem([...navItem])
  }
 
- const CompNav = ({ path, name, hasChild, icon, children, open }: any): JSX.Element => {
-
-  let navComp: JSX.Element = <></>
-
-  if (hasChild) {
-
-   navComp =
-    <>
-     <ListItem button onClick={() => {
-
-     }}>
-      <ListItemIcon>
-       {icon}
-      </ListItemIcon>
-      <ListItemText>
-       {name}
-      </ListItemText>
-      {open ? <ExpandLess /> : <ExpandMore />}
-     </ListItem>
-     {children.map(({ path, name }: any, index: number) => (
-      <Collapse key={index} in={open} timeout="auto" unmountOnExit>
-       <List component="div" disablePadding>
-        <ListItem sx={{ pl: 2 }} button component={Link} to={path}>
-         <ListItemIcon>
-         </ListItemIcon>
-         <ListItemText>
-          {name}
-         </ListItemText>
-        </ListItem>
-       </List>
-      </Collapse>
-     ))}
-
-    </>
+ const CheckIcon = ({ open }: any) => {
+  if (open) {
+   return (
+    <ExpandLess />
+   )
   } else {
-   navComp = <ListItem button component={Link} to={path}>
-    <ListItemIcon>
-     {icon}
-    </ListItemIcon>
-    <ListItemText>
-     {name}
-    </ListItemText>
-   </ListItem>
+   return (
+    <ExpandMore />
+   )
   }
-
-  return (
-   <>
-    {navComp}
-   </>
-  )
  }
-
- const CheckPoint = navItem.map(({ path, name, hasChild, icon, children }, key) => <CompNav path={path} name={name} key={key} hasChild={hasChild} icon={icon} children={children} />)
 
  return (
   <>
-   <Drawer variant="permanent" open={props.drawerOpen}>
+   <Drawer variant="permanent" open={drawerOpen}>
     <DrawerHeader>
-     <IconButton onClick={props.onToggleDrawer}>
+     <IconButton onClick={onToggleDrawer}>
       <ChevronLeftIcon />
      </IconButton>
     </DrawerHeader>
     <Divider />
-
     <List>
 
-     {CheckPoint}
+     {navItem.map(({ icon, name, children, open }: INavigation, index: number) => (
+      <div key={index}>
+       <ListItem button onClick={() => collapseClick(index)}>
+        <ListItemIcon>
+         {icon}
+        </ListItemIcon>
+        <ListItemText>
+         {name}
+        </ListItemText>
+        {children ? <CheckIcon open={open} /> : ''}
+       </ListItem>
+       {children?.map(({ path, name }: any, index: number) => (
+        <Collapse key={index} in={open} timeout="auto" unmountOnExit>
+         <List component="div" disablePadding>
+          <ListItem sx={{ pl: 2 }} button component={Link} to={path}>
+           <ListItemIcon>
+           </ListItemIcon>
+           <ListItemText>
+            {name}
+           </ListItemText>
+          </ListItem>
+         </List>
+        </Collapse>
+       ))}
+      </div>
+     ))}
 
      <ListItem button onClick={logout}>
       <ListItemIcon>
