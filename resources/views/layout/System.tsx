@@ -8,6 +8,7 @@ import Navigation from '../component/core/Navigation'
 import Http from '../../api/Api'
 import { useHistory, BrowserRouter } from 'react-router-dom'
 import Global from '../../global/index'
+import goTO from '../../global/history'
 
 interface IState {
  drawerWidth: number;
@@ -39,7 +40,6 @@ export function Body(props: any): ReactElement {
   <>{props.content}</>
  )
 }
-
 interface AppBarProps extends MuiAppBarProps {
  open?: boolean;
 }

@@ -26792,12 +26792,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/icons-material/Logout */ "./node_modules/@mui/icons-material/Logout.js");
-/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
 /* harmony import */ var _mui_material_Drawer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/Drawer */ "./node_modules/@mui/material/Drawer/Drawer.js");
 /* harmony import */ var _mui_icons_material_ChevronLeft__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/icons-material/ChevronLeft */ "./node_modules/@mui/icons-material/ChevronLeft.js");
-/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
 /* harmony import */ var _mui_icons_material_ExpandLess__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/ExpandLess */ "./node_modules/@mui/icons-material/ExpandLess.js");
 /* harmony import */ var _mui_icons_material_ExpandMore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/ExpandMore */ "./node_modules/@mui/icons-material/ExpandMore.js");
+/* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
+/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -26863,18 +26863,6 @@ var navigationItem = [{
     name: 'Permission Role'
   }]
 }];
-/* const NavItem = [
- {
-  path: '/admin/dashboard',
-  name: 'Dashboard',
-  icon: <DashboardIcon />
- },
- {
-  path: '/admin/user-management',
-  name: 'User Management',
-  icon: <PersonIcon />
- }
-] */
 
 var Navigation = function Navigation(_a) {
   var drawerOpen = _a.drawerOpen,
@@ -26885,6 +26873,13 @@ var Navigation = function Navigation(_a) {
   var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(navigationItem),
       navItem = _b[0],
       setNavItem = _b[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    navItem.find(function (item, index) {
+      navItem[index].open = false;
+      setNavItem(__spreadArray([], navItem, true));
+    });
+  }, [drawerOpen]);
 
   var openedMixin = function openedMixin(theme) {
     return {

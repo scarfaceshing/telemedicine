@@ -4,23 +4,16 @@ import { styled, useTheme } from '@mui/material/styles'
 import Http from '../../../api/Api'
 import { useLocation, Link, BrowserRouter, Router, useHistory } from 'react-router-dom'
 import LogoutIcon from '@mui/icons-material/Logout'
-import DashboardIcon from '@mui/icons-material/Dashboard'
 import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import PersonIcon from '@mui/icons-material/Person'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import StarBorder from '@mui/icons-material/StarBorder'
-import Global from '../../../global/index'
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import PersonIcon from '@mui/icons-material/Person'
 
 interface IState {
  openNav: boolean;
-}
-
-interface IProps {
- onToggleDrawer: (event: React.MouseEvent<HTMLButtonElement>) => void;
- drawerWidth: number;
- drawerOpen: boolean;
 }
 
 interface INavChildren {
@@ -34,6 +27,13 @@ interface INavigation {
  open?: boolean;
  children?: Array<INavChildren>;
 }
+interface IProps {
+ list: Array<INavigation>,
+ onToggleDrawer: (event: React.MouseEvent<HTMLButtonElement>) => void;
+ drawerWidth: number;
+ drawerOpen: boolean;
+}
+
 
 const navigationItem = [
  {
@@ -71,25 +71,17 @@ const navigationItem = [
  }
 ];
 
-/* const NavItem = [
- {
-  path: '/admin/dashboard',
-  name: 'Dashboard',
-  icon: <DashboardIcon />
- },
- {
-  path: '/admin/user-management',
-  name: 'User Management',
-  icon: <PersonIcon />
- }
-] */
-
-
-
 const Navigation: FC<IProps> = ({ drawerOpen, drawerWidth, onToggleDrawer }) => {
 
  const history = useHistory()
  const [navItem, setNavItem] = useState(navigationItem)
+
+ useEffect(() => {
+  navItem.find((item: any, index: number) => {
+   navItem[index].open = false
+   setNavItem([...navItem])
+  })
+ }, [drawerOpen])
 
  const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
