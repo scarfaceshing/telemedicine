@@ -28,7 +28,6 @@ interface INavigation {
  children?: Array<INavChildren>;
 }
 interface IProps {
- list: Array<INavigation>,
  onToggleDrawer: (event: React.MouseEvent<HTMLButtonElement>) => void;
  drawerWidth: number;
  drawerOpen: boolean;
@@ -48,7 +47,7 @@ const navigationItem = [
   open: true,
   children: [
    {
-    path: '/admin/user-management/users',
+    path: '/admin/user-management/user',
     name: 'Users'
    },
    {

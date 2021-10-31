@@ -29,6 +29,6 @@ use App\Http\Controllers\UserController;
        Route::group([
         'prefix' => 'data'
        ], function($router) {
-        Route::get('user', [UserController::class, 'index']);
+        Route::get('user/{offset}/{limit}', [UserController::class, 'index']);
        });
 });

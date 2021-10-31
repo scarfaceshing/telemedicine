@@ -13,10 +13,18 @@ class UserController extends Controller
      $this->middleware('auth:sanctum');
     }
 
-    public function index() {
+    public function index($offset, $limit) {
+     $data = User::skip($offset)->limit($limit)->get();
+     $total = count(User::all());
 
-     $user = User::all();
+     return response()->json([
+      "user" => $data,
+      "query" => [
+       "offset" => $offset,
+       "limit" => $limit,
+       "total" => $total
+      ]]);
 
-     return response()->json(["user" => $user]);
+
     }
 }

@@ -33,16 +33,7 @@ const ChangePassword = (props: IProps) => {
      </Typography>
     </Header>
     <Body>
-     <Grid container>
-      <Grid item>
-       <Typography variant="h5" component="h5" gutterBottom>
-        Change Password
-       </Typography>
-       <Typography variant="subtitle2">
-        Where the user can change password.
-       </Typography>
-      </Grid>
-     </Grid>
+     <ContentHeader title="Change Password" desc="Where the user can change password." />
      <Box component="form" onSubmit={(event: any) => onSubmit(event)}>
       <TextField margin="normal" value={curPassword} onChange={(e) => useCurPassword(e.currentTarget.value)} required fullWidth type="password" label="Current Password" />
       <TextField margin="normal" value={newPassword} onChange={(e) => useNewPassword(e.currentTarget.value)} required fullWidth type="password" label="New Password" />

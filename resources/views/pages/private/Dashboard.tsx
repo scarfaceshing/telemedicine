@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SystemLayout, { Header, Body, Footer } from '../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
 import { Typography, Box, Alert, Grid } from '@mui/material'
+import ContentHeader from '../../component/core/ContentHeader'
 
 interface IProps {
 
@@ -38,17 +39,7 @@ export class Dashboard extends Component<IProps, IState> {
      </Typography>
     </Header>
     <Body>
-     <Grid container>
-      <Grid item>
-       <Typography variant="h5" component="h5" gutterBottom>
-        Dashboard
-       </Typography>
-       <Typography variant="subtitle2">
-
-       </Typography>
-      </Grid>
-     </Grid>
-
+     <ContentHeader title="Dashboard" />
      <Alert severity="error">This is page not available for now.. :D </Alert>
     </Body>
     <Footer>
