@@ -5,19 +5,7 @@ import { Typography } from '@mui/material'
 const Permission = () => {
  return (
   <>
-   <SystemLayout>
-    <Header>
-     <Typography>
-      Sandbox - Telemedicine App
-     </Typography>
-    </Header>
-    <Body>
-
-    </Body>
-    <Footer>
-
-    </Footer>
-   </SystemLayout>
+   <h1>Permission</h1>
   </>
  )
 }

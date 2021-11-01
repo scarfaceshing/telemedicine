@@ -5,19 +5,7 @@ import { Typography } from '@mui/material'
 const Role = () => {
  return (
   <>
-   <SystemLayout>
-    <Header>
-     <Typography>
-      Sandbox - Telemedicine App
-     </Typography>
-    </Header>
-    <Body>
-     
-    </Body>
-    <Footer>
-
-    </Footer>
-   </SystemLayout>
+   <h1>Role</h1>
   </>
  )
 }

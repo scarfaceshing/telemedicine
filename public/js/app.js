@@ -28859,13 +28859,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _views_pages_public_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/pages/public/Login */ "./resources/views/pages/public/Login.tsx");
-/* harmony import */ var _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/pages/private/user-management/ChangePassword */ "./resources/views/pages/private/user-management/ChangePassword.tsx");
-/* harmony import */ var _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/pages/private/Dashboard */ "./resources/views/pages/private/Dashboard.tsx");
-/* harmony import */ var _views_pages_private_user_management_Role__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/pages/private/user-management/Role */ "./resources/views/pages/private/user-management/Role.tsx");
-/* harmony import */ var _views_pages_private_user_management_Users__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/pages/private/user-management/Users */ "./resources/views/pages/private/user-management/Users.tsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _views_pages_private_Index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/pages/private/Index */ "./resources/views/pages/private/Index.tsx");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -28894,74 +28891,11 @@ var __extends = undefined && undefined.__extends || function () {
   };
 }();
 
-var __assign = undefined && undefined.__assign || function () {
-  __assign = Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-    }
-
-    return t;
-  };
-
-  return __assign.apply(this, arguments);
-};
 
 
 
 
 
-
-
-
-
-var PrivateRoute = [{
-  path: '/admin/dashboard',
-  component: _views_pages_private_Dashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
-}, {
-  path: '/admin/user-management',
-  children: [{
-    path: '/admin/user-management/user',
-    component: _views_pages_private_user_management_Users__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }, {
-    path: '/admin/user-management/change-password',
-    component: _views_pages_private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }, {
-    path: '/admin/user-management/role',
-    component: _views_pages_private_user_management_Role__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }]
-}];
-
-var CheckPoint = function CheckPoint(_a) {
-  var path = _a.path,
-      component = _a.component,
-      children = _a.children;
-
-  if (children) {
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
-        path: path
-      }, void 0), children.map(function (_a, index) {
-        var path = _a.path,
-            component = _a.component;
-        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
-          path: path,
-          component: component
-        }, index);
-      })]
-    }, void 0);
-  } else {
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
-        path: path,
-        component: component
-      }, void 0)
-    }, void 0);
-  }
-};
 
 var Routes = function (_super) {
   __extends(Routes, _super);
@@ -28971,36 +28905,19 @@ var Routes = function (_super) {
   }
 
   Routes.prototype.render = function () {
-    // const privateComponents = PrivateRoute.map(({ path, component }, key) => <CheckPoint path={path} component={component} key={key} />)
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Redirect, {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Switch, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Redirect, {
           exact: true,
           from: "/",
           to: "/login"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
           path: "/login",
           component: _views_pages_public_Login__WEBPACK_IMPORTED_MODULE_2__["default"]
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, __assign({
-          path: "/admin"
-        }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Redirect, {
-            exact: true,
-            from: "/admin/",
-            to: "/admin/dashboard"
-          }, void 0), PrivateRoute.map(function (_a, index) {
-            var path = _a.path,
-                component = _a.component,
-                children = _a.children;
-            return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CheckPoint, {
-                path: path,
-                component: component,
-                children: children
-              }, void 0)
-            }, index);
-          })]
-        }), void 0)]
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+          path: "/admin",
+          component: _views_pages_private_Index__WEBPACK_IMPORTED_MODULE_3__["default"]
+        }, void 0)]
       }, void 0)
     }, void 0);
   };
@@ -29090,13 +29007,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableCell/TableCell.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableContainer/TableContainer.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Table/Table.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableHead/TableHead.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableRow/TableRow.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TableBody/TableBody.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TablePagination/TablePagination.js");
 /* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../api/Api */ "./resources/api/Api.ts");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -29361,51 +29278,78 @@ var DataTable = function DataTable(_a) {
     };
   }, []);
 
-  var DataTableBody = function DataTableBody(_a) {
-    var data = _a.data,
-        trow = _a.trow;
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      children: data.map(function (item, index_a) {
-        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            children: offset + index_a + 1
-          }, void 0), trow.map(function (_a, index_b) {
-            var name = _a.name,
-                dtColumn = _a.dtColumn;
-            return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              children: item[dtColumn]
-            }, index_b);
-          })]
-        }, index_a);
-      })
-    }, void 0);
+  var onSortingTableRow = function onSortingTableRow(column) {
+    console.log(column);
+  };
+
+  var DataTableHeader = function DataTableHeader(_a) {
+    var name = _a.name,
+        dtColumn = _a.dtColumn;
+
+    if (name || dtColumn) {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+        onClick: function onClick() {
+          return onSortingTableRow(dtColumn);
+        }
+      }, {
+        children: name
+      }), void 0);
+    } else {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0);
+    }
+  };
+
+  var DataTableCell = function DataTableCell(_a) {
+    var item = _a.item,
+        dtColumn = _a.dtColumn;
+
+    if (dtColumn) {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        children: item[dtColumn]
+      }, void 0);
+    } else {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0);
+    }
   };
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-      component: _mui_material__WEBPACK_IMPORTED_MODULE_7__["default"]
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
+      component: _mui_material__WEBPACK_IMPORTED_MODULE_5__["default"]
     }, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
         sx: {
           minWidth: 650
         },
         "aria-label": "simple table"
       }, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
               children: "# "
             }, void 0), trow.map(function (_a, index) {
               var name = _a.name,
                   dtColumn = _a.dtColumn;
-              return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                children: name
+              return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DataTableHeader, {
+                name: name,
+                dtColumn: dtColumn
               }, index);
             })]
           }, void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DataTableBody, {
-          trow: trow,
-          data: callBackData
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          children: callBackData === null || callBackData === void 0 ? void 0 : callBackData.map(function (item, index_a) {
+            return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                children: offset + index_a + 1
+              }, void 0), trow === null || trow === void 0 ? void 0 : trow.map(function (_a, index_b) {
+                var name = _a.name,
+                    dtColumn = _a.dtColumn;
+                return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DataTableCell, {
+                  item: item,
+                  dtColumn: dtColumn
+                }, index_b);
+              })]
+            }, index_a);
+          })
         }, void 0)]
       }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
         component: "div",
@@ -29945,11 +29889,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Alert/Alert.js");
-/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Alert/Alert.js");
+/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -29999,17 +29940,6 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-
-var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])('div')(function (_a) {
-  var theme = _a.theme;
-  return __assign({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1)
-  }, theme.mixins.toolbar);
-});
-
 var Dashboard = function (_super) {
   __extends(Dashboard, _super);
 
@@ -30021,20 +29951,14 @@ var Dashboard = function (_super) {
   }
 
   Dashboard.prototype.render = function () {
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          children: "Sandbox - Telemedicine App"
-        }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          title: "Dashboard"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-          severity: "error"
-        }, {
-          children: "This is page not available for now.. :D "
-        }), void 0)]
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        title: "Dashboard"
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+        severity: "error"
+      }, {
+        children: "This is page not available for now.. :D "
+      }), void 0)]
     }, void 0);
   };
 
@@ -30046,10 +29970,10 @@ var Dashboard = function (_super) {
 
 /***/ }),
 
-/***/ "./resources/views/pages/private/user-management/ChangePassword.tsx":
-/*!**************************************************************************!*\
-  !*** ./resources/views/pages/private/user-management/ChangePassword.tsx ***!
-  \**************************************************************************/
+/***/ "./resources/views/pages/private/Index.tsx":
+/*!*************************************************!*\
+  !*** ./resources/views/pages/private/Index.tsx ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -30058,13 +29982,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
+/* harmony import */ var _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../private/user-management/ChangePassword */ "./resources/views/pages/private/user-management/ChangePassword.tsx");
+/* harmony import */ var _private_Dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../private/Dashboard */ "./resources/views/pages/private/Dashboard.tsx");
+/* harmony import */ var _private_user_management_Role__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../private/user-management/Role */ "./resources/views/pages/private/user-management/Role.tsx");
+/* harmony import */ var _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../private/user-management/Permission */ "./resources/views/pages/private/user-management/Permission.tsx");
+/* harmony import */ var _private_user_management_Users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../private/user-management/Users */ "./resources/views/pages/private/user-management/Users.tsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -30081,6 +30008,140 @@ var __assign = undefined && undefined.__assign || function () {
   return __assign.apply(this, arguments);
 };
 
+
+
+
+
+
+
+
+
+
+
+var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_7__["default"])('div')(function (_a) {
+  var theme = _a.theme;
+  return __assign({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1)
+  }, theme.mixins.toolbar);
+});
+
+var CheckPoint = function CheckPoint(_a) {
+  var path = _a.path,
+      component = _a.component,
+      children = _a.children;
+
+  if (children) {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: path
+      }, void 0), children.map(function (_a, index) {
+        var path = _a.path,
+            component = _a.component;
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+          path: path,
+          component: component
+        }, index);
+      })]
+    }, void 0);
+  } else {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: path,
+        component: component
+      }, void 0)
+    }, void 0);
+  }
+};
+
+var PrivateRoute = [{
+  path: '/admin/dashboard',
+  component: _private_Dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: '/admin/user-management',
+  children: [{
+    path: '/admin/user-management/user',
+    component: _private_user_management_Users__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }, {
+    path: '/admin/user-management/change-password',
+    component: _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, {
+    path: '/admin/user-management/role',
+    component: _private_user_management_Role__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }, {
+    path: '/admin/user-management/permission',
+    component: _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }]
+}];
+
+var Index = function Index() {
+  var PageList = PrivateRoute.map(function (_a, index) {
+    var path = _a.path,
+        component = _a.component,
+        children = _a.children;
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CheckPoint, {
+      path: path,
+      component: component,
+      children: children
+    }, index);
+  });
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_6__.Header, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: "Sandbox - Telemedicine App"
+        }, void 0)
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_6__.Body, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Redirect, {
+            exact: true,
+            from: "/admin/",
+            to: "/admin/dashboard"
+          }, void 0), PageList]
+        }, void 0)
+      }, void 0)]
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/ChangePassword.tsx":
+/*!**************************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/ChangePassword.tsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
 
 
 
@@ -30105,65 +30166,83 @@ var ChangePassword = function ChangePassword(props) {
     console.log(curPassword, newPassword, conPassword);
   };
 
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          children: "Sandbox - Telemedicine App"
-        }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          title: "Change Password",
-          desc: "Where the user can change password."
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-          component: "form",
-          onSubmit: function onSubmit(event) {
-            return _onSubmit(event);
-          }
-        }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            margin: "normal",
-            value: curPassword,
-            onChange: function onChange(e) {
-              return useCurPassword(e.currentTarget.value);
-            },
-            required: true,
-            fullWidth: true,
-            type: "password",
-            label: "Current Password"
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            margin: "normal",
-            value: newPassword,
-            onChange: function onChange(e) {
-              return useNewPassword(e.currentTarget.value);
-            },
-            required: true,
-            fullWidth: true,
-            type: "password",
-            label: "New Password"
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            margin: "normal",
-            value: conPassword,
-            onChange: function onChange(e) {
-              return useConPassword(e.currentTarget.value);
-            },
-            required: true,
-            fullWidth: true,
-            type: "password",
-            label: "Confirm Password"
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-            type: "submit",
-            variant: "contained"
-          }, {
-            children: "Submit"
-          }), void 0)]
-        }), void 0)]
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
-    }, void 0)
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "Change Password",
+      desc: "Where the user can change password."
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+      component: "form",
+      onSubmit: function onSubmit(event) {
+        return _onSubmit(event);
+      }
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        margin: "normal",
+        value: curPassword,
+        onChange: function onChange(e) {
+          return useCurPassword(e.currentTarget.value);
+        },
+        required: true,
+        fullWidth: true,
+        type: "password",
+        label: "Current Password"
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        margin: "normal",
+        value: newPassword,
+        onChange: function onChange(e) {
+          return useNewPassword(e.currentTarget.value);
+        },
+        required: true,
+        fullWidth: true,
+        type: "password",
+        label: "New Password"
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        margin: "normal",
+        value: conPassword,
+        onChange: function onChange(e) {
+          return useConPassword(e.currentTarget.value);
+        },
+        required: true,
+        fullWidth: true,
+        type: "password",
+        label: "Confirm Password"
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
+        type: "submit",
+        variant: "contained"
+      }, {
+        children: "Submit"
+      }), void 0)]
+    }), void 0)]
   }, void 0);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChangePassword);
+
+/***/ }),
+
+/***/ "./resources/views/pages/private/user-management/Permission.tsx":
+/*!**********************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/Permission.tsx ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var Permission = function Permission() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+      children: "Permission"
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Permission);
 
 /***/ }),
 
@@ -30179,20 +30258,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-
-
 
 
 var Role = function Role() {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          children: "Sandbox - Telemedicine App"
-        }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Body, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__.Footer, {}, void 0)]
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+      children: "Role"
     }, void 0)
   }, void 0);
 };
@@ -30214,12 +30285,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
-/* harmony import */ var _component_core_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../component/core/DataTable */ "./resources/views/component/core/DataTable.tsx");
-
-
+/* harmony import */ var _component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../component/core/ContentHeader */ "./resources/views/component/core/ContentHeader.tsx");
+/* harmony import */ var _component_core_DataTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../component/core/DataTable */ "./resources/views/component/core/DataTable.tsx");
 
 
 
@@ -30232,7 +30299,7 @@ var trow = [{
   dtColumn: "email"
 }, {
   name: "Verified",
-  dtColumn: "verified_at"
+  dtColumn: "email_verified_at"
 }, {
   name: "Date Created",
   dtColumn: "created_at"
@@ -30242,26 +30309,18 @@ var trow = [{
 }];
 
 var Users = function Users() {
-  var _a = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([trow]),
+  var _a = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(trow),
       thColumn = _a[0],
       useThColumn = _a[1];
 
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          children: "Sandbox - Telemedicine App"
-        }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Body, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          title: "User list",
-          desc: "Where you can see the all users (Restricted for dev only or user)"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_DataTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          url: "user",
-          trow: thColumn
-        }, void 0)]
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_2__.Footer, {}, void 0)]
-    }, void 0)
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "User list",
+      desc: "Where you can see the all users (Restricted for dev only or user)"
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_DataTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      url: "user",
+      trow: thColumn
+    }, void 0)]
   }, void 0);
 };
 

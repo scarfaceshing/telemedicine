@@ -15,7 +15,7 @@ const trow = [
  },
  {
   name: "Verified",
-  dtColumn: "verified_at"
+  dtColumn: "email_verified_at"
  },
  {
   name: "Date Created",
@@ -28,24 +28,12 @@ const trow = [
 ];
 
 const Users = () => {
- const [thColumn, useThColumn] = useState([trow])
+ const [thColumn, useThColumn] = useState(trow)
 
  return (
   <>
-   <SystemLayout>
-    <Header>
-     <Typography>
-      Sandbox - Telemedicine App
-     </Typography>
-    </Header>
-    <Body>
-     <ContentHeader title="User list" desc="Where you can see the all users (Restricted for dev only or user)" />
-
-     <DataTable url="user" trow={thColumn} />
-    </Body>
-    <Footer>
-    </Footer>
-   </SystemLayout>
+   <ContentHeader title="User list" desc="Where you can see the all users (Restricted for dev only or user)" />
+   <DataTable url="user" trow={thColumn} />
   </>
  )
 }

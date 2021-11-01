@@ -1,11 +1,17 @@
 import { Grid, Typography, TableContainer, Paper, Table, TableHead, TableCell, TableBody, TableRow, TablePagination } from '@mui/material'
 import Http from '../../../api/Api'
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useState, useEffect, MouseEventHandler } from 'react'
 
 interface IProps {
  url: string;
  trow: Array<any>;
 }
+
+interface ITableRow {
+ name: string;
+ dtColumn: string;
+}
+
 interface IState { }
 
 const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
@@ -64,20 +70,29 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
   return () => { isMounted = false };
  }, [])
 
- const DataTableBody = ({ data, trow }: any) => {
+ const onSortingTableRow = (column: string) => {
 
-  return (
-   <TableBody>
-    {data.map((item: any, index_a: number) => (
-     <TableRow key={index_a}>
-      <TableCell>{offset + index_a + 1}</TableCell>
-      {trow.map(({ name, dtColumn }: any, index_b: number) => (
-       <TableCell key={index_b}>{item[dtColumn]}</TableCell>
-      ))}
-     </TableRow>
-    ))}
-   </TableBody>
-  )
+  console.log(column)
+ }
+
+ const DataTableHeader = ({ name, dtColumn }: any) => {
+  if (name || dtColumn) {
+   return (
+    <TableCell onClick={() => onSortingTableRow(dtColumn)}>{name}</TableCell>
+   )
+  } else {
+   return <></>
+  }
+ }
+
+ const DataTableCell = ({ item, dtColumn }: any) => {
+  if (dtColumn) {
+   return (
+    <TableCell>{item[dtColumn]}</TableCell>
+   )
+  } else {
+   return <></>
+  }
  }
 
  return (
@@ -88,11 +103,20 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
       <TableRow>
        <TableCell># </TableCell>
        {trow.map(({ name, dtColumn }: any, index: number) => (
-        <TableCell key={index}>{name}</TableCell>
+        <DataTableHeader key={index} name={name} dtColumn={dtColumn} />
        ))}
       </TableRow>
      </TableHead>
-     <DataTableBody trow={trow} data={callBackData} />
+     <TableBody>
+      {callBackData?.map((item: any, index_a: number) => (
+       <TableRow key={index_a}>
+        <TableCell>{offset + index_a + 1}</TableCell>
+        {trow?.map(({ name, dtColumn }: ITableRow, index_b: number) => (
+         <DataTableCell key={index_b} item={item} dtColumn={dtColumn} />
+        ))}
+       </TableRow>
+      ))}
+     </TableBody>
     </Table>
     <TablePagination
      component="div"
