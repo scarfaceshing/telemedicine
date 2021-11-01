@@ -77,7 +77,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 class SystemLayout extends Component<IProps, IState> {
 
-
  constructor(props: IProps) {
   super(props);
 
