@@ -3,8 +3,8 @@ import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemTex
 
 import Http from '../../../api/Api'
 import { useLocation, Link, BrowserRouter, Redirect, Router, useHistory } from 'react-router-dom'
-import LogoutIcon from '@mui/icons-material/Logout'
 
+import LogoutIcon from '@mui/icons-material/Logout'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'

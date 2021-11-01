@@ -14,17 +14,17 @@ class UserController extends Controller
     }
 
     public function index($offset, $limit) {
-     $data = User::skip($offset)->limit($limit)->get();
+     $data = User::skip($offset)
+      ->limit($limit)
+      ->get();
      $total = count(User::all());
 
      return response()->json([
-      "user" => $data,
+      "result" => $data,
       "query" => [
        "offset" => $offset,
        "limit" => $limit,
        "total" => $total
       ]]);
-
-
     }
 }

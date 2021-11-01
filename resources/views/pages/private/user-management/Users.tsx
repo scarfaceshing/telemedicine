@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
+import React, { useState, useEffect } from 'react'
 import { Typography } from '@mui/material'
 import ContentHeader from '../../../component/core/ContentHeader'
 import DataTable from '../../../component/core/DataTable'
@@ -7,15 +6,15 @@ import DataTable from '../../../component/core/DataTable'
 const trow = [
  {
   name: "Name",
-  dtColumn: "name"
+  dtColumn: "name",
  },
  {
   name: "Email",
-  dtColumn: "email"
+  dtColumn: "email",
  },
  {
   name: "Verified",
-  dtColumn: "email_verified_at"
+  dtColumn: "email_verified_at",
  },
  {
   name: "Date Created",
@@ -28,12 +27,30 @@ const trow = [
 ];
 
 const Users = () => {
- const [thColumn, useThColumn] = useState(trow)
+ const [thColumn, setThColumn] = useState(trow)
+ const [mounted, setMounted] = useState(false)
+
+ useEffect(() => {
+  setMounted(true)
+  return () => {
+   setMounted(false)
+  }
+ }, [])
+
+ const Table = ({ }) => {
+  if (mounted) {
+   return (
+    <DataTable url="user" trow={thColumn} />
+   )
+  } else {
+   return <></>
+  }
+ }
 
  return (
   <>
    <ContentHeader title="User list" desc="Where you can see the all users (Restricted for dev only or user)" />
-   <DataTable url="user" trow={thColumn} />
+   <Table />
   </>
  )
 }

@@ -1,5 +1,4 @@
 import React, { Component, useState } from 'react'
-import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
 import { Typography, Box, Alert, Grid, TextField, Button, FormGroup } from '@mui/material'
 import ContentHeader from '../../../component/core/ContentHeader'

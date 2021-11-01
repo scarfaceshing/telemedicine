@@ -1,12 +1,12 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-const Role = () => {
+const PermissionRole = () => {
  return (
   <>
-   <h1>Role</h1>
+   <h1>Permission Role</h1>
   </>
  )
 }
 
-export default Role
+export default PermissionRole

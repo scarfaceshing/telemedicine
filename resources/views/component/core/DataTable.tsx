@@ -40,15 +40,15 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
 
  const getData = async () => {
 
-  const data = await Http.get(`/auth/data/${url}/${offset}/${perPage}`)
-  return data
+  const result = await Http.get(`/auth/data/${url}/${offset}/${perPage}`)
+  return result
  }
 
  useEffect(() => {
   getData().then((res: any) => {
-   const { user, query } = res.data
+   const { result, query } = res.data
    const { total } = query
-   setCallBackData(user)
+   setCallBackData(result)
    setCallBackQuery(query)
    setTotal(total)
   })
@@ -59,9 +59,9 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
 
   getData().then((res: any) => {
    if (isMounted) {
-    const { user, query } = res.data
+    const { result, query } = res.data
     const { total } = query
-    setCallBackData(user)
+    setCallBackData(result)
     setCallBackQuery(query)
     setTotal(total)
    }

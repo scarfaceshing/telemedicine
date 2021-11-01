@@ -28647,7 +28647,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   drawerWidth: 250,
-  openNav: false
+  drawerOpen: false
 });
 
 /***/ }),
@@ -28914,6 +28914,65 @@ var NotFound = function NotFound() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Routes);
+
+/***/ }),
+
+/***/ "./resources/views/component/AppBar.tsx":
+/*!**********************************************!*\
+  !*** ./resources/views/component/AppBar.tsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppBar": () => (/* binding */ AppBar)
+/* harmony export */ });
+/* harmony import */ var _global_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../global/index */ "./resources/global/index.ts");
+/* harmony import */ var _mui_material_AppBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material/AppBar */ "./node_modules/@mui/material/AppBar/AppBar.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+
+
+var AppBar = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_1__["default"])(_mui_material_AppBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  shouldForwardProp: function shouldForwardProp(prop) {
+    return prop !== 'open';
+  }
+})(function (_a) {
+  var theme = _a.theme,
+      open = _a.open;
+  return __assign({
+    backgroundColor: "red",
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    })
+  }, open && {
+    marginLeft: _global_index__WEBPACK_IMPORTED_MODULE_0__["default"].drawerWidth,
+    width: "calc(100% - " + _global_index__WEBPACK_IMPORTED_MODULE_0__["default"].drawerWidth + "px)",
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    })
+  });
+});
 
 /***/ }),
 
@@ -29310,7 +29369,7 @@ var DataTable = function DataTable(_a) {
 
   var getData = function getData() {
     return __awaiter(void 0, void 0, void 0, function () {
-      var data;
+      var result;
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
@@ -29319,10 +29378,10 @@ var DataTable = function DataTable(_a) {
             , _api_Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/auth/data/" + url + "/" + offset + "/" + perPage)];
 
           case 1:
-            data = _a.sent();
+            result = _a.sent();
             return [2
             /*return*/
-            , data];
+            , result];
         }
       });
     });
@@ -29331,10 +29390,10 @@ var DataTable = function DataTable(_a) {
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     getData().then(function (res) {
       var _a = res.data,
-          user = _a.user,
+          result = _a.result,
           query = _a.query;
       var total = query.total;
-      setCallBackData(user);
+      setCallBackData(result);
       setCallBackQuery(query);
       setTotal(total);
     });
@@ -29344,10 +29403,10 @@ var DataTable = function DataTable(_a) {
     getData().then(function (res) {
       if (isMounted) {
         var _a = res.data,
-            user = _a.user,
+            result = _a.result,
             query = _a.query;
         var total_1 = query.total;
-        setCallBackData(user);
+        setCallBackData(result);
         setCallBackQuery(query);
         setTotal(total_1);
       }
@@ -29683,51 +29742,21 @@ var Navigation = function Navigation(_a) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Header": () => (/* binding */ Header),
-/* harmony export */   "Footer": () => (/* binding */ Footer),
-/* harmony export */   "Body": () => (/* binding */ Body),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CssBaseline/CssBaseline.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Toolbar/Toolbar.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
-/* harmony import */ var _mui_material_AppBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/AppBar */ "./node_modules/@mui/material/AppBar/AppBar.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/icons-material/Menu */ "./node_modules/@mui/icons-material/Menu.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CssBaseline/CssBaseline.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Toolbar/Toolbar.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
 /* harmony import */ var _component_core_Navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/core/Navigation */ "./resources/views/component/core/Navigation.tsx");
-var __extends = undefined && undefined.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
+/* harmony import */ var _component_Drawer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/Drawer */ "./resources/views/component/Drawer.tsx");
+/* harmony import */ var _component_AppBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/AppBar */ "./resources/views/component/AppBar.tsx");
+/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material/Menu */ "./node_modules/@mui/icons-material/Menu.js");
+/* harmony import */ var _global_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../global/index */ "./resources/global/index.ts");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -29752,151 +29781,94 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])();
-function Header(props) {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: props.content
-  }, void 0);
-}
-function Footer(props) {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: props.content
-  }, void 0);
-}
-function Body(props) {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: props.content
-  }, void 0);
-}
-var drawerWidth = 250;
-var AppBar = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])(_mui_material_AppBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
-  shouldForwardProp: function shouldForwardProp(prop) {
-    return prop !== 'open';
-  }
-})(function (_a) {
-  var theme = _a.theme,
-      open = _a.open;
-  return __assign({
-    backgroundColor: "red",
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
-  }, open && {
-    marginLeft: drawerWidth,
-    width: "calc(100% - " + drawerWidth + "px)",
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  });
-});
-var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])('div')(function (_a) {
-  var theme = _a.theme;
-  return __assign({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1)
-  }, theme.mixins.toolbar);
-});
 
-var SystemLayout = function (_super) {
-  __extends(SystemLayout, _super);
+var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_6__["default"])();
 
-  function SystemLayout(props) {
-    var _this = _super.call(this, props) || this;
+var Slot = function Slot() {
+  return null;
+};
 
-    _this.onToggleDrawer = function (e) {
-      var open = !_this.state.drawerOpen;
+var SystemLayout = function SystemLayout(_a) {
+  var _b, _c, _d;
 
-      _this.setState({
-        drawerOpen: open
-      });
-    };
+  var children = _a.children;
 
-    _this.state = {
-      drawerWidth: drawerWidth,
-      drawerOpen: false
-    };
-    return _this;
-  }
+  var _e = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(_global_index__WEBPACK_IMPORTED_MODULE_5__["default"].drawerOpen),
+      drawerOpen = _e[0],
+      setDrawerOpen = _e[1];
 
-  SystemLayout.prototype.componentDidMount = function () {
-    /*
-     Http.post('auth/check-auth', {}).then((res: any) => {
-       console.log(res)
-      }).then((res: any) => {
-       console.log(res)
-      }).catch((err: any) => {
-       this.props.history.push('/login')
-      })
-     */
+  var _f = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(_global_index__WEBPACK_IMPORTED_MODULE_5__["default"].drawerWidth),
+      drawerWidth = _f[0],
+      setDrawerWidth = _f[1];
+
+  var onToggleDrawer = function onToggleDrawer(e) {
+    var open = !drawerOpen;
+    setDrawerOpen(open);
   };
 
-  SystemLayout.prototype.render = function () {
-    var _a = this.props,
-        children = _a.children,
-        classes = _a.classes;
-    var header = children[0];
-    var body = children[1];
-    var footer = children[2];
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_styles__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-        theme: theme
+  var childrenArray = react__WEBPACK_IMPORTED_MODULE_1__.Children.toArray(children);
+  var Header = childrenArray.find(function (child) {
+    var _a;
+
+    return ((_a = child === null || child === void 0 ? void 0 : child.props) === null || _a === void 0 ? void 0 : _a.name) === 'Header';
+  });
+  var Content = childrenArray.find(function (child) {
+    var _a;
+
+    return ((_a = child === null || child === void 0 ? void 0 : child.props) === null || _a === void 0 ? void 0 : _a.name) === 'Content';
+  });
+  var Footer = childrenArray.find(function (child) {
+    var _a;
+
+    return ((_a = child === null || child === void 0 ? void 0 : child.props) === null || _a === void 0 ? void 0 : _a.name) === 'Footer';
+  });
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material_styles__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+    theme: theme
+  }, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+      sx: {
+        display: 'flex'
+      }
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_AppBar__WEBPACK_IMPORTED_MODULE_4__.AppBar, __assign({
+        position: "fixed",
+        open: drawerOpen
       }, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+            color: "inherit",
+            "aria-label": "open drawer",
+            onClick: onToggleDrawer,
+            edge: "start",
+            sx: __assign({
+              marginRight: '36px'
+            }, drawerOpen && {
+              display: 'none'
+            })
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_12__["default"], {}, void 0)
+          }), void 0), (_b = Header === null || Header === void 0 ? void 0 : Header.props) === null || _b === void 0 ? void 0 : _b.children]
+        }, void 0)
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        drawerOpen: drawerOpen,
+        drawerWidth: drawerWidth,
+        onToggleDrawer: onToggleDrawer
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("main", {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+          component: "main",
           sx: {
-            display: 'flex'
+            flexGrow: 1,
+            p: 3
           }
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(AppBar, __assign({
-            position: "fixed",
-            open: this.state.drawerOpen
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
-                color: "inherit",
-                "aria-label": "open drawer",
-                onClick: this.onToggleDrawer,
-                edge: "start",
-                sx: __assign({
-                  marginRight: '36px'
-                }, this.state.drawerOpen && {
-                  display: 'none'
-                })
-              }, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_11__["default"], {}, void 0)
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("header", {
-                children: header ? header.props.children : null
-              }, void 0)]
-            }, void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            drawerOpen: this.state.drawerOpen,
-            drawerWidth: this.state.drawerWidth,
-            onToggleDrawer: this.onToggleDrawer
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("main", {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-              component: "main",
-              sx: {
-                flexGrow: 1,
-                p: 3
-              }
-            }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(DrawerHeader, {}, void 0), body ? body.props.children : null]
-            }), void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("footer", {
-            children: footer ? footer.props.children : null
-          }, void 0)]
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_Drawer__WEBPACK_IMPORTED_MODULE_3__.DrawerHeader, {}, void 0), (_c = Content === null || Content === void 0 ? void 0 : Content.props) === null || _c === void 0 ? void 0 : _c.children]
         }), void 0)
-      }), void 0)
-    }, void 0);
-  };
+      }, void 0), (_d = Footer === null || Footer === void 0 ? void 0 : Footer.props) === null || _d === void 0 ? void 0 : _d.children]
+    }), void 0)
+  }), void 0);
+};
 
-  return SystemLayout;
-}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
-
+SystemLayout.Slot = Slot;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SystemLayout);
 
 /***/ }),
@@ -30005,16 +29977,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../private/user-management/ChangePassword */ "./resources/views/pages/private/user-management/ChangePassword.tsx");
-/* harmony import */ var _private_Dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../private/Dashboard */ "./resources/views/pages/private/Dashboard.tsx");
-/* harmony import */ var _private_user_management_Role__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../private/user-management/Role */ "./resources/views/pages/private/user-management/Role.tsx");
-/* harmony import */ var _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../private/user-management/Permission */ "./resources/views/pages/private/user-management/Permission.tsx");
-/* harmony import */ var _private_user_management_Users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../private/user-management/Users */ "./resources/views/pages/private/user-management/Users.tsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../layout/System */ "./resources/views/layout/System.tsx");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _layout_System__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../layout/System */ "./resources/views/layout/System.tsx");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../private/user-management/ChangePassword */ "./resources/views/pages/private/user-management/ChangePassword.tsx");
+/* harmony import */ var _private_Dashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../private/Dashboard */ "./resources/views/pages/private/Dashboard.tsx");
+/* harmony import */ var _private_user_management_Role__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../private/user-management/Role */ "./resources/views/pages/private/user-management/Role.tsx");
+/* harmony import */ var _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../private/user-management/Permission */ "./resources/views/pages/private/user-management/Permission.tsx");
+/* harmony import */ var _private_user_management_PermissionRole__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../private/user-management/PermissionRole */ "./resources/views/pages/private/user-management/PermissionRole.tsx");
+/* harmony import */ var _private_user_management_Users__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../private/user-management/Users */ "./resources/views/pages/private/user-management/Users.tsx");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -30041,7 +30014,8 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_7__["default"])('div')(function (_a) {
+
+var DrawerHeader = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_8__["default"])('div')(function (_a) {
   var theme = _a.theme;
   return __assign({
     display: 'flex',
@@ -30058,12 +30032,12 @@ var CheckPoint = function CheckPoint(_a) {
 
   if (children) {
     return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: path
       }, void 0), children.map(function (_a, index) {
         var path = _a.path,
             component = _a.component;
-        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
           path: path,
           component: component
         }, index);
@@ -30071,7 +30045,7 @@ var CheckPoint = function CheckPoint(_a) {
     }, void 0);
   } else {
     return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
         path: path,
         component: component
       }, void 0)
@@ -30081,23 +30055,24 @@ var CheckPoint = function CheckPoint(_a) {
 
 var PrivateRoute = [{
   path: '/admin/dashboard',
-  component: _private_Dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]
+  component: _private_Dashboard__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/admin/user-management',
   children: [{
     path: '/admin/user-management/user',
-    component: function component() {
-      return _private_user_management_Users__WEBPACK_IMPORTED_MODULE_5__["default"];
-    }
+    component: _private_user_management_Users__WEBPACK_IMPORTED_MODULE_7__["default"]
   }, {
     path: '/admin/user-management/change-password',
-    component: _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_1__["default"]
+    component: _private_user_management_ChangePassword__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/admin/user-management/role',
-    component: _private_user_management_Role__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _private_user_management_Role__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/admin/user-management/permission',
-    component: _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _private_user_management_Permission__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }, {
+    path: '/admin/user-management/permission-role',
+    component: _private_user_management_PermissionRole__WEBPACK_IMPORTED_MODULE_6__["default"]
   }]
 }];
 
@@ -30112,21 +30087,31 @@ var Index = function Index() {
       children: children
     }, index);
   });
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_6__.Header, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.BrowserRouter, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"].Slot, __assign({
+        name: "Header"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
           children: "Sandbox - Telemedicine App"
         }, void 0)
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_6__.Body, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Redirect, {
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"].Slot, __assign({
+        name: "Content"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Redirect, {
             exact: true,
             from: "/admin/",
             to: "/admin/dashboard"
           }, void 0), PageList]
         }, void 0)
-      }, void 0)]
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_System__WEBPACK_IMPORTED_MODULE_1__["default"].Slot, __assign({
+        name: "Footer"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+          children: "Footer"
+        }, void 0)
+      }), void 0)]
     }, void 0)
   }, void 0);
 };
@@ -30271,6 +30256,32 @@ var Permission = function Permission() {
 
 /***/ }),
 
+/***/ "./resources/views/pages/private/user-management/PermissionRole.tsx":
+/*!**************************************************************************!*\
+  !*** ./resources/views/pages/private/user-management/PermissionRole.tsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var PermissionRole = function PermissionRole() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+      children: "Permission Role"
+    }, void 0)
+  }, void 0);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PermissionRole);
+
+/***/ }),
+
 /***/ "./resources/views/pages/private/user-management/Role.tsx":
 /*!****************************************************************!*\
   !*** ./resources/views/pages/private/user-management/Role.tsx ***!
@@ -30336,16 +30347,35 @@ var trow = [{
 var Users = function Users() {
   var _a = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(trow),
       thColumn = _a[0],
-      useThColumn = _a[1];
+      setThColumn = _a[1];
+
+  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      mounted = _b[0],
+      setMounted = _b[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    setMounted(true);
+    return function () {
+      setMounted(false);
+    };
+  }, []);
+
+  var Table = function Table(_a) {
+    if (mounted) {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_DataTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        url: "user",
+        trow: thColumn
+      }, void 0);
+    } else {
+      return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0);
+    }
+  };
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_ContentHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: "User list",
       desc: "Where you can see the all users (Restricted for dev only or user)"
-    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_DataTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      url: "user",
-      trow: thColumn
-    }, void 0)]
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Table, {}, void 0)]
   }, void 0);
 };
 

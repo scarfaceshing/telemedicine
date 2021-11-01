@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import Http from '../../../api/Api'
+
+import { BrowserRouter, Switch, Route, Link, Redirect, useHistory } from "react-router-dom";
+import SystemLayout from '../../layout/System'
+import { styled } from '@mui/material/styles'
+import { Typography } from '@mui/material'
+
 import ChangePasswordPage from '../private/user-management/ChangePassword'
 import DashboardPage from '../private/Dashboard'
 import RolePage from '../private/user-management/Role'
 import PermissionPage from '../private/user-management/Permission'
+import PermissionRolePage from '../private/user-management/PermissionRole'
 import UsersPage from '../private/user-management/Users'
-
-import { BrowserRouter, Switch, Route, Link, Redirect, useHistory } from "react-router-dom";
-import SystemLayout, { Header, Body, Footer } from '../../layout/System'
-import { styled } from '@mui/material/styles'
-import { Typography } from '@mui/material'
 
 interface IRouteChild {
  path: string;
@@ -60,7 +62,7 @@ const PrivateRoute: Array<IRoute> = [
   children: [
    {
     path: '/admin/user-management/user',
-    component: () => UsersPage
+    component: UsersPage
    },
    {
     path: '/admin/user-management/change-password',
@@ -73,6 +75,10 @@ const PrivateRoute: Array<IRoute> = [
    {
     path: '/admin/user-management/permission',
     component: PermissionPage
+   },
+   {
+    path: '/admin/user-management/permission-role',
+    component: PermissionRolePage
    }
   ]
  }
@@ -84,17 +90,20 @@ const Index = () => {
  return (
   <BrowserRouter>
    <SystemLayout>
-    <Header>
+    <SystemLayout.Slot name="Header">
      <Typography>
       Sandbox - Telemedicine App
      </Typography>
-    </Header>
-    <Body>
+    </SystemLayout.Slot>
+    <SystemLayout.Slot name="Content">
      <Switch>
       <Redirect exact from="/admin/" to="/admin/dashboard" />
       {PageList}
      </Switch>
-    </Body>
+    </SystemLayout.Slot>
+    <SystemLayout.Slot name="Footer">
+     <h1>Footer</h1>
+    </SystemLayout.Slot>
    </SystemLayout>
   </BrowserRouter>
  )

@@ -1,5 +1,4 @@
 import React from 'react'
-import SystemLayout, { Header, Body, Footer } from '../../../layout/System'
 import { Typography } from '@mui/material'
 
 const Permission = () => {

@@ -1,22 +1,17 @@
 import React, { Component } from 'react'
-import SystemLayout, { Header, Body, Footer } from '../../layout/System'
 import { styled, useTheme } from '@mui/material/styles'
 import { Typography, Box, Alert, Grid } from '@mui/material'
 import ContentHeader from '../../component/core/ContentHeader'
 
-interface IProps {
+interface IProps { }
 
-}
-
-interface IState {
-}
+interface IState { }
 
 export class Dashboard extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
  }
-
 
  render() {
   return (
