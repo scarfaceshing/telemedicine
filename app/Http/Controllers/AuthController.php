@@ -41,7 +41,8 @@ class AuthController extends Controller
 
      return response()->json(['status' => 'Logout Successfully']); */
      $request->user()->tokens()->delete();
+     Auth::guard('web')->logout();
 
-     if (Auth::guard('web')->logout()) return response()->json(["status" => "true"]);
+     return response()->json(["status" => "true"]);
     }
 }

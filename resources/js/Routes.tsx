@@ -20,7 +20,6 @@ const Routes: FC<IProps> = (props) => {
     <Redirect exact from="/" to="/login" />
     <Route path="/login" component={LoginPage} />
     <PrivateRoute />
-    <Route path="*" component={NotFound} />
    </Switch>
   </BrowserRouter >
  );

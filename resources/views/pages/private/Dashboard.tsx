@@ -15,8 +15,6 @@ export class Dashboard extends Component<IProps, IState> {
 
  constructor(props: IProps) {
   super(props)
-
-  console.log("Dashboard")
  }
 
 

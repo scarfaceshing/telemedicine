@@ -30,6 +30,11 @@ interface Validator {
 
 class Login extends Component<IProps, IState>{
 
+ async componentDidMount() {
+  const { data } = await Http.post("/auth/check-auth", {});
+  if (data.authenticate) this.props.history.push('/admin/')
+ }
+
  constructor(props: IProps) {
   super(props)
 

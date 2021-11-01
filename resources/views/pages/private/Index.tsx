@@ -60,7 +60,7 @@ const PrivateRoute: Array<IRoute> = [
   children: [
    {
     path: '/admin/user-management/user',
-    component: UsersPage
+    component: () => UsersPage
    },
    {
     path: '/admin/user-management/change-password',
