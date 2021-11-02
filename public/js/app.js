@@ -29355,6 +29355,14 @@ var DataTable = function DataTable(_a) {
       total = _j[0],
       setTotal = _j[1];
 
+  var _k = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)('created_at'),
+      orderBy = _k[0],
+      setOrderBy = _k[1];
+
+  var _l = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)('asc'),
+      sortBy = _l[0],
+      setSortBy = _l[1];
+
   var handleChangePage = function handleChangePage(event, newPage) {
     setPage(newPage);
     setOffset(newPage * perPage);
@@ -29375,7 +29383,7 @@ var DataTable = function DataTable(_a) {
           case 0:
             return [4
             /*yield*/
-            , _api_Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/auth/data/" + url + "/" + offset + "/" + perPage)];
+            , _api_Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/auth/data/" + url + "/" + offset + "/" + perPage + "/" + orderBy + "/" + sortBy)];
 
           case 1:
             result = _a.sent();
@@ -29397,7 +29405,7 @@ var DataTable = function DataTable(_a) {
       setCallBackQuery(query);
       setTotal(total);
     });
-  }, [offset, perPage, total]);
+  }, [offset, perPage, total, orderBy, sortBy]);
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     var isMounted = true;
     getData().then(function (res) {
@@ -29417,7 +29425,13 @@ var DataTable = function DataTable(_a) {
   }, []);
 
   var onSortingTableRow = function onSortingTableRow(column) {
-    console.log(column);
+    setOrderBy(column);
+
+    if (sortBy === 'asc') {
+      setSortBy('desc');
+    } else {
+      setSortBy('asc');
+    }
   };
 
   var DataTableHeader = function DataTableHeader(_a) {

@@ -24,6 +24,8 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
  const [offset, setOffset] = useState(0)
  const [perPage, setPerPage] = useState(5)
  const [total, setTotal] = useState(0)
+ const [orderBy, setOrderBy] = useState('created_at')
+ const [sortBy, setSortBy] = useState('asc')
 
  const handleChangePage = (event: any, newPage: number) => {
   setPage(newPage)
@@ -39,8 +41,7 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
  };
 
  const getData = async () => {
-
-  const result = await Http.get(`/auth/data/${url}/${offset}/${perPage}`)
+  const result = await Http.get(`/auth/data/${url}/${offset}/${perPage}/${orderBy}/${sortBy}`)
   return result
  }
 
@@ -52,7 +53,7 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
    setCallBackQuery(query)
    setTotal(total)
   })
- }, [offset, perPage, total])
+ }, [offset, perPage, total, orderBy, sortBy])
 
  useEffect(() => {
   let isMounted = true
@@ -71,8 +72,12 @@ const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
  }, [])
 
  const onSortingTableRow = (column: string) => {
-
-  console.log(column)
+  setOrderBy(column)
+  if (sortBy === 'asc') {
+   setSortBy('desc')
+  } else {
+   setSortBy('asc')
+  }
  }
 
  const DataTableHeader = ({ name, dtColumn }: any) => {

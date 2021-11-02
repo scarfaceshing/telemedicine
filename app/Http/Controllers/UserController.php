@@ -13,10 +13,13 @@ class UserController extends Controller
      $this->middleware('auth:sanctum');
     }
 
-    public function index($offset, $limit) {
+    public function index($offset=0,$limit=5,$orderby='created_at',$sortby='asc') {
+
      $data = User::skip($offset)
-      ->limit($limit)
-      ->get();
+     ->limit($limit)
+     ->orderBy($orderby, $sortby)
+     ->get();
+
      $total = count(User::all());
 
      return response()->json([
