@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { Typography } from '@mui/material'
 import ContentHeader from '../../../component/core/ContentHeader'
 import DataTable from '../../../component/core/DataTable'
@@ -7,30 +7,50 @@ import Http from '../../../../api/Api'
 
 const trow = [
  {
-  name: "Name",
-  dtColumn: "name",
+  name: "name",
+  label: "Name",
+  options: {
+   filter: true,
+   sort: true,
+  }
  },
  {
-  name: "Email",
-  dtColumn: "email",
+  name: "email",
+  label: "Email",
+  options: {
+   filter: true,
+   sort: true,
+  }
  },
  {
-  name: "Verified",
-  dtColumn: "email_verified_at",
+  name: "email_verified_at",
+  label: "Email Verified",
+  options: {
+   filter: true,
+   sort: true,
+  }
  },
  {
-  name: "Date Created",
-  dtColumn: "created_at"
+  name: "created_at",
+  label: "Date Created",
+  options: {
+   filter: true,
+   sort: true,
+  }
  },
  {
-  name: "Date Updated",
-  dtColumn: "updated_at"
+  name: "updated_at",
+  label: "Date Updated",
+  options: {
+   filter: true,
+   sort: true,
+  }
  }
 ];
 
-const columns = ["name", "email", "email_verified_at", "created_at", "updated_at"];
+interface IProps { }
 
-const Users = () => {
+const Users: FC<IProps> = () => {
  const [thColumn, setThColumn] = useState(trow)
  const [mounted, setMounted] = useState(false)
  const [data, setData] = useState([])
@@ -42,13 +62,22 @@ const Users = () => {
   }
  }, [])
 
+ const loadTable = () => {
+  Http.get('/auth/data/user').then(({ data }: any) => {
+   setData(data)
+  })
+ }
+
  const options: any = {
+  filters: false,
+  rowsPerPage: 5,
+  rowsPerPageOptions: [5],
   serverSide: true,
-  onTableChange: async (action: any, tableState: any) => {
-   const { data } = await Http.get('/auth/data/user/0/5/created_at/asc');
-   setData(data.result)
+  count: -1,
+  onTableChange: async (action: string, tableState: any) => {
+   loadTable()
   }
- };
+ }
 
  return (
   <>
@@ -56,7 +85,7 @@ const Users = () => {
    <MUIDataTable
     title={"Employee List"}
     data={data}
-    columns={columns}
+    columns={thColumn}
     options={options}
    />
   </>

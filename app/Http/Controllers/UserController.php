@@ -13,21 +13,23 @@ class UserController extends Controller
      $this->middleware('auth:sanctum');
     }
 
-    public function index($offset=0,$limit=5,$orderby='created_at',$sortby='asc') {
+    public function index(Request $request) {
+     extract(request()->only(['filter', 'limit', 'page', 'sort', 'order']));
 
-     $data = User::skip($offset)
-     ->limit($limit)
-     ->orderBy($orderby, $sortby)
-     ->get();
 
-     $total = count(User::all());
+     $user = new User;
+     $count = count($user->all());
+
+     $data = $user
+      ->whereLike(["name", "email"], "%{$filter}%")
+      ->skip($page)
+      ->limit($limit)
+      ->orderBy($order, $sort)
+      ->get();
 
      return response()->json([
       "result" => $data,
-      "query" => [
-       "offset" => $offset,
-       "limit" => $limit,
-       "total" => $total
-      ]]);
+      "count" => $count
+     ]);
     }
 }
