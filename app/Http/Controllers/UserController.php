@@ -14,22 +14,19 @@ class UserController extends Controller
     }
 
     public function index(Request $request) {
-     extract(request()->only(['filter', 'limit', 'page', 'sort', 'order']));
 
+     [$data, $count] = User::getDataTable([
+      'id',
+      'name',
+      'email',
+      'email_verified_at',
+      'created_at',
+      'updated_at'
+      ]);
 
-     $user = new User;
-     $count = count($user->all());
-
-     $data = $user
-      ->whereLike(["name", "email"], "%{$filter}%")
-      ->skip($page)
-      ->limit($limit)
-      ->orderBy($order, $sort)
-      ->get();
-
-     return response()->json([
-      "result" => $data,
-      "count" => $count
-     ]);
+      return response()->json([
+          'result' => $data,
+          'count' => $count
+      ]);
     }
 }

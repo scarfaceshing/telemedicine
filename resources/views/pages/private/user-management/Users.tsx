@@ -53,7 +53,18 @@ interface IProps { }
 const Users: FC<IProps> = () => {
  const [thColumn, setThColumn] = useState(trow)
  const [mounted, setMounted] = useState(false)
+
  const [data, setData] = useState([])
+ const [count, setCount] = useState(0)
+
+ const [page, setPage] = useState(1)
+ const [offset, setOffset] = useState(0)
+ const [limit, setLimit] = useState(5)
+ const [order, setOrder] = useState('created_at')
+ const [align, setAlign] = useState('desc')
+ const [filter, setFilter] = useState('')
+ const [perPage, setPerPage] = useState([5, 10, 25])
+ const [toggleRequest, setToggleRequest] = useState(true)
 
  useEffect(() => {
   setMounted(true)
@@ -63,19 +74,46 @@ const Users: FC<IProps> = () => {
  }, [])
 
  const loadTable = () => {
-  Http.get('/auth/data/user').then(({ data }: any) => {
-   setData(data)
+  Http.get(`/auth/data/user?offset=${offset}&limit=${limit}&orderby=${order}&sort=${align}&filter=${filter}`).then(({ data }: any) => {
+   setData(data.result)
+   setCount(data.count)
   })
  }
 
+ useEffect(() => {
+  loadTable()
+ }, [page, limit, order, align, filter])
+
  const options: any = {
-  filters: false,
-  rowsPerPage: 5,
-  rowsPerPageOptions: [5],
+  filterType: 'textField',
+  rowsPerPage: limit,
+  rowsPerPageOptions: perPage,
   serverSide: true,
-  count: -1,
-  onTableChange: async (action: string, tableState: any) => {
-   loadTable()
+  filter: false,
+  print: false,
+  download: false,
+  viewColumns: false,
+  searchAlwaysOpen: true,
+  elevation: 0,
+  count: count,
+  selectableRowsHideCheckboxes: true,
+  onTableInit: (action: string, tableState: any) => {
+   setPage(tableState.page)
+  },
+  onChangePage: (currentPage: number) => {
+   setPage(currentPage)
+   setOffset(currentPage * limit)
+  },
+  onChangeRowsPerPage: (numberOfRows: number) => {
+   setLimit(numberOfRows)
+  },
+  onColumnSortChange: (changeColumn: string, direction: string) => {
+   setOrder(changeColumn)
+   setAlign(direction)
+  },
+  onSearchChange: (searchText: string) => {
+   if (searchText === null) searchText = ''
+   setFilter(searchText)
   }
  }
 
