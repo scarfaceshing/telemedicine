@@ -13,10 +13,20 @@ class UserController extends Controller
      $this->middleware('auth:sanctum');
     }
 
-    public function index() {
+    public function index(Request $request) {
 
-     $user = User::all();
+     [$data, $count] = User::getDataTable([
+      'id',
+      'name',
+      'email',
+      'email_verified_at',
+      'created_at',
+      'updated_at'
+      ]);
 
-     return response()->json(["user" => $user]);
+      return response()->json([
+          'result' => $data,
+          'count' => $count
+      ]);
     }
 }

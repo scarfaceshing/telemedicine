@@ -1,3 +1,9 @@
 import { useHistory } from 'react-router-dom';
 
-export default useHistory();
+const goTo = (path: string) => {
+ const history = useHistory()
+
+ history.push(path)
+}
+
+export default goTo

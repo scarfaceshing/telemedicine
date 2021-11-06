@@ -1,27 +1,17 @@
 import React, { Component, FC, MouseEventHandler, useState, useEffect } from 'react'
 import { Theme, CSSObject, IconButton, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Collapse, ListItemButton } from '@mui/material'
-import { styled, useTheme } from '@mui/material/styles'
+
 import Http from '../../../api/Api'
-import { useLocation, Link, BrowserRouter, Router, useHistory } from 'react-router-dom'
+import { useLocation, Link, BrowserRouter, Redirect, Router, useHistory } from 'react-router-dom'
+
 import LogoutIcon from '@mui/icons-material/Logout'
-import DashboardIcon from '@mui/icons-material/Dashboard'
-import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import PersonIcon from '@mui/icons-material/Person'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import StarBorder from '@mui/icons-material/StarBorder'
-import Global from '../../../global/index'
-
-interface IState {
- openNav: boolean;
-}
-
-interface IProps {
- onToggleDrawer: (event: React.MouseEvent<HTMLButtonElement>) => void;
- drawerWidth: number;
- drawerOpen: boolean;
-}
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import PersonIcon from '@mui/icons-material/Person'
+import { Drawer, DrawerHeader } from '../Drawer'
 
 interface INavChildren {
  path?: string;
@@ -34,6 +24,12 @@ interface INavigation {
  open?: boolean;
  children?: Array<INavChildren>;
 }
+interface IProps {
+ onToggleDrawer: (event: React.MouseEvent<HTMLButtonElement>) => void;
+ drawerWidth: number;
+ drawerOpen: boolean;
+}
+
 
 const navigationItem = [
  {
@@ -48,7 +44,7 @@ const navigationItem = [
   open: true,
   children: [
    {
-    path: '/admin/user-management/users',
+    path: '/admin/user-management/user',
     name: 'Users'
    },
    {
@@ -71,72 +67,17 @@ const navigationItem = [
  }
 ];
 
-/* const NavItem = [
- {
-  path: '/admin/dashboard',
-  name: 'Dashboard',
-  icon: <DashboardIcon />
- },
- {
-  path: '/admin/user-management',
-  name: 'User Management',
-  icon: <PersonIcon />
- }
-] */
-
-
-
 const Navigation: FC<IProps> = ({ drawerOpen, drawerWidth, onToggleDrawer }) => {
 
- const history = useHistory()
  const [navItem, setNavItem] = useState(navigationItem)
+ const history = useHistory()
 
- const openedMixin = (theme: Theme): CSSObject => ({
-  width: drawerWidth,
-  transition: theme.transitions.create('width', {
-   easing: theme.transitions.easing.sharp,
-   duration: theme.transitions.duration.enteringScreen,
-  }),
-  overflowX: 'hidden',
- });
-
- const closedMixin = (theme: Theme): CSSObject => ({
-  transition: theme.transitions.create('width', {
-   easing: theme.transitions.easing.sharp,
-   duration: theme.transitions.duration.leavingScreen,
-  }),
-  overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-   width: `calc(${theme.spacing(9)} + 1px)`,
-  },
- });
-
- const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
- }));
-
- const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-   width: drawerWidth,
-   flexShrink: 0,
-   whiteSpace: 'nowrap',
-   boxSizing: 'border-box',
-   ...(open && {
-    ...openedMixin(theme),
-    '& .MuiDrawer-paper': openedMixin(theme),
-   }),
-   ...(!open && {
-    ...closedMixin(theme),
-    '& .MuiDrawer-paper': closedMixin(theme),
-   }),
-  }),
- );
+ useEffect(() => {
+  navItem.find((item: any, index: number) => {
+   navItem[index].open = false
+   setNavItem([...navItem])
+  })
+ }, [drawerOpen])
 
  const getUser = (): void => {
   Http.get('auth/data/user', {}).then((res: any) => {
@@ -151,10 +92,14 @@ const Navigation: FC<IProps> = ({ drawerOpen, drawerWidth, onToggleDrawer }) => 
   })
  }
 
- const logout = (): void => {
-  Http.post('auth/logout', {}).then((res) => {
-   history.push('/')
-  })
+ const onLogout = () => {
+  Http.post('auth/logout', {})
+ }
+
+ const logout = () => {
+  onLogout()
+
+  history.push('/')
  }
 
  const collapseClick = (index: number) => {
@@ -221,6 +166,7 @@ const Navigation: FC<IProps> = ({ drawerOpen, drawerWidth, onToggleDrawer }) => 
        Logout
       </ListItemText>
      </ListItem>
+
     </List>
    </Drawer>
   </>

@@ -1,157 +1,80 @@
-import React, { Component, ReactElement, ReactNode } from 'react'
+import React, { FC, Children, ReactElement, ReactNode, useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { CssBaseline, Toolbar, IconButton, Box } from '@mui/material'
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
-import { styled } from '@mui/material/styles'
-import MenuIcon from '@mui/icons-material/Menu'
 import Navigation from '../component/core/Navigation'
-import Http from '../../api/Api'
-import { useHistory, BrowserRouter } from 'react-router-dom'
+import { DrawerHeader } from '../component/Drawer'
+import { AppBar } from '../component/AppBar'
+import MenuIcon from '@mui/icons-material/Menu'
 import Global from '../../global/index'
 
-interface IState {
- drawerWidth: number;
- drawerOpen: boolean;
-}
-
 interface IProps {
- children?: ReactElement[];
- classes?: any;
- history?: any;
+ children: {
+  header: ReactNode,
+  body: ReactNode,
+  footer: ReactNode
+ }
 }
 
 const theme = createTheme()
 
-export function Header(props: any): ReactElement {
- return (
-  <>{props.content}</>
- )
-}
+const Slot: React.FC<{
+ name: 'Header' | 'Content' | 'Footer';
+}> = () => null;
 
-export function Footer(props: any): ReactElement {
- return (
-  <>{props.content}</>
- )
-}
+const SystemLayout = ({ children }: { children: Array<React.ReactElement> }) => {
 
-export function Body(props: any): ReactElement {
- return (
-  <>{props.content}</>
- )
-}
+ const [drawerOpen, setDrawerOpen] = useState(Global.drawerOpen)
+ const [drawerWidth, setDrawerWidth] = useState(Global.drawerWidth)
 
-interface AppBarProps extends MuiAppBarProps {
- open?: boolean;
-}
-
-const drawerWidth = 250;
-
-const AppBar = styled(MuiAppBar, {
- shouldForwardProp: (prop) => prop !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
- backgroundColor: "red",
- zIndex: theme.zIndex.drawer + 1,
- transition: theme.transitions.create(['width', 'margin'], {
-  easing: theme.transitions.easing.sharp,
-  duration: theme.transitions.duration.leavingScreen,
- }),
- ...(open && {
-  marginLeft: drawerWidth,
-  width: `calc(100% - ${drawerWidth}px)`,
-  transition: theme.transitions.create(['width', 'margin'], {
-   easing: theme.transitions.easing.sharp,
-   duration: theme.transitions.duration.enteringScreen,
-  }),
- }),
-}));
-
-const DrawerHeader = styled('div')(({ theme }) => ({
- display: 'flex',
- alignItems: 'center',
- justifyContent: 'flex-end',
- padding: theme.spacing(0, 1),
- // necessary for content to be below app bar
- ...theme.mixins.toolbar,
-}));
-
-
-class SystemLayout extends Component<IProps, IState> {
-
-
- constructor(props: IProps) {
-  super(props);
-
-  this.state = {
-   drawerWidth: drawerWidth,
-   drawerOpen: false
-  }
+ const onToggleDrawer = (e: any): void => {
+  let open = !drawerOpen
+  setDrawerOpen(open)
  }
 
- componentDidMount() {
+ const childrenArray = Children.toArray(children) as unknown as React.ReactElement[];
+ const Header = childrenArray.find(child => child?.props?.name === 'Header');
+ const Content = childrenArray.find(child => child?.props?.name === 'Content');
+ const Footer = childrenArray.find(child => child?.props?.name === 'Footer');
 
-  /*
-   Http.post('auth/check-auth', {}).then((res: any) => {
-     console.log(res)
-    }).then((res: any) => {
-     console.log(res)
-    }).catch((err: any) => {
-     this.props.history.push('/login')
-    })
-   */
+ return (
+  <ThemeProvider theme={theme}>
+   <Box sx={{ display: 'flex' }}>
+    <CssBaseline />
+    <AppBar position="fixed" open={drawerOpen}>
+     <Toolbar>
+      <IconButton
+       color="inherit"
+       aria-label="open drawer"
+       onClick={onToggleDrawer}
+       edge="start"
+       sx={{
+        marginRight: '36px',
+        ...(drawerOpen && { display: 'none' }),
+       }}
+      >
+       <MenuIcon />
+      </IconButton>
 
- }
+      {Header?.props?.children}
 
- private onToggleDrawer = (e: any): void => {
-  let open = !this.state.drawerOpen
-  this.setState({ drawerOpen: open })
- }
+     </Toolbar>
+    </AppBar>
+    <Navigation drawerOpen={drawerOpen} drawerWidth={drawerWidth} onToggleDrawer={onToggleDrawer} />
+    <main>
+     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <DrawerHeader />
 
+      {Content?.props?.children}
 
- render() {
-  const { children, classes }: any = this.props
-  const header = children[0]
-  const body = children[1]
-  const footer = children[2]
-
-  return (
-   <>
-    <ThemeProvider theme={theme}>
-     <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={this.state.drawerOpen}>
-       <Toolbar>
-        <IconButton
-         color="inherit"
-         aria-label="open drawer"
-         onClick={this.onToggleDrawer}
-         edge="start"
-         sx={{
-          marginRight: '36px',
-          ...(this.state.drawerOpen && { display: 'none' }),
-         }}
-        >
-         <MenuIcon />
-        </IconButton>
-        <header>
-         {header ? header.props.children : null}
-        </header>
-       </Toolbar>
-      </AppBar>
-      <Navigation drawerOpen={this.state.drawerOpen} drawerWidth={this.state.drawerWidth} onToggleDrawer={this.onToggleDrawer} />
-      <main>
-       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        {body ? body.props.children : null}
-       </Box>
-      </main>
-      <footer>
-       {footer ? footer.props.children : null}
-      </footer>
      </Box>
-    </ThemeProvider>
-   </>
-  )
- }
+    </main>
+
+    {Footer?.props?.children}
+
+   </Box>
+  </ThemeProvider>
+ )
 }
 
-export default SystemLayout;
+SystemLayout.Slot = Slot
+export default SystemLayout

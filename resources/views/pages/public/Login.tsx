@@ -30,6 +30,11 @@ interface Validator {
 
 class Login extends Component<IProps, IState>{
 
+ async componentDidMount() {
+  const { data } = await Http.post("/auth/check-auth", {});
+  if (data.authenticate) this.props.history.push('/admin/')
+ }
+
  constructor(props: IProps) {
   super(props)
 
@@ -133,7 +138,7 @@ class Login extends Component<IProps, IState>{
         type="submit"
         fullWidth
         variant="contained"
-        sx={{ mt: 3, mb: 2 }}
+        sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
        >
         Sign In
        </Button>
