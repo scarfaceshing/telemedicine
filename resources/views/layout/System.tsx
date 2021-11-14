@@ -5,7 +5,7 @@ import Navigation from '../component/core/Navigation'
 import { DrawerHeader } from '../component/Drawer'
 import { AppBar } from '../component/AppBar'
 import MenuIcon from '@mui/icons-material/Menu'
-import Global from '../../global/index'
+import * as MuiConfig from '../../global/mui-config'
 
 interface IProps {
  children: {
@@ -23,8 +23,8 @@ const Slot: React.FC<{
 
 const SystemLayout = ({ children }: { children: Array<React.ReactElement> }) => {
 
- const [drawerOpen, setDrawerOpen] = useState(Global.drawerOpen)
- const [drawerWidth, setDrawerWidth] = useState(Global.drawerWidth)
+ const [drawerOpen, setDrawerOpen] = useState(MuiConfig.drawerOpen)
+ const [drawerWidth, setDrawerWidth] = useState(MuiConfig.drawerWidth)
 
  const onToggleDrawer = (e: any): void => {
   let open = !drawerOpen

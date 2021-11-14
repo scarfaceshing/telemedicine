@@ -1,142 +1,90 @@
-import { Grid, Typography, TableContainer, Paper, Table, TableHead, TableCell, TableBody, TableRow, TablePagination } from '@mui/material'
+import React, { useState, useEffect, FC } from 'react'
+import { Typography, IconButton } from '@mui/material'
+import MUIDataTable from "mui-datatables";
 import Http from '../../../api/Api'
-import React, { FC, useState, useEffect, MouseEventHandler } from 'react'
 
 interface IProps {
+ title: string;
  url: string;
- trow: Array<any>;
+ column: any;
 }
 
-interface ITableRow {
- name: string;
- dtColumn: string;
-}
+const Users: FC<IProps> = ({ title, url, column }: IProps) => {
+ const [mounted, setMounted] = useState(false)
 
-interface IState { }
+ const [data, setData] = useState([])
+ const [count, setCount] = useState(0)
 
-const DataTable: FC<IProps> = ({ url, trow }: IProps) => {
- const [callBackData, setCallBackData] = useState([])
- const [callBackQuery, setCallBackQuery] = useState([])
-
- const [page, setPage] = useState(0);
- const [rowsPerPage, setRowsPerPage] = useState(5);
- const [rowsPerPageOptions, setRowsPerPageOptions] = useState([5, 10, 25, 100])
+ const [page, setPage] = useState(1)
  const [offset, setOffset] = useState(0)
- const [perPage, setPerPage] = useState(5)
- const [total, setTotal] = useState(0)
- const [orderBy, setOrderBy] = useState('created_at')
- const [sortBy, setSortBy] = useState('asc')
-
- const handleChangePage = (event: any, newPage: number) => {
-  setPage(newPage)
-  setOffset(newPage * perPage)
- };
-
- const handleChangeRowsPerPage = (event: any) => {
-  setRowsPerPage(parseInt(event.target.value, 10));
-  setPage(0);
-  setOffset(0)
-
-  setPerPage(parseInt(event.target.value))
- };
-
- const getData = async () => {
-  const result = await Http.get(`/auth/data/${url}/${offset}/${perPage}/${orderBy}/${sortBy}`)
-  return result
- }
+ const [limit, setLimit] = useState(5)
+ const [order, setOrder] = useState('created_at')
+ const [align, setAlign] = useState('desc')
+ const [filter, setFilter] = useState('')
+ const [perPage, setPerPage] = useState([5, 10, 25])
+ const [toggleRequest, setToggleRequest] = useState(true)
 
  useEffect(() => {
-  getData().then((res: any) => {
-   const { result, query } = res.data
-   const { total } = query
-   setCallBackData(result)
-   setCallBackQuery(query)
-   setTotal(total)
-  })
- }, [offset, perPage, total, orderBy, sortBy])
-
- useEffect(() => {
-  let isMounted = true
-
-  getData().then((res: any) => {
-   if (isMounted) {
-    const { result, query } = res.data
-    const { total } = query
-    setCallBackData(result)
-    setCallBackQuery(query)
-    setTotal(total)
-   }
-  })
-
-  return () => { isMounted = false };
+  setMounted(true)
+  return () => {
+   setMounted(false)
+  }
  }, [])
 
- const onSortingTableRow = (column: string) => {
-  setOrderBy(column)
-  if (sortBy === 'asc') {
-   setSortBy('desc')
-  } else {
-   setSortBy('asc')
-  }
+ const loadTable = () => {
+  Http.get(`/auth/data/${url}?offset=${offset}&limit=${limit}&orderby=${order}&sort=${align}&filter=${filter}`).then(({ data }: any) => {
+   setData(data.result)
+   setCount(data.count)
+  })
  }
 
- const DataTableHeader = ({ name, dtColumn }: any) => {
-  if (name || dtColumn) {
-   return (
-    <TableCell onClick={() => onSortingTableRow(dtColumn)}>{name}</TableCell>
-   )
-  } else {
-   return <></>
-  }
- }
+ useEffect(() => {
+  loadTable()
+ }, [page, limit, order, align, filter])
 
- const DataTableCell = ({ item, dtColumn }: any) => {
-  if (dtColumn) {
-   return (
-    <TableCell>{item[dtColumn]}</TableCell>
-   )
-  } else {
-   return <></>
+ const options: any = {
+  filterType: 'textField',
+  rowsPerPage: limit,
+  rowsPerPageOptions: perPage,
+  serverSide: true,
+  filter: false,
+  print: false,
+  download: false,
+  viewColumns: false,
+  searchAlwaysOpen: true,
+  elevation: 0,
+  count: count,
+  selectableRowsHideCheckboxes: true,
+  onTableInit: (action: string, tableState: any) => {
+   setPage(tableState.page)
+  },
+  onChangePage: (currentPage: number) => {
+   setPage(currentPage)
+   setOffset(currentPage * limit)
+  },
+  onChangeRowsPerPage: (numberOfRows: number) => {
+   setLimit(numberOfRows)
+  },
+  onColumnSortChange: (changeColumn: string, direction: string) => {
+   setOrder(changeColumn)
+   setAlign(direction)
+  },
+  onSearchChange: (searchText: string) => {
+   if (searchText === null) searchText = ''
+   setFilter(searchText)
   }
  }
 
  return (
   <>
-   <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-     <TableHead>
-      <TableRow>
-       <TableCell># </TableCell>
-       {trow.map(({ name, dtColumn }: any, index: number) => (
-        <DataTableHeader key={index} name={name} dtColumn={dtColumn} />
-       ))}
-      </TableRow>
-     </TableHead>
-     <TableBody>
-      {callBackData?.map((item: any, index_a: number) => (
-       <TableRow key={index_a}>
-        <TableCell>{offset + index_a + 1}</TableCell>
-        {trow?.map(({ name, dtColumn }: ITableRow, index_b: number) => (
-         <DataTableCell key={index_b} item={item} dtColumn={dtColumn} />
-        ))}
-       </TableRow>
-      ))}
-     </TableBody>
-    </Table>
-    <TablePagination
-     component="div"
-     rowsPerPageOptions={rowsPerPageOptions}
-     count={total}
-     rowsPerPage={rowsPerPage}
-     page={page}
-     onPageChange={handleChangePage}
-     onRowsPerPageChange={handleChangeRowsPerPage}
-    />
-   </TableContainer>
+   <MUIDataTable
+    title={title}
+    data={data}
+    columns={column}
+    options={options}
+   />
   </>
  )
 }
 
-
-export default DataTable
-
+export default Users

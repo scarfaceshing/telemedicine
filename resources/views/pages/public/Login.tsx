@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container, AppBar, Typography, Backdrop, CircularProgress } from '@mui/material'
+import { Collapse, Alert, TextField, Toolbar, Box, FormControlLabel, Button, Checkbox, Container, AppBar, Typography, Backdrop, CircularProgress, Modal } from '@mui/material'
 import Http from '../../../api/Api'
 import { storeToken } from '../../../js/Cookie'
 
@@ -63,7 +63,7 @@ class Login extends Component<IProps, IState>{
     storeToken(res.data.access_token)
     this.setState({ showLoading: true })
     this.props.history.push('/admin')
-   }).catch((err) => {
+   }).catch((err: any) => {
     this.setState({ showLoading: false })
     this.setState({ displayError: true })
     this.setState({ error: "Error Login" })
