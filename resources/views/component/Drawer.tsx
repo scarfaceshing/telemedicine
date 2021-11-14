@@ -1,10 +1,10 @@
 import MuiDrawer from '@mui/material/Drawer'
-import Global from '../../global/index'
+import * as MuiConfig from '../../global/mui-config'
 import { CSSObject, Theme } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 
 const openedMixin = (theme: Theme): CSSObject => ({
- width: Global.drawerWidth,
+ width: MuiConfig.drawerWidth,
  transition: theme.transitions.create('width', {
   easing: theme.transitions.easing.sharp,
   duration: theme.transitions.duration.enteringScreen,
@@ -35,7 +35,7 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
 
 export const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop: any) => prop !== 'open' })(
  ({ theme, open }: any) => ({
-  width: Global.drawerWidth,
+  width: MuiConfig.drawerWidth,
   flexShrink: 0,
   whiteSpace: 'nowrap',
   boxSizing: 'border-box',

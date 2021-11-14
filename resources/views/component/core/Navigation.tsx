@@ -45,7 +45,7 @@ const navigationItem = [
   children: [
    {
     path: '/admin/user-management/user',
-    name: 'Users'
+    name: 'Users List'
    },
    {
     path: '/admin/user-management/change-password',
@@ -58,10 +58,6 @@ const navigationItem = [
    {
     path: '/admin/user-management/permission',
     name: 'Permission'
-   },
-   {
-    path: '/admin/user-management/permission-role',
-    name: 'Permission Role'
    }
   ]
  }

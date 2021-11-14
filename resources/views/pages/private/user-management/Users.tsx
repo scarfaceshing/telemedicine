@@ -1,11 +1,19 @@
-import React, { useState, useEffect, FC } from 'react'
-import { Typography } from '@mui/material'
-import ContentHeader from '../../../component/core/ContentHeader'
-import DataTable from '../../../component/core/DataTable'
-import MUIDataTable from "mui-datatables";
-import Http from '../../../../api/Api'
+import React, { useState } from 'react'
 
-const trow = [
+import ContentHeader from '../../../component/core/ContentHeader'
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteIcon from '@mui/icons-material/Delete'
+import { IconButton, Button, Modal, Box } from '@mui/material'
+import DataTable from '../../../component/core/DataTable'
+import Utilities from '../../../../global/utilities'
+import ModalForm from '../../../component/core/ModalForm'
+import { Typography } from '@material-ui/core'
+
+const compDateTime = (date: string) => {
+ return (`${Utilities.shortDate(date)} - ${Utilities.shortTime(date)}`)
+}
+
+const column = [
  {
   name: "name",
   label: "Name",
@@ -28,6 +36,7 @@ const trow = [
   options: {
    filter: true,
    sort: true,
+   customBodyRender: (value: string) => compDateTime(value)
   }
  },
  {
@@ -36,6 +45,7 @@ const trow = [
   options: {
    filter: true,
    sort: true,
+   customBodyRender: (value: string) => compDateTime(value)
   }
  },
  {
@@ -44,90 +54,51 @@ const trow = [
   options: {
    filter: true,
    sort: true,
+   customBodyRender: (value: string) => compDateTime(value)
   }
- }
+ },
+ {
+  name: "Actions",
+  options: {
+   filter: false,
+   sort: false,
+   customBodyRenderLite: (value: any, tableMeta: any, updateValue: any) => {
+    return (
+     <>
+      <IconButton color="primary" onClick={() => console.log(value, tableMeta)}>
+       <EditIcon />
+      </IconButton>
+      <IconButton color="error" onClick={() => console.log(value, tableMeta)}>
+       <DeleteIcon />
+      </IconButton>
+     </>
+    )
+   }
+  }
+ },
 ];
-
-interface IProps { }
-
-const Users: FC<IProps> = () => {
- const [thColumn, setThColumn] = useState(trow)
- const [mounted, setMounted] = useState(false)
-
- const [data, setData] = useState([])
- const [count, setCount] = useState(0)
-
- const [page, setPage] = useState(1)
- const [offset, setOffset] = useState(0)
- const [limit, setLimit] = useState(5)
- const [order, setOrder] = useState('created_at')
- const [align, setAlign] = useState('desc')
- const [filter, setFilter] = useState('')
- const [perPage, setPerPage] = useState([5, 10, 25])
- const [toggleRequest, setToggleRequest] = useState(true)
-
- useEffect(() => {
-  setMounted(true)
-  return () => {
-   setMounted(false)
-  }
- }, [])
-
- const loadTable = () => {
-  Http.get(`/auth/data/user?offset=${offset}&limit=${limit}&orderby=${order}&sort=${align}&filter=${filter}`).then(({ data }: any) => {
-   setData(data.result)
-   setCount(data.count)
-  })
- }
-
- useEffect(() => {
-  loadTable()
- }, [page, limit, order, align, filter])
-
- const options: any = {
-  filterType: 'textField',
-  rowsPerPage: limit,
-  rowsPerPageOptions: perPage,
-  serverSide: true,
-  filter: false,
-  print: false,
-  download: false,
-  viewColumns: false,
-  searchAlwaysOpen: true,
-  elevation: 0,
-  count: count,
-  selectableRowsHideCheckboxes: true,
-  onTableInit: (action: string, tableState: any) => {
-   setPage(tableState.page)
-  },
-  onChangePage: (currentPage: number) => {
-   setPage(currentPage)
-   setOffset(currentPage * limit)
-  },
-  onChangeRowsPerPage: (numberOfRows: number) => {
-   setLimit(numberOfRows)
-  },
-  onColumnSortChange: (changeColumn: string, direction: string) => {
-   setOrder(changeColumn)
-   setAlign(direction)
-  },
-  onSearchChange: (searchText: string) => {
-   if (searchText === null) searchText = ''
-   setFilter(searchText)
-  }
- }
+const Users = () => {
+ const [modal, setModal] = useState(false)
 
  return (
   <>
+   <Button onClick={() => {
+    setModal(true)
+   }}>Open</Button>
+   <ModalForm open={modal}>
+    <ModalForm.Slot name="Header">
+     Add
+    </ModalForm.Slot>
+    <ModalForm.Slot name="Content">
+    </ModalForm.Slot>
+    <ModalForm.Slot name="Footer">
+     <Button color="primary" onClick={() => { setModal(false) }}>Cancel</Button>
+    </ModalForm.Slot>
+   </ModalForm>
    <ContentHeader title="User list" desc="Where you can see the all users (Restricted for dev only or user)" />
-   <MUIDataTable
-    title={"Employee List"}
-    data={data}
-    columns={thColumn}
-    options={options}
-   />
+   <DataTable title={'User List'} url="user" column={column} />
   </>
  )
 }
 
-export default Users
+export default Users;

@@ -1,4 +1,4 @@
-import Global from '../../global/index'
+import * as MuiConfig from '../../global/mui-config'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
 import { styled } from '@mui/material/styles'
 
@@ -16,8 +16,8 @@ export const AppBar = styled(MuiAppBar, {
   duration: theme.transitions.duration.leavingScreen,
  }),
  ...(open && {
-  marginLeft: Global.drawerWidth,
-  width: `calc(100% - ${Global.drawerWidth}px)`,
+  marginLeft: MuiConfig.drawerWidth,
+  width: `calc(100% - ${MuiConfig.drawerWidth}px)`,
   transition: theme.transitions.create(['width', 'margin'], {
    easing: theme.transitions.easing.sharp,
    duration: theme.transitions.duration.enteringScreen,
