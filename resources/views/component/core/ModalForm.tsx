@@ -31,14 +31,13 @@ const ModalForm = ({ open, children }: { children: Array<React.ReactElement>, op
     open={open}
     onClose={handleClose}
     aria-labelledby="draggable-dialog-title"
+    fullWidth={true}
    >
     <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
      {Header?.props?.children}
     </DialogTitle>
     <DialogContent>
-     <DialogContentText>
-      {Content?.props?.children}
-     </DialogContentText>
+     {Content?.props?.children}
     </DialogContent>
     <DialogActions>
      {Footer?.props?.children}

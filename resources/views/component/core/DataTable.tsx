@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from 'react'
-import { Typography, IconButton } from '@mui/material'
+import { Typography, IconButton, Button } from '@mui/material'
 import MUIDataTable from "mui-datatables";
 import Http from '../../../api/Api'
 
@@ -7,9 +7,10 @@ interface IProps {
  title: string;
  url: string;
  column: any;
+ header: any;
 }
 
-const Users: FC<IProps> = ({ title, url, column }: IProps) => {
+const Users: FC<IProps> = ({ title, url, column, header }: IProps) => {
  const [mounted, setMounted] = useState(false)
 
  const [data, setData] = useState([])
@@ -55,6 +56,7 @@ const Users: FC<IProps> = ({ title, url, column }: IProps) => {
   elevation: 0,
   count: count,
   selectableRowsHideCheckboxes: true,
+  customToolbar: () => header,
   onTableInit: (action: string, tableState: any) => {
    setPage(tableState.page)
   },
