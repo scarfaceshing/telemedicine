@@ -2,6 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import LoginPage from '../views/pages/public/Login'
 import AdminPage from '../views/pages/private/Index'
+import HomePage from '../views/pages/Index';
 
 interface IProps { }
 
@@ -19,6 +20,7 @@ const Routes: FC<IProps> = (props) => {
    <Switch>
     <Redirect exact from="/" to="/login" />
     <Route path="/login" component={LoginPage} />
+    <Route path="/home" component={HomePage} />
     <PrivateRoute />
    </Switch>
   </BrowserRouter >
