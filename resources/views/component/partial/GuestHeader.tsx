@@ -6,7 +6,7 @@ interface ILink {
  [key: string]: string | number
 }
 
-const link: ILink = { color: "#191919", fontWeight: "bold", fontSize: "18px", textTransform: "capitalize" }
+const link: ILink = { color: "#191919", fontWeight: "700", fontStyle: "normal", fontSize: "18px", textTransform: "capitalize" }
 
 const GuestHeader = () => {
  return (
@@ -77,7 +77,12 @@ const GuestHeader = () => {
           </Router>
          </Grid>
          <Grid item>
-          <Button sx={{ textTransform: "capitalize" }} component={RouterLink} to="/login" color="primary">
+          <Button sx={{
+           textTransform: "capitalize",
+           fontSize: "16px",
+           lineHeight: "24px",
+           padding: "8px 50px"
+          }} variant="contained" component={RouterLink} to="/login" color="primary">
            Login
           </Button>
          </Grid>

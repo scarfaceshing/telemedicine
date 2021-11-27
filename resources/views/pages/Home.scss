@@ -1,0 +1,27 @@
+$primaryBackgroundColor: #e32129;
+$primaryFontColor: #ffffff;
+$secondaryBackgroundColor: #ffffff;
+$secondaryFontColor: #191919;
+
+.style-1 {
+	background-color: $primaryBackgroundColor;
+	color: $primaryFontColor;
+}
+
+.style-2 {
+	background-color: $secondaryBackgroundColor;
+	color: $secondaryFontColor;
+}
+
+.section-1-header {
+ width: 610px
+}
+
+.section-1-content {
+ margin-top: 24px;
+ width: 470px
+}
+
+.section-1-booknow {
+ margin-top: 24px;
+}

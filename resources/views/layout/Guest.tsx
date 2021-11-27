@@ -4,11 +4,17 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { AppBar, Container, CssBaseline, Toolbar } from '@mui/material'
 import { green, purple, red } from '@mui/material/colors'
 import "@fontsource/montserrat/400.css"
+import "@fontsource/montserrat/700.css"
 import { fontWeight } from '@mui/system'
 import PropTypes from 'prop-types'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 const theme = createTheme({
+ palette: {
+  primary: {
+   main: "#e32129",
+  },
+ },
  typography: {
   fontFamily: 'Montserrat'
  },
@@ -26,10 +32,7 @@ const theme = createTheme({
      fontFamily: 'Montserrat',
      backgroundColor: "#e32129",
      color: "#ffffff",
-     fontWeight: "bold",
-     fontSize: "16px",
-     lineHeight: "24px",
-     padding: "8px 50px"
+     fontWeight: "bold"
     }
    }
   }
@@ -120,10 +123,10 @@ class PublicLayout extends Component<IProps, IState> {
       </AppBar>
      </ElevationScroll>
      <Toolbar />
+     <Toolbar />
+     <Toolbar />
      <main>
-      <Container>
-       {body ? body.props.children : null}
-      </Container>
+      {body ? body.props.children : null}
      </main>
      <footer>
       {footer ? footer.props.children : null}

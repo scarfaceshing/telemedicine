@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSubheader, Input, InputAdornment } from '@mui/material'
+import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSubheader, Input, InputAdornment, Stack } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import { borderRadius } from '@mui/system'
@@ -34,6 +34,7 @@ const CSS: ICss = {
   fontSize: "18px"
  },
  subscriberText: {
+  color: "#1E2833",
   fontSize: "24px",
   mb: 2
  },
@@ -50,7 +51,8 @@ const CSS: ICss = {
  },
  subscriberInput: {
   fontSize: "15px",
-  borderBottom: "1px solid black"
+  fontWeight: "400",
+  borderBottom: "1px solid #E5E5E5"
  },
  logo: {
   pt: 3,
@@ -60,24 +62,20 @@ const CSS: ICss = {
   display: 'flex',
   flexWrap: 'wrap',
   alignContent: 'flex-end',
-  bgcolor: 'background.paper',
-  maxWidth: 380,
-  height: 200,
+  bgcolor: 'background.paper'
  },
  socialMedia: {
   display: 'flex',
   flexWrap: 'wrap',
   alignContent: 'flex-end',
-  bgcolor: 'background.paper',
-  maxWidth: 380,
-  height: 200,
+  bgcolor: 'background.paper'
  }
 }
 
 const GuestFooter = () => {
  return (
   <>
-   <Grid container justifyContent="center">
+   <Grid container justifyContent="center" sx={{ pt: 5 }}>
     <Grid item xs={9}>
      <Grid container justifyContent="space-between">
       <Grid item xs={6}>
@@ -131,13 +129,12 @@ const GuestFooter = () => {
      </Grid>
     </Grid>
    </Grid>
-   <Grid container justifyContent="center">
+   <Grid container justifyContent="center" sx={{ mb: 5 }}>
     <Grid item xs={9}>
      <Grid container justifyContent="space-between">
-      <Box sx={CSS.subscriber}>
+      <Stack sx={CSS.subscriber}>
        <Typography sx={CSS.subscriberText}>
-        Subscribe to our<br />
-        newsletter
+        Subscribe to our <br />newsletter
        </Typography>
        <Input disableUnderline={true} sx={CSS.subscriberInput} placeholder="Email Address" endAdornment={
         <InputAdornment position="end">
@@ -147,7 +144,7 @@ const GuestFooter = () => {
         </InputAdornment>
        }
        />
-      </Box>
+      </Stack>
       <Box sx={CSS.socialMedia}>
        <SocialMediaIconButton>
         <FacebookIcon />

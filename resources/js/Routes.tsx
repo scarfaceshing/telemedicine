@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import LoginPage from '../views/pages/public/Login'
 import AdminPage from '../views/pages/private/Index'
-import HomePage from '../views/pages/Index';
+import HomePage from '../views/pages/Home';
 
 interface IProps { }
 
