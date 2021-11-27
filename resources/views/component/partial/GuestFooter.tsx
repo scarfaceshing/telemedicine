@@ -1,17 +1,165 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSubheader, Input, InputAdornment } from '@mui/material'
+import { styled } from '@mui/material/styles'
+import ChevronRight from '@mui/icons-material/ChevronRight'
+import { borderRadius } from '@mui/system'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+interface ICssObject {
+ [key: string]: string | number
+}
+interface ICss {
+ [key: string]: {
+  [key: string]: string | number | ICssObject
+ }
+}
+
+const SocialMediaIconButton = styled(IconButton)({
+ marginLeft: "20px",
+ marginBottom: "0px",
+ paddingBottom: "0px"
+})
+
+const CSS: ICss = {
+ copyRight: {
+  fontSize: "18px"
+ },
+ schedule: {
+  fontSize: "12px"
+ },
+ subHeader: {
+  color: "#E32129",
+  fontSize: "18px"
+ },
+ subscriberText: {
+  fontSize: "24px",
+  mb: 2
+ },
+ subscriberButton: {
+  backgroundColor: "red",
+  borderRadius: "0",
+  color: "white",
+  marginBottom: "7px",
+  borderTopLeftRadius: "5px",
+  borderTopRightRadius: "5px",
+  ":hover": {
+   backgroundColor: "red",
+  },
+ },
+ subscriberInput: {
+  fontSize: "15px",
+  borderBottom: "1px solid black"
+ },
+ logo: {
+  pt: 3,
+  pb: 3
+ },
+ subscriber: {
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignContent: 'flex-end',
+  bgcolor: 'background.paper',
+  maxWidth: 380,
+  height: 200,
+ },
+ socialMedia: {
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignContent: 'flex-end',
+  bgcolor: 'background.paper',
+  maxWidth: 380,
+  height: 200,
+ }
+}
 
 const GuestFooter = () => {
  return (
   <>
-   <Grid container spacing={0} direction="column">
-    <Grid item xs={6}>
-     <img src="/storage/images/logo.png" />
-
-     Copyright
+   <Grid container justifyContent="center">
+    <Grid item xs={9}>
+     <Grid container justifyContent="space-between">
+      <Grid item xs={6}>
+       <Box sx={CSS.logo}>
+        <img src="/storage/images/logo.png" />
+       </Box>
+       <Typography sx={CSS.copyRight}>Copyright © 2021. Sapphire Clinics Incorporated</Typography>
+       <Typography sx={CSS.schedule}>
+        <strong>Mondays to Fridays</strong> - 7:00 am to 6:00 pm<br />
+        <strong>Saturdays and Sundays</strong> - 10:00 am to 6:00 pm
+       </Typography>
+      </Grid>
+      <Grid item xs={6}>
+       <Grid container alignItems="left">
+        <Box>
+         <List>
+          <ListSubheader sx={CSS.subHeader}>Services</ListSubheader>
+          <ListItem>
+           <ListItemText>Physical Therapy</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Occupational Therapy</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Speech Pathology</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Medical Consultations</ListItemText>
+          </ListItem>
+         </List>
+        </Box>
+        <Box>
+         <List>
+          <ListSubheader sx={CSS.subHeader}>About</ListSubheader>
+          <ListItem>
+           <ListItemText>{`Mission & Vision`}</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Founder</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Consultants</ListItemText>
+          </ListItem>
+          <ListItem>
+           <ListItemText>Careers</ListItemText>
+          </ListItem>
+         </List>
+        </Box>
+       </Grid>
+      </Grid>
+     </Grid>
     </Grid>
-    <Grid item xs={6}>
-
+   </Grid>
+   <Grid container justifyContent="center">
+    <Grid item xs={9}>
+     <Grid container justifyContent="space-between">
+      <Box sx={CSS.subscriber}>
+       <Typography sx={CSS.subscriberText}>
+        Subscribe to our<br />
+        newsletter
+       </Typography>
+       <Input disableUnderline={true} sx={CSS.subscriberInput} placeholder="Email Address" endAdornment={
+        <InputAdornment position="end">
+         <IconButton sx={CSS.subscriberButton} color='primary'>
+          <ChevronRight />
+         </IconButton>
+        </InputAdornment>
+       }
+       />
+      </Box>
+      <Box sx={CSS.socialMedia}>
+       <SocialMediaIconButton>
+        <FacebookIcon />
+       </SocialMediaIconButton>
+       <SocialMediaIconButton>
+        <TwitterIcon />
+       </SocialMediaIconButton>
+       <SocialMediaIconButton>
+        <InstagramIcon />
+       </SocialMediaIconButton>
+      </Box>
+     </Grid>
     </Grid>
    </Grid>
   </>

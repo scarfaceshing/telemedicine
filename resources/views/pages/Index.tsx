@@ -4,6 +4,7 @@ import React from 'react'
 import GuestLayout, { Header, Body, Footer } from '../layout/Guest'
 import GuestHeader from '../component/partial/GuestHeader'
 import GuestFooter from '../component/partial/GuestFooter'
+import GetFreeConsultant from '../component/GetFreeConsultant'
 import "./Index.scss"
 
 class Index extends React.Component {
@@ -28,6 +29,7 @@ class Index extends React.Component {
          </Grid>
         </Grid>
        </Grid>
+       <GetFreeConsultant />
       </Grid>
      </Body>
 
