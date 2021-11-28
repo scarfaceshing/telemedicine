@@ -13,15 +13,19 @@ $secondaryFontColor: #191919;
 	color: $secondaryFontColor;
 }
 
-.section-1-header {
- width: 610px
+.wrapper-banner-image-1 > img.image-1 {
+ position: absolute;
+ right: 0px;
+ height: 829.94px;
+ width: 711px;
 }
 
-.section-1-content {
- margin-top: 24px;
- width: 470px
+.wrapper-banner-image-2 > img.image-2 {
+ position: absolute;
+ width: 130px;
+ height: 130px;
+ left: 70px;
+ bottom: 0px;
+ margin-bottom: -100px;
 }
 
-.section-1-booknow {
- margin-top: 24px;
-}

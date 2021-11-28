@@ -21,6 +21,7 @@ const GuestHeader = () => {
     </Grid>
    </Toolbar>
    <Toolbar className="style-2" sx={{
+    backgroundColor: "#FFFFFF",
     justifyContent: "center",
     padding: "30px 0px",
    }}>

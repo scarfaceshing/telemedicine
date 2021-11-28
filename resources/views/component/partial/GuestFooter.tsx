@@ -6,6 +6,7 @@ import { borderRadius } from '@mui/system'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { red } from '@mui/material/colors';
 
 interface ICssObject {
  [key: string]: string | number
@@ -39,14 +40,14 @@ const CSS: ICss = {
   mb: 2
  },
  subscriberButton: {
-  backgroundColor: "red",
+  backgroundColor: red[500],
   borderRadius: "0",
   color: "white",
   marginBottom: "7px",
   borderTopLeftRadius: "5px",
   borderTopRightRadius: "5px",
   ":hover": {
-   backgroundColor: "red",
+   backgroundColor: red[500],
   },
  },
  subscriberInput: {
