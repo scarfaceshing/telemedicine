@@ -7,6 +7,9 @@ import GetFreeConsultant from '../component/GetFreeConsultant'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { styled } from '@mui/styles'
 import SelectWithBook from '../component/SelectWithBook'
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import TagFacesIcon from '@mui/icons-material/TagFaces';
 import "./Home.scss"
 
 interface ICssObject {
@@ -34,6 +37,10 @@ const InputSelectBook = styled(NativeSelect)({
 })
 
 const CSS: ICss = {
+ wrapperFeature: {
+  background: "linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)",
+  color: "white"
+ },
  wrapperBanner: {
   backgroundColor: "#FDFDFD",
   height: "829.94px",
@@ -53,6 +60,21 @@ const CSS: ICss = {
   ":focus": {
    backgroundColor: "transparent"
   }
+ },
+ featureIcon: {
+  width: "60px",
+  height: "60px",
+  mt: 7
+ },
+ featureHeader: {
+  fontSize: "24px",
+  fontWeight: 700,
+  my: 2
+ },
+ featureContent: {
+  fontSize: "18px",
+  fontWeight: 400,
+  my: 2
  },
  button: {
   fontWeight: 700,
@@ -105,6 +127,35 @@ class Home extends React.Component {
          </Grid>
         </Grid>
        </ThemeProvider>
+      </Box>
+      <Box sx={CSS.wrapperFeature}>
+       <Grid container justifyContent="center">
+
+        <Grid item xs={8}>
+         <Grid container>
+
+          <Grid item xs sx={{ textAlign: "center", mb: 8 }} rowSpacing={{ xs: 2 }}>
+           <EventAvailableIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
+           <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
+          </Grid>
+
+          <Grid item xs sx={{ textAlign: "center" }}>
+           <LocalHospitalIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
+           <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+          </Grid>
+
+          <Grid item xs sx={{ textAlign: "center" }}>
+           <TagFacesIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
+           <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+          </Grid>
+
+         </Grid>
+        </Grid>
+
+       </Grid>
       </Box>
       <GetFreeConsultant />
      </Body>
