@@ -29,3 +29,22 @@ $secondaryFontColor: #191919;
  margin-bottom: -100px;
 }
 
+.content-image {
+ position: absolute;
+}
+
+.content-image.left {
+ left: 140px;
+}
+
+.content-image.right {
+ right: 140px;
+}
+
+.content-image.image-1 {
+ margin-top: 40px;
+}
+
+.content-image.image-4 {
+ margin-bottom: 40px;
+}

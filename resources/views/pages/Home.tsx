@@ -11,6 +11,7 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import "./Home.scss"
+import { fontWeight } from '@mui/system'
 
 interface ICssObject {
  [key: string]: string | number
@@ -80,7 +81,60 @@ const CSS: ICss = {
   fontWeight: 700,
   py: 1,
   px: 5
+ },
+ testimonialHeader: {
+  fontSize: "48px"
+ },
+ testimonialContent: {
+  fontSize: "18px"
  }
+}
+
+interface IServiceInfo {
+ header?: JSX.Element,
+ content?: JSX.Element
+}
+
+const ServiceInfo = ({ header, content }: IServiceInfo) => {
+ const CSS: ICss = {
+  header: {
+   fontSize: "48px",
+   lineHeight: "58.51px",
+   fontWeight: 400
+  },
+  content: {
+   fontSize: "18px",
+   fontWeight: 400
+  },
+  button: {
+   py: 1,
+   px: 2
+  },
+  wrapper: {
+   my: 23
+  },
+  divider: {
+   my: 2
+  }
+ }
+
+ return (
+  <Box sx={CSS.wrapper}>
+   <Box sx={CSS.divider}>
+    <Typography sx={CSS.header}>
+     {header}
+    </Typography>
+   </Box>
+   <Box sx={CSS.divider}>
+    <Typography sx={CSS.content}>
+     {content}
+    </Typography>
+   </Box>
+   <Box sx={CSS.divider}>
+    <Button sx={CSS.button}>Learn More</Button>
+   </Box>
+  </Box>
+ )
 }
 
 class Home extends React.Component {
@@ -102,31 +156,29 @@ class Home extends React.Component {
        <img className="image-2" src="/storage/images/banner_image_2.png" />
       </div>
       <Box sx={CSS.wrapperBanner}>
-       <ThemeProvider theme={theme}>
-        <Grid container>
-         <Grid item sx={{ ml: 12, mt: 12 }}>
-          <Stack>
-           <div className='header'>
-            <Typography sx={CSS.headerText}>
-             The highest standard for<br />
-             pediatric and adult<br />
-             assessment and therapy
-            </Typography>
-           </div>
-           <div className="content">
-            <Typography sx={CSS.contentText}>
-             As a rehabilitation clinic, Sandbox aims to provide<br />
-             the highest quality of treatment and other services<br />
-             to its patients.
-            </Typography>
-           </div>
-           <div className="booknow">
-            <SelectWithBook />
-           </div>
-          </Stack>
-         </Grid>
+       <Grid container>
+        <Grid item sx={{ ml: 12, mt: 12 }}>
+         <Stack>
+          <div className='header'>
+           <Typography sx={CSS.headerText}>
+            The highest standard for<br />
+            pediatric and adult<br />
+            assessment and therapy
+           </Typography>
+          </div>
+          <div className="content">
+           <Typography sx={CSS.contentText}>
+            As a rehabilitation clinic, Sandbox aims to provide<br />
+            the highest quality of treatment and other services<br />
+            to its patients.
+           </Typography>
+          </div>
+          <div className="booknow">
+           <SelectWithBook />
+          </div>
+         </Stack>
         </Grid>
-       </ThemeProvider>
+       </Grid>
       </Box>
       <Box sx={CSS.wrapperFeature}>
        <Grid container justifyContent="center">
@@ -157,6 +209,117 @@ class Home extends React.Component {
 
        </Grid>
       </Box>
+
+      <Container sx={{ marginBottom: "200px" }}>
+       <img src="/storage/images/content_image_1.png" className="content-image image-1 left" />
+       <Grid container justifyContent="right">
+        <Grid item xs={6}>
+         <ServiceInfo
+          header={<>
+           Physical Therapy<br />
+           Department
+          </>
+          }
+
+          content={
+           <>
+            The Physical Therapy Department will be<br />equipped with the
+            state-of-the-art medical<br />equipment and modalities available,<br />
+            supported by evidence.
+           </>
+          }
+         />
+        </Grid>
+       </Grid>
+
+       <img src="/storage/images/content_image_2.png" className="content-image image-2 right" />
+       <Grid container justifyContent="left">
+        <Grid item xs={6}>
+         <ServiceInfo
+          header={<>
+           Occupational Therapy <br />
+           Department
+          </>
+          }
+
+          content={
+           <>
+            The Occupational Therapy Department will be<br />
+            composed of highly qualified therapists, unique<br />
+            with their own certifications or specializations
+           </>
+          }
+         />
+        </Grid>
+       </Grid>
+
+       <img src="/storage/images/content_image_3.png" className="content-image image-3 left" />
+       <Grid container justifyContent="right">
+        <Grid item xs={6}>
+         <ServiceInfo
+          header={<>
+           Speech Language<br />
+           Department
+          </>
+          }
+
+          content={
+           <>
+            Speech-Language Pathology, or Speech Therapy<br />
+            is a developing practice in the country. Guided by<br />
+            the best practices, each speech-language<br />
+            pathologist is committed to providing<br />
+            quality services that are catered to each individual‘s needs and strengths.
+           </>
+          }
+         />
+        </Grid>
+       </Grid>
+
+       <img src="/storage/images/content_image_4.png" className="content-image image-4 right" />
+       <Grid container justifyContent="left">
+        <Grid item xs={6}>
+         <ServiceInfo
+          header={<>
+           Medical Department
+          </>
+          }
+
+          content={
+           <>
+            Book a medical consultation with a licensed<br />
+            professional for all your medical consultancy<br />
+            needs and demands.
+           </>
+          }
+         />
+        </Grid>
+       </Grid>
+      </Container>
+
+      <Container>
+       <Grid container justifyContent="center">
+        <Grid item xs={7}>
+         <Grid container justifyContent="center">
+          <Grid item>
+           <Typography sx={CSS.testimonialHeader}>
+            Testimonials
+           </Typography>
+          </Grid>
+          <Grid item>
+           <Typography sx={CSS.testimonialContent} align="center">
+            Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases think for yourself. everytime you smile at someone, it is an action of love
+           </Typography>
+          </Grid>
+         </Grid>
+        </Grid>
+       </Grid>
+      </Container>
+
+      <Container>
+
+      </Container>
+
       <GetFreeConsultant />
      </Body>
      <Footer>
