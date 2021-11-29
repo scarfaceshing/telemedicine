@@ -1,0 +1,50 @@
+$primaryBackgroundColor: #e32129;
+$primaryFontColor: #ffffff;
+$secondaryBackgroundColor: #ffffff;
+$secondaryFontColor: #191919;
+
+.style-1 {
+	background-color: $primaryBackgroundColor;
+	color: $primaryFontColor;
+}
+
+.style-2 {
+	background-color: $secondaryBackgroundColor;
+	color: $secondaryFontColor;
+}
+
+.wrapper-banner-image-1 > img.image-1 {
+ position: absolute;
+ right: 0px;
+ height: 829.94px;
+ width: 711px;
+}
+
+.wrapper-banner-image-2 > img.image-2 {
+ position: absolute;
+ width: 130px;
+ height: 130px;
+ left: 70px;
+ bottom: 0px;
+ margin-bottom: -100px;
+}
+
+.content-image {
+ position: absolute;
+}
+
+.content-image.left {
+ left: 140px;
+}
+
+.content-image.right {
+ right: 140px;
+}
+
+.content-image.image-1 {
+ margin-top: 40px;
+}
+
+.content-image.image-4 {
+ margin-bottom: 40px;
+}
