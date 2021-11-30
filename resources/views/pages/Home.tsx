@@ -7,11 +7,12 @@ import GetFreeConsultant from '../component/GetFreeConsultant'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { styled } from '@mui/styles'
 import SelectWithBook from '../component/SelectWithBook'
-import EventAvailableIcon from '@mui/icons-material/EventAvailable';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import TagFacesIcon from '@mui/icons-material/TagFaces';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable'
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital'
+import TagFacesIcon from '@mui/icons-material/TagFaces'
 import "./Home.scss"
 import { fontWeight } from '@mui/system'
+import Testimonials from '../component/Testimonials'
 
 interface ICssObject {
  [key: string]: string | number
@@ -81,12 +82,6 @@ const CSS: ICss = {
   fontWeight: 700,
   py: 1,
   px: 5
- },
- testimonialHeader: {
-  fontSize: "48px"
- },
- testimonialContent: {
-  fontSize: "18px"
  }
 }
 
@@ -296,29 +291,31 @@ class Home extends React.Component {
         </Grid>
        </Grid>
       </Container>
+     
+     <Testimonials />
 
-      <Container>
-       <Grid container justifyContent="center">
-        <Grid item xs={7}>
-         <Grid container justifyContent="center">
-          <Grid item>
-           <Typography sx={CSS.testimonialHeader}>
-            Testimonials
-           </Typography>
+     <img style={{ position: 'absolute', right: '100px', marginTop: '50px' }} src="/storage/images/meetdoctor_image_1.png" />
+     <Box sx={{ py: 30, color: '#ffffff', background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)' }}>
+     <Grid container justifyContent="center">
+        <Grid item xs={9}>
+         <Grid container justifyContent="left">
+             <Grid item xs={6}>
+          <Typography sx={{ fontWeight: '400', fontSize: '48px', fontStyle: 'normal', mb: 5 }}>
+            The Sandbox App
+          </Typography>
+          <Typography sx={{ fontWeight: '400', fontSize: '18px', fontStyle: 'normal', lineHeight:'21.94px'}}>
+          Sapphire Clinics Incorporated (SCI) has been continuously gaining ground since its incorporation
+in May 2021. As SCI has already laid down the foundation for the establishment of its first world-class clinic, it
+sets its sights to new opportunities which are consistent with its vision to become the forefront of rehabilitation medicine in the Philippines.
+          </Typography>
+          <Button sx={{ mt: 5, fontWeight: 700, py: 1, px: 3, backgroundColor: '#ffffff', color: '#e32129', ":hover": {backgroundColor: '#ffffff'} }}>
+              Book now
+          </Button>
           </Grid>
-          <Grid item>
-           <Typography sx={CSS.testimonialContent} align="center">
-            Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases think for yourself. everytime you smile at someone, it is an action of love
-           </Typography>
           </Grid>
-         </Grid>
-        </Grid>
-       </Grid>
-      </Container>
-
-      <Container>
-
-      </Container>
+          </Grid>
+          </Grid>
+    </Box>
 
       <GetFreeConsultant />
      </Body>
