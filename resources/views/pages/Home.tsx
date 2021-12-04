@@ -10,29 +10,29 @@ import SelectWithBook from '../component/SelectWithBook'
 import EventAvailableIcon from '@mui/icons-material/EventAvailable'
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital'
 import TagFacesIcon from '@mui/icons-material/TagFaces'
-import "./Home.scss"
+import './Home.scss'
 import { fontWeight } from '@mui/system'
 import Testimonials from '../component/Testimonials'
 
 interface ICssObject {
- [key: string]: string | number
+    [key: string]: string | number
 }
 interface ICss {
- [key: string]: {
-  [key: string]: string | number | ICssObject
- }
+    [key: string]: {
+        [key: string]: string | number | ICssObject
+    }
 }
 
 const theme = createTheme({
  palette: {
   primary: {
-   main: "#e32129",
+   main: '#e32129',
   },
  },
  typography: {
   fontFamily: 'Montserrat'
  }
-});
+})
 
 const InputSelectBook = styled(NativeSelect)({
 
@@ -40,41 +40,41 @@ const InputSelectBook = styled(NativeSelect)({
 
 const CSS: ICss = {
  wrapperFeature: {
-  background: "linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)",
-  color: "white"
+  background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)',
+  color: 'white'
  },
  wrapperBanner: {
-  backgroundColor: "#FDFDFD",
-  height: "829.94px",
+  backgroundColor: '#FDFDFD',
+  height: '829.94px',
   mb: 12
  },
  headerText: {
-  paddingTop: "50px",
-  lineHeight: "58.51px",
-  fontSize: "48px"
+  paddingTop: '50px',
+  lineHeight: '58.51px',
+  fontSize: '48px'
  },
  contentText: {
   pt: 4,
-  fontSize: "18px",
-  lineHeight: "21.94px"
+  fontSize: '18px',
+  lineHeight: '21.94px'
  },
  select: {
-  ":focus": {
-   backgroundColor: "transparent"
+  ':focus': {
+   backgroundColor: 'transparent'
   }
  },
  featureIcon: {
-  width: "60px",
-  height: "60px",
+  width: '60px',
+  height: '60px',
   mt: 7
  },
  featureHeader: {
-  fontSize: "24px",
+  fontSize: '24px',
   fontWeight: 700,
   my: 2
  },
  featureContent: {
-  fontSize: "18px",
+  fontSize: '18px',
   fontWeight: 400,
   my: 2
  },
@@ -86,19 +86,19 @@ const CSS: ICss = {
 }
 
 interface IServiceInfo {
- header?: JSX.Element,
- content?: JSX.Element
+    header?: JSX.Element,
+    content?: JSX.Element
 }
 
 const ServiceInfo = ({ header, content }: IServiceInfo) => {
  const CSS: ICss = {
   header: {
-   fontSize: "48px",
-   lineHeight: "58.51px",
+   fontSize: '48px',
+   lineHeight: '58.51px',
    fontWeight: 400
   },
   content: {
-   fontSize: "18px",
+   fontSize: '18px',
    fontWeight: 400
   },
   button: {
@@ -155,17 +155,10 @@ class Home extends React.Component {
         <Grid item sx={{ ml: 12, mt: 12 }}>
          <Stack>
           <div className='header'>
-           <Typography sx={CSS.headerText}>
-            The highest standard for<br />
-            pediatric and adult<br />
-            assessment and therapy
-           </Typography>
+           <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
           </div>
           <div className="content">
-           <Typography sx={CSS.contentText}>
-            As a rehabilitation clinic, Sandbox aims to provide<br />
-            the highest quality of treatment and other services<br />
-            to its patients.
+           <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.
            </Typography>
           </div>
           <div className="booknow">
@@ -181,19 +174,19 @@ class Home extends React.Component {
         <Grid item xs={8}>
          <Grid container>
 
-          <Grid item xs sx={{ textAlign: "center", mb: 8 }} rowSpacing={{ xs: 2 }}>
+          <Grid item xs sx={{ textAlign: 'center', mb: 8 }} rowSpacing={{ xs: 2 }}>
            <EventAvailableIcon sx={CSS.featureIcon} />
            <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
            <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
           </Grid>
 
-          <Grid item xs sx={{ textAlign: "center" }}>
+          <Grid item xs sx={{ textAlign: 'center' }}>
            <LocalHospitalIcon sx={CSS.featureIcon} />
            <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
            <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
           </Grid>
 
-          <Grid item xs sx={{ textAlign: "center" }}>
+          <Grid item xs sx={{ textAlign: 'center' }}>
            <TagFacesIcon sx={CSS.featureIcon} />
            <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
            <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
@@ -205,22 +198,22 @@ class Home extends React.Component {
        </Grid>
       </Box>
 
-      <Container sx={{ marginBottom: "200px" }}>
+      <Container sx={{ marginBottom: '200px' }}>
        <img src="/storage/images/content_image_1.png" className="content-image image-1 left" />
        <Grid container justifyContent="right">
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-           Physical Therapy<br />
-           Department
+                                            Physical Therapy 
+                                            Department
           </>
           }
 
           content={
            <>
-            The Physical Therapy Department will be<br />equipped with the
-            state-of-the-art medical<br />equipment and modalities available,<br />
-            supported by evidence.
+                                                The Physical Therapy Department will be equipped with the
+                                                state-of-the-art medical equipment and modalities available, 
+                                                supported by evidence.
            </>
           }
          />
@@ -232,16 +225,16 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-           Occupational Therapy <br />
-           Department
+                                            Occupational Therapy  
+                                            Department
           </>
           }
 
           content={
            <>
-            The Occupational Therapy Department will be<br />
-            composed of highly qualified therapists, unique<br />
-            with their own certifications or specializations
+                                                The Occupational Therapy Department will be 
+                                                composed of highly qualified therapists, unique 
+                                                with their own certifications or specializations
            </>
           }
          />
@@ -253,18 +246,18 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-           Speech Language<br />
-           Department
+                                            Speech Language 
+                                            Department
           </>
           }
 
           content={
            <>
-            Speech-Language Pathology, or Speech Therapy<br />
-            is a developing practice in the country. Guided by<br />
-            the best practices, each speech-language<br />
-            pathologist is committed to providing<br />
-            quality services that are catered to each individual‘s needs and strengths.
+                                                Speech-Language Pathology, or Speech Therapy 
+                                                is a developing practice in the country. Guided by 
+                                                the best practices, each speech-language 
+                                                pathologist is committed to providing 
+                                                quality services that are catered to each individual‘s needs and strengths.
            </>
           }
          />
@@ -276,46 +269,46 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-           Medical Department
+                                            Medical Department
           </>
           }
 
           content={
            <>
-            Book a medical consultation with a licensed<br />
-            professional for all your medical consultancy<br />
-            needs and demands.
+                                                Book a medical consultation with a licensed 
+                                                professional for all your medical consultancy 
+                                                needs and demands.
            </>
           }
          />
         </Grid>
        </Grid>
       </Container>
-     
-     <Testimonials />
 
-     <img style={{ position: 'absolute', right: '100px', marginTop: '50px' }} src="/storage/images/meetdoctor_image_1.png" />
-     <Box sx={{ py: 30, color: '#ffffff', background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)' }}>
-     <Grid container justifyContent="center">
+      <Testimonials />
+
+      <img style={{ position: 'absolute', right: '100px', marginTop: '50px' }} src="/storage/images/meetdoctor_image_1.png" />
+      <Box sx={{ py: 30, color: '#ffffff', background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)' }}>
+       <Grid container justifyContent="center">
         <Grid item xs={9}>
          <Grid container justifyContent="left">
-             <Grid item xs={6}>
-          <Typography sx={{ fontWeight: '400', fontSize: '48px', fontStyle: 'normal', mb: 5 }}>
-            The Sandbox App
-          </Typography>
-          <Typography sx={{ fontWeight: '400', fontSize: '18px', fontStyle: 'normal', lineHeight:'21.94px'}}>
-          Sapphire Clinics Incorporated (SCI) has been continuously gaining ground since its incorporation
-in May 2021. As SCI has already laid down the foundation for the establishment of its first world-class clinic, it
-sets its sights to new opportunities which are consistent with its vision to become the forefront of rehabilitation medicine in the Philippines.
-          </Typography>
-          <Button sx={{ mt: 5, fontWeight: 700, py: 1, px: 3, backgroundColor: '#ffffff', color: '#e32129', ":hover": {backgroundColor: '#ffffff'} }}>
-              Book now
-          </Button>
+          <Grid item xs={6}>
+           <Typography sx={{ fontWeight: '400', fontSize: '48px', fontStyle: 'normal', mb: 5 }}>
+                                                The Sandbox App
+           </Typography>
+           <Typography sx={{ fontWeight: '400', fontSize: '18px', fontStyle: 'normal', lineHeight: '21.94px' }}>
+                                                Sapphire Clinics Incorporated (SCI) has been continuously gaining ground since its incorporation
+                                                in May 2021. As SCI has already laid down the foundation for the establishment of its first world-class clinic, it
+                                                sets its sights to new opportunities which are consistent with its vision to become the forefront of rehabilitation medicine in the Philippines.
+           </Typography>
+           <Button sx={{ mt: 5, fontWeight: 700, py: 1, px: 3, backgroundColor: '#ffffff', color: '#e32129', ':hover': { backgroundColor: '#ffffff' } }}>
+                                                Book now
+           </Button>
           </Grid>
-          </Grid>
-          </Grid>
-          </Grid>
-    </Box>
+         </Grid>
+        </Grid>
+       </Grid>
+      </Box>
 
       <GetFreeConsultant />
      </Body>
@@ -328,4 +321,4 @@ sets its sights to new opportunities which are consistent with its vision to bec
  }
 }
 
-export default Home;
+export default Home

@@ -26,12 +26,12 @@ interface IEvent {
 interface Validator {
  username: string;
  password: string;
-};
+}
 
 class Login extends Component<IProps, IState>{
 
  async componentDidMount() {
-  const { data } = await Http.post("/auth/check-auth", {});
+  const { data } = await Http.post('/auth/check-auth', {})
   if (data.authenticate) this.props.history.push('/admin/')
  }
 
@@ -53,7 +53,7 @@ class Login extends Component<IProps, IState>{
  }
 
  public Authenticate = (event: Event): void => {
-  event.preventDefault();
+  event.preventDefault()
 
   try {
    Http.post('/auth/login', {
@@ -66,8 +66,7 @@ class Login extends Component<IProps, IState>{
    }).catch((err: any) => {
     this.setState({ showLoading: false })
     this.setState({ displayError: true })
-    this.setState({ error: "Error Login" })
-   }).finally(() => {
+    this.setState({ error: 'Error Login' })
    })
   } catch (err) {
    console.log(err)
@@ -80,7 +79,7 @@ class Login extends Component<IProps, IState>{
 
   return (
    <>
-    <AppBar sx={{ backgroundColor: "red" }}>
+    <AppBar sx={{ backgroundColor: 'red' }}>
      <Toolbar>
       <Typography>
        Sandbox - Telemedicine App
@@ -138,7 +137,7 @@ class Login extends Component<IProps, IState>{
         type="submit"
         fullWidth
         variant="contained"
-        sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
+        sx={{ mt: 3, mb: 2, backgroundColor: 'red' }}
        >
         Sign In
        </Button>
