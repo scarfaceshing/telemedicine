@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@mui/material'
-import "./Component.scss"
+import './Component.scss'
 import { fontWeight } from '@mui/system'
 
 interface ICssObject {
@@ -30,11 +30,11 @@ const SelectWithBook = () => {
     <option>Occupational Therapy</option>
     <option>Speech Language</option>
    </select>
-   <Button sx={CSS.button} variant="contained">
+   <Button className="button" sx={CSS.button} variant="contained">
     Book Now
    </Button>
   </div>
  )
 }
 
-export default SelectWithBook;
+export default SelectWithBook

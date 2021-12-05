@@ -12,7 +12,7 @@ interface IProps {
 
 const Slot: FC<{
  name: 'Header' | 'Content' | 'Footer';
-}> = () => null;
+}> = () => null
 
 const handleClose = () => {
 
@@ -20,10 +20,10 @@ const handleClose = () => {
 
 const ModalForm = ({ open, children }: { children: Array<React.ReactElement>, open: boolean }) => {
 
- const childrenArray = Children.toArray(children) as unknown as React.ReactElement[];
- const Header = childrenArray.find(child => child?.props?.name === 'Header');
- const Content = childrenArray.find(child => child?.props?.name === 'Content');
- const Footer = childrenArray.find(child => child?.props?.name === 'Footer');
+ const childrenArray = Children.toArray(children) as unknown as React.ReactElement[]
+ const Header = childrenArray.find(child => child?.props?.name === 'Header')
+ const Content = childrenArray.find(child => child?.props?.name === 'Content')
+ const Footer = childrenArray.find(child => child?.props?.name === 'Footer')
 
  return (
   <>
@@ -47,5 +47,5 @@ const ModalForm = ({ open, children }: { children: Array<React.ReactElement>, op
  )
 }
 
-ModalForm.Slot = Slot;
-export default ModalForm;
+ModalForm.Slot = Slot
+export default ModalForm

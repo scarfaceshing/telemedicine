@@ -3,8 +3,8 @@ import React, { Component, ReactElement, ReactNode } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { AppBar, Container, CssBaseline, Toolbar } from '@mui/material'
 import { green, purple, red } from '@mui/material/colors'
-import "@fontsource/montserrat/400.css"
-import "@fontsource/montserrat/700.css"
+import '@fontsource/montserrat/400.css'
+import '@fontsource/montserrat/700.css'
 import { fontWeight } from '@mui/system'
 import PropTypes from 'prop-types'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
@@ -12,7 +12,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger'
 const theme = createTheme({
  palette: {
   primary: {
-   main: "#e32129",
+   main: '#e32129',
   },
  },
  typography: {
@@ -30,17 +30,17 @@ const theme = createTheme({
    styleOverrides: {
     root: {
      fontFamily: 'Montserrat',
-     backgroundColor: "#e32129",
-     color: "#ffffff",
-     fontWeight: "bold"
+     backgroundColor: '#e32129',
+     color: '#ffffff',
+     fontWeight: 'bold'
     }
    }
   }
  }
-});
+})
 
 function ElevationScroll(props: any) {
- const { children, window } = props;
+ const { children, window } = props
  // Note that you normally won't need to set the window ref as useScrollTrigger
  // will default to window.
  // This is only being set here because the demo is in an iframe.
@@ -48,11 +48,11 @@ function ElevationScroll(props: any) {
   disableHysteresis: true,
   threshold: 0,
   target: window ? window() : undefined,
- });
+ })
 
  return React.cloneElement(children, {
   elevation: trigger ? 4 : 0,
- });
+ })
 }
 
 ElevationScroll.propTypes = {
@@ -62,7 +62,7 @@ ElevationScroll.propTypes = {
   * You won't need it on your project.
   */
  window: PropTypes.func,
-};
+}
 
 interface IState {
  test?: string;
@@ -137,4 +137,4 @@ class PublicLayout extends Component<IProps, IState> {
  }
 }
 
-export default PublicLayout;
+export default PublicLayout

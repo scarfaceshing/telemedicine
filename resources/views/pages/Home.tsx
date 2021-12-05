@@ -13,6 +13,7 @@ import TagFacesIcon from '@mui/icons-material/TagFaces'
 import './Home.scss'
 import { fontWeight } from '@mui/system'
 import Testimonials from '../component/Testimonials'
+import FixedContainer from '../component/FixedContainer'
 
 interface ICssObject {
     [key: string]: string | number
@@ -44,7 +45,6 @@ const CSS: ICss = {
   color: 'white'
  },
  wrapperBanner: {
-  backgroundColor: '#FDFDFD',
   height: '829.94px',
   mb: 12
  },
@@ -144,30 +144,31 @@ class Home extends React.Component {
      </Header>
 
      <Body>
-      <div className="wrapper-banner-image-1">
-       <img className="image-1" src="/storage/images/banner_image_1.png" />
-      </div>
-      <div className="wrapper-banner-image-2">
-       <img className="image-2" src="/storage/images/banner_image_2.png" />
-      </div>
-      <Box sx={CSS.wrapperBanner}>
-       <Grid container>
-        <Grid item sx={{ ml: 12, mt: 12 }}>
-         <Stack>
-          <div className='header'>
-           <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
-          </div>
-          <div className="content">
-           <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.
-           </Typography>
-          </div>
-          <div className="booknow">
-           <SelectWithBook />
-          </div>
-         </Stack>
+      <div style={{backgroundColor: '#FDFDFD' }}>
+       <Box className="banner wrapper" sx={CSS.wrapperBanner}>
+        <div className="wrapper-banner-image-1"></div>
+        <div className="wrapper-banner-image-2"></div>
+        <Grid container justifyContent="center" sx={{position: 'relative'}}>
+         <Grid item xs={11} md={9} sx={{ mt: 12 }}>
+          <Stack>
+           <div className='header'>
+            <Box sx={{ maxWidth: '610px' }}>
+             <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
+            </Box>
+           </div>
+           <div className="content">
+            <Box sx={{ maxWidth: '481px' }}>
+             <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.</Typography>
+            </Box>
+           </div>
+           <div className="booknow">
+            <SelectWithBook />
+           </div>
+          </Stack>
+         </Grid>
         </Grid>
-       </Grid>
-      </Box>
+       </Box>
+      </div>
       <Box sx={CSS.wrapperFeature}>
        <Grid container justifyContent="center">
 
@@ -204,16 +205,16 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-                                            Physical Therapy 
-                                            Department
+          Physical Therapy 
+          Department
           </>
           }
 
           content={
            <>
-                                                The Physical Therapy Department will be equipped with the
-                                                state-of-the-art medical equipment and modalities available, 
-                                                supported by evidence.
+           The Physical Therapy Department will be equipped with the
+           state-of-the-art medical equipment and modalities available, 
+           supported by evidence.
            </>
           }
          />
@@ -225,16 +226,16 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-                                            Occupational Therapy  
-                                            Department
+          Occupational Therapy  
+          Department
           </>
           }
 
           content={
            <>
-                                                The Occupational Therapy Department will be 
-                                                composed of highly qualified therapists, unique 
-                                                with their own certifications or specializations
+          The Occupational Therapy Department will be 
+          composed of highly qualified therapists, unique 
+          with their own certifications or specializations
            </>
           }
          />
@@ -246,18 +247,18 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-                                            Speech Language 
-                                            Department
+            Speech Language 
+            Department
           </>
           }
 
           content={
            <>
-                                                Speech-Language Pathology, or Speech Therapy 
-                                                is a developing practice in the country. Guided by 
-                                                the best practices, each speech-language 
-                                                pathologist is committed to providing 
-                                                quality services that are catered to each individual‘s needs and strengths.
+           Speech-Language Pathology, or Speech Therapy 
+           is a developing practice in the country. Guided by 
+           the best practices, each speech-language 
+           pathologist is committed to providing 
+           quality services that are catered to each individual‘s needs and strengths.
            </>
           }
          />
@@ -269,15 +270,15 @@ class Home extends React.Component {
         <Grid item xs={6}>
          <ServiceInfo
           header={<>
-                                            Medical Department
+          Medical Department
           </>
           }
 
           content={
            <>
-                                                Book a medical consultation with a licensed 
-                                                professional for all your medical consultancy 
-                                                needs and demands.
+           Book a medical consultation with a licensed 
+           professional for all your medical consultancy 
+           needs and demands.
            </>
           }
          />
@@ -294,15 +295,15 @@ class Home extends React.Component {
          <Grid container justifyContent="left">
           <Grid item xs={6}>
            <Typography sx={{ fontWeight: '400', fontSize: '48px', fontStyle: 'normal', mb: 5 }}>
-                                                The Sandbox App
+            The Sandbox App
            </Typography>
            <Typography sx={{ fontWeight: '400', fontSize: '18px', fontStyle: 'normal', lineHeight: '21.94px' }}>
-                                                Sapphire Clinics Incorporated (SCI) has been continuously gaining ground since its incorporation
-                                                in May 2021. As SCI has already laid down the foundation for the establishment of its first world-class clinic, it
-                                                sets its sights to new opportunities which are consistent with its vision to become the forefront of rehabilitation medicine in the Philippines.
+            Sapphire Clinics Incorporated (SCI) has been continuously gaining ground since its incorporation
+            in May 2021. As SCI has already laid down the foundation for the establishment of its first world-class clinic, it
+            sets its sights to new opportunities which are consistent with its vision to become the forefront of rehabilitation medicine in the Philippines.
            </Typography>
            <Button sx={{ mt: 5, fontWeight: 700, py: 1, px: 3, backgroundColor: '#ffffff', color: '#e32129', ':hover': { backgroundColor: '#ffffff' } }}>
-                                                Book now
+            Book now
            </Button>
           </Grid>
          </Grid>
