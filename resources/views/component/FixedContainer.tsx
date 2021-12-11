@@ -1,8 +1,8 @@
 import React, { FC, Children, ReactNode } from 'react'
-import { Grid } from '@mui/material'
+import { Grid, Container } from '@mui/material'
 
 interface IProps {
-    children: React.ReactElement;
+    children: any;
     marginTop?: number;
     marginBottom?: number;
     paddingTop?: number;
@@ -20,15 +20,15 @@ const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0,
  }
  
  return (
-  <Grid container justifyContent="center" alignItems="center" sx={style}>
-   <Grid item xs={9}>
-    <Grid container justifyContent={justify} alignItems="center">
-     <Grid item>
+  <Container maxWidth="xl">
+   <Grid container justifyContent="center" alignItems="center" sx={style}>
+    <Grid item xs={10}>
+     <Grid container justifyContent={justify}>
       {content}
      </Grid>
     </Grid>
    </Grid>
-  </Grid>
+  </Container>
  )
 }
 

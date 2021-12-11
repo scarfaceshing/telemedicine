@@ -144,59 +144,49 @@ class Home extends React.Component {
      </Header>
 
      <Body>
-      <div style={{backgroundColor: '#FDFDFD' }}>
-       <Box className="banner wrapper" sx={CSS.wrapperBanner}>
+      <Box sx={{backgroundColor: '#FDFDFD' }}>
+       <FixedContainer>
         <div className="wrapper-banner-image-1"></div>
         <div className="wrapper-banner-image-2"></div>
-        <Grid container justifyContent="center" sx={{position: 'relative'}}>
-         <Grid item xs={11} md={9} sx={{ mt: 12 }}>
-          <Stack>
-           <div className='header'>
-            <Box sx={{ maxWidth: '610px' }}>
-             <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
-            </Box>
-           </div>
-           <div className="content">
-            <Box sx={{ maxWidth: '481px' }}>
-             <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.</Typography>
-            </Box>
-           </div>
+        <Grid sx={{mb: 50, mt: 10}}>
+         <Stack>
+          <Box sx={{ maxWidth: '610px' }}>
+           <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
+          </Box>
+          <Box sx={{ maxWidth: '481px' }}>
+           <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.</Typography>
+          </Box>
+          <Box>
            <div className="booknow">
             <SelectWithBook />
            </div>
-          </Stack>
-         </Grid>
+          </Box>
+         </Stack>
         </Grid>
-       </Box>
-      </div>
+       </FixedContainer>
+      </Box>
       <Box sx={CSS.wrapperFeature}>
-       <Grid container justifyContent="center">
+       <FixedContainer justify="center">
 
-        <Grid item xs={8}>
-         <Grid container>
-
-          <Grid item xs sx={{ textAlign: 'center', mb: 8 }} rowSpacing={{ xs: 2 }}>
-           <EventAvailableIcon sx={CSS.featureIcon} />
-           <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
-           <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
-          </Grid>
-
-          <Grid item xs sx={{ textAlign: 'center' }}>
-           <LocalHospitalIcon sx={CSS.featureIcon} />
-           <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
-           <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
-          </Grid>
-
-          <Grid item xs sx={{ textAlign: 'center' }}>
-           <TagFacesIcon sx={CSS.featureIcon} />
-           <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
-           <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
-          </Grid>
-
-         </Grid>
+        <Grid item xs sx={{ textAlign: 'center', mb: 8 }} rowSpacing={{ xs: 2 }}>
+         <EventAvailableIcon sx={CSS.featureIcon} />
+         <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
         </Grid>
 
-       </Grid>
+        <Grid item xs sx={{ textAlign: 'center' }}>
+         <LocalHospitalIcon sx={CSS.featureIcon} />
+         <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+        </Grid>
+
+        <Grid item xs sx={{ textAlign: 'center' }}>
+         <TagFacesIcon sx={CSS.featureIcon} />
+         <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+        </Grid>
+
+       </FixedContainer>
       </Box>
 
       <Container sx={{ marginBottom: '200px' }}>
@@ -232,7 +222,7 @@ class Home extends React.Component {
           }
 
           content={
-           <>
+           <>tam-an bi
           The Occupational Therapy Department will be 
           composed of highly qualified therapists, unique 
           with their own certifications or specializations
