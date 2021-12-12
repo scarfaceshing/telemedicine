@@ -2,12 +2,12 @@ import React, { FC, Children, ReactNode } from 'react'
 import { Grid, Container } from '@mui/material'
 
 interface IProps {
-    children: any;
-    marginTop?: number;
-    marginBottom?: number;
-    paddingTop?: number;
-    paddingBottom?: number;
-    justify?: string;
+ children: any;
+ marginTop?: number;
+ marginBottom?: number;
+ paddingTop?: number;
+ paddingBottom?: number;
+ justify?: string;
 }
 
 const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0, paddingTop = 0, paddingBottom = 0, justify = 'left' }: IProps) => {
@@ -18,7 +18,7 @@ const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0,
   pt: paddingTop,
   pb: paddingBottom
  }
- 
+
  return (
   <Container maxWidth="xl">
    <Grid container justifyContent="center" alignItems="center" sx={style}>

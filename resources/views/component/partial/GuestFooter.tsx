@@ -3,10 +3,11 @@ import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSu
 import { styled } from '@mui/material/styles'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import { borderRadius } from '@mui/system'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { red } from '@mui/material/colors';
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import { red } from '@mui/material/colors'
+import FixedContainer from '../FixedContainer'
 
 interface ICssObject {
  [key: string]: string | number
@@ -75,9 +76,9 @@ const CSS: ICss = {
 
 const GuestFooter = () => {
  return (
-  <>
+  <FixedContainer marginTop={5}>
    <Grid container justifyContent="center" sx={{ pt: 5 }}>
-    <Grid item xs={9}>
+    <Grid item xs={12}>
      <Grid container justifyContent="space-between">
       <Grid item xs={6}>
        <Box sx={CSS.logo}>
@@ -131,7 +132,7 @@ const GuestFooter = () => {
     </Grid>
    </Grid>
    <Grid container justifyContent="center" sx={{ mb: 5 }}>
-    <Grid item xs={9}>
+    <Grid item xs={12}>
      <Grid container justifyContent="space-between">
       <Stack sx={CSS.subscriber}>
        <Typography sx={CSS.subscriberText}>
@@ -160,7 +161,7 @@ const GuestFooter = () => {
      </Grid>
     </Grid>
    </Grid>
-  </>
+  </FixedContainer>
  )
 }
 

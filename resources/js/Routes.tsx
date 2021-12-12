@@ -1,26 +1,22 @@
 import React, { FC, useEffect } from 'react'
 import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom'
-import LoginPage from '../views/pages/public/Login'
-import AdminPage from '../views/pages/private/Index'
 import HomePage from '../views/pages/Home'
+import AboutUs from '../views/pages/AboutUs'
+import ServicesPage from '../views/pages/Services'
+import FaqsPage from '../views/pages/Faqs'
 
 interface IProps { }
 
 const Routes: FC<IProps> = (props) => {
-
- const PrivateRoute = ({ }) => {
-  return (
-   <Route path="/admin" component={AdminPage} />
-  )
- }
-
 
  return (
   <BrowserRouter>
    <Switch>
     <Redirect exact from="/" to="/home" />
     <Route path="/home" component={HomePage} />
-    <PrivateRoute />
+    <Route path="/aboutus" component={AboutUs} />
+    <Route path="/services" component={ServicesPage} />
+    <Route path="/faqs" component={FaqsPage} />
    </Switch>
   </BrowserRouter >
  )

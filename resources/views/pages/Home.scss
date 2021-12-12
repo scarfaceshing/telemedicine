@@ -41,6 +41,13 @@ $grid-breakpoints: (
 	color: $secondaryFontColor;
 }
 
+.wrapper-banner {
+ background-image: url('/storage/images/banner_image.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+/*
 .wrapper-banner-image-1 {
 	background-image: url('/storage/images/banner_image_1.png');
 	background-color: transparent;
@@ -68,18 +75,18 @@ $grid-breakpoints: (
 	height: 100%;
 	max-width: 130px;
 	max-height: 130px;
-}
+} */
 
 .content-image {
  position: absolute;
 }
 
 .content-image.left {
- left: 140px;
+ margin-left: -100px;
 }
 
 .content-image.right {
- right: 140px;
+ margin-left: 600px;
 }
 
 .content-image.image-1 {
