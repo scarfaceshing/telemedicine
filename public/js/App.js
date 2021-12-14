@@ -19852,6 +19852,36 @@ var Banner = function Banner() {
   }), void 0);
 };
 
+var TitlePaper = function TitlePaper(_a) {
+  var title = _a.title;
+  var CSS = {
+    title: {
+      fontWeight: 400,
+      fontSize: '32px',
+      display: 'inline-block',
+      paddingBottom: '20px',
+      position: 'relative',
+      marginBottom: '25px',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        width: '50px',
+        height: '1px',
+        marginTop: '50px',
+        marginLeft: '36%',
+        marginRight: 'auto',
+        borderBottom: '2px solid red',
+        paddingBottom: '20px'
+      }
+    }
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+    sx: CSS.title
+  }, {
+    children: title
+  }), void 0);
+};
+
 var AboutUsPaper = function AboutUsPaper(_a) {
   var title = _a.title,
       content = _a.content;
@@ -19860,21 +19890,6 @@ var AboutUsPaper = function AboutUsPaper(_a) {
       boxShadow: "-2px 23px 40px 0px rgba(0,0,0,0.07)",
       my: 8,
       py: 8
-    },
-    title: {
-      fontWeight: 400,
-      fontStyle: "normal",
-      fontSize: "48px",
-      lineHeight: "58.51px",
-      ":before": {
-        content: '',
-        position: "absolute",
-        width: "50%",
-        height: "1px",
-        bottom: "0",
-        left: "25%",
-        borderBottom: "1px solid red"
-      }
     },
     content: {
       fontWeight: 'normal',
@@ -19889,11 +19904,9 @@ var AboutUsPaper = function AboutUsPaper(_a) {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
       justify: 'center'
     }, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
-        sx: CSS.title
-      }, {
-        children: title
-      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(TitlePaper, {
+        title: title
+      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
         sx: CSS.content,
         align: 'center'
       }, {
@@ -20670,7 +20683,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".about_us .banner_image {\n  background-image: url(\"/storage/images/aboutus_banner_image_1.png\");\n  background-position: left;\n  width: 556px;\n  height: 492px;\n  margin-top: -50px;\n  position: absolute;\n}\n\n.about_us .underline {\n  position: relative;\n}\n\n.about_us .underline:after {\n  content: \"\";\n  position: absolute;\n  bottom: -2px;\n  /*position the underline using left and bottom property*/\n  left: 0;\n  width: 50px;\n  /* adjust the width of underline as you like*/\n  border-bottom: 1px solid #ccc;\n  /* adjust the underline width and color as you like*/\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".about_us .banner_image {\n  background-image: url(\"/storage/images/aboutus_banner_image_1.png\");\n  background-position: left;\n  width: 556px;\n  height: 492px;\n  margin-top: -50px;\n  position: absolute;\n}\n\n.about_us .underline {\n  position: relative;\n}\n\n.about_us .underline:after {\n  content: \"\";\n  position: absolute;\n  bottom: -2px;\n  /*position the underline using left and bottom property*/\n  left: 0;\n  width: 50px;\n  /* adjust the width of underline as you like*/\n  border-bottom: 1px solid #ccc;\n  /* adjust the underline width and color as you like*/\n}\n\n/* h1.aboutus.paper-title {\n font-weight: 400;\n font-style: normal;\n font-size: 32px;\n display: inline-block;\n padding-bottom: 5px;\n position: relative;\n}\nh1.aboutus.paper-title:before{\n   content: \"\";\n   position: absolute;\n   width: 50%;\n   height: 1px;\n   bottom: 0;\n   left: 25%;\n   border-bottom: 1px solid red;\n} */", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

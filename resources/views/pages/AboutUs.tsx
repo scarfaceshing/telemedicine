@@ -67,27 +67,40 @@ const Banner = () => {
  )
 }
 
+const TitlePaper = ({ title }: { title?: string }) => {
+ const CSS: ICss = {
+  title: {
+   fontWeight: 400,
+   fontSize: '32px',
+   display: 'inline-block',
+   paddingBottom: '20px',
+   position: 'relative',
+   marginBottom: '25px',
+   '&::before': {
+    content: '""',
+    position: 'absolute',
+    width: '50px',
+    height: '1px',
+    marginTop: '50px',
+    marginLeft: '36%',
+    marginRight: 'auto',
+    borderBottom: '2px solid red',
+    paddingBottom: '20px'
+   }
+  }
+ }
+
+ return (
+  <Typography sx={CSS.title}>{title}</Typography>
+ )
+}
+
 const AboutUsPaper = ({ title, content }: { title?: string, content?: string }) => {
  const CSS: ICss = {
   paper: {
    boxShadow: "-2px 23px 40px 0px rgba(0,0,0,0.07)",
    my: 8,
    py: 8
-  },
-  title: {
-   fontWeight: 400,
-   fontStyle: "normal",
-   fontSize: "48px",
-   lineHeight: "58.51px",
-   ":before": {
-    content: '',
-    position: "absolute",
-    width: "50%",
-    height: "1px",
-    bottom: "0",
-    left: "25%",
-    borderBottom: "1px solid red"
-   }
   },
   content: {
    fontWeight: 'normal',
@@ -100,7 +113,7 @@ const AboutUsPaper = ({ title, content }: { title?: string, content?: string }) 
  return (
   <Box sx={CSS.paper}>
    <FixedContainer justify='center'>
-    <Typography sx={CSS.title}>{title}</Typography>
+    <TitlePaper title={title} />
     <Typography sx={CSS.content} align='center'>
      {content}
     </Typography>
