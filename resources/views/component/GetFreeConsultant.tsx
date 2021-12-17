@@ -1,6 +1,6 @@
 import React from 'react'
-import { Typography, Grid, Box, InputBase, Button, TextField, InputAdornment } from '@mui/material';
-import { fontWeight } from '@mui/system';
+import { Typography, Grid, Box, InputBase, Button, TextField, InputAdornment } from '@mui/material'
+import { fontWeight } from '@mui/system'
 import FixedContainer from './FixedContainer'
 
 interface ICssObject {
@@ -14,30 +14,30 @@ interface ICss {
 
 const CSS: ICss = {
  content: {
-  backgroundColor: "rgba(247, 233, 233, 0.5)",
-  padding: "100px 0"
+  backgroundColor: 'rgba(247, 233, 233, 0.5)',
+  padding: '100px 0'
  },
  header: {
-  fontSize: "48px",
-  lineHeight: "56px",
-  fontStyle: "normal",
-  fontWeight: "700",
-  padding: "18px 0"
+  fontSize: '48px',
+  lineHeight: '56px',
+  fontStyle: 'normal',
+  fontWeight: '700',
+  padding: '18px 0'
  },
  sendNow: {
-  padding: "10px 25px"
+  padding: '10px 25px'
  },
  emailAddress: {
-  backgroundColor: "white",
-  height: "80px",
-  width: "733px",
-  paddingLeft: "30px",
-  paddingRight: "10px",
-  borderRadius: "10px",
-  fontWeight: "bold",
-  boxShadow: "5px 4px 63px 14px rgba(0,0,0,0.10)",
-  ":placeholder": {
-   color: ""
+  backgroundColor: 'white',
+  height: '80px',
+  width: '733px',
+  paddingLeft: '30px',
+  paddingRight: '10px',
+  borderRadius: '10px',
+  fontWeight: 'bold',
+  boxShadow: '5px 4px 63px 14px rgba(0,0,0,0.10)',
+  ':placeholder': {
+   color: ''
   }
  }
 }
@@ -76,4 +76,4 @@ const GetFreeConsultant = () => {
  )
 }
 
-export default GetFreeConsultant;
+export default GetFreeConsultant
