@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import GuestLayout, { Header, Body, Footer } from '@/views/layout/Guest'
+import GuestLayout, { Header, Body, Footer } from '../layout/Guest'
 import GuestHeader from '../component/partial/GuestHeader'
 import GuestFooter from '../component/partial/GuestFooter'
 
@@ -19,4 +19,4 @@ const Careers: FC = () => {
  )
 }
 
-export default Careers;
+export default Careers

@@ -57,7 +57,7 @@ const GuestHeader = () => {
         </Link>
        </Grid>
        <Grid item>
-        <Link color="text.primary" underline="none">
+        <Link color="text.primary" underline="none" component={RouterLink} to="/careers">
          <Typography sx={link}>careers</Typography>
         </Link>
        </Grid>
