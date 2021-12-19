@@ -22,4 +22,4 @@ const Faqs: FC = () => {
  )
 }
 
-export default Faqs;
+export default Faqs

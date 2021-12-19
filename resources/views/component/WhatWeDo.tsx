@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import FixedContainer from './FixedContainer'
-import "./Component.scss"
+import './Component.scss'
 
 const WhatWeDo = () => {
  return (
@@ -34,4 +34,4 @@ const WhatWeDo = () => {
  )
 }
 
-export default WhatWeDo;
+export default WhatWeDo
