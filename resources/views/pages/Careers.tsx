@@ -2,11 +2,13 @@ import React, { FC } from 'react'
 import GuestLayout, { Header, Body, Footer } from '../layout/Guest'
 import GuestHeader from '../component/partial/GuestHeader'
 import GuestFooter from '../component/partial/GuestFooter'
-import { Box, Typography, Grid, Stack, Button, Chip } from '@mui/material'
+import { Box, Typography, Grid, Stack, Button, Chip, Accordion, AccordionSummary, AccordionDetails } from '@mui/material'
 import FixedContainer from '../component/FixedContainer'
 import * as Text from '../component/core/Text'
 import './Careers.scss'
 import { borderRadius } from '@mui/system'
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import { styled } from '@mui/material/styles'
 
 interface ICssObject {
     [key: string]: string | number
@@ -16,6 +18,21 @@ interface ICss {
         [key: string]: string | number | ICssObject
     }
 }
+
+const CustomAccordionSummary = styled((props) => (
+ <AccordionSummary
+  expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#E32129' }} />}
+  {...props}
+ />
+))(({ theme }) => ({ 
+ 
+ '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+  transform: 'rotate(90deg)',
+ },
+ '& .MuiAccordionSummary-content': {
+  marginLeft: theme.spacing(1),
+ },
+}))
 
 const ButtonPrimary = ({ children }: any) => {
  const CSS: ICss = {
@@ -174,7 +191,7 @@ const ComeAndJoinUs = () => {
 
  const CheckIcon = () => {
   return (
-   <Box >
+   <Box sx={{mt: 1}}>
     <svg width="24" height="24" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
      <g id="Icon">
       <ellipse id="Oval" opacity="0.15" cx="18.2351" cy="18" rx="18.1765" ry="18" fill="#F19094"/>
@@ -202,7 +219,8 @@ const ComeAndJoinUs = () => {
    width: '567.51px',
    height: '483px',
    borderRadius: '32px',
-   marginLeft:'500px'
+   marginLeft:'500px',
+   boxShadow: '-50px 50px 50px rgba(0, 0, 0, 0.05)'
   },
   chip: {
    backgroundColor: '#FDEEEA',
@@ -222,14 +240,14 @@ const ComeAndJoinUs = () => {
  const Counts = ({ number, subtitle }: {number: number, subtitle: string}) => {
   return (
    <Box>
-    <Stack direction="row" spacing={5}>
+    <Stack direction="row" spacing={2}>
      <Box>
       <CheckIcon />
      </Box>
      <Box>
       <Stack>
        <Box>
-        <Text.HeadCustomOne bold={false} align='left'>
+        <Text.HeadCustomOne bold={true} align='left'>
          {number}
         </Text.HeadCustomOne>
        </Box>
@@ -262,10 +280,134 @@ const ComeAndJoinUs = () => {
       </Text.ParagraphContent>
      </Box>
      <Box>
-      <Counts number={3500} subtitle='Visitors' />
+      <Grid container spacing={5}>
+       <Grid item xs={4}>
+        <Counts number={3500} subtitle='Visitors' />
+       </Grid>
+       <Grid item xs={4}>
+        <Counts number={36} subtitle='Services' />
+       </Grid>
+       <Grid item xs={4}>
+        <Counts number={30} subtitle='Doctors' />
+       </Grid>
+       <Grid item xs={4}>
+        <Counts number={8} subtitle='Departments' />
+       </Grid>
+       <Grid item xs={4}>
+        <Counts number={6} subtitle='Stages' />
+       </Grid>
+      </Grid>
      </Box>
     </Stack>
    </Box>
+  </FixedContainer>
+ )
+}
+
+const JobOpenings = () => {
+ const [expand, setExpand] = React.useState([false, false, false, false])
+
+ const handleChange = (event: any, target: number) => {
+  const array = expand
+  const oldValue = expand[target]
+  array.splice(target, 1, !oldValue)
+  setExpand(array)
+ }
+   
+ return (
+  <FixedContainer>
+   <Grid container direction="row" justifyContent="center">
+    <Grid item>
+     <Stack>
+      <Box sx={{mt: 10}}>
+       <Text.HeadOne bold={false} align='center'>Job Openings</Text.HeadOne>
+      </Box>
+      <Box sx={{width: '700px', mt: 5, mb: 15}}>
+       <Text.HeadContent align='center'>
+        The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
+       </Text.HeadContent>
+      </Box>
+     </Stack>
+    </Grid>
+   </Grid>
+   <Grid container direction="row" justifyContent="center">
+    <Grid item>
+     <Stack spacing={2}>
+      <Box>
+       <Accordion expanded={expand[0] === true} onChange={(event) => handleChange(event, 0)}>
+        <CustomAccordionSummary>
+         <Stack>
+          <Text.ParagraphContent color='tertiary' align='left'>Physical Therapist</Text.ParagraphContent>
+          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+         </Stack>
+        </CustomAccordionSummary>
+        <AccordionDetails>
+         <Typography>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+         sit amet blandit leo lobortis eget.
+         </Typography>
+        </AccordionDetails>
+       </Accordion>
+      </Box>
+      <Box>
+       <Accordion expanded={expand[1] === true} onChange={(event) => handleChange(event, 1)}>
+        <CustomAccordionSummary>
+         <Stack>
+          <Text.ParagraphContent color='tertiary' align='left'>Occupational  Therapist</Text.ParagraphContent>
+          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+         </Stack>
+        </CustomAccordionSummary>
+        <AccordionDetails>
+         <Typography>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+         sit amet blandit leo lobortis eget.
+         </Typography>
+        </AccordionDetails>
+       </Accordion>
+      </Box>
+      <Box>
+       <Accordion expanded={expand[2] === true} onChange={(event) => handleChange(event, 2)}>
+        <CustomAccordionSummary>
+         <Stack>
+          <Text.ParagraphContent color='tertiary' align='left'>Speech Pathologist</Text.ParagraphContent>
+          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+         </Stack>
+        </CustomAccordionSummary>
+        <AccordionDetails>
+         <Typography>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+         sit amet blandit leo lobortis eget.
+         </Typography>
+        </AccordionDetails>
+       </Accordion>
+      </Box>
+      <Box>
+       <Accordion expanded={expand[3] === true} onChange={(event) => handleChange(event, 3)}>
+        <CustomAccordionSummary>
+         <Stack>
+          <Text.ParagraphContent color='tertiary' align='left'>Clinic Manager</Text.ParagraphContent>
+          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+         </Stack>
+        </CustomAccordionSummary>
+        <AccordionDetails>
+         <Typography>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+         sit amet blandit leo lobortis eget.
+         </Typography>
+        </AccordionDetails>
+       </Accordion>
+      </Box>
+     </Stack>
+    </Grid>
+   </Grid>
   </FixedContainer>
  )
 }
@@ -280,6 +422,7 @@ const Careers: FC = () => {
     <Banner />
     <OurValues />
     <ComeAndJoinUs />
+    <JobOpenings />
    </Body>
    <Footer>
     <GuestFooter />

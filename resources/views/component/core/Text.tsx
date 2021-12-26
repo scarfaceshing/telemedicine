@@ -404,7 +404,7 @@ export const HeadCustomOne = ({ children, align = 'center', color = 'primary', b
   fontStyle: 'normal',
   fontWeight: (bold === true) ? FONT_WEIGHT_MD : FONT_WEIGHT_SM,
   color: fontColor,
-  ...STYLE_HEAD_ONE
+  ...STYLE_PARAGRAPH_TWO
  }
         
  return ( 
