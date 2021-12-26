@@ -14,16 +14,16 @@ interface ICss {
 
 const CSS: ICss = {
  testimonialHeader: {
-  fontSize: "48px"
+  fontSize: '48px'
  },
  testimonialContent: {
-  fontSize: "18px"
+  fontSize: '18px'
  },
  wrapperPhoto: {
-  backgroundColor: "#C4C4C4",
+  backgroundColor: '#C4C4C4',
  },
  wrapperMessage: {
-  backgroundColor: "#FBF4F4"
+  backgroundColor: '#FBF4F4'
  },
  hygiene: {
   position: 'absolute'
@@ -31,20 +31,20 @@ const CSS: ICss = {
 }
 
 const FramePhoto = styled(Paper)({
- borderRadius: "50px"
+ borderRadius: '50px'
 })
 
 const WrapperMessage = styled(Paper)({
- marginTop: "80px",
- padding: "40px 80px",
- borderRadius: "0 50px 50px 0px"
+ marginTop: '80px',
+ padding: '40px 80px',
+ borderRadius: '0 50px 50px 0px'
 })
 
 const Photo = () => {
  return (
   <>
    <FramePhoto sx={CSS.wrapperPhoto} elevation={0}>
-    <Box sx={{ height: "454px" }}></Box>
+    <Box sx={{ height: '454px' }}></Box>
    </FramePhoto>
   </>
  )
@@ -67,9 +67,9 @@ const Message = () => {
 }
 
 const PageTab = styled(Tab)({
- margin: "0px",
- padding: "0px"
-});
+ margin: '0px',
+ padding: '0px'
+})
 
 
 const Testimonials: React.FC = () => {
@@ -118,4 +118,4 @@ const Testimonials: React.FC = () => {
  )
 }
 
-export default Testimonials;
+export default Testimonials

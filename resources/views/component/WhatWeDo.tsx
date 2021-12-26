@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import FixedContainer from './FixedContainer'
+import * as Text from './core/Text'
 import './Component.scss'
 
 const WhatWeDo = () => {
@@ -11,21 +12,21 @@ const WhatWeDo = () => {
      <div className="image_1"></div>
      <Stack>
       <Box sx={{ width: 481 }}>
-       <Typography className="subtitle">
+       <Text.HeadThree align='left' color="secondary">
         What We Do
-       </Typography>
+       </Text.HeadThree>
       </Box>
       <Box sx={{ width: 610, my: 2 }}>
-       <Typography className="title">
+       <Text.HeadOne align='left' color="secondary">
         The highest standard for pediatric
         and adult assessment
         and therapy
-       </Typography>
+       </Text.HeadOne>
       </Box>
       <Box sx={{ width: 530 }}>
-       <Typography className="content">
+       <Text.ParagraphCustomOne align='left' color="secondary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis.
-       </Typography>
+       </Text.ParagraphCustomOne>
       </Box>
      </Stack>
     </FixedContainer>

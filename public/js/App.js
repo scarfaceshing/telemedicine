@@ -19756,28 +19756,28 @@ var __assign = undefined && undefined.__assign || function () {
 
 var CSS = {
   testimonialHeader: {
-    fontSize: "48px"
+    fontSize: '48px'
   },
   testimonialContent: {
-    fontSize: "18px"
+    fontSize: '18px'
   },
   wrapperPhoto: {
-    backgroundColor: "#C4C4C4"
+    backgroundColor: '#C4C4C4'
   },
   wrapperMessage: {
-    backgroundColor: "#FBF4F4"
+    backgroundColor: '#FBF4F4'
   },
   hygiene: {
     position: 'absolute'
   }
 };
 var FramePhoto = (0,_mui_styles__WEBPACK_IMPORTED_MODULE_1__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"])({
-  borderRadius: "50px"
+  borderRadius: '50px'
 });
 var WrapperMessage = (0,_mui_styles__WEBPACK_IMPORTED_MODULE_1__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"])({
-  marginTop: "80px",
-  padding: "40px 80px",
-  borderRadius: "0 50px 50px 0px"
+  marginTop: '80px',
+  padding: '40px 80px',
+  borderRadius: '0 50px 50px 0px'
 });
 
 var Photo = function Photo() {
@@ -19788,7 +19788,7 @@ var Photo = function Photo() {
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
         sx: {
-          height: "454px"
+          height: '454px'
         }
       }, void 0)
     }), void 0)
@@ -19829,8 +19829,8 @@ var Message = function Message() {
 };
 
 var PageTab = (0,_mui_styles__WEBPACK_IMPORTED_MODULE_1__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"])({
-  margin: "0px",
-  padding: "0px"
+  margin: '0px',
+  padding: '0px'
 });
 
 var Testimonials = function Testimonials() {
@@ -19928,11 +19928,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
 /* harmony import */ var _FixedContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FixedContainer */ "./resources/views/component/FixedContainer.tsx");
-/* harmony import */ var _Component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Component.scss */ "./resources/views/component/Component.scss");
+/* harmony import */ var _core_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/Text */ "./resources/views/component/core/Text.tsx");
+/* harmony import */ var _Component_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Component.scss */ "./resources/views/component/Component.scss");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -19954,43 +19954,47 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
+
 var WhatWeDo = function WhatWeDo() {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
       className: "whatwedo banner"
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_FixedContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "image_1"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
             sx: {
               width: 481
             }
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-              className: "subtitle"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_core_Text__WEBPACK_IMPORTED_MODULE_2__.HeadThree, __assign({
+              align: 'left',
+              color: "secondary"
             }, {
               children: "What We Do"
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
             sx: {
               width: 610,
               my: 2
             }
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-              className: "title"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_core_Text__WEBPACK_IMPORTED_MODULE_2__.HeadOne, __assign({
+              align: 'left',
+              color: "secondary"
             }, {
               children: "The highest standard for pediatric and adult assessment and therapy"
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
             sx: {
               width: 530
             }
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-              className: "content"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_core_Text__WEBPACK_IMPORTED_MODULE_2__.ParagraphCustomOne, __assign({
+              align: 'left',
+              color: "secondary"
             }, {
               children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis."
             }), void 0)
@@ -20026,7 +20030,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeadThree": () => (/* binding */ HeadThree),
 /* harmony export */   "HeadContent": () => (/* binding */ HeadContent),
 /* harmony export */   "HeadTitle": () => (/* binding */ HeadTitle),
-/* harmony export */   "HeadTypeface": () => (/* binding */ HeadTypeface)
+/* harmony export */   "HeadTypeface": () => (/* binding */ HeadTypeface),
+/* harmony export */   "HeadCustomOne": () => (/* binding */ HeadCustomOne)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var __assign = undefined && undefined.__assign || function () {
@@ -20051,7 +20056,7 @@ var TEXT_COLOR_SECONDARY = '#FFFFFF';
 var TEXT_COLOR_TERIARY = '#E94C27';
 var TEXT_COLOR_QUATERNARY = '#646464';
 var TEXT_COLOR_QUINARY = '#969696';
-var TEXT_COLOR_SENARY = null;
+var TEXT_COLOR_SENARY = '#5A7184';
 var TEXT_COLOR_SEPTENARY = null;
 var TEXT_COLOR_OCTONARY = null;
 var TEXT_COLOR_NONARY = null;
@@ -20059,7 +20064,8 @@ var TEXT_COLOR_DENARY = null;
 var TEXT_COLOR_DUODENARY = null;
 var TEXT_COLOR_VIGENARY = null;
 var FONT_WEIGHT_LG = 700;
-var FONT_WEIGHT_MD = 400;
+var FONT_WEIGHT_MD = 600;
+var FONT_WEIGHT_SM = 400;
 var STYLE_HEAD_ONE = {
   fontSize: '48px',
   lineHeight: '58.51px'
@@ -20134,6 +20140,10 @@ var color_selection = function color_selection(type) {
     case 'quinary':
       return TEXT_COLOR_QUINARY;
       break;
+
+    case 'senary':
+      return TEXT_COLOR_SENARY;
+      break;
   }
 };
 
@@ -20151,7 +20161,7 @@ var ParagraphOne = function ParagraphOne(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_ONE);
 
@@ -20177,7 +20187,7 @@ var ParagraphTwo = function ParagraphTwo(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_TWO);
 
@@ -20203,7 +20213,7 @@ var ParagraphThree = function ParagraphThree(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_THREE);
 
@@ -20229,7 +20239,7 @@ var ParagraphContent = function ParagraphContent(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_CONTENT);
 
@@ -20255,7 +20265,7 @@ var ParagraphTitle = function ParagraphTitle(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_TITLE);
 
@@ -20281,7 +20291,7 @@ var ParagraphCustomOne = function ParagraphCustomOne(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_CUSTOM_1);
 
@@ -20307,7 +20317,7 @@ var ParagraphCustomTwo = function ParagraphCustomTwo(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_PARAGRAPH_CUSTOM_2);
 
@@ -20333,7 +20343,7 @@ var HeadOne = function HeadOne(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_ONE);
 
@@ -20359,7 +20369,7 @@ var HeadTwo = function HeadTwo(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_TWO);
 
@@ -20385,7 +20395,7 @@ var HeadThree = function HeadThree(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_THREE);
 
@@ -20411,7 +20421,7 @@ var HeadContent = function HeadContent(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_CONTENT);
 
@@ -20437,7 +20447,7 @@ var HeadTitle = function HeadTitle(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_TITLE);
 
@@ -20463,9 +20473,35 @@ var HeadTypeface = function HeadTypeface(_a) {
   var CSS = __assign({
     textAlign: align,
     fontStyle: 'normal',
-    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_MD,
+    fontWeight: bold === true ? FONT_WEIGHT_LG : FONT_WEIGHT_SM,
     color: fontColor
   }, STYLE_HEAD_TYPEFACE);
+
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+      style: CSS
+    }, {
+      children: content
+    }), void 0)
+  }, void 0);
+};
+var HeadCustomOne = function HeadCustomOne(_a) {
+  var children = _a.children,
+      _b = _a.align,
+      align = _b === void 0 ? 'center' : _b,
+      _c = _a.color,
+      color = _c === void 0 ? 'primary' : _c,
+      _d = _a.bold,
+      bold = _d === void 0 ? false : _d;
+  var content = children;
+  var fontColor = color_selection(color) || TEXT_COLOR_PRIMARY;
+
+  var CSS = __assign({
+    textAlign: align,
+    fontStyle: 'normal',
+    fontWeight: bold === true ? FONT_WEIGHT_MD : FONT_WEIGHT_SM,
+    color: fontColor
+  }, STYLE_HEAD_ONE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
@@ -20534,41 +20570,41 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 var SocialMediaIconButton = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"])({
-  marginLeft: "20px",
-  marginBottom: "0px",
-  paddingBottom: "0px"
+  marginLeft: '20px',
+  marginBottom: '0px',
+  paddingBottom: '0px'
 });
 var CSS = {
   copyRight: {
-    fontSize: "18px"
+    fontSize: '18px'
   },
   schedule: {
-    fontSize: "12px"
+    fontSize: '12px'
   },
   subHeader: {
-    color: "#E32129",
-    fontSize: "18px"
+    color: '#E32129',
+    fontSize: '18px'
   },
   subscriberText: {
-    color: "#1E2833",
-    fontSize: "24px",
+    color: '#1E2833',
+    fontSize: '24px',
     mb: 2
   },
   subscriberButton: {
     backgroundColor: _mui_material_colors__WEBPACK_IMPORTED_MODULE_4__["default"][500],
-    borderRadius: "0",
-    color: "white",
-    marginBottom: "7px",
-    borderTopLeftRadius: "5px",
-    borderTopRightRadius: "5px",
-    ":hover": {
+    borderRadius: '0',
+    color: 'white',
+    marginBottom: '7px',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
+    ':hover': {
       backgroundColor: _mui_material_colors__WEBPACK_IMPORTED_MODULE_4__["default"][500]
     }
   },
   subscriberInput: {
-    fontSize: "15px",
-    fontWeight: "400",
-    borderBottom: "1px solid #E5E5E5"
+    fontSize: '15px',
+    fontWeight: '400',
+    borderBottom: '1px solid #E5E5E5'
   },
   logo: {
     pt: 3,
@@ -20670,7 +20706,7 @@ var GuestFooter = function GuestFooter() {
                     children: "About"
                   }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
                     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                      children: "Mission & Vision"
+                      children: 'Mission & Vision'
                     }, void 0)
                   }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
                     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -20903,19 +20939,6 @@ var GuestHeader = function GuestHeader() {
                   sx: link
                 }, {
                   children: "about us"
-                }), void 0)
-              }), void 0)
-            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
-              item: true
-            }, {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-                color: "text.primary",
-                underline: "none"
-              }, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-                  sx: link
-                }, {
-                  children: "contact"
                 }), void 0)
               }), void 0)
             }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
@@ -21887,9 +21910,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Guest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layout/Guest */ "./resources/views/layout/Guest.tsx");
 /* harmony import */ var _component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/partial/GuestHeader */ "./resources/views/component/partial/GuestHeader.tsx");
 /* harmony import */ var _component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/partial/GuestFooter */ "./resources/views/component/partial/GuestFooter.tsx");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Chip/Chip.js");
 /* harmony import */ var _component_FixedContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/FixedContainer */ "./resources/views/component/FixedContainer.tsx");
 /* harmony import */ var _component_core_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/core/Text */ "./resources/views/component/core/Text.tsx");
 /* harmony import */ var _Careers_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Careers.scss */ "./resources/views/pages/Careers.scss");
@@ -21918,6 +21943,31 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
+var ButtonPrimary = function ButtonPrimary(_a) {
+  var children = _a.children;
+  var CSS = {
+    style: {
+      py: 1,
+      px: 2,
+      backgroundColor: '#ffffff',
+      borderRadius: '87px',
+      color: '#E32129',
+      textTransform: 'capitalize',
+      fontWeight: '400',
+      fontStyle: 'normal',
+      fontSize: '16px',
+      ':hover': {
+        backgroundColor: '#ffffff'
+      }
+    }
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+    sx: CSS.style
+  }, {
+    children: children
+  }), void 0);
+};
+
 var Banner = function Banner() {
   var CSS = {
     wrapper: {
@@ -21926,23 +21976,23 @@ var Banner = function Banner() {
     }
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
       sx: CSS.wrapper
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "careers_banner_image_1"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
           container: true
         }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
             item: true,
             sx: {
               my: 10
             }
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
                 sx: {
                   my: 4
                 }
@@ -21953,18 +22003,23 @@ var Banner = function Banner() {
                 }, {
                   children: "Come join Us!"
                 }), void 0)
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
                 sx: {
-                  width: '480px'
+                  width: '480px',
+                  mb: 3
                 }
               }, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadContent, __assign({
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphCustomOne, __assign({
                   color: "secondary",
                   align: 'left'
                 }, {
                   children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis."
                 }), void 0)
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}, void 0)]
+              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ButtonPrimary, {
+                  children: "See Openings."
+                }, void 0)
+              }, void 0)]
             }, void 0)
           }), void 0)
         }), void 0)]
@@ -21973,12 +22028,316 @@ var Banner = function Banner() {
   }, void 0);
 };
 
+var OurValues = function OurValues() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+      container: true,
+      direction: "row",
+      justifyContent: "center"
+    }, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+        item: true
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+            sx: {
+              mt: 10
+            }
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadOne, __assign({
+              bold: false,
+              align: 'center'
+            }, {
+              children: "Our Values"
+            }), void 0)
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+            sx: {
+              width: '700px',
+              mt: 5,
+              mb: 15
+            }
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadContent, __assign({
+              align: 'center'
+            }, {
+              children: "The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence."
+            }), void 0)
+          }), void 0)]
+        }, void 0)
+      }), void 0)
+    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+      container: true,
+      direction: "row",
+      justifyContent: "center"
+    }, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+        item: true,
+        xs: 8
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+          container: true,
+          direction: "row",
+          justifyContent: "center",
+          rowSpacing: 6,
+          columnSpacing: 1
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+            item: true,
+            xs: 6
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+              spacing: 2
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                  src: "/storage/icons/ant-design_team-outlined.png"
+                }, void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadThree, __assign({
+                  align: 'left'
+                }, {
+                  children: "Collaboration"
+                }), void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+                maxWidth: '350px'
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphCustomTwo, __assign({
+                  align: 'left',
+                  color: 'senary'
+                }, {
+                  children: "Collaboration is the process of two or more people or organizations working together to complete a task or achieve a goal."
+                }), void 0)
+              }), void 0)]
+            }), void 0)
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+            item: true,
+            xs: 6
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+              spacing: 2
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                  src: "/storage/icons/healthicons_magnifying-glass.png"
+                }, void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadThree, __assign({
+                  align: 'left'
+                }, {
+                  children: "Transparency"
+                }), void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+                maxWidth: '340px'
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphCustomTwo, __assign({
+                  align: 'left',
+                  color: 'senary'
+                }, {
+                  children: "Transparency, as used in science is operating in such a way that it is easy for others to see what actions are performed."
+                }), void 0)
+              }), void 0)]
+            }), void 0)
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+            item: true,
+            xs: 6
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+              spacing: 2
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                  src: "/storage/icons/fluent_handshake-16-regular.png"
+                }, void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadThree, __assign({
+                  align: 'left'
+                }, {
+                  children: "Trust"
+                }), void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+                maxWidth: '340px'
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphCustomTwo, __assign({
+                  align: 'left',
+                  color: 'senary'
+                }, {
+                  children: "Trust will help us foster a positive and productive environment that delivers value to our users and customers."
+                }), void 0)
+              }), void 0)]
+            }), void 0)
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+            item: true,
+            xs: 6
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+              spacing: 2
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                  src: "/storage/icons/fluent_gavel-32-regular.png"
+                }, void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadThree, __assign({
+                  align: 'left'
+                }, {
+                  children: "Integrity"
+                }), void 0)
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+                maxWidth: '330px'
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphCustomTwo, __assign({
+                  align: 'left',
+                  color: 'senary'
+                }, {
+                  children: "Integrity is the practice of showing a consistent and uncompromising adherence to strong moral and ethical principles."
+                }), void 0)
+              }), void 0)]
+            }), void 0)
+          }), void 0)]
+        }), void 0)
+      }), void 0)
+    }), void 0)]
+  }, void 0);
+};
+
+var ComeAndJoinUs = function ComeAndJoinUs() {
+  var CheckIcon = function CheckIcon() {
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", __assign({
+        width: "24",
+        height: "24",
+        viewBox: "0 0 38 36",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("g", __assign({
+          id: "Icon"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ellipse", {
+            id: "Oval",
+            opacity: "0.15",
+            cx: "18.2351",
+            cy: "18",
+            rx: "18.1765",
+            ry: "18",
+            fill: "#F19094"
+          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
+            id: "Icon_2",
+            d: "M15.8095 23.7363L10.869 18.873C10.7309 18.7363 10.6619 18.5605 10.6619 18.3457C10.6619 18.1308 10.7309 17.9551 10.869 17.8183L11.9636 16.7637C12.1016 16.6074 12.2742 16.5293 12.4813 16.5293C12.6884 16.5293 12.8708 16.6074 13.0286 16.7637L16.342 20.0449L23.4422 13.0137C23.5999 12.8574 23.7824 12.7793 23.9895 12.7793C24.1966 12.7793 24.3691 12.8574 24.5072 13.0137L25.6018 14.0684C25.7399 14.2051 25.8089 14.3809 25.8089 14.5957C25.8089 14.8105 25.7399 14.9863 25.6018 15.123L16.8745 23.7363C16.7365 23.8926 16.5589 23.9707 16.342 23.9707C16.125 23.9707 15.9475 23.8926 15.8095 23.7363Z",
+            fill: "#F19094"
+          }, void 0)]
+        }), void 0)
+      }), void 0)
+    }, void 0);
+  };
+
+  var CSS = {
+    box1: {
+      mt: 20,
+      backgroundColor: '#E94C27',
+      width: '727.06px',
+      height: '500px',
+      borderRadius: '32px'
+    },
+    box2: {
+      mt: 10,
+      p: 9,
+      pt: 12,
+      position: 'absolute',
+      backgroundColor: '#FFFFFF',
+      width: '567.51px',
+      height: '483px',
+      borderRadius: '32px',
+      marginLeft: '500px'
+    },
+    chip: {
+      backgroundColor: '#FDEEEA',
+      color: '#E94C27',
+      width: '147px'
+    },
+    check: {
+      width: '24.24px',
+      height: '24.24px',
+      fontSize: '1px',
+      backgroundColor: '#FDEEEA',
+      color: '#E94C27',
+      borderRadius: '100%'
+    }
+  };
+
+  var Counts = function Counts(_a) {
+    var number = _a.number,
+        subtitle = _a.subtitle;
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+        direction: "row",
+        spacing: 5
+      }, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CheckIcon, {}, void 0)
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadCustomOne, __assign({
+                bold: false,
+                align: 'left'
+              }, {
+                children: number
+              }), void 0)
+            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              children: subtitle
+            }, void 0)]
+          }, void 0)
+        }, void 0)]
+      }), void 0)
+    }, void 0);
+  };
+
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      sx: CSS.box1
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+      sx: CSS.box2
+    }, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+        spacing: 3
+      }, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            label: 'COME JOIN US',
+            sx: CSS.chip
+          }, void 0)
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.HeadTwo, __assign({
+            align: 'left'
+          }, {
+            children: "Why Work Here"
+          }), void 0)
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+          maxWidth: '454.41px'
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_5__.ParagraphContent, __assign({
+            align: 'left'
+          }, {
+            children: "From year to year we strive to invent the most innovative technology."
+          }), void 0)
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Counts, {
+            number: 3500,
+            subtitle: 'Visitors'
+          }, void 0)
+        }, void 0)]
+      }), void 0)
+    }), void 0)]
+  }, void 0);
+};
+
 var Careers = function Careers() {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_Guest__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_1__.Header, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {}, void 0)
-    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_1__.Body, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Banner, {}, void 0)
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_Guest__WEBPACK_IMPORTED_MODULE_1__.Body, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Banner, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(OurValues, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ComeAndJoinUs, {}, void 0)]
     }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_1__.Footer, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0)
     }, void 0)]

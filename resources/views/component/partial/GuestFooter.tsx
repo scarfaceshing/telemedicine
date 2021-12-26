@@ -19,42 +19,42 @@ interface ICss {
 }
 
 const SocialMediaIconButton = styled(IconButton)({
- marginLeft: "20px",
- marginBottom: "0px",
- paddingBottom: "0px"
+ marginLeft: '20px',
+ marginBottom: '0px',
+ paddingBottom: '0px'
 })
 
 const CSS: ICss = {
  copyRight: {
-  fontSize: "18px"
+  fontSize: '18px'
  },
  schedule: {
-  fontSize: "12px"
+  fontSize: '12px'
  },
  subHeader: {
-  color: "#E32129",
-  fontSize: "18px"
+  color: '#E32129',
+  fontSize: '18px'
  },
  subscriberText: {
-  color: "#1E2833",
-  fontSize: "24px",
+  color: '#1E2833',
+  fontSize: '24px',
   mb: 2
  },
  subscriberButton: {
   backgroundColor: red[500],
-  borderRadius: "0",
-  color: "white",
-  marginBottom: "7px",
-  borderTopLeftRadius: "5px",
-  borderTopRightRadius: "5px",
-  ":hover": {
+  borderRadius: '0',
+  color: 'white',
+  marginBottom: '7px',
+  borderTopLeftRadius: '5px',
+  borderTopRightRadius: '5px',
+  ':hover': {
    backgroundColor: red[500],
   },
  },
  subscriberInput: {
-  fontSize: "15px",
-  fontWeight: "400",
-  borderBottom: "1px solid #E5E5E5"
+  fontSize: '15px',
+  fontWeight: '400',
+  borderBottom: '1px solid #E5E5E5'
  },
  logo: {
   pt: 3,
@@ -113,7 +113,7 @@ const GuestFooter = () => {
          <List>
           <ListSubheader sx={CSS.subHeader}>About</ListSubheader>
           <ListItem>
-           <ListItemText>{`Mission & Vision`}</ListItemText>
+           <ListItemText>{'Mission & Vision'}</ListItemText>
           </ListItem>
           <ListItem>
            <ListItemText>Founder</ListItemText>
@@ -165,4 +165,4 @@ const GuestFooter = () => {
  )
 }
 
-export default GuestFooter;
+export default GuestFooter
