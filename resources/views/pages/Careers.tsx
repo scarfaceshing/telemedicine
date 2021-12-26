@@ -9,6 +9,7 @@ import './Careers.scss'
 import { borderRadius } from '@mui/system'
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
 import { styled } from '@mui/material/styles'
+import GetFreeConsultant from '../component/GetFreeConsultant'
 
 interface ICssObject {
     [key: string]: string | number
@@ -316,98 +317,100 @@ const JobOpenings = () => {
    
  return (
   <FixedContainer>
-   <Grid container direction="row" justifyContent="center">
-    <Grid item>
-     <Stack>
-      <Box sx={{mt: 10}}>
-       <Text.HeadOne bold={false} align='center'>Job Openings</Text.HeadOne>
-      </Box>
-      <Box sx={{width: '700px', mt: 5, mb: 15}}>
-       <Text.HeadContent align='center'>
+   <Box sx={{mb: 10}}>
+    <Grid container direction="row" justifyContent="center">
+     <Grid item>
+      <Stack>
+       <Box sx={{mt: 10}}>
+        <Text.HeadOne bold={false} align='center'>Job Openings</Text.HeadOne>
+       </Box>
+       <Box sx={{width: '700px', mt: 5, mb: 15}}>
+        <Text.HeadContent align='center'>
         The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
-       </Text.HeadContent>
-      </Box>
-     </Stack>
+        </Text.HeadContent>
+       </Box>
+      </Stack>
+     </Grid>
     </Grid>
-   </Grid>
-   <Grid container direction="row" justifyContent="center">
-    <Grid item>
-     <Stack spacing={2}>
-      <Box>
-       <Accordion expanded={expand[0] === true} onChange={(event) => handleChange(event, 0)}>
-        <CustomAccordionSummary>
-         <Stack>
-          <Text.ParagraphContent color='tertiary' align='left'>Physical Therapist</Text.ParagraphContent>
-          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
-         </Stack>
-        </CustomAccordionSummary>
-        <AccordionDetails>
-         <Typography>
+    <Grid container direction="row" justifyContent="center">
+     <Grid item>
+      <Stack spacing={2}>
+       <Box>
+        <Accordion expanded={expand[0] === true} onChange={(event) => handleChange(event, 0)}>
+         <CustomAccordionSummary>
+          <Stack>
+           <Text.ParagraphContent color='tertiary' align='left'>Physical Therapist</Text.ParagraphContent>
+           <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+          </Stack>
+         </CustomAccordionSummary>
+         <AccordionDetails>
+          <Typography>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
          sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
          sit amet blandit leo lobortis eget.
-         </Typography>
-        </AccordionDetails>
-       </Accordion>
-      </Box>
-      <Box>
-       <Accordion expanded={expand[1] === true} onChange={(event) => handleChange(event, 1)}>
-        <CustomAccordionSummary>
-         <Stack>
-          <Text.ParagraphContent color='tertiary' align='left'>Occupational  Therapist</Text.ParagraphContent>
-          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
-         </Stack>
-        </CustomAccordionSummary>
-        <AccordionDetails>
-         <Typography>
+          </Typography>
+         </AccordionDetails>
+        </Accordion>
+       </Box>
+       <Box>
+        <Accordion expanded={expand[1] === true} onChange={(event) => handleChange(event, 1)}>
+         <CustomAccordionSummary>
+          <Stack>
+           <Text.ParagraphContent color='tertiary' align='left'>Occupational  Therapist</Text.ParagraphContent>
+           <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+          </Stack>
+         </CustomAccordionSummary>
+         <AccordionDetails>
+          <Typography>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
          sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
          sit amet blandit leo lobortis eget.
-         </Typography>
-        </AccordionDetails>
-       </Accordion>
-      </Box>
-      <Box>
-       <Accordion expanded={expand[2] === true} onChange={(event) => handleChange(event, 2)}>
-        <CustomAccordionSummary>
-         <Stack>
-          <Text.ParagraphContent color='tertiary' align='left'>Speech Pathologist</Text.ParagraphContent>
-          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
-         </Stack>
-        </CustomAccordionSummary>
-        <AccordionDetails>
-         <Typography>
+          </Typography>
+         </AccordionDetails>
+        </Accordion>
+       </Box>
+       <Box>
+        <Accordion expanded={expand[2] === true} onChange={(event) => handleChange(event, 2)}>
+         <CustomAccordionSummary>
+          <Stack>
+           <Text.ParagraphContent color='tertiary' align='left'>Speech Pathologist</Text.ParagraphContent>
+           <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+          </Stack>
+         </CustomAccordionSummary>
+         <AccordionDetails>
+          <Typography>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
          sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
          sit amet blandit leo lobortis eget.
-         </Typography>
-        </AccordionDetails>
-       </Accordion>
-      </Box>
-      <Box>
-       <Accordion expanded={expand[3] === true} onChange={(event) => handleChange(event, 3)}>
-        <CustomAccordionSummary>
-         <Stack>
-          <Text.ParagraphContent color='tertiary' align='left'>Clinic Manager</Text.ParagraphContent>
-          <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
-         </Stack>
-        </CustomAccordionSummary>
-        <AccordionDetails>
-         <Typography>
+          </Typography>
+         </AccordionDetails>
+        </Accordion>
+       </Box>
+       <Box>
+        <Accordion expanded={expand[3] === true} onChange={(event) => handleChange(event, 3)}>
+         <CustomAccordionSummary>
+          <Stack>
+           <Text.ParagraphContent color='tertiary' align='left'>Clinic Manager</Text.ParagraphContent>
+           <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
+          </Stack>
+         </CustomAccordionSummary>
+         <AccordionDetails>
+          <Typography>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
          sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
          sit amet blandit leo lobortis eget.
-         </Typography>
-        </AccordionDetails>
-       </Accordion>
-      </Box>
-     </Stack>
+          </Typography>
+         </AccordionDetails>
+        </Accordion>
+       </Box>
+      </Stack>
+     </Grid>
     </Grid>
-   </Grid>
+   </Box>
   </FixedContainer>
  )
 }
@@ -423,6 +426,7 @@ const Careers: FC = () => {
     <OurValues />
     <ComeAndJoinUs />
     <JobOpenings />
+    <GetFreeConsultant />
    </Body>
    <Footer>
     <GuestFooter />

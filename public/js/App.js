@@ -23176,20 +23176,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Guest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/Guest */ "./resources/views/layout/Guest.tsx");
 /* harmony import */ var _component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/partial/GuestHeader */ "./resources/views/component/partial/GuestHeader.tsx");
 /* harmony import */ var _component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/partial/GuestFooter */ "./resources/views/component/partial/GuestFooter.tsx");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/AccordionSummary/AccordionSummary.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Chip/Chip.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Accordion/Accordion.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/AccordionDetails/AccordionDetails.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/AccordionSummary/AccordionSummary.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Chip/Chip.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Accordion/Accordion.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/AccordionDetails/AccordionDetails.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
 /* harmony import */ var _component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/FixedContainer */ "./resources/views/component/FixedContainer.tsx");
 /* harmony import */ var _component_core_Text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../component/core/Text */ "./resources/views/component/core/Text.tsx");
 /* harmony import */ var _Careers_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Careers.scss */ "./resources/views/pages/Careers.scss");
-/* harmony import */ var _mui_icons_material_ArrowForwardIosSharp__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/icons-material/ArrowForwardIosSharp */ "./node_modules/@mui/icons-material/ArrowForwardIosSharp.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _mui_icons_material_ArrowForwardIosSharp__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/icons-material/ArrowForwardIosSharp */ "./node_modules/@mui/icons-material/ArrowForwardIosSharp.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _component_GetFreeConsultant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../component/GetFreeConsultant */ "./resources/views/component/GetFreeConsultant.tsx");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -23217,9 +23218,10 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-var CustomAccordionSummary = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_8__["default"])(function (props) {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
-    expandIcon: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ArrowForwardIosSharp__WEBPACK_IMPORTED_MODULE_10__["default"], {
+
+var CustomAccordionSummary = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_9__["default"])(function (props) {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], __assign({
+    expandIcon: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_ArrowForwardIosSharp__WEBPACK_IMPORTED_MODULE_11__["default"], {
       sx: {
         fontSize: '0.9rem',
         color: '#E32129'
@@ -23256,7 +23258,7 @@ var ButtonPrimary = function ButtonPrimary(_a) {
       }
     }
   };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], __assign({
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
     sx: CSS.style
   }, {
     children: children
@@ -23271,23 +23273,23 @@ var Banner = function Banner() {
     }
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
       sx: CSS.wrapper
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "careers_banner_image_1"
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
           container: true
         }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             item: true,
             sx: {
               my: 10
             }
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 sx: {
                   my: 4
                 }
@@ -23298,7 +23300,7 @@ var Banner = function Banner() {
                 }, {
                   children: "Come join Us!"
                 }), void 0)
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 sx: {
                   width: '480px',
                   mb: 3
@@ -23310,7 +23312,7 @@ var Banner = function Banner() {
                 }, {
                   children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis."
                 }), void 0)
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ButtonPrimary, {
                   children: "See Openings."
                 }, void 0)
@@ -23325,16 +23327,16 @@ var Banner = function Banner() {
 
 var OurValues = function OurValues() {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
       container: true,
       direction: "row",
       justifyContent: "center"
     }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
         item: true
       }, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
             sx: {
               mt: 10
             }
@@ -23345,7 +23347,7 @@ var OurValues = function OurValues() {
             }, {
               children: "Our Values"
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
             sx: {
               width: '700px',
               mt: 5,
@@ -23360,40 +23362,40 @@ var OurValues = function OurValues() {
           }), void 0)]
         }, void 0)
       }), void 0)
-    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
       container: true,
       direction: "row",
       justifyContent: "center"
     }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
         item: true,
         xs: 8
       }, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
           container: true,
           direction: "row",
           justifyContent: "center",
           rowSpacing: 6,
           columnSpacing: 1
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             item: true,
             xs: 6
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
               spacing: 2
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                   src: "/storage/icons/ant-design_team-outlined.png"
                 }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadThree, __assign({
                   align: 'left'
                 }, {
                   children: "Collaboration"
                 }), void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 maxWidth: '350px'
               }, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
@@ -23404,24 +23406,24 @@ var OurValues = function OurValues() {
                 }), void 0)
               }), void 0)]
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             item: true,
             xs: 6
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
               spacing: 2
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                   src: "/storage/icons/healthicons_magnifying-glass.png"
                 }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadThree, __assign({
                   align: 'left'
                 }, {
                   children: "Transparency"
                 }), void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 maxWidth: '340px'
               }, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
@@ -23432,24 +23434,24 @@ var OurValues = function OurValues() {
                 }), void 0)
               }), void 0)]
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             item: true,
             xs: 6
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
               spacing: 2
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                   src: "/storage/icons/fluent_handshake-16-regular.png"
                 }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadThree, __assign({
                   align: 'left'
                 }, {
                   children: "Trust"
                 }), void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 maxWidth: '340px'
               }, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
@@ -23460,24 +23462,24 @@ var OurValues = function OurValues() {
                 }), void 0)
               }), void 0)]
             }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             item: true,
             xs: 6
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
               spacing: 2
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                   src: "/storage/icons/fluent_gavel-32-regular.png"
                 }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadThree, __assign({
                   align: 'left'
                 }, {
                   children: "Integrity"
                 }), void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
                 maxWidth: '330px'
               }, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
@@ -23497,7 +23499,7 @@ var OurValues = function OurValues() {
 
 var ComeAndJoinUs = function ComeAndJoinUs() {
   var CheckIcon = function CheckIcon() {
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
       sx: {
         mt: 1
       }
@@ -23568,23 +23570,23 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
   var Counts = function Counts(_a) {
     var number = _a.number,
         subtitle = _a.subtitle;
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
         direction: "row",
         spacing: 2
       }, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CheckIcon, {}, void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
               children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadCustomOne, __assign({
                 bold: true,
                 align: 'left'
               }, {
                 children: number
               }), void 0)
-            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
               children: subtitle
             }, void 0)]
           }, void 0)
@@ -23594,26 +23596,26 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
   };
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
       sx: CSS.box1
-    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+    }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
       sx: CSS.box2
     }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
         spacing: 3
       }, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
             label: 'COME JOIN US',
             sx: CSS.chip
           }, void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadTwo, __assign({
             align: 'left'
           }, {
             children: "Why Work Here"
           }), void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
           maxWidth: '454.41px'
         }, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
@@ -23621,12 +23623,12 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
           }, {
             children: "From year to year we strive to invent the most innovative technology."
           }), void 0)
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
             container: true,
             spacing: 5
           }, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
               item: true,
               xs: 4
             }, {
@@ -23634,7 +23636,7 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
                 number: 3500,
                 subtitle: 'Visitors'
               }, void 0)
-            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
               item: true,
               xs: 4
             }, {
@@ -23642,7 +23644,7 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
                 number: 36,
                 subtitle: 'Services'
               }, void 0)
-            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
               item: true,
               xs: 4
             }, {
@@ -23650,7 +23652,7 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
                 number: 30,
                 subtitle: 'Doctors'
               }, void 0)
-            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
               item: true,
               xs: 4
             }, {
@@ -23658,7 +23660,7 @@ var ComeAndJoinUs = function ComeAndJoinUs() {
                 number: 8,
                 subtitle: 'Departments'
               }, void 0)
-            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
               item: true,
               xs: 4
             }, {
@@ -23686,165 +23688,171 @@ var JobOpenings = function JobOpenings() {
     setExpand(array);
   };
 
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-      container: true,
-      direction: "row",
-      justifyContent: "center"
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+      sx: {
+        mb: 10
+      }
     }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-        item: true
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+        container: true,
+        direction: "row",
+        justifyContent: "center"
       }, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-            sx: {
-              mt: 10
-            }
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadOne, __assign({
-              bold: false,
-              align: 'center'
-            }, {
-              children: "Job Openings"
-            }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-            sx: {
-              width: '700px',
-              mt: 5,
-              mb: 15
-            }
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadContent, __assign({
-              align: 'center'
-            }, {
-              children: "The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence."
-            }), void 0)
-          }), void 0)]
-        }, void 0)
-      }), void 0)
-    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-      container: true,
-      direction: "row",
-      justifyContent: "center"
-    }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-        item: true
-      }, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-          spacing: 2
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+          item: true
         }, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], __assign({
-              expanded: expand[0] === true,
-              onChange: function onChange(event) {
-                return handleChange(event, 0);
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+              sx: {
+                mt: 10
               }
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                  children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
-                    color: 'tertiary',
-                    align: 'left'
-                  }, {
-                    children: "Physical Therapist"
-                  }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
-                    color: 'primary',
-                    align: 'left'
-                  }, {
-                    children: "Manila, NCR"
-                  }), void 0)]
-                }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                  children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-                }, void 0)
-              }, void 0)]
-            }), void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], __assign({
-              expanded: expand[1] === true,
-              onChange: function onChange(event) {
-                return handleChange(event, 1);
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadOne, __assign({
+                bold: false,
+                align: 'center'
+              }, {
+                children: "Job Openings"
+              }), void 0)
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
+              sx: {
+                width: '700px',
+                mt: 5,
+                mb: 15
               }
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                  children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
-                    color: 'tertiary',
-                    align: 'left'
-                  }, {
-                    children: "Occupational  Therapist"
-                  }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
-                    color: 'primary',
-                    align: 'left'
-                  }, {
-                    children: "Manila, NCR"
-                  }), void 0)]
-                }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                  children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-                }, void 0)
-              }, void 0)]
-            }), void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], __assign({
-              expanded: expand[2] === true,
-              onChange: function onChange(event) {
-                return handleChange(event, 2);
-              }
-            }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                  children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
-                    color: 'tertiary',
-                    align: 'left'
-                  }, {
-                    children: "Speech Pathologist"
-                  }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
-                    color: 'primary',
-                    align: 'left'
-                  }, {
-                    children: "Manila, NCR"
-                  }), void 0)]
-                }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                  children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-                }, void 0)
-              }, void 0)]
-            }), void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], __assign({
-              expanded: expand[3] === true,
-              onChange: function onChange(event) {
-                return handleChange(event, 3);
-              }
-            }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                  children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
-                    color: 'tertiary',
-                    align: 'left'
-                  }, {
-                    children: "Clinic Manager"
-                  }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
-                    color: 'primary',
-                    align: 'left'
-                  }, {
-                    children: "Manila, NCR"
-                  }), void 0)]
-                }, void 0)
-              }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                  children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-                }, void 0)
-              }, void 0)]
-            }), void 0)
-          }, void 0)]
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.HeadContent, __assign({
+                align: 'center'
+              }, {
+                children: "The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence."
+              }), void 0)
+            }), void 0)]
+          }, void 0)
         }), void 0)
-      }), void 0)
-    }), void 0)]
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+        container: true,
+        direction: "row",
+        justifyContent: "center"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
+          item: true
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
+            spacing: 2
+          }, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], __assign({
+                expanded: expand[0] === true,
+                onChange: function onChange(event) {
+                  return handleChange(event, 0);
+                }
+              }, {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
+                      color: 'tertiary',
+                      align: 'left'
+                    }, {
+                      children: "Physical Therapist"
+                    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
+                      color: 'primary',
+                      align: 'left'
+                    }, {
+                      children: "Manila, NCR"
+                    }), void 0)]
+                  }, void 0)
+                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+                    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+                  }, void 0)
+                }, void 0)]
+              }), void 0)
+            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], __assign({
+                expanded: expand[1] === true,
+                onChange: function onChange(event) {
+                  return handleChange(event, 1);
+                }
+              }, {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
+                      color: 'tertiary',
+                      align: 'left'
+                    }, {
+                      children: "Occupational  Therapist"
+                    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
+                      color: 'primary',
+                      align: 'left'
+                    }, {
+                      children: "Manila, NCR"
+                    }), void 0)]
+                  }, void 0)
+                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+                    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+                  }, void 0)
+                }, void 0)]
+              }), void 0)
+            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], __assign({
+                expanded: expand[2] === true,
+                onChange: function onChange(event) {
+                  return handleChange(event, 2);
+                }
+              }, {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
+                      color: 'tertiary',
+                      align: 'left'
+                    }, {
+                      children: "Speech Pathologist"
+                    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
+                      color: 'primary',
+                      align: 'left'
+                    }, {
+                      children: "Manila, NCR"
+                    }), void 0)]
+                  }, void 0)
+                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+                    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+                  }, void 0)
+                }, void 0)]
+              }), void 0)
+            }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], __assign({
+                expanded: expand[3] === true,
+                onChange: function onChange(event) {
+                  return handleChange(event, 3);
+                }
+              }, {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CustomAccordionSummary, {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphContent, __assign({
+                      color: 'tertiary',
+                      align: 'left'
+                    }, {
+                      children: "Clinic Manager"
+                    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_6__.ParagraphCustomTwo, __assign({
+                      color: 'primary',
+                      align: 'left'
+                    }, {
+                      children: "Manila, NCR"
+                    }), void 0)]
+                  }, void 0)
+                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+                    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+                  }, void 0)
+                }, void 0)]
+              }), void 0)
+            }, void 0)]
+          }), void 0)
+        }), void 0)
+      }), void 0)]
+    }), void 0)
   }, void 0);
 };
 
@@ -23853,7 +23861,7 @@ var Careers = function Careers() {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Header, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0)
     }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Body, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Banner, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(OurValues, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ComeAndJoinUs, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(JobOpenings, {}, void 0)]
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Banner, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(OurValues, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ComeAndJoinUs, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(JobOpenings, {}, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_GetFreeConsultant__WEBPACK_IMPORTED_MODULE_8__["default"], {}, void 0)]
     }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Footer, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_4__["default"], {}, void 0)
     }, void 0)]
