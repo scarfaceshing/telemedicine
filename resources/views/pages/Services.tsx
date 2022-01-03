@@ -22,4 +22,4 @@ const Services: FC = () => {
  )
 }
 
-export default Services;
+export default Services

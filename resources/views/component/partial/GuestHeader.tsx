@@ -51,11 +51,11 @@ const GuestHeader = () => {
          <Typography sx={link}>about us</Typography>
         </Link>
        </Grid>
-       <Grid item>
+       {/* <Grid item>
         <Link color="text.primary" underline="none">
          <Typography sx={link}>contact</Typography>
         </Link>
-       </Grid>
+       </Grid> */}
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/careers">
          <Typography sx={link}>careers</Typography>

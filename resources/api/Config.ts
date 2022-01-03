@@ -39,6 +39,6 @@ const config: IConfig = {
 
 */
 
-};
+}
 
-export default config;
+export default config
