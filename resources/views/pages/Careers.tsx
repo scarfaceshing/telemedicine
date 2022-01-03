@@ -12,12 +12,12 @@ import { styled } from '@mui/material/styles'
 import GetFreeConsultant from '../component/GetFreeConsultant'
 
 interface ICssObject {
-    [key: string]: string | number
+ [key: string]: string | number
 }
 interface ICss {
-    [key: string]: {
-        [key: string]: string | number | ICssObject
-    }
+ [key: string]: {
+  [key: string]: string | number | ICssObject
+ }
 }
 
 const CustomAccordionSummary = styled((props) => (
@@ -25,8 +25,8 @@ const CustomAccordionSummary = styled((props) => (
   expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#E32129' }} />}
   {...props}
  />
-))(({ theme }) => ({ 
- 
+))(({ theme }) => ({
+
  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
   transform: 'rotate(90deg)',
  },
@@ -72,12 +72,12 @@ const Banner = () => {
     <FixedContainer>
      <div className="careers_banner_image_1"></div>
      <Grid container>
-      <Grid item sx={{my: 10}}>
+      <Grid item sx={{ my: 10 }}>
        <Stack>
-        <Box sx={{my: 4}}>
+        <Box sx={{ my: 4 }}>
          <Text.HeadOne color="secondary" align="left">Come join Us!</Text.HeadOne>
         </Box>
-        <Box sx={{ width: '480px', mb: 3}}>
+        <Box sx={{ width: '480px', mb: 3 }}>
          <Text.ParagraphCustomOne color="secondary" align='left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis.</Text.ParagraphCustomOne>
         </Box>
         <Box>
@@ -98,12 +98,12 @@ const OurValues = () => {
    <Grid container direction="row" justifyContent="center">
     <Grid item>
      <Stack>
-      <Box sx={{mt: 10}}>
+      <Box sx={{ mt: 10 }}>
        <Text.HeadOne bold={false} align='center'>Our Values</Text.HeadOne>
       </Box>
-      <Box sx={{width: '700px', mt: 5, mb: 15}}>
+      <Box sx={{ width: '700px', mt: 5, mb: 15 }}>
        <Text.HeadContent align='center'>
-           The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
+        The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
        </Text.HeadContent>
       </Box>
      </Stack>
@@ -120,12 +120,12 @@ const OurValues = () => {
         </Box>
         <Box>
          <Text.HeadThree align='left'>
-            Collaboration
+          Collaboration
          </Text.HeadThree>
         </Box>
         <Box maxWidth='350px'>
          <Text.ParagraphCustomTwo align='left' color='senary'>
-            Collaboration is the process of two or more people or organizations working together to complete a task or achieve a goal. 
+          Collaboration is the process of two or more people or organizations working together to complete a task or achieve a goal.
          </Text.ParagraphCustomTwo>
         </Box>
        </Stack>
@@ -137,12 +137,12 @@ const OurValues = () => {
         </Box>
         <Box>
          <Text.HeadThree align='left'>
-        Transparency
+          Transparency
          </Text.HeadThree>
         </Box>
         <Box maxWidth='340px'>
          <Text.ParagraphCustomTwo align='left' color='senary'>
-            Transparency, as used in science is operating in such a way that it is easy for others to see what actions are performed.
+          Transparency, as used in science is operating in such a way that it is easy for others to see what actions are performed.
          </Text.ParagraphCustomTwo>
         </Box>
        </Stack>
@@ -159,7 +159,7 @@ const OurValues = () => {
         </Box>
         <Box maxWidth='340px'>
          <Text.ParagraphCustomTwo align='left' color='senary'>
-            Trust will help us foster a positive and productive environment that delivers value to our users and customers.
+          Trust will help us foster a positive and productive environment that delivers value to our users and customers.
          </Text.ParagraphCustomTwo>
         </Box>
        </Stack>
@@ -171,12 +171,12 @@ const OurValues = () => {
         </Box>
         <Box>
          <Text.HeadThree align='left'>
-         Integrity
+          Integrity
          </Text.HeadThree>
         </Box>
         <Box maxWidth='330px'>
          <Text.ParagraphCustomTwo align='left' color='senary'>
-        Integrity is the practice of showing a consistent and uncompromising adherence to strong moral and ethical principles.
+          Integrity is the practice of showing a consistent and uncompromising adherence to strong moral and ethical principles.
          </Text.ParagraphCustomTwo>
         </Box>
        </Stack>
@@ -192,17 +192,17 @@ const ComeAndJoinUs = () => {
 
  const CheckIcon = () => {
   return (
-   <Box sx={{mt: 1}}>
+   <Box sx={{ mt: 1 }}>
     <svg width="24" height="24" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
      <g id="Icon">
-      <ellipse id="Oval" opacity="0.15" cx="18.2351" cy="18" rx="18.1765" ry="18" fill="#F19094"/>
-      <path id="Icon_2" d="M15.8095 23.7363L10.869 18.873C10.7309 18.7363 10.6619 18.5605 10.6619 18.3457C10.6619 18.1308 10.7309 17.9551 10.869 17.8183L11.9636 16.7637C12.1016 16.6074 12.2742 16.5293 12.4813 16.5293C12.6884 16.5293 12.8708 16.6074 13.0286 16.7637L16.342 20.0449L23.4422 13.0137C23.5999 12.8574 23.7824 12.7793 23.9895 12.7793C24.1966 12.7793 24.3691 12.8574 24.5072 13.0137L25.6018 14.0684C25.7399 14.2051 25.8089 14.3809 25.8089 14.5957C25.8089 14.8105 25.7399 14.9863 25.6018 15.123L16.8745 23.7363C16.7365 23.8926 16.5589 23.9707 16.342 23.9707C16.125 23.9707 15.9475 23.8926 15.8095 23.7363Z" fill="#F19094"/>
+      <ellipse id="Oval" opacity="0.15" cx="18.2351" cy="18" rx="18.1765" ry="18" fill="#F19094" />
+      <path id="Icon_2" d="M15.8095 23.7363L10.869 18.873C10.7309 18.7363 10.6619 18.5605 10.6619 18.3457C10.6619 18.1308 10.7309 17.9551 10.869 17.8183L11.9636 16.7637C12.1016 16.6074 12.2742 16.5293 12.4813 16.5293C12.6884 16.5293 12.8708 16.6074 13.0286 16.7637L16.342 20.0449L23.4422 13.0137C23.5999 12.8574 23.7824 12.7793 23.9895 12.7793C24.1966 12.7793 24.3691 12.8574 24.5072 13.0137L25.6018 14.0684C25.7399 14.2051 25.8089 14.3809 25.8089 14.5957C25.8089 14.8105 25.7399 14.9863 25.6018 15.123L16.8745 23.7363C16.7365 23.8926 16.5589 23.9707 16.342 23.9707C16.125 23.9707 15.9475 23.8926 15.8095 23.7363Z" fill="#F19094" />
      </g>
     </svg>
    </Box>
   )
  }
- 
+
  const CSS: ICss = {
   box1: {
    mt: 20,
@@ -220,7 +220,7 @@ const ComeAndJoinUs = () => {
    width: '567.51px',
    height: '483px',
    borderRadius: '32px',
-   marginLeft:'500px',
+   marginLeft: '500px',
    boxShadow: '-50px 50px 50px rgba(0, 0, 0, 0.05)'
   },
   chip: {
@@ -238,7 +238,7 @@ const ComeAndJoinUs = () => {
   }
  }
 
- const Counts = ({ number, subtitle }: {number: number, subtitle: string}) => {
+ const Counts = ({ number, subtitle }: { number: number, subtitle: string }) => {
   return (
    <Box>
     <Stack direction="row" spacing={2}>
@@ -277,7 +277,7 @@ const ComeAndJoinUs = () => {
      </Box>
      <Box maxWidth='454.41px'>
       <Text.ParagraphContent align='left'>
-         From year to year we strive to invent the most innovative technology.
+       From year to year we strive to invent the most innovative technology.
       </Text.ParagraphContent>
      </Box>
      <Box>
@@ -314,19 +314,19 @@ const JobOpenings = () => {
   array.splice(target, 1, !oldValue)
   setExpand(array)
  }
-   
+
  return (
   <FixedContainer>
-   <Box sx={{mb: 10}}>
+   <Box sx={{ mb: 10 }}>
     <Grid container direction="row" justifyContent="center">
      <Grid item>
       <Stack>
-       <Box sx={{mt: 10}}>
+       <Box sx={{ mt: 10 }}>
         <Text.HeadOne bold={false} align='center'>Job Openings</Text.HeadOne>
        </Box>
-       <Box sx={{width: '700px', mt: 5, mb: 15}}>
+       <Box sx={{ width: '700px', mt: 5, mb: 15 }}>
         <Text.HeadContent align='center'>
-        The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
+         The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
         </Text.HeadContent>
        </Box>
       </Stack>
@@ -345,10 +345,10 @@ const JobOpenings = () => {
          </CustomAccordionSummary>
          <AccordionDetails>
           <Typography>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-         sit amet blandit leo lobortis eget.
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+           malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+           sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+           sit amet blandit leo lobortis eget.
           </Typography>
          </AccordionDetails>
         </Accordion>
@@ -363,10 +363,10 @@ const JobOpenings = () => {
          </CustomAccordionSummary>
          <AccordionDetails>
           <Typography>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-         sit amet blandit leo lobortis eget.
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+           malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+           sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+           sit amet blandit leo lobortis eget.
           </Typography>
          </AccordionDetails>
         </Accordion>
@@ -381,10 +381,10 @@ const JobOpenings = () => {
          </CustomAccordionSummary>
          <AccordionDetails>
           <Typography>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-         sit amet blandit leo lobortis eget.
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+           malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+           sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+           sit amet blandit leo lobortis eget.
           </Typography>
          </AccordionDetails>
         </Accordion>
@@ -393,16 +393,16 @@ const JobOpenings = () => {
         <Accordion expanded={expand[3] === true} onChange={(event) => handleChange(event, 3)}>
          <CustomAccordionSummary>
           <Stack>
-           <Text.ParagraphContent color='tertiary' align='left'>Clinic Manager</Text.ParagraphContent>
+           <Text.ParagraphContent color='tertiary' align='left'>Clinic Assistant</Text.ParagraphContent>
            <Text.ParagraphCustomTwo color='primary' align='left'>Manila, NCR</Text.ParagraphCustomTwo>
           </Stack>
          </CustomAccordionSummary>
          <AccordionDetails>
           <Typography>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-         malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-         sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-         sit amet blandit leo lobortis eget.
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+           malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+           sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+           sit amet blandit leo lobortis eget.
           </Typography>
          </AccordionDetails>
         </Accordion>

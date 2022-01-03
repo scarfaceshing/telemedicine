@@ -15,6 +15,7 @@ import { fontWeight } from '@mui/system'
 import Testimonials from '../component/Testimonials'
 import FixedContainer from '../component/FixedContainer'
 import Booking from '../component/Booking'
+import * as Text from '../component/core/Text'
 
 interface ICssObject {
  [key: string]: string | number
@@ -153,15 +154,21 @@ class Home extends React.Component {
           <Grid container justifyContent="left">
            <Grid sx={{ mb: 50, mt: 10 }}>
             <Stack>
-             <Box sx={{ maxWidth: '610px' }}>
-              <Typography sx={CSS.headerText}>The highest standard for pediatric and adult assessment and therapy</Typography>
+             <Box sx={{ maxWidth: '710px' }}>
+              <Text.HeadOne align="left">
+               The highest standard for pediatric and adult medical consultations and rehabilitation services.
+              </Text.HeadOne>
+              {/* <Typography sx={CSS.headerText}></Typography> */}
              </Box>
-             <Box sx={{ maxWidth: '481px' }}>
-              <Typography sx={CSS.contentText}>As a rehabilitation clinic, Sandbox aims to provide the highest quality of treatment and other services to its patients.</Typography>
+             <Box sx={{ maxWidth: '481px', my: 2 }}>
+              <Text.ParagraphCustomOne align='left'>
+               As a multi-specialty clinic, Sandbox aims to provide the highest quality care and treatment to its patients and clients from different age group with different medical and rehabilitation needs.
+              </Text.ParagraphCustomOne>
+              {/* <Typography sx={CSS.contentText}></Typography> */}
              </Box>
              <Box>
               <div className="booknow">
-               <SelectWithBook />
+               {/* <SelectWithBook /> */}
               </div>
              </Box>
             </Stack>
@@ -184,13 +191,13 @@ class Home extends React.Component {
         <Grid item xs sx={{ textAlign: 'center' }}>
          <LocalHospitalIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not<br /> everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
         </Grid>
 
         <Grid item xs sx={{ textAlign: 'center' }}>
          <TagFacesIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not<br />everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
         </Grid>
 
        </FixedContainer>
@@ -229,11 +236,7 @@ class Home extends React.Component {
           }
 
           content={
-           <>tam-an bi
-            The Occupational Therapy Department will be<br />
-            composed of highly qualified therapists, unique<br />
-            with their own certifications or specializations
-           </>
+           <>Sandbox Occupational Therapy Department is composed of highly qualified OT consultants, unique with their own certifications, specializations and application of various OT principles in their interventions.</>
           }
          />
         </Grid>
@@ -251,11 +254,11 @@ class Home extends React.Component {
 
           content={
            <>
-            Speech-Language Pathology, or Speech Therapy
-            is a developing practice in the country. Guided by
-            the best practices, each speech-language
-            pathologist is committed to providing
-            quality services that are catered to each individual‘s needs and strengths.
+            Speech-Language Pathology, or Speech Therapy is a developing
+            practice in the country. Guided by the best practices,
+            each Speech-Language Pathologist is committed to providing
+            quality services that are catered to each individual‘s needs and
+            strengths.
            </>
           }
          />
@@ -285,7 +288,7 @@ class Home extends React.Component {
 
       <Testimonials />
 
-      <Booking />
+      {/* <Booking /> */}
 
       <GetFreeConsultant />
      </Body>

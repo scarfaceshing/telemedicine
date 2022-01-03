@@ -17,7 +17,7 @@ interface ICss {
  }
 }
 
-const ButtonPrimary = ({children}: {children: any}) => {
+const ButtonPrimary = ({ children }: { children: any }) => {
  const CSS: ICss = {
   style: {
    padding: '16px 32px',
@@ -25,14 +25,14 @@ const ButtonPrimary = ({children}: {children: any}) => {
    textTransform: 'Capitalize'
   }
  }
- 
+
  return (
   <Button sx={CSS.style} variant="contained">{children}</Button>
  )
 }
- 
 
-const ButtonSecondary = ({children}: {children: any}) => {
+
+const ButtonSecondary = ({ children }: { children: any }) => {
  const CSS: ICss = {
   style: {
    backgroundColor: '#ED6925',
@@ -160,21 +160,27 @@ const MissionVision = () => {
 
  return (
   <FixedContainer justify='center'>
-   <Grid container justifyContent="center" sx={{mt: 10}}>
+   <Grid container justifyContent="center" sx={{ mt: 10 }}>
     <Stack direction="row" spacing={7}>
      <AboutUsPaper title={
       'The Mission'
      }
-     content={
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque pellentesque elit nec volutpat nunc sed elit. In tempor at cursus pharetra elementum ante.'
-     }
+      content={
+       `Sandbox is a new generation
+       multi-specialty and rehabilitation clinic that focuses in providing a holistic approach to one’s health.
+       It aims to provide the highest quality of consultation services in the fields rehabilitation medicine,
+       orthopedics, neurology, and developmental pediatrics. As a rehabilitation clinic, it aims to provide
+       the highest quality of treatment and other services to its patients using Physical Therapy,
+       Occupational Therapy, and Speech Therapy, applying the most recent evidence and practice in
+       rehabilitation medicine and utilizing the most advanced technology in healthcare.`
+      }
      />
      <AboutUsPaper title={
       'The Vision'
      }
-     content={
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque pellentesque elit nec volutpat nunc sed elit. In tempor at cursus pharetra elementum ante.'
-     }
+      content={
+       `Sandbox Clinic envisions to become the forefront of rehabilitation medicine and center of learning and research in the Philippines.`
+      }
      />
     </Stack>
    </Grid>
@@ -204,12 +210,12 @@ const TheFounders = () => {
     <Grid container direction="row" justifyContent="center">
      <Grid item>
       <Stack>
-       <Box sx={{mt: 10}}>
+       <Box sx={{ mt: 20 }}>
         <Text.HeadOne bold={false} align='center'>The Founders</Text.HeadOne>
        </Box>
-       <Box sx={{width: '700px', mt: 5, mb: 15}}>
+       <Box sx={{ width: '700px', mt: 5, mb: 15 }}>
         <Text.HeadContent align='center'>
-          The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
+         The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.
         </Text.HeadContent>
        </Box>
       </Stack>
@@ -221,17 +227,17 @@ const TheFounders = () => {
        <FrameImage />
        <Box>
         <Stack>
-         <Box sx={{ mb: 1}}>
+         <Box sx={{ mb: 1 }}>
           <Text.HeadContent align='left' color="tertiary">
            {'Founder & CEO'}
           </Text.HeadContent>
          </Box>
          <Box>
           <Text.HeadTwo align='left'>
-          June Nicca Medina
+           June Nicca Medina
           </Text.HeadTwo>
          </Box>
-         <Box sx={{width: '487px', mt: 2}}>
+         <Box sx={{ width: '487px', mt: 2 }}>
           <Text.ParagraphCustomOne align='left' color="quaternary">
            {`June, as she is fondly called, graduated cum
           laude and the salutatorian of her class in De La
@@ -249,7 +255,7 @@ const TheFounders = () => {
           La Salle University - Manila.`}
           </Text.ParagraphCustomOne>
          </Box>
-         <Box sx={{mt: 3}}>
+         <Box sx={{ mt: 3 }}>
           <ButtonPrimary>Learn More</ButtonPrimary>
          </Box>
         </Stack>
@@ -261,17 +267,17 @@ const TheFounders = () => {
        <FrameImage />
        <Box>
         <Stack>
-         <Box sx={{ mb: 1}}>
+         <Box sx={{ mb: 1 }}>
           <Text.HeadContent align='left' color="tertiary">
            {'Chairman, Sandbox Clinic Rehabilitation Medicine'}
           </Text.HeadContent>
          </Box>
          <Box>
           <Text.HeadTwo align='left'>
-          Francis Exequiel M. Laxamana
+           Francis Exequiel M. Laxamana
           </Text.HeadTwo>
          </Box>
-         <Box sx={{width: '487px', mt: 2}}>
+         <Box sx={{ width: '487px', mt: 2 }}>
           <Text.ParagraphCustomOne align='left' color="quaternary">
            {`Dr. Laxamana, or Bruce to his friends, took his BS
             Physical Therapy and Doctor of Medicine at the
@@ -286,7 +292,7 @@ const TheFounders = () => {
            }
           </Text.ParagraphCustomOne>
          </Box>
-         <Box sx={{mt: 3}}>
+         <Box sx={{ mt: 3 }}>
           <ButtonPrimary>Learn More</ButtonPrimary>
          </Box>
         </Stack>
@@ -405,7 +411,7 @@ const TheConsultants = () => {
     location: 'Sandbox Clinic / Manila'
    },
   ]
-  
+
   return (
    <Grid container spacing={2}>
     {consultants.map((item: any, index: number) => (
@@ -413,7 +419,7 @@ const TheConsultants = () => {
       <Box sx={CSS.style}>
        <Grid container>
         <Grid item xs={12}>
-         <Box sx={{height: '260px'}}>
+         <Box sx={{ height: '260px' }}>
           <Stack spacing={3}>
            <Box>
             <Avatar />
@@ -459,7 +465,7 @@ const TheConsultants = () => {
   )
  }
 
- const BtnSeeMoreConsultants = ({children}: {children: any}) => {
+ const BtnSeeMoreConsultants = ({ children }: { children: any }) => {
   const CSS: ICss = {
    style: {
     fontWeight: 400,
@@ -469,22 +475,22 @@ const TheConsultants = () => {
     textTransform: 'Capitalize'
    }
   }
-  
+
   return (
    <Button sx={CSS.style} variant="contained">{children}</Button>
   )
  }
-  
+
  return (
   <>
    <FixedContainer>
     <Grid container direction="row" justifyContent="center">
      <Grid item>
       <Stack>
-       <Box sx={{mt: 10}}>
+       <Box sx={{ mt: 10 }}>
         <Text.HeadOne bold={false} align='center'>The Consultants</Text.HeadOne>
        </Box>
-       <Box sx={{width: '800px', mt: 5, mb: 15}}>
+       <Box sx={{ width: '800px', mt: 5, mb: 15 }}>
         <Text.ParagraphContent>
          {'The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence.'}
         </Text.ParagraphContent>
@@ -499,7 +505,7 @@ const TheConsultants = () => {
       </Stack>
      </Grid>
     </Grid>
-    <Grid container direction="row" justifyContent="center" sx={{mt: 10, mb: 20}}>
+    <Grid container direction="row" justifyContent="center" sx={{ mt: 10, mb: 20 }}>
      <Grid item>
       <BtnSeeMoreConsultants>See More Consultants</BtnSeeMoreConsultants>
      </Grid>
