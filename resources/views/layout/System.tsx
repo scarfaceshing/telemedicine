@@ -19,7 +19,7 @@ const theme = createTheme()
 
 const Slot: React.FC<{
  name: 'Header' | 'Content' | 'Footer';
-}> = () => null;
+}> = () => null
 
 const SystemLayout = ({ children }: { children: Array<React.ReactElement> }) => {
 
@@ -27,14 +27,14 @@ const SystemLayout = ({ children }: { children: Array<React.ReactElement> }) => 
  const [drawerWidth, setDrawerWidth] = useState(MuiConfig.drawerWidth)
 
  const onToggleDrawer = (e: any): void => {
-  let open = !drawerOpen
+  const open = !drawerOpen
   setDrawerOpen(open)
  }
 
- const childrenArray = Children.toArray(children) as unknown as React.ReactElement[];
- const Header = childrenArray.find(child => child?.props?.name === 'Header');
- const Content = childrenArray.find(child => child?.props?.name === 'Content');
- const Footer = childrenArray.find(child => child?.props?.name === 'Footer');
+ const childrenArray = Children.toArray(children) as unknown as React.ReactElement[]
+ const Header = childrenArray.find(child => child?.props?.name === 'Header')
+ const Content = childrenArray.find(child => child?.props?.name === 'Content')
+ const Footer = childrenArray.find(child => child?.props?.name === 'Footer')
 
  return (
   <ThemeProvider theme={theme}>

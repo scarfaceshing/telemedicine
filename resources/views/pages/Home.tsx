@@ -149,6 +149,7 @@ class Home extends React.Component {
       <Box sx={{ backgroundColor: '#FDFDFD' }}>
 
        <Container maxWidth="xl">
+        {/* <img src="/storage/images/banner_image_1.png" className="banner image" height="829.94px" width="711px"/> */}
         <Grid container justifyContent="center" alignItems="center" className="wrapper-banner">
          <Grid item xs={10}>
           <Grid container justifyContent="left">
@@ -168,7 +169,7 @@ class Home extends React.Component {
              </Box>
              <Box>
               <div className="booknow">
-               {/* <SelectWithBook /> */}
+               <SelectWithBook />
               </div>
              </Box>
             </Stack>

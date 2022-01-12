@@ -1,7 +1,7 @@
 
 import React, { Component, ReactElement, ReactNode } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { AppBar, Container, CssBaseline, Toolbar } from '@mui/material'
+import { AppBar, Container, CssBaseline, Toolbar, Box } from '@mui/material'
 import { green, purple, red } from '@mui/material/colors'
 import '@fontsource/montserrat/400.css'
 import '@fontsource/montserrat/700.css'
@@ -122,9 +122,7 @@ class PublicLayout extends Component<IProps, IState> {
        </header>
       </AppBar>
      </ElevationScroll>
-     <Toolbar />
-     <Toolbar />
-     <Toolbar />
+     <Box sx={{height: '100px'}} />
      <main>
       {body ? body.props.children : null}
      </main>

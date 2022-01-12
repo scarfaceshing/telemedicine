@@ -7,6 +7,7 @@ import { Box, Typography, Stack, Grid, Button, Avatar, Chip } from '@mui/materia
 import FixedContainer from '../component/FixedContainer'
 import * as Text from '../component/core/Text'
 import './AboutUs.scss'
+import TextEllipsis from '../component/core/TextEllipsis'
 
 interface ICssObject {
  [key: string]: string | number
@@ -165,22 +166,22 @@ const MissionVision = () => {
      <AboutUsPaper title={
       'The Mission'
      }
-      content={
-       `Sandbox is a new generation
+     content={
+      `Sandbox is a new generation
        multi-specialty and rehabilitation clinic that focuses in providing a holistic approach to one’s health.
        It aims to provide the highest quality of consultation services in the fields rehabilitation medicine,
        orthopedics, neurology, and developmental pediatrics. As a rehabilitation clinic, it aims to provide
        the highest quality of treatment and other services to its patients using Physical Therapy,
        Occupational Therapy, and Speech Therapy, applying the most recent evidence and practice in
        rehabilitation medicine and utilizing the most advanced technology in healthcare.`
-      }
+     }
      />
      <AboutUsPaper title={
       'The Vision'
      }
-      content={
-       `Sandbox Clinic envisions to become the forefront of rehabilitation medicine and center of learning and research in the Philippines.`
-      }
+     content={
+      'Sandbox Clinic envisions to become the forefront of rehabilitation medicine and center of learning and research in the Philippines.'
+     }
      />
     </Stack>
    </Grid>
@@ -443,7 +444,7 @@ const TheConsultants = () => {
           </Stack>
          </Box>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
          <Box
           sx={{
            display: 'flex',
@@ -522,6 +523,9 @@ const AboutUs: FC = () => {
     <GuestHeader />
    </Header>
    <Body>
+    <TextEllipsis>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sapiente eos iste eum tempora amet incidunt laboriosam eaque adipisci dolores ut, quod sequi. Ipsam mollitia eveniet officiis autem suscipit voluptates!
+    </TextEllipsis>
     <Banner />
     <MissionVision />
     <TheFounders />

@@ -42,10 +42,20 @@ $grid-breakpoints: (
 }
 
 .wrapper-banner {
- background-image: url('/storage/images/banner_image.png');
- background-size: cover;
- background-repeat: no-repeat;
+ background-image: url('/storage/images/banner_image_1.png'), url('/storage/images/banner_image_2.png');
+ background-size: auto 711px, auto 130px;
+	background-position: right, left;
+	background-position-y: top, 600px;
+ background-repeat: no-repeat, no-repeat;
 }
+
+/* .banner.image {
+	width: 100%;
+	max-width: 711px;
+	height: auto;
+	position: absolute;
+	right: 0px;
+} */
 
 /*
 .wrapper-banner-image-1 {

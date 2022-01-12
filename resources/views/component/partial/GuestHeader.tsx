@@ -4,22 +4,30 @@ import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-ro
 import FixContainer from '../../component/FixedContainer'
 import FixedContainer from '../../component/FixedContainer'
 
-interface ILink {
+interface ICssObject {
  [key: string]: string | number
 }
-
-const link: ILink = { color: '#191919', fontWeight: '700', fontStyle: 'normal', fontSize: '18px', textTransform: 'capitalize' }
+interface ICss {
+ [key: string]: {
+  [key: string]: string | number | ICssObject
+ }
+}
+const CSS: ICss = {
+ link: {
+  color: '#191919',
+  fontWeight: '700',
+  fontStyle: 'normal',
+  fontSize: '18px',
+  textTransform: 'capitalize',
+  '&:hover': {
+   color: '#E94C27'
+  }
+ }
+}
 
 const GuestHeader = () => {
  return (
   <>
-   <Toolbar className="style-1">
-    <FixedContainer justify="center">
-     <Button component={RouterLink} to="/" color="primary">
-      book a session now
-     </Button>
-    </FixedContainer>
-   </Toolbar>
    <Toolbar className="style-2" sx={{
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
@@ -34,21 +42,21 @@ const GuestHeader = () => {
        </Grid>
       </Grid>
      </Grid>
-     <Grid item>
+     <Grid item sx={{ display: { xs: 'none', md: 'none', lg: 'block' } }}>
       <Grid container sx={{ mt: 2 }} rowSpacing={{ xs: 0 }} columnSpacing={{ xs: 8, sm: 4, md: 7 }} alignItems="center">
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/home">
-         <Typography sx={link} className="style-2">home</Typography>
+         <Typography sx={CSS.link} className="style-2">home</Typography>
         </Link>
        </Grid>
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/services">
-         <Typography sx={link}>services</Typography>
+         <Typography sx={CSS.link}>services</Typography>
         </Link>
        </Grid>
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/aboutus">
-         <Typography sx={link}>about us</Typography>
+         <Typography sx={CSS.link}>about us</Typography>
         </Link>
        </Grid>
        {/* <Grid item>
@@ -58,12 +66,12 @@ const GuestHeader = () => {
        </Grid> */}
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/careers">
-         <Typography sx={link}>careers</Typography>
+         <Typography sx={CSS.link}>careers</Typography>
         </Link>
        </Grid>
        <Grid item>
         <Link color="text.primary" underline="none" component={RouterLink} to="/faqs">
-         <Typography sx={link}>FAQs</Typography>
+         <Typography sx={CSS.link}>FAQs</Typography>
         </Link>
        </Grid>
        <Grid item>
@@ -78,7 +86,9 @@ const GuestHeader = () => {
        </Grid>
       </Grid>
      </Grid>
-
+     <Grid item sx={{ display: { xs: 'block', md: 'block', lg: 'none' } }}>
+      <Button>Menu</Button>
+     </Grid>
     </FixedContainer>
    </Toolbar>
   </>
