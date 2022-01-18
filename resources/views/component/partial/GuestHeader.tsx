@@ -1,8 +1,9 @@
 import React from 'react'
-import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container } from '@mui/material'
+import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container, IconButton, Menu, MenuItem } from '@mui/material'
 import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom'
 import FixContainer from '../../component/FixedContainer'
 import FixedContainer from '../../component/FixedContainer'
+import MenuIcon from '@mui/icons-material/Menu'
 
 interface ICssObject {
  [key: string]: string | number
@@ -31,7 +32,9 @@ const GuestHeader = () => {
    <Toolbar className="style-2" sx={{
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
-    padding: '30px 0px',
+    padding: {
+     xl: '30px 0px',
+    }
    }}>
 
     <FixedContainer justify="space-between">
@@ -87,7 +90,9 @@ const GuestHeader = () => {
       </Grid>
      </Grid>
      <Grid item sx={{ display: { xs: 'block', md: 'block', lg: 'none' } }}>
-      <Button>Menu</Button>
+      <IconButton aria-label="delete" size="large" color="primary">
+       <MenuIcon fontSize="inherit" />
+      </IconButton>
      </Grid>
     </FixedContainer>
    </Toolbar>
