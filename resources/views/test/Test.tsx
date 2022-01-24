@@ -10,7 +10,7 @@ import SelectWithBook from '../component/SelectWithBook'
 import EventAvailableIcon from '@mui/icons-material/EventAvailable'
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital'
 import TagFacesIcon from '@mui/icons-material/TagFaces'
-import './Home.scss'
+import './Test.scss'
 import { fontWeight } from '@mui/system'
 import Testimonials from '../component/Testimonials'
 import FixedContainer from '../component/FixedContainer'
@@ -134,7 +134,7 @@ const ServiceInfo = ({ header, content }: IServiceInfo) => {
  )
 }
 
-class Home extends React.Component {
+class Test extends React.Component {
 
  render() {
 
@@ -152,7 +152,7 @@ class Home extends React.Component {
         <Grid container justifyContent="center" alignItems="center" className="wrapper-banner">
          <Grid item xs={10}>
           <Grid container justifyContent="left">
-           <Grid sx={{ mb: 50, mt: 10 }}>
+           <Grid sx={{ mb: { sm: 50 }, mt: 10 }}>
             <Stack>
              <Box sx={{ maxWidth: '710px' }}>
               <Text.HeadOne align="left">
@@ -182,7 +182,7 @@ class Home extends React.Component {
       <Box sx={CSS.wrapperFeature}>
        <FixedContainer justify="center">
 
-        <Grid item xs sx={{ textAlign: 'center', mb: 8 }} rowSpacing={{ xs: 2 }}>
+        <Grid item xs sx={{ textAlign: 'center', mb: { sm: 8 } }} rowSpacing={{ sm: 2 }}>
          <EventAvailableIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
          <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
@@ -203,94 +203,6 @@ class Home extends React.Component {
        </FixedContainer>
       </Box>
 
-      <Container sx={{ marginBottom: '200px' }}>
-       <img src="/storage/images/content_image_1.png" className="content-image image-1 left" />
-       <Grid container justifyContent="right">
-        <Grid item xs={6}>
-         <ServiceInfo
-          header={<>
-           Physical Therapy
-           Department
-          </>
-          }
-
-          content={
-           <>
-            The Physical Therapy Department will be equipped with the
-            state-of-the-art medical equipment and modalities available,
-            supported by evidence.
-           </>
-          }
-         />
-        </Grid>
-       </Grid>
-
-       <img src="/storage/images/content_image_2.png" className="content-image image-2 right" />
-       <Grid container justifyContent="left">
-        <Grid item xs={6}>
-         <ServiceInfo
-          header={<>
-           Occupational Therapy
-           Department
-          </>
-          }
-
-          content={
-           <>Sandbox Occupational Therapy Department is composed of highly qualified OT consultants, unique with their own certifications, specializations and application of various OT principles in their interventions.</>
-          }
-         />
-        </Grid>
-       </Grid>
-
-       <img src="/storage/images/content_image_3.png" className="content-image image-3 left" />
-       <Grid container justifyContent="right">
-        <Grid item xs={6}>
-         <ServiceInfo
-          header={<>
-           Speech Language
-           Department
-          </>
-          }
-
-          content={
-           <>
-            Speech-Language Pathology, or Speech Therapy is a developing
-            practice in the country. Guided by the best practices,
-            each Speech-Language Pathologist is committed to providing
-            quality services that are catered to each individual‘s needs and
-            strengths.
-           </>
-          }
-         />
-        </Grid>
-       </Grid>
-
-       <img src="/storage/images/content_image_4.png" className="content-image image-4 right" />
-       <Grid container justifyContent="left">
-        <Grid item xs={6}>
-         <ServiceInfo
-          header={<>
-           Medical Department
-          </>
-          }
-
-          content={
-           <>
-            Book a medical consultation with a licensed
-            professional for all your medical consultancy
-            needs and demands.
-           </>
-          }
-         />
-        </Grid>
-       </Grid>
-      </Container>
-
-      <Testimonials />
-
-      {/* <Booking /> */}
-
-      <GetFreeConsultant />
      </Body>
      <Footer>
       <GuestFooter />
@@ -301,4 +213,4 @@ class Home extends React.Component {
  }
 }
 
-export default Home
+export default Test

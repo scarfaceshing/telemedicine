@@ -5,6 +5,7 @@ import AboutUs from '../views/pages/AboutUs'
 import ServicesPage from '../views/pages/Services'
 import FaqsPage from '../views/pages/Faqs'
 import CareersPage from '../views/pages/Careers'
+import TestPage from '../views/test/Test'
 
 interface IProps { }
 
@@ -19,6 +20,7 @@ const Routes: FC<IProps> = (props) => {
     <Route path="/services" component={ServicesPage} />
     <Route path="/faqs" component={FaqsPage} />
     <Route path="/careers" component={CareersPage} />
+    <Route path="/test" component={TestPage} />
    </Switch>
   </BrowserRouter >
  )
