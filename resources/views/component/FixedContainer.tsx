@@ -8,21 +8,23 @@ interface IProps {
  paddingTop?: number;
  paddingBottom?: number;
  justify?: string;
+ sx?: any;
 }
 
-const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0, paddingTop = 0, paddingBottom = 0, justify = 'left' }: IProps) => {
+const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0, paddingTop = 0, paddingBottom = 0, justify = 'left', sx = {} }: IProps) => {
  const content = children
  const style = {
   mt: marginTop,
   mb: marginBottom,
   pt: paddingTop,
-  pb: paddingBottom
+  pb: paddingBottom,
+  ...sx
  }
 
  return (
   <Container maxWidth="xl">
-   <Grid container justifyContent="center" alignItems="center" sx={style}>
-    <Grid item xs={10}>
+   <Grid container justifyContent="center" sx={style}>
+    <Grid item sm={12} md={11} lg={10}>
      <Grid container justifyContent={justify}>
       {content}
      </Grid>

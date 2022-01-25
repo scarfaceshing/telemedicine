@@ -5,31 +5,11 @@ $secondaryFontColor: #191919;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  sm: 600px,
+  md: 900px,
+  lg: 1536px,
+  xl: 1400px,
 );
-
-@media (min-width: 576px) { }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { }
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-	.wrapper.banner {
-		max-width: 1200px;
-	}
-}
 
 .style-1 {
 	background-color: $primaryBackgroundColor;
@@ -105,4 +85,27 @@ $grid-breakpoints: (
 
 .content-image.image-4 {
  margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+	.wrapper-banner {
+		background-image: none;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 900px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1200px) { }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1536px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+	.wrapper.banner {
+		max-width: 1200px;
+	}
 }

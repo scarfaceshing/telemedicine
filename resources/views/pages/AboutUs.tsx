@@ -523,9 +523,6 @@ const AboutUs: FC = () => {
     <GuestHeader />
    </Header>
    <Body>
-    <TextEllipsis>
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sapiente eos iste eum tempora amet incidunt laboriosam eaque adipisci dolores ut, quod sequi. Ipsam mollitia eveniet officiis autem suscipit voluptates!
-    </TextEllipsis>
     <Banner />
     <MissionVision />
     <TheFounders />

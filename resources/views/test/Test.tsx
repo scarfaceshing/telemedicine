@@ -1,4 +1,4 @@
-import { Typography, Grid, Button, Link, Toolbar, Stack, Box, Container, InputLabel, NativeSelect, MenuItem, TextField } from '@mui/material'
+import { Typography, Grid, Button, Link, Toolbar, Stack, Box, Container, InputLabel, NativeSelect, MenuItem, TextField, Select } from '@mui/material'
 import React from 'react'
 import GuestLayout, { Header, Body, Footer } from '../layout/Guest'
 import GuestHeader from '../component/partial/GuestHeader'
@@ -16,6 +16,7 @@ import Testimonials from '../component/Testimonials'
 import FixedContainer from '../component/FixedContainer'
 import Booking from '../component/Booking'
 import * as Text from '../component/core/Text'
+import { StringMappingType } from 'typescript'
 
 interface ICssObject {
  [key: string]: string | number
@@ -44,7 +45,8 @@ const InputSelectBook = styled(NativeSelect)({
 const CSS: ICss = {
  wrapperFeature: {
   background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)',
-  color: 'white'
+  color: 'white',
+  mb: 5
  },
  wrapperBanner: {
   height: '829.94px',
@@ -89,10 +91,12 @@ const CSS: ICss = {
 
 interface IServiceInfo {
  header?: JSX.Element,
- content?: JSX.Element
+ content?: JSX.Element,
+ image?: string,
+ origin?: 'left' | 'right'
 }
 
-const ServiceInfo = ({ header, content }: IServiceInfo) => {
+const ServiceInfo = ({ header, content, image, origin }: IServiceInfo) => {
  const CSS: ICss = {
   header: {
    fontSize: '48px',
@@ -112,25 +116,35 @@ const ServiceInfo = ({ header, content }: IServiceInfo) => {
   },
   divider: {
    my: 2
+  },
+  background: {
+   backgroundImage: `url('/storage/images/${image}')`,
+   backgroundSize: 'auto 100%',
+   backgroundPosition: `${(origin === 'left') ? 'right' : 'left'}`,
+   backgroundRepeat: 'no-repeat',
   }
  }
 
  return (
-  <Box sx={CSS.wrapper}>
-   <Box sx={CSS.divider}>
-    <Typography sx={CSS.header}>
-     {header}
-    </Typography>
-   </Box>
-   <Box sx={CSS.divider}>
-    <Typography sx={CSS.content}>
-     {content}
-    </Typography>
-   </Box>
-   <Box sx={CSS.divider}>
-    <Button sx={CSS.button}>Learn More</Button>
-   </Box>
-  </Box>
+  <FixedContainer justify={origin} sx={CSS.background}>
+   <Grid item xs={6}>
+    <Box sx={CSS.wrapper}>
+     <Box sx={CSS.divider}>
+      <Typography sx={CSS.header}>
+       {header}
+      </Typography>
+     </Box>
+     <Box sx={CSS.divider}>
+      <Typography sx={CSS.content}>
+       {content}
+      </Typography>
+     </Box>
+     <Box sx={CSS.divider}>
+      <Button sx={CSS.button}>Learn More</Button>
+     </Box>
+    </Box>
+   </Grid>
+  </FixedContainer>
  )
 }
 
@@ -150,9 +164,9 @@ class Test extends React.Component {
        <Container maxWidth="xl">
         {/* <img src="/storage/images/banner_image_1.png" className="banner image" height="829.94px" width="711px"/> */}
         <Grid container justifyContent="center" alignItems="center" className="wrapper-banner">
-         <Grid item xs={10}>
+         <Grid item sm={12} md={10}>
           <Grid container justifyContent="left">
-           <Grid sx={{ mb: { sm: 50 }, mt: 10 }}>
+           <Grid sx={{ mb: { sm: 50 }, mt: { sm: 10 } }}>
             <Stack>
              <Box sx={{ maxWidth: '710px' }}>
               <Text.HeadOne align="left">
@@ -166,10 +180,23 @@ class Test extends React.Component {
               </Text.ParagraphCustomOne>
               {/* <Typography sx={CSS.contentText}></Typography> */}
              </Box>
-             <Box>
+             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <div className="booknow">
                <SelectWithBook />
               </div>
+             </Box>
+             <Box sx={{ display: { xs: 'block', sm: 'none' }}}>
+              <Select
+               labelId="demo-simple-select-label"
+               id="demo-simple-select"
+               label="Age"
+               autoWidth={true}
+               sx={{ width: '100%' }}
+              >
+               <MenuItem value={'Physical Therapy'}>Physical Therapy</MenuItem>
+               <MenuItem value={'Occupational Therapy'}>Occupational Therapy</MenuItem>
+               <MenuItem value={'Speech Language'}>Speech Language</MenuItem>
+              </Select>
              </Box>
             </Stack>
            </Grid>
@@ -182,26 +209,95 @@ class Test extends React.Component {
       <Box sx={CSS.wrapperFeature}>
        <FixedContainer justify="center">
 
-        <Grid item xs sx={{ textAlign: 'center', mb: { sm: 8 } }} rowSpacing={{ sm: 2 }}>
+        <Grid item sm={4} sx={{ textAlign: 'center' }} rowSpacing={{ md: 2 }}>
          <EventAvailableIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
          <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
         </Grid>
 
-        <Grid item xs sx={{ textAlign: 'center' }}>
+        <Grid item sm={4} sx={{ textAlign: 'center' }}>
          <LocalHospitalIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not<br /> everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
         </Grid>
 
-        <Grid item xs sx={{ textAlign: 'center' }}>
+        <Grid item sm={4} sx={{ textAlign: 'center' }}>
          <TagFacesIcon sx={CSS.featureIcon} />
          <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not<br />everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
+         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
         </Grid>
 
        </FixedContainer>
       </Box>
+
+      <ServiceInfo
+       origin="right"
+       image="content_image_1.png"
+       header={<>
+           Physical Therapy
+           Department
+       </>
+       }
+
+       content={
+        <>
+            The Physical Therapy Department will be equipped with the
+            state-of-the-art medical equipment and modalities available,
+            supported by evidence.
+        </>
+       }
+      />
+
+      <ServiceInfo
+       origin="left"
+       image="content_image_2.png"
+       header={<>
+           Occupational Therapy
+           Department
+       </>
+       }
+
+       content={
+        <>Sandbox Occupational Therapy Department is composed of highly qualified OT consultants, unique with their own certifications, specializations and application of various OT principles in their interventions.</>
+       }
+      />
+
+      <ServiceInfo
+       origin="right"
+       image="content_image_3.png"
+       header={<>
+           Speech Language
+           Department
+       </>
+       }
+
+       content={
+        <>
+            Speech-Language Pathology, or Speech Therapy is a developing
+            practice in the country. Guided by the best practices,
+            each Speech-Language Pathologist is committed to providing
+            quality services that are catered to each individual‘s needs and
+            strengths.
+        </>
+       }
+      />
+
+      <ServiceInfo
+       origin="left"
+       image="content_image_4.png"
+       header={<>
+           Medical Department
+       </>
+       }
+
+       content={
+        <>
+            Book a medical consultation with a licensed
+            professional for all your medical consultancy
+            needs and demands.
+        </>
+       }
+      />
 
      </Body>
      <Footer>
