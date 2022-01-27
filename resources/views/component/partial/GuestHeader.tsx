@@ -33,11 +33,11 @@ const GuestHeader = () => {
    <Toolbar sx={{
     backgroundColor: '#FFFFFF'
    }}>
-    <FixedContainer justify="space-between" sx={{ py: { md: 2 }} }>
-     <Grid item sx={{ display: { xs: 'none', sm: 'flex'  } }}>
+    <FixedContainer justify='space-between' sx={{ py: 2 }}>
+     <Grid item>
       <Logo />
      </Grid>
-     <Grid item sx={{ display: { xs: 'none', sm: 'none' , md: 'flex' } }}>
+     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
       <Stack direction="row" spacing={5} mt={1}>
        <Link color="text.primary" underline="none" component={RouterLink} to="/home">
         <Typography sx={CSS.link}>home</Typography>
@@ -56,11 +56,8 @@ const GuestHeader = () => {
        </Link>
       </Stack>
      </Grid>
-     <Grid item sx={{ display: { xs: 'flex', sm: 'none' } }}>
-      <img src="/storage/images/logo.png" />
-     </Grid>
      <Grid item sx={{ display: { sm: 'flex', md: 'none' } }}>
-      <IconButton aria-label="delete" size="large" color="primary">
+      <IconButton size="large" color="primary">
        <MenuIcon fontSize="inherit" />
       </IconButton>
      </Grid>

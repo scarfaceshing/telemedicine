@@ -24,7 +24,7 @@ const FixedContainer: FC<IProps> = ({ children, marginTop = 0, marginBottom = 0,
  return (
   <Container maxWidth="xl">
    <Grid container justifyContent="center" sx={style}>
-    <Grid item sm={12} md={11} lg={10}>
+    <Grid item xs={12} sm={12} md={11} lg={10}>
      <Grid container justifyContent={justify}>
       {content}
      </Grid>

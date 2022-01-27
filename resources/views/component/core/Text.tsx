@@ -1,10 +1,11 @@
 import React, { FC, ReactElement } from 'react'
+import { Box } from '@mui/material'
 
 interface IProps {
-    bold?: boolean;
-    color?: string;
-    children?: any;
-    align?: string;
+ bold?: boolean;
+ color?: string;
+ children?: any;
+ align?: string | ICssObject;
 }
 
 interface ICssObject {
@@ -12,7 +13,7 @@ interface ICssObject {
 }
 
 interface ICss {
-  [key: string]: string | number | ICssObject
+ [key: string]: string | number | ICssObject
 }
 
 const TEXT_COLOR_PRIMARY = '#191919'
@@ -29,7 +30,7 @@ const TEXT_COLOR_DUODENARY = null
 const TEXT_COLOR_VIGENARY = null
 
 const FONT_WEIGHT_LG = 700
-const FONT_WEIGHT_MD= 600
+const FONT_WEIGHT_MD = 600
 const FONT_WEIGHT_SM = 400
 
 const STYLE_HEAD_ONE = {
@@ -87,44 +88,44 @@ const STYLE_PARAGRAPH_TITLE = {
  lineHeight: '117.02px'
 }
 
-const STYLE_PARAGRAPH_CUSTOM_1= {
+const STYLE_PARAGRAPH_CUSTOM_1 = {
  fontSize: '16px',
  lineHeight: '24px'
 }
 
-const STYLE_PARAGRAPH_CUSTOM_2= {
+const STYLE_PARAGRAPH_CUSTOM_2 = {
  fontSize: '14px',
  lineHeight: '17.07px'
 }
- 
+
 
 const color_selection = (type: string) => {
  switch (type) {
- case 'primary':
-  return TEXT_COLOR_PRIMARY
-  break
- case 'secondary':
-  return TEXT_COLOR_SECONDARY
-  break
- case 'tertiary':
-  return TEXT_COLOR_TERIARY
-  break
- case 'quaternary':
-  return TEXT_COLOR_QUATERNARY
-  break
- case 'quinary':
-  return TEXT_COLOR_QUINARY
-  break
- case 'senary':
-  return TEXT_COLOR_SENARY
-  break
+  case 'primary':
+   return TEXT_COLOR_PRIMARY
+   break
+  case 'secondary':
+   return TEXT_COLOR_SECONDARY
+   break
+  case 'tertiary':
+   return TEXT_COLOR_TERIARY
+   break
+  case 'quaternary':
+   return TEXT_COLOR_QUATERNARY
+   break
+  case 'quinary':
+   return TEXT_COLOR_QUINARY
+   break
+  case 'senary':
+   return TEXT_COLOR_SENARY
+   break
  }
 }
 
-export const ParagraphOne = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphOne = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
- 
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -132,21 +133,21 @@ export const ParagraphOne = ({ children, align = 'center', color = 'primary', bo
   color: fontColor,
   ...STYLE_PARAGRAPH_ONE
  }
-        
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
 
-export const ParagraphTwo = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphTwo = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-   
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -154,20 +155,20 @@ export const ParagraphTwo = ({ children, align = 'center', color = 'primary', bo
   color: fontColor,
   ...STYLE_PARAGRAPH_TWO
  }
-          
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
- 
-export const ParagraphThree = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+
+export const ParagraphThree = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-    
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -175,20 +176,20 @@ export const ParagraphThree = ({ children, align = 'center', color = 'primary', 
   color: fontColor,
   ...STYLE_PARAGRAPH_THREE
  }
-           
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const ParagraphContent= ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphContent = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-     
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -196,20 +197,20 @@ export const ParagraphContent= ({ children, align = 'center', color = 'primary',
   color: fontColor,
   ...STYLE_PARAGRAPH_CONTENT
  }
-            
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const ParagraphTitle= ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphTitle = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-      
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -217,20 +218,20 @@ export const ParagraphTitle= ({ children, align = 'center', color = 'primary', b
   color: fontColor,
   ...STYLE_PARAGRAPH_TITLE
  }
-             
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const ParagraphCustomOne= ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphCustomOne = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-       
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -238,20 +239,20 @@ export const ParagraphCustomOne= ({ children, align = 'center', color = 'primary
   color: fontColor,
   ...STYLE_PARAGRAPH_CUSTOM_1
  }
-              
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const ParagraphCustomTwo= ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const ParagraphCustomTwo = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-        
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -259,17 +260,17 @@ export const ParagraphCustomTwo= ({ children, align = 'center', color = 'primary
   color: fontColor,
   ...STYLE_PARAGRAPH_CUSTOM_2
  }
-               
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadOne = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadOne = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
 
@@ -280,20 +281,20 @@ export const HeadOne = ({ children, align = 'center', color = 'primary', bold = 
   color: fontColor,
   ...STYLE_HEAD_ONE
  }
-       
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadTwo = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadTwo = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-   
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -301,20 +302,20 @@ export const HeadTwo = ({ children, align = 'center', color = 'primary', bold = 
   color: fontColor,
   ...STYLE_HEAD_TWO
  }
-          
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadThree = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadThree = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-      
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -322,20 +323,20 @@ export const HeadThree = ({ children, align = 'center', color = 'primary', bold 
   color: fontColor,
   ...STYLE_HEAD_THREE
  }
-             
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadContent = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadContent = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-         
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -343,20 +344,20 @@ export const HeadContent = ({ children, align = 'center', color = 'primary', bol
   color: fontColor,
   ...STYLE_HEAD_CONTENT
  }
-                
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadTitle = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadTitle = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-            
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -364,20 +365,20 @@ export const HeadTitle = ({ children, align = 'center', color = 'primary', bold 
   color: fontColor,
   ...STYLE_HEAD_TITLE
  }
-                   
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadTypeface = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadTypeface = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
-               
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -385,20 +386,20 @@ export const HeadTypeface = ({ children, align = 'center', color = 'primary', bo
   color: fontColor,
   ...STYLE_HEAD_TYPEFACE
  }
-                      
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
 
-export const HeadCustomOne = ({ children, align = 'center', color = 'primary', bold = false}: IProps) => {
+export const HeadCustomOne = ({ children, align = 'center', color = 'primary', bold = false }: IProps) => {
  const content = children
  const fontColor = color_selection(color) || TEXT_COLOR_PRIMARY
- 
+
  const CSS: ICss = {
   textAlign: align,
   fontStyle: 'normal',
@@ -406,13 +407,12 @@ export const HeadCustomOne = ({ children, align = 'center', color = 'primary', b
   color: fontColor,
   ...STYLE_PARAGRAPH_TWO
  }
-        
- return ( 
+
+ return (
   <>
-   <div style={CSS}>
+   <Box sx={CSS}>
     {content}
-   </div>
+   </Box>
   </>
  )
 }
- 

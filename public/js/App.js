@@ -3452,6 +3452,34 @@ function isHostComponent(element) {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/ArrowForwardIos.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@mui/icons-material/ArrowForwardIos.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"
+}), 'ArrowForwardIos');
+
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/ArrowForwardIosSharp.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@mui/icons-material/ArrowForwardIosSharp.js ***!
@@ -23713,6 +23741,24 @@ styleFunctionSx.filterProps = ['sx'];
 
 /***/ }),
 
+/***/ "./node_modules/@mui/system/esm/styled.js":
+/*!************************************************!*\
+  !*** ./node_modules/@mui/system/esm/styled.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _createStyled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createStyled */ "./node_modules/@mui/system/esm/createStyled.js");
+
+const styled = (0,_createStyled__WEBPACK_IMPORTED_MODULE_0__["default"])();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styled);
+
+/***/ }),
+
 /***/ "./node_modules/@mui/system/esm/typography.js":
 /*!****************************************************!*\
   !*** ./node_modules/@mui/system/esm/typography.js ***!
@@ -25144,6 +25190,7 @@ var FixedContainer = function FixedContainer(_a) {
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], __assign({
         item: true,
+        xs: 12,
         sm: 12,
         md: 11,
         lg: 10
@@ -25320,11 +25367,17 @@ var GetFreeConsultant = function GetFreeConsultant() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "Base": () => (/* binding */ Base)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Select/Select.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
 /* harmony import */ var _Component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Component.scss */ "./resources/views/component/Component.scss");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/styled.js");
+/* harmony import */ var _mui_icons_material_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/ArrowForwardIos */ "./node_modules/@mui/icons-material/ArrowForwardIos.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -25344,41 +25397,119 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
+
+
 var CSS = {
+  wrapper: {
+    backgroundColor: '#ffffff',
+    maxWidth: '500px',
+    pr: 1
+  },
   button: {
-    ml: 5,
-    py: 1.5,
-    px: 4,
-    fontFamily: 'Montserrat',
-    fontWeight: 700
+    py: 2,
+    px: 2,
+    my: 1
   }
 };
-
-var SelectWithBook = function SelectWithBook() {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
-    className: "wrapper-select"
+var InputSelectBook = (0,_mui_system__WEBPACK_IMPORTED_MODULE_2__["default"])(function (props) {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+    IconComponent: _mui_icons_material_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, props), void 0);
+})(function (_a) {
+  var theme = _a.theme;
+  return {
+    fontSize: '18px',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    lineHeight: '28px',
+    letterSpacing: '0px',
+    textAlign: 'left',
+    backgroundColor: 'white',
+    width: theme.breakpoints.down('xs') ? '100%' : '240px',
+    '& .MuiOutlinedInput-notchedOutline': {
+      border: 'none'
+    },
+    '&	.MuiSelect-icon': {
+      color: 'black',
+      fontSize: '1.0rem'
+    },
+    '&	.MuiSelect-iconOpen': {
+      transform: 'rotate(90deg)'
+    },
+    '@media (min-width: 0px)': {
+      '& .MuiSelect-select': {
+        width: '100%'
+      }
+    },
+    '@media (min-width: 600px)': {
+      '& .MuiSelect-select': {
+        width: '240px'
+      }
+    }
+  };
+});
+var Base = function Base() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], __assign({
+    sx: CSS.wrapper
   }, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", __assign({
-      className: "select"
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+      container: true,
+      justifyContent: 'space-between'
     }, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-        children: "Physical Therapy"
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-        children: "Occupational Therapy"
-      }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-        children: "Speech Language"
-      }, void 0)]
-    }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], __assign({
-      className: "button",
-      sx: CSS.button,
-      variant: "contained"
-    }, {
-      children: "Book Now"
-    }), void 0)]
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+        item: true,
+        xs: 12,
+        sm: 7,
+        sx: {
+          pt: 0.5
+        }
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(InputSelectBook, __assign({
+          value: 1
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+            value: 1
+          }, {
+            children: "Physical Therapy"
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+            value: 2
+          }, {
+            children: "Occupational Therapy"
+          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+            value: 2
+          }, {
+            children: "Speech Language"
+          }), void 0)]
+        }), void 0)
+      }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+        item: true,
+        xs: 12,
+        sm: 4
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+          container: true,
+          direction: "row",
+          justifyContent: "center",
+          alignItems: "flex-start"
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+            item: true,
+            xs: 12
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], __assign({
+              className: "button",
+              sx: CSS.button,
+              fullWidth: true,
+              variant: "contained"
+            }, {
+              children: "Book Now"
+            }), void 0)
+          }), void 0)
+        }), void 0)
+      }), void 0)]
+    }), void 0)
   }), void 0);
 };
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SelectWithBook);
 
 /***/ }),
 
@@ -25530,6 +25661,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeadCustomOne": () => (/* binding */ HeadCustomOne)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -25545,6 +25677,7 @@ var __assign = undefined && undefined.__assign || function () {
 
   return __assign.apply(this, arguments);
 };
+
 
 
 var TEXT_COLOR_PRIMARY = '#191919';
@@ -25662,8 +25795,8 @@ var ParagraphOne = function ParagraphOne(_a) {
   }, STYLE_PARAGRAPH_ONE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25688,8 +25821,8 @@ var ParagraphTwo = function ParagraphTwo(_a) {
   }, STYLE_PARAGRAPH_TWO);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25714,8 +25847,8 @@ var ParagraphThree = function ParagraphThree(_a) {
   }, STYLE_PARAGRAPH_THREE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25740,8 +25873,8 @@ var ParagraphContent = function ParagraphContent(_a) {
   }, STYLE_PARAGRAPH_CONTENT);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25766,8 +25899,8 @@ var ParagraphTitle = function ParagraphTitle(_a) {
   }, STYLE_PARAGRAPH_TITLE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25792,8 +25925,8 @@ var ParagraphCustomOne = function ParagraphCustomOne(_a) {
   }, STYLE_PARAGRAPH_CUSTOM_1);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25818,8 +25951,8 @@ var ParagraphCustomTwo = function ParagraphCustomTwo(_a) {
   }, STYLE_PARAGRAPH_CUSTOM_2);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25844,8 +25977,8 @@ var HeadOne = function HeadOne(_a) {
   }, STYLE_HEAD_ONE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25870,8 +26003,8 @@ var HeadTwo = function HeadTwo(_a) {
   }, STYLE_HEAD_TWO);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25896,8 +26029,8 @@ var HeadThree = function HeadThree(_a) {
   }, STYLE_HEAD_THREE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25922,8 +26055,8 @@ var HeadContent = function HeadContent(_a) {
   }, STYLE_HEAD_CONTENT);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25948,8 +26081,8 @@ var HeadTitle = function HeadTitle(_a) {
   }, STYLE_HEAD_TITLE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -25974,8 +26107,8 @@ var HeadTypeface = function HeadTypeface(_a) {
   }, STYLE_HEAD_TYPEFACE);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -26000,8 +26133,8 @@ var HeadCustomOne = function HeadCustomOne(_a) {
   }, STYLE_PARAGRAPH_TWO);
 
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      style: CSS
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
+      sx: CSS
     }, {
       children: content
     }), void 0)
@@ -26346,21 +26479,13 @@ var GuestHeader = function GuestHeader() {
       }
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_1__["default"], __assign({
-        justify: "space-between",
+        justify: 'space-between',
         sx: {
-          py: {
-            md: 2
-          }
+          py: 2
         }
       }, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
-          item: true,
-          sx: {
-            display: {
-              xs: 'none',
-              sm: 'flex'
-            }
-          }
+          item: true
         }, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_core_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], {}, void 0)
         }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
@@ -26439,25 +26564,12 @@ var GuestHeader = function GuestHeader() {
           item: true,
           sx: {
             display: {
-              xs: 'flex',
-              sm: 'none'
-            }
-          }
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-            src: "/storage/images/logo.png"
-          }, void 0)
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], __assign({
-          item: true,
-          sx: {
-            display: {
               sm: 'flex',
               md: 'none'
             }
           }
         }, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
-            "aria-label": "delete",
             size: "large",
             color: "primary"
           }, {
@@ -28161,8 +28273,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Select/Select.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _layout_Guest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/Guest */ "./resources/views/layout/Guest.tsx");
 /* harmony import */ var _component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/partial/GuestHeader */ "./resources/views/component/partial/GuestHeader.tsx");
@@ -28170,9 +28280,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
 /* harmony import */ var _mui_styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/styles */ "./node_modules/@mui/styles/styled/styled.js");
 /* harmony import */ var _component_SelectWithBook__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/SelectWithBook */ "./resources/views/component/SelectWithBook.tsx");
-/* harmony import */ var _mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/icons-material/EventAvailable */ "./node_modules/@mui/icons-material/EventAvailable.js");
-/* harmony import */ var _mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/icons-material/LocalHospital */ "./node_modules/@mui/icons-material/LocalHospital.js");
-/* harmony import */ var _mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/icons-material/TagFaces */ "./node_modules/@mui/icons-material/TagFaces.js");
+/* harmony import */ var _mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/EventAvailable */ "./node_modules/@mui/icons-material/EventAvailable.js");
+/* harmony import */ var _mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/icons-material/LocalHospital */ "./node_modules/@mui/icons-material/LocalHospital.js");
+/* harmony import */ var _mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/icons-material/TagFaces */ "./node_modules/@mui/icons-material/TagFaces.js");
 /* harmony import */ var _Home_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Home.scss */ "./resources/views/pages/Home.scss");
 /* harmony import */ var _component_FixedContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../component/FixedContainer */ "./resources/views/component/FixedContainer.tsx");
 /* harmony import */ var _component_core_Text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../component/core/Text */ "./resources/views/component/core/Text.tsx");
@@ -28302,9 +28412,17 @@ var ServiceInfo = function ServiceInfo(_a) {
     header: {
       fontSize: '48px',
       lineHeight: '58.51px',
-      fontWeight: 400
+      fontWeight: 400,
+      textAlign: {
+        xs: 'center',
+        sm: 'left'
+      }
     },
     content: {
+      textAlign: {
+        xs: 'center',
+        sm: 'left'
+      },
       fontSize: '18px',
       fontWeight: 400
     },
@@ -28439,7 +28557,10 @@ var Home = function (_super) {
                           }
                         }, {
                           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_8__.HeadOne, __assign({
-                            align: "left"
+                            align: {
+                              xs: 'center',
+                              sm: 'left'
+                            }
                           }, {
                             children: "The highest standard for pediatric and adult medical consultations and rehabilitation services."
                           }), void 0)
@@ -28450,55 +28571,20 @@ var Home = function (_super) {
                           }
                         }, {
                           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_8__.ParagraphCustomOne, __assign({
-                            align: 'left'
+                            align: {
+                              xs: 'center',
+                              sm: 'left'
+                            }
                           }, {
                             children: "As a multi-specialty clinic, Sandbox aims to provide the highest quality care and treatment to its patients and clients from different age group with different medical and rehabilitation needs."
                           }), void 0)
-                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            display: {
-                              xs: 'none',
-                              sm: 'block'
-                            }
-                          }
-                        }, {
+                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
                             className: "booknow"
                           }, {
-                            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_SelectWithBook__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0)
+                            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_SelectWithBook__WEBPACK_IMPORTED_MODULE_5__.Base, {}, void 0)
                           }), void 0)
-                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            display: {
-                              xs: 'block',
-                              sm: 'none'
-                            }
-                          }
-                        }, {
-                          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], __assign({
-                            labelId: "demo-simple-select-label",
-                            id: "demo-simple-select",
-                            label: "Age",
-                            autoWidth: true,
-                            sx: {
-                              width: '100%'
-                            }
-                          }, {
-                            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Physical Therapy'
-                            }, {
-                              children: "Physical Therapy"
-                            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Occupational Therapy'
-                            }, {
-                              children: "Occupational Therapy"
-                            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Speech Language'
-                            }, {
-                              children: "Speech Language"
-                            }), void 0)]
-                          }), void 0)
-                        }), void 0)]
+                        }, void 0)]
                       }, void 0)
                     }), void 0)
                   }), void 0)
@@ -28521,7 +28607,7 @@ var Home = function (_super) {
                   md: 2
                 }
               }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_20__["default"], {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_18__["default"], {
                   sx: CSS.featureIcon
                 }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
                   align: "center",
@@ -28541,7 +28627,7 @@ var Home = function (_super) {
                   textAlign: 'center'
                 }
               }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_21__["default"], {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_19__["default"], {
                   sx: CSS.featureIcon
                 }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
                   align: "center",
@@ -28561,7 +28647,7 @@ var Home = function (_super) {
                   textAlign: 'center'
                 }
               }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_22__["default"], {
+                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_20__["default"], {
                   sx: CSS.featureIcon
                 }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
                   align: "center",
@@ -28652,28 +28738,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/NativeSelect/NativeSelect.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Select/Select.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Select/Select.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _layout_Guest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/Guest */ "./resources/views/layout/Guest.tsx");
 /* harmony import */ var _component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/partial/GuestHeader */ "./resources/views/component/partial/GuestHeader.tsx");
 /* harmony import */ var _component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/partial/GuestFooter */ "./resources/views/component/partial/GuestFooter.tsx");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
-/* harmony import */ var _mui_styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/styles */ "./node_modules/@mui/styles/styled/styled.js");
-/* harmony import */ var _component_SelectWithBook__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/SelectWithBook */ "./resources/views/component/SelectWithBook.tsx");
-/* harmony import */ var _mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/icons-material/EventAvailable */ "./node_modules/@mui/icons-material/EventAvailable.js");
-/* harmony import */ var _mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/icons-material/LocalHospital */ "./node_modules/@mui/icons-material/LocalHospital.js");
-/* harmony import */ var _mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/icons-material/TagFaces */ "./node_modules/@mui/icons-material/TagFaces.js");
-/* harmony import */ var _Test_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Test.scss */ "./resources/views/test/Test.scss");
-/* harmony import */ var _component_FixedContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../component/FixedContainer */ "./resources/views/component/FixedContainer.tsx");
-/* harmony import */ var _component_core_Text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../component/core/Text */ "./resources/views/component/core/Text.tsx");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
+/* harmony import */ var _mui_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/styles */ "./node_modules/@mui/styles/styled/styled.js");
+/* harmony import */ var _Test_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Test.scss */ "./resources/views/test/Test.scss");
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
@@ -28727,13 +28800,7 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 
-
-
-
-
-
-
-var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_9__["default"])({
+var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_6__["default"])({
   palette: {
     primary: {
       main: '#e32129'
@@ -28743,126 +28810,24 @@ var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_9__["default"])({
     fontFamily: 'Montserrat'
   }
 });
-var InputSelectBook = (0,_mui_styles__WEBPACK_IMPORTED_MODULE_10__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"])({});
-var CSS = {
-  wrapperFeature: {
-    background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)',
-    color: 'white',
-    mb: 5
-  },
-  wrapperBanner: {
-    height: '829.94px',
-    mb: 12
-  },
-  headerText: {
-    paddingTop: '50px',
-    lineHeight: '58.51px',
-    fontSize: '48px'
-  },
-  contentText: {
-    pt: 4,
-    fontSize: '18px',
-    lineHeight: '21.94px'
-  },
-  select: {
-    ':focus': {
-      backgroundColor: 'transparent'
-    }
-  },
-  featureIcon: {
-    width: '60px',
-    height: '60px',
-    mt: 7
-  },
-  featureHeader: {
-    fontSize: '24px',
-    fontWeight: 700,
-    my: 2
-  },
-  featureContent: {
-    fontSize: '18px',
-    fontWeight: 400,
-    my: 2
-  },
-  button: {
-    fontWeight: 700,
-    py: 1,
-    px: 5
-  }
-};
-
-var ServiceInfo = function ServiceInfo(_a) {
-  var header = _a.header,
-      content = _a.content,
-      image = _a.image,
-      origin = _a.origin;
-  var CSS = {
-    header: {
-      fontSize: '48px',
-      lineHeight: '58.51px',
-      fontWeight: 400
+var InputSelectBook = (0,_mui_styles__WEBPACK_IMPORTED_MODULE_7__["default"])(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"])(function (props) {
+  return {
+    backgroundColor: props.myBackgroundColor,
+    '& .MuiSelect-select': {
+      width: '500px'
     },
-    content: {
-      fontSize: '18px',
-      fontWeight: 400
+    '& .MuiOutlinedInput-notchedOutline': {
+      border: 'none'
     },
-    button: {
-      py: 1,
-      px: 2
+    '&	.MuiSelect-icon': {
+      color: 'black',
+      transform: 'rotate(-90deg)'
     },
-    wrapper: {
-      my: 23
-    },
-    divider: {
-      my: 2
-    },
-    background: {
-      backgroundImage: "url('/storage/images/" + image + "')",
-      backgroundSize: 'auto 100%',
-      backgroundPosition: "" + (origin === 'left' ? 'right' : 'left'),
-      backgroundRepeat: 'no-repeat'
+    '&	.MuiSelect-iconOpen': {
+      transform: 'rotate(0deg)'
     }
   };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-    justify: origin,
-    sx: CSS.background
-  }, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-      item: true,
-      xs: 6
-    }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-        sx: CSS.wrapper
-      }, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-          sx: CSS.divider
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-            sx: CSS.header
-          }, {
-            children: header
-          }), void 0)
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-          sx: CSS.divider
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-            sx: CSS.content
-          }, {
-            children: content
-          }), void 0)
-        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-          sx: CSS.divider
-        }, {
-          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], __assign({
-            sx: CSS.button
-          }, {
-            children: "Learn More"
-          }), void 0)
-        }), void 0)]
-      }), void 0)
-    }), void 0)
-  }), void 0);
-};
+});
 
 var Test = function (_super) {
   __extends(Test, _super);
@@ -28876,221 +28841,25 @@ var Test = function (_super) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__["default"], {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Header, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0)
-        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Body, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-            sx: {
-              backgroundColor: '#FDFDFD'
-            }
+        }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Body, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(InputSelectBook, __assign({
+            myBackgroundColor: "white",
+            value: 1
           }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], __assign({
-              maxWidth: "xl"
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+              value: 1
             }, {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                container: true,
-                justifyContent: "center",
-                alignItems: "center",
-                className: "wrapper-banner"
-              }, {
-                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                  item: true,
-                  sm: 12,
-                  md: 10
-                }, {
-                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                    container: true,
-                    justifyContent: "left"
-                  }, {
-                    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                      sx: {
-                        mb: {
-                          sm: 50
-                        },
-                        mt: {
-                          sm: 10
-                        }
-                      }
-                    }, {
-                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-                        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            maxWidth: '710px'
-                          }
-                        }, {
-                          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_8__.HeadOne, __assign({
-                            align: "left"
-                          }, {
-                            children: "The highest standard for pediatric and adult medical consultations and rehabilitation services."
-                          }), void 0)
-                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            maxWidth: '481px',
-                            my: 2
-                          }
-                        }, {
-                          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_core_Text__WEBPACK_IMPORTED_MODULE_8__.ParagraphCustomOne, __assign({
-                            align: 'left'
-                          }, {
-                            children: "As a multi-specialty clinic, Sandbox aims to provide the highest quality care and treatment to its patients and clients from different age group with different medical and rehabilitation needs."
-                          }), void 0)
-                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            display: {
-                              xs: 'none',
-                              sm: 'block'
-                            }
-                          }
-                        }, {
-                          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-                            className: "booknow"
-                          }, {
-                            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_SelectWithBook__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0)
-                          }), void 0)
-                        }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-                          sx: {
-                            display: {
-                              xs: 'block',
-                              sm: 'none'
-                            }
-                          }
-                        }, {
-                          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], __assign({
-                            labelId: "demo-simple-select-label",
-                            id: "demo-simple-select",
-                            label: "Age",
-                            autoWidth: true,
-                            sx: {
-                              width: '100%'
-                            }
-                          }, {
-                            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Physical Therapy'
-                            }, {
-                              children: "Physical Therapy"
-                            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Occupational Therapy'
-                            }, {
-                              children: "Occupational Therapy"
-                            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], __assign({
-                              value: 'Speech Language'
-                            }, {
-                              children: "Speech Language"
-                            }), void 0)]
-                          }), void 0)
-                        }), void 0)]
-                      }, void 0)
-                    }), void 0)
-                  }), void 0)
-                }), void 0)
-              }), void 0)
-            }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], __assign({
-            sx: CSS.wrapperFeature
-          }, {
-            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_component_FixedContainer__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-              justify: "center"
+              children: "Physical Therapy"
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+              value: 2
             }, {
-              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                item: true,
-                sm: 4,
-                sx: {
-                  textAlign: 'center'
-                },
-                rowSpacing: {
-                  md: 2
-                }
-              }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_20__["default"], {
-                  sx: CSS.featureIcon
-                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureHeader
-                }, {
-                  children: "Schedule Consultation"
-                }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureContent
-                }, {
-                  children: "Book a consultation with any of Sandbox\u2019s directory of professional consultants."
-                }), void 0)]
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                item: true,
-                sm: 4,
-                sx: {
-                  textAlign: 'center'
-                }
-              }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_LocalHospital__WEBPACK_IMPORTED_MODULE_21__["default"], {
-                  sx: CSS.featureIcon
-                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureHeader
-                }, {
-                  children: "Personalized Treatment"
-                }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureContent
-                }, {
-                  children: "Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases"
-                }), void 0)]
-              }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], __assign({
-                item: true,
-                sm: 4,
-                sx: {
-                  textAlign: 'center'
-                }
-              }, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_icons_material_TagFaces__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                  sx: CSS.featureIcon
-                }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureHeader
-                }, {
-                  children: "Improve Health"
-                }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], __assign({
-                  align: "center",
-                  sx: CSS.featureContent
-                }, {
-                  children: ["Everything has beauty, but not everyone sees it. think wrongly,", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}, void 0), " if you please, but in all cases"]
-                }), void 0)]
-              }), void 0)]
-            }), void 0)
-          }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ServiceInfo, {
-            origin: "right",
-            image: "content_image_1.png",
-            header: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Physical Therapy Department"
-            }, void 0),
-            content: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "The Physical Therapy Department will be equipped with the state-of-the-art medical equipment and modalities available, supported by evidence."
-            }, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ServiceInfo, {
-            origin: "left",
-            image: "content_image_2.png",
-            header: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Occupational Therapy Department"
-            }, void 0),
-            content: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Sandbox Occupational Therapy Department is composed of highly qualified OT consultants, unique with their own certifications, specializations and application of various OT principles in their interventions."
-            }, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ServiceInfo, {
-            origin: "right",
-            image: "content_image_3.png",
-            header: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Speech Language Department"
-            }, void 0),
-            content: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Speech-Language Pathology, or Speech Therapy is a developing practice in the country. Guided by the best practices, each Speech-Language Pathologist is committed to providing quality services that are catered to each individual\u2018s needs and strengths."
-            }, void 0)
-          }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(ServiceInfo, {
-            origin: "left",
-            image: "content_image_4.png",
-            header: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Medical Department"
-            }, void 0),
-            content: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-              children: "Book a medical consultation with a licensed professional for all your medical consultancy needs and demands."
-            }, void 0)
-          }, void 0)]
+              children: "Occupational Therapy"
+            }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], __assign({
+              value: 2
+            }, {
+              children: "Speech Language"
+            }), void 0)]
+          }), void 0)
         }, void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_layout_Guest__WEBPACK_IMPORTED_MODULE_2__.Footer, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_partial_GuestFooter__WEBPACK_IMPORTED_MODULE_4__["default"], {}, void 0)
         }, void 0)]
