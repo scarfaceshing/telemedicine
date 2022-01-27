@@ -116,6 +116,9 @@ const ServiceInfo = ({ header, content, image, origin }: IServiceInfo) => {
    fontWeight: 400
   },
   button: {
+   maxWidth: {
+    sm: '150px',
+   },
    py: { sm: 1 },
    px: { sm: 2 }
   },
@@ -123,7 +126,7 @@ const ServiceInfo = ({ header, content, image, origin }: IServiceInfo) => {
    my: { sm: 23 }
   },
   divider: {
-   my: { sm: 2 }
+   my: 2
   },
   background: {
    backgroundImage: { xs: 'none', sm: `url('/storage/images/${image}')` },
@@ -148,7 +151,7 @@ const ServiceInfo = ({ header, content, image, origin }: IServiceInfo) => {
       </Typography>
      </Box>
      <Box sx={CSS.divider}>
-      <Button sx={CSS.button}>Learn More</Button>
+      <Button sx={CSS.button} fullWidth>Learn More</Button>
      </Box>
     </Box>
    </Grid>
@@ -248,6 +251,59 @@ class Home extends React.Component {
         </>
        }
       />
+
+      <ServiceInfo
+       origin="left"
+       image="content_image_2.png"
+       header={<>
+        Occupational Therapy
+        Department
+       </>
+       }
+
+       content={
+        <>Sandbox Occupational Therapy Department is composed of highly qualified OT consultants, unique with their own certifications, specializations and application of various OT principles in their interventions.</>
+       }
+      />
+
+      <ServiceInfo
+       origin="right"
+       image="content_image_3.png"
+       header={<>
+        Speech Language
+        Department
+       </>
+       }
+
+       content={
+        <>
+         Speech-Language Pathology, or Speech Therapy is a developing
+         practice in the country. Guided by the best practices,
+         each Speech-Language Pathologist is committed to providing
+         quality services that are catered to each individual‘s needs and
+         strengths.
+        </>
+       }
+      />
+
+      <ServiceInfo
+       origin="left"
+       image="content_image_4.png"
+       header={<>
+        Medical Department
+       </>
+       }
+
+       content={
+        <>
+         Book a medical consultation with a licensed
+         professional for all your medical consultancy
+         needs and demands.
+        </>
+       }
+      />
+
+      <GetFreeConsultant />
 
      </Body>
      <Footer>

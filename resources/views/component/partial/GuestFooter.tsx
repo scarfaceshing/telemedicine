@@ -1,5 +1,6 @@
 import React from 'react'
-import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSubheader, Input, InputAdornment, Stack } from '@mui/material'
+import { Grid, Typography, Box, List, ListItem, Link, IconButton, ListItemText, ListSubheader, Input, InputAdornment, Stack } from '@mui/material'
+import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import { borderRadius } from '@mui/system'
@@ -80,7 +81,7 @@ const GuestFooter = () => {
    <Grid container justifyContent="center" sx={{ pt: 5 }}>
     <Grid item xs={12}>
      <Grid container justifyContent="space-between">
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
        <Box sx={CSS.logo}>
         <img src="/storage/images/logo.png" />
        </Box>
@@ -90,13 +91,15 @@ const GuestFooter = () => {
         <strong>Saturdays and Sundays</strong> - 10:00 am to 6:00 pm
        </Typography>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
        <Grid container alignItems="left">
         <Box>
          <List>
           <ListSubheader sx={CSS.subHeader}>Services</ListSubheader>
           <ListItem>
-           <ListItemText>Physical Therapy</ListItemText>
+           <Link color="text.primary" underline="none" component={RouterLink} to="/home">
+            <ListItemText>Physical Therapy</ListItemText>
+           </Link>
           </ListItem>
           <ListItem>
            <ListItemText>Occupational Therapy</ListItemText>

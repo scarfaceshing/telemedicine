@@ -122,7 +122,7 @@ class PublicLayout extends Component<IProps, IState> {
        </header>
       </AppBar>
      </ElevationScroll>
-     <Box sx={{height: '100px'}} />
+     <Box sx={{ height: '80px' }} />
      <main>
       {body ? body.props.children : null}
      </main>
