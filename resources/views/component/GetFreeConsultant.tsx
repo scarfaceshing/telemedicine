@@ -111,12 +111,16 @@ const GetFreeConsultant = () => {
          </Grid>
         </Grid>
        </Grid>
-       <Grid item xs={12} sx={{ mt: 5 }}>
-        <InputBase sx={CSS.emailAddress} fullWidth={true} placeholder="Your e-mail address" endAdornment={
-         <InputAdornment position="end">
-          <Button variant="contained" color="primary" sx={CSS.sendNow}>send now</Button>
-         </InputAdornment>
-        } />
+       <Grid item sx={{ mt: 5 }}>
+        <Grid container justifyContent="center">
+         <Grid item>
+          <InputBase sx={CSS.emailAddress} fullWidth={true} placeholder="Your e-mail address" endAdornment={
+           <InputAdornment position="end">
+            <Button variant="contained" color="primary" sx={CSS.sendNow}>send now</Button>
+           </InputAdornment>
+          } />
+         </Grid>
+        </Grid>
        </Grid>
       </Grid>
      </Grid>

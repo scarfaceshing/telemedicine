@@ -25652,27 +25652,35 @@ var GetFreeConsultant = function GetFreeConsultant() {
               }), void 0)
             }), void 0), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
               item: true,
-              xs: 12,
               sx: {
                 mt: 5
               }
             }, {
-              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                sx: CSS.emailAddress,
-                fullWidth: true,
-                placeholder: "Your e-mail address",
-                endAdornment: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
-                  position: "end"
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+                container: true,
+                justifyContent: "center"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], __assign({
+                  item: true
                 }, {
-                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
-                    variant: "contained",
-                    color: "primary",
-                    sx: CSS.sendNow
-                  }, {
-                    children: "send now"
-                  }), void 0)
+                  children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                    sx: CSS.emailAddress,
+                    fullWidth: true,
+                    placeholder: "Your e-mail address",
+                    endAdornment: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], __assign({
+                      position: "end"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], __assign({
+                        variant: "contained",
+                        color: "primary",
+                        sx: CSS.sendNow
+                      }, {
+                        children: "send now"
+                      }), void 0)
+                    }), void 0)
+                  }, void 0)
                 }), void 0)
-              }, void 0)
+              }), void 0)
             }), void 0)]
           }), void 0)
         }), void 0)
