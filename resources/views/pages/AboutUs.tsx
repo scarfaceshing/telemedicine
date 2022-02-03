@@ -8,6 +8,7 @@ import FixedContainer from '../component/FixedContainer'
 import * as Text from '../component/core/Text'
 import './AboutUs.scss'
 import TextEllipsis from '../component/core/TextEllipsis'
+import Banner from '../component/Banner'
 
 interface ICssObject {
  [key: string]: string | number
@@ -50,7 +51,7 @@ const ButtonSecondary = ({ children }: { children: any }) => {
 
 
 
-const Banner = () => {
+/* const Banner = () => {
  const CSS: ICss = {
   wrapper: {
    background: 'linear-gradient(203.28deg, #9C1D23 -127.58%, #CC1F24 -46.55%, #D11F24 -17.45%, #E74126 44.86%, #EB5D24 120.21%, #F07C23 150.64%)',
@@ -99,7 +100,7 @@ const Banner = () => {
    </FixedContainer>
   </Box>
  )
-}
+} */
 
 const TitlePaper = ({ title }: { title?: string }) => {
  const CSS: ICss = {
@@ -166,22 +167,22 @@ const MissionVision = () => {
      <AboutUsPaper title={
       'The Mission'
      }
-     content={
-      `Sandbox is a new generation
+      content={
+       `Sandbox is a new generation
        multi-specialty and rehabilitation clinic that focuses in providing a holistic approach to one’s health.
        It aims to provide the highest quality of consultation services in the fields rehabilitation medicine,
        orthopedics, neurology, and developmental pediatrics. As a rehabilitation clinic, it aims to provide
        the highest quality of treatment and other services to its patients using Physical Therapy,
        Occupational Therapy, and Speech Therapy, applying the most recent evidence and practice in
        rehabilitation medicine and utilizing the most advanced technology in healthcare.`
-     }
+      }
      />
      <AboutUsPaper title={
       'The Vision'
      }
-     content={
-      'Sandbox Clinic envisions to become the forefront of rehabilitation medicine and center of learning and research in the Philippines.'
-     }
+      content={
+       'Sandbox Clinic envisions to become the forefront of rehabilitation medicine and center of learning and research in the Philippines.'
+      }
      />
     </Stack>
    </Grid>
@@ -523,7 +524,16 @@ const AboutUs: FC = () => {
     <GuestHeader />
    </Header>
    <Body>
-    <Banner />
+    <Banner
+     align='right'
+     posy={63}
+     image='aboutus_banner_image_1.png'
+     content={[
+      'What We Are',
+      'The highest standard for pediatric and adult assessment and therapy',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis.'
+     ]}
+    />
     <MissionVision />
     <TheFounders />
     <TheConsultants />

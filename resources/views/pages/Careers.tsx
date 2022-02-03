@@ -58,36 +58,46 @@ const ButtonPrimary = ({ children }: any) => {
  )
 }
 
+const StyledBanner = styled(Box)({
+ background: 'linear-gradient(203.28deg,  #9C1D23 -127.58%, #CC1F24 -46.55%, #D11F24 -17.45%,  #E74126 44.86%, #EB5D24 120.21%, #F07C23 150.64%)',
+ width: '100%',
+ height: '554px',
+ color: '#ffffff'
+})
+
 const Banner = () => {
  const CSS: ICss = {
-  wrapper: {
-   background: 'linear-gradient(203.28deg, #9C1D23 -127.58%, #CC1F24 -46.55%, #D11F24 -17.45%, #E74126 44.86%, #EB5D24 120.21%, #F07C23 150.64%);',
-   height: '554px'
+  banner: {
+   width: '100%',
+   backgroundImage: 'url("/storage/images/careers_banner_image_1.png")',
+   backgroundSize: 'auto',
+   backgroundPositionX: 'right',
+   backgroundPositionY: '-100px',
+   backgroundRepeat: 'no-repeat',
+   height: '554px',
+   py: 12
   }
  }
 
  return (
   <>
-   <Box sx={CSS.wrapper}>
-    <FixedContainer>
-     <div className="careers_banner_image_1"></div>
-     <Grid container>
-      <Grid item sx={{ my: 10 }}>
-       <Stack>
-        <Box sx={{ my: 4 }}>
-         <Text.HeadOne color="secondary" align="left">Come join Us!</Text.HeadOne>
-        </Box>
-        <Box sx={{ width: '480px', mb: 3 }}>
-         <Text.ParagraphCustomOne color="secondary" align='left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis.</Text.ParagraphCustomOne>
-        </Box>
-        <Box>
-         <ButtonPrimary>See Openings.</ButtonPrimary>
-        </Box>
-       </Stack>
-      </Grid>
+   <StyledBanner>
+    <FixedContainer justify={'left'} sx={CSS.banner}>
+     <Grid item>
+      <Stack>
+       <Box sx={{ my: 4 }}>
+        <Text.HeadOne align='left' color="secondary">Come join Us!</Text.HeadOne>
+       </Box>
+       <Box sx={{ maxWidth: '480px', mb: 3 }}>
+        <Text.ParagraphCustomOne color="secondary" align='left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus eu sagittis eu, donec feugiat orci. A ullamcorper sed turpis augue sit commodo. Diam pellentesque dapibus nisi dictum justo. In aliquet bibendum viverra tincidunt massa vel congue facilisis.</Text.ParagraphCustomOne>
+       </Box>
+       <Box>
+        <ButtonPrimary>See Openings.</ButtonPrimary>
+       </Box>
+      </Stack>
      </Grid>
     </FixedContainer>
-   </Box>
+   </StyledBanner>
   </>
  )
 }
