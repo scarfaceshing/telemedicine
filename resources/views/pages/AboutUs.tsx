@@ -10,7 +10,6 @@ import './AboutUs.scss'
 import TextEllipsis from '../component/core/TextEllipsis'
 import Banner from '../component/Banner'
 import { styled } from '@mui/material/styles'
-import LinesEllipsis from 'react-lines-ellipsis'
 
 interface ICssObject {
  [key: string]: string | number
