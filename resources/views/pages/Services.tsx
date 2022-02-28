@@ -14,7 +14,7 @@ const Services: FC = () => {
    <Body>
     <Banner
      align='left'
-     posy={50}
+     posy={60}
      image='whatwedo_banner_image_1.png'
      content={[
       'What We Do',

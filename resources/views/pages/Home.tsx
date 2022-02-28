@@ -46,7 +46,8 @@ const CSS: ICss = {
  wrapperFeature: {
   background: 'linear-gradient(207.89deg, #9C1D23 -153.41%, #CC1F24 -65.2%, #D11F24 -33.52%, #E74126 34.32%, #EB5D24 116.35%, #F07C23 149.48%)',
   color: 'white',
-  mb: 5
+  mb: 5,
+  pb: 4
  },
  wrapperBanner: {
   height: '829.94px',
@@ -178,8 +179,9 @@ class Home extends React.Component {
          backgroundImage: { xs: 'none', sm: 'url("/storage/images/banner_image_1.png"), url("/storage/images/banner_image_2.png")' },
          backgroundSize: 'auto 711px, auto 130px',
          backgroundPosition: 'right, left',
-         backgroundPositionY: 'top, 600px',
-         backgroundRepeat: 'no-repeat, no-repeat'
+         backgroundPositionY: '60px, 600px',
+         backgroundRepeat: 'no-repeat, no-repeat',
+         pt: 5
         }}>
          <Grid item sm={12} md={10}>
           <Grid container justifyContent="left">
@@ -213,22 +215,46 @@ class Home extends React.Component {
       <Box sx={CSS.wrapperFeature}>
        <FixedContainer justify="center">
 
-        <Grid item sm={4} sx={{ textAlign: 'center' }} rowSpacing={{ md: 2 }}>
-         <EventAvailableIcon sx={CSS.featureIcon} />
-         <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
+        <Grid item sm={4} sx={{ textAlign: 'center' }}>
+         <Grid container justifyContent="center">
+          <Grid item>
+           <EventAvailableIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Schedule Consultation</Typography>
+          </Grid>
+          <Grid item>
+           <Box sx={{ 'maxWidth': '300px' }}>
+            <Typography align="center" sx={CSS.featureContent}>Book a consultation with any of Sandbox’s directory of professional consultants.</Typography>
+           </Box>
+          </Grid>
+         </Grid>
         </Grid>
 
         <Grid item sm={4} sx={{ textAlign: 'center' }}>
-         <LocalHospitalIcon sx={CSS.featureIcon} />
-         <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+         <Grid container justifyContent="center">
+          <Grid item>
+           <LocalHospitalIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Personalized Treatment</Typography>
+          </Grid>
+          <Grid item>
+           <Box sx={{ 'maxWidth': '300px' }}>
+            <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+           </Box>
+          </Grid>
+         </Grid>
         </Grid>
 
         <Grid item sm={4} sx={{ textAlign: 'center' }}>
-         <TagFacesIcon sx={CSS.featureIcon} />
-         <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
-         <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly,<br /> if you please, but in all cases</Typography>
+         <Grid container justifyContent="center">
+          <Grid item>
+           <TagFacesIcon sx={CSS.featureIcon} />
+           <Typography align="center" sx={CSS.featureHeader}>Improve Health</Typography>
+          </Grid>
+          <Grid item>
+           <Box sx={{ 'maxWidth': '300px' }}>
+            <Typography align="center" sx={CSS.featureContent}>Everything has beauty, but not everyone sees it. think wrongly, if you please, but in all cases</Typography>
+           </Box>
+          </Grid>
+         </Grid>
         </Grid>
 
        </FixedContainer>
