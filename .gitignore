@@ -17,5 +17,6 @@ Homestead.json
 /.vagrant
 
 # custom
+.env
 public/js/*
 **/.env
