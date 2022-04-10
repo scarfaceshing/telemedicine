@@ -160,6 +160,17 @@ const ServiceInfo = ({ header, content, image, origin }: IServiceInfo) => {
  )
 }
 
+const RedirectToSeriousMDbtn = () => {
+ const CSS: ICss = {
+  button: {
+   maxWidth: '200px',
+   textTransform: 'capitalize'
+  }
+ }
+
+ return (<Button className="button" sx={CSS.button} fullWidth variant="contained">SeriousMD</Button>)
+}
+
 class Home extends React.Component {
 
  render() {
@@ -201,7 +212,8 @@ class Home extends React.Component {
              </Box>
              <Box>
               <div className="booknow">
-               <SelectWithBook.Base />
+               {/* <SelectWithBook.Base /> */}
+               <RedirectToSeriousMDbtn />
               </div>
              </Box>
             </Stack>
