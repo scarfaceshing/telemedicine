@@ -1,10 +1,18 @@
+
+
 .wrapper-select {
  background-color: #ffffff;
- padding: 20px;
+ padding: 15px;
+ margin-top: 25px;
  border-radius: 5px;
+ width: 100%;
+ max-width: 532px;
+ display: flex;
+ justify-content: space-between;
+
 }
 
-.select {
+.wrapper-select .select {
  background-color: #ffffff;
  font-weight: 700;
  font-size: 18px;
@@ -12,14 +20,60 @@
  border: none;
 }
 
-.select:focus {
+.wrapper-select .select:focus {
  border:none;
 }
 
-.select:active {
+.wrapper-select .select:active {
  border:none;
 }
 
-.select:hover {
+.wrapper-select .select:hover {
  border:none;
+}
+
+.wrapper-select .button {
+    // float: right;
+}
+
+.whatwedo.banner {
+ background: linear-gradient(203.28deg, #9C1D23 -127.58%, #CC1F24 -46.55%, #D11F24 -17.45%, #E74126 44.86%, #EB5D24 120.21%, #F07C23 150.64%);
+ height: 554px;
+ color: #ffffff;
+ padding-top: 100px;
+}
+
+.whatwedo .image_1 {
+ background-image: url('/storage/images/whatwedo_banner_image_1.png');
+ background-position: right;
+ background-repeat: no-repeat;
+ width: 556px;
+ height: 492px;
+ position: absolute;
+ margin-left: 750px;
+ margin-top: -38px;
+}
+
+.whatwedo .subtitle {
+ font-weight: 400;
+ font-style: normal;
+ font-size: 24px;
+ line-height: 36px;
+ font-family: Montserrat;
+}
+
+.whatwedo .title {
+ font-weight: 400;
+ font-style: normal;
+ font-size: 48px;
+ line-height: 58.51px;
+ font-family: Montserrat;
+}
+
+.whatwedo .content {
+ font-weight: 400;
+ font-style: normal;
+ font-size: 18px;
+ line-height: 21.94px;
+ font-family: Montserrat;
 }

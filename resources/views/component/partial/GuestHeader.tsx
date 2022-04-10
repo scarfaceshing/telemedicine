@@ -1,100 +1,141 @@
-import React from 'react'
-import { Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container } from '@mui/material'
-import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom';
+import React, { useState } from 'react'
+import { List, ListItem, ListItemButton, ListItemText, Typography, Grid, Button, Link, Toolbar, Stack, styled, Box, Container, IconButton, Menu, MenuItem } from '@mui/material'
+import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom'
+import FixContainer from '../../component/FixedContainer'
+import FixedContainer from '../../component/FixedContainer'
+import MenuIcon from '@mui/icons-material/Menu'
+import Logo from '../core/Logo'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-interface ILink {
+interface ICssObject {
  [key: string]: string | number
 }
+interface ICss {
+ [key: string]: {
+  [key: string]: string | number | ICssObject
+ }
+}
+const CSS: ICss = {
+ link: {
+  color: '#191919',
+  fontWeight: '700',
+  fontStyle: 'normal',
+  fontSize: '18px',
+  textTransform: 'capitalize',
+  '&:hover': {
+   color: '#E94C27'
+  }
+ }
+}
 
-const link: ILink = { color: "#191919", fontWeight: "700", fontStyle: "normal", fontSize: "18px", textTransform: "capitalize" }
+const MenuList = () => {
+ return (
+  <List>
+   <ListItem>
+    <ListItemButton component={RouterLink} to="/home">
+     <ListItemText sx={{ textAlign: 'center' }} primary="Home" />
+    </ListItemButton>
+   </ListItem>
+   <ListItem>
+    <ListItemButton component={RouterLink} to="/services">
+     <ListItemText sx={{ textAlign: 'center' }} primary="Services" />
+    </ListItemButton>
+   </ListItem>
+   <ListItem>
+    <ListItemButton component={RouterLink} to="/aboutus">
+     <ListItemText sx={{ textAlign: 'center' }} primary="About Us" />
+    </ListItemButton>
+   </ListItem>
+   <ListItem>
+    <ListItemButton component={RouterLink} to="/faqs">
+     <ListItemText sx={{ textAlign: 'center' }} primary="FAQs" />
+    </ListItemButton>
+   </ListItem>
+  </List>
+ )
+}
+
+const theme = createTheme({
+ palette: {
+  primary: {
+   main: '#e32129',
+  },
+ },
+ typography: {
+  fontFamily: 'Montserrat'
+ },
+ components: {
+  MuiAppBar: {
+   styleOverrides: {
+    root: {
+
+    }
+   }
+  },
+  MuiButton: {
+   styleOverrides: {
+    root: {
+     fontFamily: 'Montserrat',
+     backgroundColor: '#e32129',
+     color: '#ffffff',
+     fontWeight: 'bold'
+    }
+   }
+  }
+ }
+})
 
 const GuestHeader = () => {
+ const [collapse, setCollapse] = useState(false)
+
+ const handleMenu = () => {
+  const menu = !collapse
+
+  setCollapse(menu)
+ }
+
  return (
   <>
-   <Toolbar className="style-1">
-    <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
-     <Grid item xs={12}>
-      <Button component={RouterLink} to="/" color="primary">
-       book a session now
-      </Button>
-     </Grid>
-    </Grid>
-   </Toolbar>
-   <Toolbar className="style-2" sx={{
-    backgroundColor: "#FFFFFF",
-    justifyContent: "center",
-    padding: "30px 0px",
-   }}>
-    <Grid container justifyContent="center" alignItems="center">
-     <Grid item xs={9}>
-      <Grid container justifyContent="space-between" alignItems="center">
-       <Grid item>
-        <Grid container>
-         <Grid item>
-          <img style={{ width: "150px", height: "50px" }} src="/storage/images/logo_with_name.png" />
-         </Grid>
-        </Grid>
-       </Grid>
-       <Grid item>
-        <Grid container rowSpacing={{ xs: 0 }} columnSpacing={{ xs: 8, sm: 4, md: 7 }} alignItems="center">
-         <Grid item>
-          <Link color="text.primary" underline="none">
-           <Typography sx={link} className="style-2">home</Typography>
-          </Link>
-         </Grid>
-         <Grid item>
-          <Router>
-           <Link color="text.primary" underline="none">
-            <Typography sx={link}>services</Typography>
-           </Link>
-          </Router>
-         </Grid>
-         <Grid item>
-          <Router>
-           <Link color="text.primary" underline="none">
-            <Typography sx={link}>about us</Typography>
-           </Link>
-          </Router>
-         </Grid>
-         <Grid item>
-          <Router>
-           <Link color="text.primary" underline="none">
-            <Typography sx={link}>contact</Typography>
-           </Link>
-          </Router>
-         </Grid>
-         <Grid item>
-          <Router>
-           <Link color="text.primary" underline="none">
-            <Typography sx={link}>blogs</Typography>
-           </Link>
-          </Router>
-         </Grid>
-         <Grid item>
-          <Router>
-           <Link color="text.primary" underline="none">
-            <Typography sx={link}>FAQs</Typography>
-           </Link>
-          </Router>
-         </Grid>
-         <Grid item>
-          <Button sx={{
-           textTransform: "capitalize",
-           fontSize: "16px",
-           lineHeight: "24px",
-           padding: "8px 50px"
-          }} variant="contained" component={RouterLink} to="/login" color="primary">
-           Login
-          </Button>
-         </Grid>
-        </Grid>
-       </Grid>
+   <ThemeProvider theme={theme}>
+    <Toolbar variant='dense' disableGutters={false} sx={{
+     backgroundColor: '#FFFFFF'
+    }}>
+     <FixedContainer justify='space-between' sx={{ py: 2 }}>
+      <Grid item>
+       <Logo />
       </Grid>
-     </Grid>
-    </Grid>
-   </Toolbar>
+      <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
+       <Stack direction="row" spacing={5} mt={1}>
+        <Link color="text.primary" underline="none" component={RouterLink} to="/home">
+         <Typography sx={CSS.link}>home</Typography>
+        </Link>
+        <Link color="text.primary" underline="none" component={RouterLink} to="/services">
+         <Typography sx={CSS.link}>services</Typography>
+        </Link>
+        <Link color="text.primary" underline="none" component={RouterLink} to="/aboutus">
+         <Typography sx={CSS.link}>about us</Typography>
+        </Link>
+        <Link color="text.primary" underline="none" component={RouterLink} to="/careers">
+         <Typography sx={CSS.link}>careers</Typography>
+        </Link>
+        <Link color="text.primary" underline="none" component={RouterLink} to="/faqs">
+         <Typography sx={CSS.link}>FAQs</Typography>
+        </Link>
+       </Stack>
+      </Grid>
+      <Grid item sx={{ display: { sm: 'flex', md: 'none' } }}>
+       <IconButton size="large" color="primary" onClick={handleMenu}>
+        <MenuIcon fontSize="inherit" />
+       </IconButton>
+      </Grid>
+     </FixedContainer>
+    </Toolbar>
+    <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>
+     {collapse && <MenuList />}
+    </Box>
+   </ThemeProvider>
   </>
  )
 }
 
-export default GuestHeader;
+export default GuestHeader

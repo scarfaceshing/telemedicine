@@ -9,7 +9,7 @@ interface AppBarProps extends MuiAppBarProps {
 export const AppBar = styled(MuiAppBar, {
  shouldForwardProp: (prop: any) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
- backgroundColor: "red",
+ backgroundColor: 'red',
  zIndex: theme.zIndex.drawer + 1,
  transition: theme.transitions.create(['width', 'margin'], {
   easing: theme.transitions.easing.sharp,
@@ -23,4 +23,4 @@ export const AppBar = styled(MuiAppBar, {
    duration: theme.transitions.duration.enteringScreen,
   }),
  }),
-}));
+}))

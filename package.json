@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "eslint": "./node_modules/.bin/eslint . --ext .tsx . --ext .ts",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
@@ -16,9 +17,11 @@
         "@types/js-cookie": "^3.0.0",
         "@types/md5": "^2.3.1",
         "@types/mui-datatables": "^3.7.7",
+        "@typescript-eslint/eslint-plugin": "^5.5.0",
+        "@typescript-eslint/parser": "^5.5.0",
         "axios": "^0.21",
-        "eslint-config-prettier": "8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
+        "eslint": "^8.4.0",
+        "eslint-plugin-react": "^7.27.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",

@@ -1,12 +1,14 @@
 import React from 'react'
-import { Grid, Typography, Box, List, ListItem, IconButton, ListItemText, ListSubheader, Input, InputAdornment, Stack } from '@mui/material'
+import { Grid, Typography, Box, List, ListItem, Link, IconButton, ListItemText, ListSubheader, Input, InputAdornment, Stack } from '@mui/material'
+import { Link as RouterLink, MemoryRouter as Router, useHistory } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import { borderRadius } from '@mui/system'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { red } from '@mui/material/colors';
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import { red } from '@mui/material/colors'
+import FixedContainer from '../FixedContainer'
 
 interface ICssObject {
  [key: string]: string | number
@@ -18,42 +20,42 @@ interface ICss {
 }
 
 const SocialMediaIconButton = styled(IconButton)({
- marginLeft: "20px",
- marginBottom: "0px",
- paddingBottom: "0px"
+ marginLeft: '20px',
+ marginBottom: '0px',
+ paddingBottom: '0px'
 })
 
 const CSS: ICss = {
  copyRight: {
-  fontSize: "18px"
+  fontSize: '18px'
  },
  schedule: {
-  fontSize: "12px"
+  fontSize: '12px'
  },
  subHeader: {
-  color: "#E32129",
-  fontSize: "18px"
+  color: '#E32129',
+  fontSize: '18px'
  },
  subscriberText: {
-  color: "#1E2833",
-  fontSize: "24px",
+  color: '#1E2833',
+  fontSize: '24px',
   mb: 2
  },
  subscriberButton: {
   backgroundColor: red[500],
-  borderRadius: "0",
-  color: "white",
-  marginBottom: "7px",
-  borderTopLeftRadius: "5px",
-  borderTopRightRadius: "5px",
-  ":hover": {
+  borderRadius: '0',
+  color: 'white',
+  marginBottom: '7px',
+  borderTopLeftRadius: '5px',
+  borderTopRightRadius: '5px',
+  ':hover': {
    backgroundColor: red[500],
   },
  },
  subscriberInput: {
-  fontSize: "15px",
-  fontWeight: "400",
-  borderBottom: "1px solid #E5E5E5"
+  fontSize: '15px',
+  fontWeight: '400',
+  borderBottom: '1px solid #E5E5E5'
  },
  logo: {
   pt: 3,
@@ -75,11 +77,11 @@ const CSS: ICss = {
 
 const GuestFooter = () => {
  return (
-  <>
+  <FixedContainer marginTop={5}>
    <Grid container justifyContent="center" sx={{ pt: 5 }}>
-    <Grid item xs={9}>
+    <Grid item xs={12}>
      <Grid container justifyContent="space-between">
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
        <Box sx={CSS.logo}>
         <img src="/storage/images/logo.png" />
        </Box>
@@ -89,13 +91,15 @@ const GuestFooter = () => {
         <strong>Saturdays and Sundays</strong> - 10:00 am to 6:00 pm
        </Typography>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
        <Grid container alignItems="left">
         <Box>
          <List>
           <ListSubheader sx={CSS.subHeader}>Services</ListSubheader>
           <ListItem>
-           <ListItemText>Physical Therapy</ListItemText>
+           <Link color="text.primary" underline="none" component={RouterLink} to="/home">
+            <ListItemText>Physical Therapy</ListItemText>
+           </Link>
           </ListItem>
           <ListItem>
            <ListItemText>Occupational Therapy</ListItemText>
@@ -112,7 +116,7 @@ const GuestFooter = () => {
          <List>
           <ListSubheader sx={CSS.subHeader}>About</ListSubheader>
           <ListItem>
-           <ListItemText>{`Mission & Vision`}</ListItemText>
+           <ListItemText>{'Mission & Vision'}</ListItemText>
           </ListItem>
           <ListItem>
            <ListItemText>Founder</ListItemText>
@@ -131,7 +135,7 @@ const GuestFooter = () => {
     </Grid>
    </Grid>
    <Grid container justifyContent="center" sx={{ mb: 5 }}>
-    <Grid item xs={9}>
+    <Grid item xs={12}>
      <Grid container justifyContent="space-between">
       <Stack sx={CSS.subscriber}>
        <Typography sx={CSS.subscriberText}>
@@ -160,8 +164,8 @@ const GuestFooter = () => {
      </Grid>
     </Grid>
    </Grid>
-  </>
+  </FixedContainer>
  )
 }
 
-export default GuestFooter;
+export default GuestFooter
