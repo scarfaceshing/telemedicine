@@ -188,7 +188,7 @@ class Home extends React.Component {
         {/* <img src="/storage/images/banner_image_1.png" className="banner image" height="829.94px" width="711px"/> */}
         <Grid container justifyContent="center" alignItems="center" sx={{
          backgroundImage: { xs: 'none', sm: 'url("/storage/images/banner_image_1.png"), url("/storage/images/banner_image_2.png")' },
-         backgroundSize: 'auto 711px, auto 130px',
+         backgroundSize: 'auto 511px, auto 130px',
          backgroundPosition: 'right, left',
          backgroundPositionY: '60px, 600px',
          backgroundRepeat: 'no-repeat, no-repeat',
@@ -308,18 +308,13 @@ class Home extends React.Component {
        origin="right"
        image="content_image_3.png"
        header={<>
-        Speech Language
-        Department
+        Speech-Language Pathology Department
        </>
        }
 
        content={
         <>
-         Speech-Language Pathology, or Speech Therapy is a developing
-         practice in the country. Guided by the best practices,
-         each Speech-Language Pathologist is committed to providing
-         quality services that are catered to each individual‘s needs and
-         strengths.
+         The Sandbox Clinic Speech-Language Pathology Department is guided by the best practices in the field, each Speech-Language Pathologists in Sandbox is committed to providing quality services that are catered to each individual‘s needs. We also offer specialized Speech Therapy services such as PROMPT, and Pediatric Feeding and Dysphagia Therapy.
         </>
        }
       />
